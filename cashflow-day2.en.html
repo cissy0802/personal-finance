@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Finance · Day 2 · Cash Flow &amp; Budgeting System</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.flow{list-style:none;padding:0;margin:10px 0}
+.flow li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.flow li:last-child{border:none}
+.flow b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="kicker">Personal Finance <span class="dot"></span> Day 2</span>
+  <h1>Cash Flow &amp; Budgeting System</h1>
+  <p class="sub">Day 1 said the savings rate decides everything; this issue turns it into a system that runs itself—so saving doesn't depend on monthly willpower.</p>
+  <p class="meta">个人理财 · 现金流与预算系统　|　2026-07-15</p>
+</header>
+
+<div class="lede">
+Last issue's conclusion: your <b>savings rate</b>—meaning income you don't spend and then invest, not the balance sitting in a bank—decides how soon you reach financial independence. But here's the uncomfortable truth: <b>almost no one sustains a high savings rate on the strength of "I'll be careful this month"</b>. Willpower runs out; life jumps the queue. What actually works isn't a more disciplined budget but a <b>cash-flow system that makes the right thing happen by default</b>—on payday, money flows to where it should go before you ever get a chance to spend it. This issue breaks it into four builds: pay yourself first, pick a framework that's good enough, let account structure execute for you, and how to choose between tracking every detail and automating once.
+</div>
+
+<h2 class="section">Four Builds</h2>
+
+<!-- 1 -->
+<div class="card">
+  <span class="num">POINT 1</span>
+  <h3>Pay Yourself First</h3>
+  <div class="oneline">The first thing on payday is to move savings out; only what's left is spendable.</div>
+  <p><span class="lbl">Mechanism.</span> Most people run "income − spending = savings"—spend first, save whatever's left at month's end. Trouble is, there's almost never anything left, because spending swells to fill whatever is available (Parkinson's Law). Flip the order: <strong>income − savings = money to spend</strong>. Savings goes from "the leftover" to "taken off the top," as fixed as rent. This isn't a moral lecture—it's <strong>turning saving from a decision you re-make every month into a default you set once</strong>.</p>
+  <p><span class="lbl">Actionable.</span> Set up an automatic transfer that moves your target percentage from your paycheck account into savings/investing on payday (or the next day). If your employer can route straight into a retirement account, split it at the source—money that never touches your checking account can't be spent. Start at a rate that doesn't hurt, and each time you get a raise, automatically add a slice of the raise to that transfer.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "I'll just spend normally and save what's left at month's end." — That ranks saving behind every impulse purchase, and the order guarantees it always finishes last. Paying yourself first isn't about saving more; it's about <strong>changing the execution order</strong>.</div>
+  <div class="do"><span class="lbl">This week:</span> Set up a payday auto-transfer sized to last month's real savings rate (even if it's small). <b>Reflection:</b> if that money vanished before you saw the balance, would this month's spending actually feel any different?</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <span class="num">POINT 2</span>
+  <h3>Pick a Framework That's Good Enough: 50/30/20 or the Anti-Budget</h3>
+  <div class="oneline">A budget framework is a starting reference, not mandatory line-item tracking; the one you'll actually sustain is the good one.</div>
+  <p><span class="lbl">Mechanism.</span> <strong>50/30/20</strong> splits after-tax income into 50% needs (rent/food/utilities), 30% wants, and 20% saving and debt payoff—a memorable starting point. The <strong>anti-budget</strong> is blunter: lock in only that 20% (or your target savings rate), auto-move it off the top, and spend the rest freely with no line-item tracking. Both share the same core as Point 1: <strong>secure savings first, then talk about how spending is split</strong>. The only difference is whether you want to manage the details of the rest.</p>
+  <p class="note"><strong>Calibration warning</strong>: "fixed percentage of income" frameworks like 50/30/20 <strong>systematically misfit</strong> high earners / high marginal-tax brackets—the higher the income, the lower needs usually run as a share, so treating 20% as the savings target is <strong>badly too low</strong>. Don't treat the percentages as a ceiling. The harder yardstick is back in Day 1: watch the <strong>savings rate itself</strong> and <strong>net worth ÷ annual spending</strong>, letting your savings rate—not a fixed ratio—set the bar. For high earners the right number is often 30%, 40%, or more.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Budgeting = logging every transaction." — For most people, granular expense logging doesn't survive three months. The anti-budget proves it: as long as savings is auto-moved first, spending the rest to zero is fine and the system still holds.</div>
+  <div class="do"><span class="lbl">This week:</span> Run last month's numbers through 50/30/20 to see which bucket you're stuck in; then decide whether to upgrade to a savings-only anti-budget. <b>Reflection:</b> are you someone who needs a sense of detailed control, or someone who wants to set it and never think about it again?</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <span class="num">POINT 3</span>
+  <h3>Let Account Structure Do the Work</h3>
+  <div class="oneline">Use a few purpose-built accounts and auto-transfers to turn your budget into a pipeline you don't have to babysit.</div>
+  <p><span class="lbl">Mechanism.</span> Budgets usually fail not from ignorance but because every step needs a manual push. The fix is to <strong>hard-wire the rules into account structure</strong>: money auto-routes along a preset path the moment it arrives, accounts are physically separated, and the friction of moving funds naturally blocks impulse. A common routing skeleton:</p>
+  <ul class="flow">
+    <li>Paycheck → <b>hub account</b> (checking; a way-station only, holds little)</li>
+    <li>↳ auto-move → <b>savings/investing</b> (pay yourself first, see Point 1)</li>
+    <li>↳ auto-move → <b>fixed bills</b> (rent/utilities/insurance, dedicated)</li>
+    <li>↳ remainder stays in hub → <b>day-to-day spending</b> (fine to spend to zero)</li>
+  </ul>
+  <p>Keep the emergency fund in a high-yield savings account (HYSA—an online savings account with a rate well above ordinary checking), separate from daily money, so it earns interest and adds "not convenient to raid" friction. <span class="note">US vs. China: in the US this runs on checking/savings accounts plus automatic ACH transfers; in China the same routing can be built with a salary card, a money-market wallet (e.g. Yu'ebao), and automatic recurring investments.</span></p>
+  <div class="miss"><span class="lbl">Common myth:</span> "One account holds everything, and I keep in my head which part is off-limits." — Mixed together, "money I shouldn't touch" is just a thought, and it gets overridden. Physical separation + auto-routing is what moves discipline out of your head and into the system.</div>
+  <div class="do"><span class="lbl">This week:</span> Open at least one more savings account to split the emergency fund from daily spending; set a payday auto-transfer into it. <b>Reflection:</b> how many pots of money do you have that are "supposedly untouched but actually always moving"?</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <span class="num">POINT 4</span>
+  <h3>Track vs. Automate: How Fine Should You Manage?</h3>
+  <div class="oneline">Tracking is for diagnosis, automation is for execution; track first to see the problem, then automate to free yourself.</div>
+  <p><span class="lbl">Mechanism.</span> This is the biggest debate in budgeting. The <strong>tracking camp</strong> says: if you don't log it, you don't know where the money went. The <strong>automation camp</strong> says: logging is drudgery, and once savings is auto-moved first, tracking is redundant. The truth is they <strong>solve different stages</strong>: tracking is a <strong>diagnostic tool</strong>, used short-term to see the truth of your spending; automation is an <strong>execution system</strong>, used long-term to make the right thing happen by default. The healthy path: track intensively for a month or two as a checkup, find the problem spending, cut what should be cut and fix what should be fixed, then <strong>automate the system and step out of daily tracking</strong>—keeping only a monthly/quarterly look at the trend.</p>
+  <p><span class="lbl">Actionable.</span> Do one 30-day "spending audit": record every expense (let an app auto-categorize; no need to hand-copy). When it's done you don't have to keep logging forever—harden the findings into auto-transfers and account structure, then just glance at the four ratios (see Day 1) at month's end.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "It's either log forever or don't manage at all." — Both extremes are wrong. Logging by hand forever burns out into quitting; tracking nothing means you never catch that quietly swelling recurring expense. The right stance is <strong>diagnose first, automate next, review periodically</strong>.</div>
+  <div class="do"><span class="lbl">This week:</span> Start a 30-day spending audit—diagnose, don't judge. <b>Reflection:</b> a week in, which category's amount surprised you most? Is it habit or keeping up?</div>
+</div>
+
+<div class="tech">
+  <h4>Note for High-Earning Tech Workers</h4>
+  <p class="cap">One per issue, focused on the specific situation of this group: equity comp / heavy taxes / volatile income.</p>
+  <ul>
+    <li><b>Size auto-routing to your lowest monthly salary baseline, not the peak.</b> Vesting equity, bonuses, and sign-on payments make take-home income swing wildly year to year. Anchor the fixed auto-savings to your <strong>regular salary</strong>—that stable cash flow—and handle one-off large sums (bonus/vesting) separately by hand (see next), so the system doesn't break in the months income drops back.</li>
+    <li><b>Give every one-off windfall a preset "landing path."</b> Equity vesting or a bonus hitting your account is the moment lifestyle inflation most easily breaks through. Decide the split <strong>before the money arrives</strong>: how much reserved for tax, how much into long-term investing, how much you allow yourself to spend—pay-yourself-first applies to windfalls too; don't let them land in the daily account first.</li>
+    <li><b>Auto-routing must reserve for the tax pit.</b> Withholding on equity comp / RSUs (restricted stock units) is often too low, leaving a bill at tax time. Open a dedicated "tax reserve" account in your structure and quarantine that slice first—don't spend it as if it were disposable cash.</li>
+  </ul>
+</div>
+
+<h2 class="section">Deeper Questions</h2>
+
+<details>
+  <summary>Won't the anti-budget let people lose control and overspend?</summary>
+  <div class="body">Only if the premise isn't met. The anti-budget's entire safety rests on the savings slice being auto-moved <strong>first</strong>—as long as that step is automatic and sized well enough (for high earners, often well above 20%), spending the rest to zero really is fine, because what needed saving is already saved. It loses control in exactly one case: the savings step isn't automated, or the rate is set too low. So the anti-budget isn't "not managing money"—it's <strong>concentrating all your discipline into one action</strong>, then automating it completely.</div>
+</details>
+<details>
+  <summary>How does this system work with irregular income (freelance/commission/founder)?</summary>
+  <div class="body">Manufacture the stability yourself. How: all income lands in a buffer account first, and that buffer pays you a <strong>fixed, conservative monthly "salary"</strong> into your daily account—you put yourself on payroll. The overflow of fat months stays in the buffer to cover lean ones. Savings still auto-moves at a steady low baseline, with any surplus topped up at a quarterly settle. Pay-yourself-first and auto-routing still hold; there's just an extra buffer layer that smooths the irregular into the regular.</div>
+</details>
+<details>
+  <summary>If it's all automated, what's the point of a budget?</summary>
+  <div class="body">Automation solves "execution," not "direction." The system faithfully executes the ratios you set, but whether those ratios are right, whether they should change with your life stage, whether that quietly swelling subscription should be cut—these still need you to look up periodically. So the endpoint isn't "never think about money" but <strong>handing daily execution to the system and saving your scarce attention for a quarterly direction review</strong>. That reclaimed attention is exactly what automation buys back.</div>
+</details>
+
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment / tax / legal advice; consult a licensed professional for your specific situation. The ratios here (e.g. 50/30/20) are an <strong>illustrative starting point</strong>, not a rule that fits everyone—optimal allocation varies widely with income structure. US accounts and tax rules are the default background; China-specific differences are flagged separately.
+</div>
+
+</div>
+</body>
+</html>
