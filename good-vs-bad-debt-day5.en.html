@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Finance · Day 5 · Good Debt vs Bad Debt</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="kicker">Personal Finance <span class="dot"></span> Day 5</span>
+  <h1>Good Debt vs Bad Debt</h1>
+  <p class="sub">Debt isn't good or evil—only cheap or expensive. What decides whether a debt is friend or foe isn't its name; it's that one percentage.</p>
+  <p class="meta">个人理财 · 好债务 vs 坏债务　|　2026-07-19</p>
+</header>
+
+<div class="lede">
+The labels "good debt" and "bad debt" are overused: people call every mortgage good and every credit card bad. But the uncomfortable truth is that a debt's quality depends <b>not on its name, but on its interest rate and what the borrowed money did for you</b>. A debt is <b>reverse compounding</b>—every day, it earns your money for the lender. This issue nails down four things: the interest rate is the real dividing line, the snowball-vs-avalanche fight over payoff order, why credit cards and consumer loans are traps by design, and leverage—the double-edged blade that magnifies gains and ruin alike. No emotion, just the percentage.
+</div>
+
+<h2 class="section">Four Foundations</h2>
+
+<!-- 1 -->
+<div class="card">
+  <span class="num">POINT 1</span>
+  <h3>The Interest Rate Is the Dividing Line</h3>
+  <div class="oneline">Whether a debt is good or bad starts with one test: is its rate above the after-tax return you can reliably earn?</div>
+  <p><span class="lbl">Mechanism.</span> Investment compounding puts money to work for you; debt is <strong>reverse compounding</strong>, putting you to work for the lender. To judge a debt, use one hard yardstick: compare its <strong>APR (annual percentage rate—the real share of interest you pay per year)</strong> to the return you can earn <strong>after tax, reliably, over the long run</strong>. Paying off a 22% debt locks in a <strong>guaranteed 22% risk-free return</strong>—no investment reliably beats that. So the higher the rate, the sooner it should die; debts whose rate sits near or below long-run returns (like a low, locked-in mortgage) can ride alongside your investing.</p>
+  <table>
+    <thead><tr><th>Debt type</th><th>Typical APR (US · 2025 assumption)</th><th>Class</th></tr></thead>
+    <tbody>
+      <tr><td>Payday loan / revolving card</td><td class="rate">20%–400%</td><td class="yr">Bad (kill first)</td></tr>
+      <tr><td>Buy-now-pay-later / personal loan</td><td class="rate">15%–30%</td><td class="yr">Bad</td></tr>
+      <tr><td>Auto loan</td><td class="rate">7%–12%</td><td class="yr">Gray</td></tr>
+      <tr><td>Federal student loan</td><td class="rate">5%–8%</td><td class="yr">It depends</td></tr>
+      <tr><td>Low, locked-in mortgage</td><td class="rate">3%–7%</td><td class="yr">Can be "good"</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Figures are rough US ranges around 2025 and move with the market; shown only to illustrate the tiers. The principle—rate over label—is universal, but always convert any "small daily fee" or "handling charge" marketing into a true APR before comparing.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Mortgages are good debt, credit cards are bad—absolutely." — The name doesn't decide. A 7% auto loan that keeps you from clearing a 22% card is bad debt; a 3% locked mortgage in a high-rate world is an asset. Read the percentage, not the label.</div>
+  <div class="do"><span class="lbl">This week:</span> List every debt in one table: balance, APR, minimum payment. Sort by APR, highest first—that table is the map for every decision ahead. <b>Reflection:</b> the highest-rate line—does the thing you bought with it still create value in your life?</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <span class="num">POINT 2</span>
+  <h3>Payoff Order: Avalanche Saves Money, Snowball Saves Willpower</h3>
+  <div class="oneline">Mathematically, highest-rate-first saves the most; behaviorally, smallest-balance-first is what keeps you going.</div>
+  <p><span class="lbl">Mechanism.</span> With multiple debts, which first? Two main methods. <strong>Avalanche</strong>—pay the minimum on everything, throw all spare cash at the <strong>highest APR</strong>, kill it, then attack the next. It pays the least total interest and gets you out fastest, on paper. <strong>Snowball</strong>—throw spare cash at the <strong>smallest balance</strong> first, clear one quickly for the "another one gone" hit of momentum, then roll to the next. It pays a bit more interest in exchange for a higher completion rate. Research (e.g., consumer data cited by <em>Harvard Business Review</em> in 2016) suggests what actually decides whether you finish is <strong>persistence, not optimality</strong>—many people repay in full precisely with the snowball.</p>
+  <p><span class="lbl">Actionable.</span> Choosing: rates far apart (say 24% vs 6%) → avalanche; don't pay thousands in interest for feelings. Many messy debts and a history of quitting → snowball; buy yourself a winnable streak first. Either way, stop <strong>creating new debt</strong> first, or you're bailing a boat while drilling holes in it. And don't forget a third path: call the issuer to negotiate a lower rate, or move a high-rate balance to a <strong>0% balance-transfer card</strong> (mind the fee and the rate jump when the term ends)—that drags the debt back to the good side of the line.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Pay the smallest, lowest-rate one first—it feels easy." — If rates are far apart, clearing a small low-rate debt first lets the high-rate one keep compounding viciously; in pure dollars you lose. Snowball's value is persistence only; don't sell it as saving money.</div>
+  <div class="do"><span class="lbl">This week:</span> Using the table from Point 1, pick avalanche or snowball and set the "extra payment" as an automatic transfer. <b>Reflection:</b> when you failed at debt before, was it the wrong order, or the lack of persistence? The answer picks your method.</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <span class="num">POINT 3</span>
+  <h3>Credit Cards &amp; Consumer Debt: Traps by Design</h3>
+  <div class="oneline">Minimum payments, daily interest, buy-now-pay-later—these are engineered to make you pay more, not accidents.</div>
+  <p><span class="lbl">Mechanism.</span> A credit card paid in full monthly is a free, efficient tool; <strong>the moment you carry a balance, it switches into one of the most expensive common loans in America</strong>. Three traps are by design: (1) <strong>the minimum payment</strong>—paying just 2%–3% can take decades and cost more in interest than the principal; that "paying only the minimum takes X years" line on your statement is the warning; (2) <strong>daily interest + losing the grace period</strong>—once a balance revolves, new purchases accrue interest from the swipe date, and a 20%+ APR compounds daily; (3) <strong>buy-now-pay-later (BNPL—splitting one purchase into several installments)</strong> looks interest-free but dulls the pain of paying and nudges you past your budget, with late fees and stacked use as its profit engine.</p>
+  <p><span class="lbl">Actionable.</span> Three iron rules: <strong>use the card like a debit card</strong>—only spend money already in your account, pay in full monthly; <strong>never take a cash advance</strong> (no grace period, higher rate, interest from day one); <strong>treat BNPL as the installment loan it is</strong>—ask "would I buy this if I paid in full?" One term to nail here: <strong>your savings rate = the share of income you don't spend and then invest—not the balance sitting in your bank</strong>—and every dollar of card interest is drained straight out of that rate.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "I make the minimum payment, so my credit's fine." — The minimum-payer is the issuer's most profitable customer. It protects your score while sinking you deeper into 20%+ compounding; the credit isn't broken, but the wallet is being bled dry.</div>
+  <div class="do"><span class="lbl">This week:</span> Pull one card statement, find the "paying only the minimum takes X years / total interest Y" line, and read it three times. <b>Reflection:</b> have you ever used BNPL for something you wouldn't have bought at full price? What did that money buy you now?</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <span class="num">POINT 4</span>
+  <h3>Leverage Cuts Both Ways</h3>
+  <div class="oneline">Borrowing to invest magnifies gains—but it magnifies losses too, and adds a "you must survive to that day" time constraint.</div>
+  <p><span class="lbl">Mechanism.</span> "Good debt" is often sold as borrowing cheaply to buy high-return assets (a mortgage, sometimes margin). That can amplify returns—but leverage is <strong>symmetric</strong>: it magnifies losses by the same factor, and layers on two hidden risks: <strong>margin calls / default</strong> (a sharp short-term drop can force you to liquidate or default at the worst moment) and <strong>sequence risk</strong> (an unlucky order of returns can knock you out mid-way even if the long-run average is fine). A mortgage is relatively gentle precisely because it's low-rate, long-term, and won't get margin-called on a short-term price dip. The correct use of leverage is <strong>conservative</strong>: only when the rate is clearly below expected return and you have enough buffer to survive the worst case.</p>
+  <p><span class="lbl">Actionable.</span> Lenders gatekeep with <strong>debt-to-income ratio (DTI = monthly debt payments ÷ pretax monthly income)</strong>; the classic "28/36 rule" caps housing at ≤ 28% and total debt at ≤ 36%. <strong>Calibration warning</strong>: ratios anchored to <strong>pretax income</strong> <strong>systematically overstate</strong> capacity for high marginal-tax brackets, equity-comp-heavy earners, and volatile incomes—a "safe" pretax payment share can hide already-tight after-tax cash flow, and a bonus/vesting peak year makes the ratio look far too comfortable. The harder yardstick is <strong>after-tax cash flow</strong> and <strong>net worth ÷ annual spending</strong> (see Day 1): in the worst year (job loss, stock halved, income cut in half), can I still carry this debt? If not, don't add it.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Borrow cheap, invest high—guaranteed spread." — The spread only holds if the asset doesn't crash, you aren't forced to liquidate, and you last to the long run. Countless "guaranteed" leverage bets died in the short-term trough they couldn't outlast. Leverage doesn't change the expected value—only the variance.</div>
+  <div class="do"><span class="lbl">This week:</span> Compute your DTI (total monthly debt payments ÷ pretax monthly income), then redo it on an after-tax basis and see the gap. <b>Reflection:</b> if income were halved for a year, which of your debts would crush cash flow first?</div>
+</div>
+
+<div class="tech">
+  <h4>A Note for High-Earning Tech Workers</h4>
+  <p class="cap">One per issue, focused on the specific situation of people with equity comp / high tax burdens / volatile income.</p>
+  <ul>
+    <li><b>Don't use leverage to double down on an already over-concentrated bet.</b> Your human capital (salary) is already staked on your employer; adding a <strong>margin loan or stock-backed line (like some brokers' PLOC)</strong> to hold more of your own or tech stock stacks leverage on top of double concentration—when the stock drops, income, net worth, and margin all blow at once, the nastiest form of sequence risk.</li>
+    <li><b>A low, locked-in mortgage may be the "best" debt you hold.</b> If you locked a rate clearly below your long-run after-tax expected return, aggressively prepaying it isn't obviously worth it—but that "borrow low, invest high" arithmetic only holds if you have a thick buffer and won't be forced to sell stock into a trough to plug a gap.</li>
+    <li><b>Judge every debt on an after-tax, "trough-year" basis.</b> A high marginal bracket makes pretax DTI systematically overstate your capacity, and a vesting peak year makes the ratio look far too optimistic. Stress-test against the worst year's after-tax cash flow, not the offer or the peak-year number.</li>
+  </ul>
+</div>
+
+<h2 class="section">Go Deeper</h2>
+
+<details>
+  <summary>Is there a right answer to "pay off debt or invest first"?</summary>
+  <div class="body">There's a practical line: compare the debt's rate to what you can earn <strong>after tax, over the long run, reliably</strong>. High-rate debt (cards at 20%+) almost always comes first—paying it locks in a risk-free high return no investment reliably matches. But two things go ahead of even that: (1) build a small emergency buffer first (see Day 3), or paying down debt leaves you cashless and back to swiping; (2) don't skip an employer 401(k) match (a free, instant return). Only the remaining low-rate debt enters the "pay vs invest" spread comparison.</div>
+</details>
+
+<details>
+  <summary>Prepaying a low-rate mortgage: rational, or emotional?</summary>
+  <div class="body">Both, and both are legitimate. In pure math, if the mortgage rate is below your long-run after-tax expected return, investing spare cash has a higher expected value—but that's an <strong>expected</strong> value, with volatility and forced-sale risk attached. The cash-flow flexibility and sleep quality of being debt-free are real, priceable returns. Honestly: this isn't pure arithmetic but how much you'll pay for certainty. The less stable your income and the thinner your buffer, the more weight certainty deserves.</div>
+</details>
+
+<details>
+  <summary>What about jurisdictions outside the US?</summary>
+  <div class="body">This site defaults to a US backdrop—mature revolving credit, a credit-score system (next issue), high card APRs but interest-free grace periods and tools like 0% balance-transfer cards. Elsewhere the products differ, and the true annualized cost of installment plans, consumer loans, and some online lending is often buried under "daily rate" or "handling fee" marketing—always convert to an APR before judging. Mortgage rate mechanics, prepayment penalties, and tax treatment also vary by country. The one principle that travels everywhere: rate over label.</div>
+</details>
+
+<details>
+  <summary>Is "good debt" itself an over-glamorized idea?</summary>
+  <div class="body">Largely, yes. The finance industry loves packaging "good debt" as a shortcut to wealth, because debt is its product. A sturdier default stance: <strong>all debt is a burden until proven otherwise</strong>—a debt earns the word "good" only when its rate is clearly below expected return, its term is stable, and you have a buffer to survive the worst case. For most people most of the time, "no high-rate debt + a thick buffer" is itself the most underrated high-return position there is.</div>
+</details>
+
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not individualized investment / tax / legal advice; consult a licensed professional for your specific situation. Rate ranges and the 28/36, snowball/avalanche figures are <strong>illustrative models</strong> under specific assumptions (US markets around 2025, illustrative tiers), move with the market, are not promises, and are not a recommendation of any lending or investment product. The default backdrop is US accounts and tax rules; cross-border differences are flagged where relevant.
+</div>
+
+</div>
+</body>
+</html>
