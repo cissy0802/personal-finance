@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 6 · The Credit System (US)</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Noto Sans",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 6</span>
+<h1>The Credit System (US)</h1>
+<p class="sub">A credit score isn't a morality score—it's an algorithm you can reverse-engineer. Understand how it's computed and you can raise it at almost no cost.</p>
+<p class="meta">个人理财 · 信用体系（美国）　|　2026-07-21</p>
+</header>
+<div class="lede">
+Most people think a credit score measures how much money you have. It actually measures <b>how reliably you repay</b>—and that number directly sets the <b>price</b> you pay to borrow: mortgage rates, auto loans, credit cards, and in many US states even rental approvals and car-insurance premiums. Here's the uncomfortable part: on the same 30-year mortgage, a gap of a few dozen points can mean a <b>five-figure</b> difference in interest. The good news is that it's an algorithm, not black magic. This issue nails four things: how the five FICO factors are computed, how to build and optimize credit cheaply, whether you're playing the rewards game or being played by it, and identity-theft protection (with US–China differences flagged).
+</div>
+<h2 class="section">Four Foundations</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>How FICO Is Built: Five Factors, Two Own 65%</h3>
+<div class="oneline">Your score is a weighted sum of five factors—two of which make up 65%. Focus on those two.</div>
+<p><span class="lbl">Mechanism.</span> FICO (Fair Isaac Corporation, the dominant US consumer credit score) ranges <strong>300–850</strong>. It compresses your credit report into a weighted sum of five factors: <strong>payment history</strong> and <strong>credit utilization</strong> together account for 65%—so "pay on time" and "don't max out" nearly decide the whole thing.</p>
+<table>
+<thead><tr><th>Factor</th><th>Weight</th><th>How to optimize</th></tr></thead>
+<tbody>
+<tr><td>Payment history</td><td class="rate">35%</td><td class="yr">Never miss, not once</td></tr>
+<tr><td>Credit utilization</td><td class="rate">30%</td><td class="yr">Keep under 30%, ideally &lt;10%</td></tr>
+<tr><td>Length of history</td><td class="rate">15%</td><td class="yr">Don't close old cards</td></tr>
+<tr><td>New credit / hard inquiries</td><td class="rate">10%</td><td class="yr">Apply rarely, don't cluster</td></tr>
+<tr><td>Credit mix</td><td class="rate">10%</td><td class="yr">Let it happen; don't force it</td></tr>
+</tbody>
+</table>
+<p class="note">Utilization = balance used ÷ total limit. Rough bands: 670+ is "good," 740+ "very good," 800+ "exceptional." Exact numbers vary by FICO version; the direction is stable.</p>
+<div class="miss"><span class="lbl">Common myth:</span> "Checking my own score lowers it." — It doesn't. Checking your own score is a <strong>soft pull</strong> and never affects it; what dings you is a <strong>hard pull</strong>, triggered when a lender pulls your report for a new application. Check your own score as often as you like.</div>
+<div class="do"><span class="lbl">This week:</span> Pull your FICO / VantageScore for free (most bank and card apps now offer it) and note the one factor flagged red. <b>Reflection:</b> is your weakest factor a habit problem or just a time problem?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>Build and Optimize: Three Free Levers</h3>
+<div class="oneline">Building credit takes time and consistency; optimizing it runs on three free levers: on-time, utilization, age.</div>
+<p><span class="lbl">Mechanism.</span> Credit is a track record proving you can borrow responsibly—starting from zero takes time. But raising it costs almost nothing; you just manage three things.</p>
+<p><span class="lbl">Actionable.</span></p>
+<ul class="ratios">
+<li><b>Start from zero:</b> use a <strong>secured card</strong> (your deposit is your limit), or have a credit-healthy family member add you as an <strong>authorized user</strong> to piggyback on their age and history.</li>
+<li><b>100% on time:</b> even if you only pay the minimum, never miss—automate it. Lateness reports at 30 days past due, but a single 30-day late can knock off 50–100 points and linger for years.</li>
+<li><b>Lower utilization:</b> spread balances across cards, request limit increases, and pay down before the statement closes—it's the statement snapshot that counts, not month-end.</li>
+<li><b>Don't close your oldest card:</b> closing cuts your total limit (raising utilization) and, years later, lowers your average account age.</li>
+<li><b>Open new credit sparingly:</b> each hard inquiry is roughly −5 to −10 points for about 12 months; but multiple inquiries for the <em>same</em> mortgage/auto loan within a 14–45 day window count as one.</li>
+</ul>
+<div class="miss"><span class="lbl">Common myth:</span> "Carrying a small balance builds credit." — Expensively wrong. Building credit only needs you to <strong>pay in full, on time</strong>; carrying a balance just donates interest (card APR—annual percentage rate—often runs 20–24%). Utilization is a statement-date snapshot; it has nothing to do with whether you leave a balance.</div>
+<div class="do"><span class="lbl">This week:</span> Set autopay-in-full on every card; confirm your oldest card is open and kept active with an occasional small charge. <b>Reflection:</b> have you ever closed an old card to "save on fees" and quietly lost account age?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>Credit-Card Rewards: Playing vs. Being Played</h3>
+<div class="oneline">Only people who pay in full are playing the rewards game; carry a balance and the rewards are playing you.</div>
+<p><span class="lbl">Mechanism.</span> Cash back / points (1–5%) are <strong>bait</strong> the issuer funds from merchant fees and from the interest that balance-carriers pay. The bank's real profit is interest and annual fees. The math is brutal: earn 2% back while carrying a 22% APR balance and you're down ~20% a month—the rewards don't even cover the rounding error.</p>
+<p><span class="lbl">Actionable.</span></p>
+<ul class="ratios">
+<li><b>Iron rule:</b> touch a rewards card only if you can <strong>pay in full every month</strong>; if you can't, use the plainest card and focus on paying down debt.</li>
+<li><b>Cash back vs. travel points:</b> cash back is simple and certain; travel points have a higher ceiling but must be redeemed skillfully and get <strong>devalued</strong> (issuers reprice redemptions at will).</li>
+<li><b>Annual-fee cards:</b> worth it only if you genuinely <strong>use up</strong> the perks (on spending you'd do anyway); otherwise the fee exceeds the rewards.</li>
+<li><b>Never spend for points:</b> spending $1,000 to "save $100" is the oldest marketing trap there is.</li>
+</ul>
+<div class="miss"><span class="lbl">Common myth:</span> "I put more on the card to rack up miles." — Unless that money was going to be spent anyway, you paid 100% of the principal to chase a 1–5% rebate. <strong>Rewards should never drive spending</strong>—they should only recapture value from spending you'd have done regardless.</div>
+<div class="do"><span class="lbl">This week:</span> Pick one card and compute: annual fee − (cash back + perks you actually used over the last 12 months) = positive or negative? If negative, downgrade or close it. <b>Reflection:</b> how much of your spending has been quietly inflated by "earning points"?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>Identity-Theft Protection (with US–China Differences)</h3>
+<div class="oneline">The strongest protection is free: turn on a credit freeze at all three bureaus.</div>
+<p><span class="lbl">Mechanism.</span> Identity theft = someone using your identity to open credit and rack up debt in your name. The US has three bureaus: <strong>Equifax, Experian, TransUnion</strong>. A <strong>credit freeze</strong> has been <strong>free</strong> at all three since 2018—once frozen, no one (including you) can open a new account with your information until you temporarily lift it. That's a lock placed <em>before</em> the fact, far stronger than an after-the-fact alert.</p>
+<p><span class="lbl">Actionable.</span></p>
+<ul class="ratios">
+<li><strong>Freeze at each</strong> of the three bureaus (about 5 minutes each, one-time); temporarily lift it when you genuinely apply for credit, then re-freeze.</li>
+<li>Use the official <strong>AnnualCreditReport.com</strong> to pull all three reports for free on a schedule (now available weekly) and check for accounts you don't recognize.</li>
+<li>Lighter alternative: set a <strong>fraud alert</strong>, requiring lenders to verify your identity before opening credit in your name.</li>
+<li><b>US–China difference:</b> China has no FICO. Personal credit is centrally managed mainly by the <strong>PBOC Credit Reference Center</strong> (People's Bank of China); private scores like Sesame Credit are <strong>proprietary</strong> and are not the official credit file. Inquiry, dispute, and "freeze" processes all differ from the US. Credit built in the US <strong>does not carry over to China</strong>, and vice versa—cross-border movers build from scratch on both sides.</li>
+</ul>
+<div class="miss"><span class="lbl">Common myth:</span> "A credit-monitoring service protects me from identity theft." — Monitoring is only an <strong>after-the-fact alert</strong>; a freeze is a <strong>before-the-fact lock</strong>—and it's free. Many paid monitoring products are selling you something you can do for free.</div>
+<div class="do"><span class="lbl">This week:</span> Turn on a credit freeze at all three bureaus today (5 minutes each). <b>Reflection:</b> if someone opened a card in your name tomorrow, how soon would you find out?</div>
+</div>
+<div class="tech">
+<h4>Note for High-Earning Tech Workers</h4>
+<p class="cap">One per issue, focused on the specific situation of this group: equity comp / heavy taxes / high liquidity.</p>
+<ul>
+<li><b>"Fat wallet, thin credit file" is the classic trap for high-earning new immigrants.</b> Income is high but US credit history is near-zero, so a mortgage or a rental gets blocked. Don't rush to carry a balance to "build score"—use a <strong>secured card / authorized user / 100% on-time</strong> and you'll start in months and reach a strong band within a year or two.</li>
+<li><b>High net worth is a high-value target for identity theft.</b> Freeze at all three bureaus first; don't rely on paid monitoring alone. Your name is worth impersonating to open credit—put the defense in front.</li>
+<li><b>Don't disturb your credit right before a big loan.</b> In the months before a mortgage application, don't cluster new cards, hard inquiries, or big charges that spike utilization—it lowers your score and raises the rate on a 30-year loan, a cost that dwarfs any rewards.</li>
+</ul>
+</div>
+<h2 class="section">Deeper Questions</h2>
+<details>
+<summary>Does a high credit score equal financial health?</summary>
+<div class="body">No. A credit score only measures your reliability at repaying debt—not net worth or savings. Someone carrying a lot of debt but paying on time every month can have a high score and still be financially fragile—one layoff from collapse. A score is the <strong>price tag on borrowing</strong>, not a financial checkup (health is ratios—see Day 1). Don't mistake a high score for evidence of wealth.</div>
+</details>
+<details>
+<summary>Is it fine to skip credit cards and use only a debit card?</summary>
+<div class="body">In the US, that leaves your credit file too "thin," hurting you on mortgages, rentals, and certain services. The more rational move: use one or two no-annual-fee cards <em>like</em> a debit card—<strong>paid in full every month</strong>—purely to maintain a solid history, not to spend or chase points. The tool is neutral; the point is that you use it, not that it uses you.</div>
+</details>
+<details>
+<summary>What happens if I close a card I don't use?</summary>
+<div class="body">It usually nudges your score down: it cuts your total available limit (instantly raising utilization) and, years later, lowers your average account age. Unless the card carries a high annual fee you can't use, <strong>keeping it usually beats closing it</strong>—put a small recurring charge on it, auto-paid, to keep it active. If you must close one, close a newer card, never your oldest.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment / tax / legal advice; consult a licensed professional for your specific situation. The factor weights, score bands, and APR ranges here are <strong>illustrative descriptions</strong> at a point in time—FICO has multiple versions and credit rules change over time and by institution, so defer to official sources and your own issuer/bureau. US credit and accounts are the default background; China-specific differences are flagged.
+</div>
+</div>
+</body>
+</html>

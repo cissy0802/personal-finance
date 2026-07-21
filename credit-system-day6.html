@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 6 · 信用体系（美国）</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 6</span>
+<h1>信用体系（美国）</h1>
+<p class="sub">信用分不是道德分，是一套能被反向工程的算法——搞懂它怎么算，你就能几乎零成本地把它拉高。</p>
+<p class="meta">Personal Finance · The Credit System (US)　|　2026-07-21</p>
+</header>
+<div class="lede">
+很多人以为信用分衡量的是“你有多少钱”，其实它衡量的是<b>你还钱的可信度</b>——而这个数字直接决定你借钱的<b>价格</b>：房贷利率、车贷、信用卡，甚至在很多州还影响你的租房审批与车险保费。一个不那么好听的事实是：同样一笔三十年房贷，信用分差几十分，利息差可以是<b>五位数美元</b>。好消息是，它是算法，不是玄学。这一期把四件事讲透：FICO 五因子怎么算、怎么低成本建立与优化、信用卡积分是你在玩转还是被玩、以及身份盗窃防护（附中美征信差异）。
+</div>
+<h2 class="section">四块地基</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>FICO 怎么算：五个因子，两个占 65%</h3>
+<p class="en">How Your FICO Score Is Built</p>
+<div class="oneline">信用分是五个因子的加权和，其中两个就占了 65%——盯住这两个，性价比最高。</div>
+<p><span class="lbl">机制。</span>FICO（Fair Isaac Corporation，美国最主流的个人信用评分）范围 <strong>300–850</strong>。它把你的信用报告压缩成五个因子的加权和：<strong>还款记录</strong>与<strong>信用利用率</strong>两项加起来占 65%——也就是说，“按时还”和“别刷爆”几乎决定了全局。</p>
+<table>
+<thead><tr><th>因子</th><th>权重</th><th>怎么优化</th></tr></thead>
+<tbody>
+<tr><td>还款记录</td><td class="rate">35%</td><td class="yr">一次都别逾期</td></tr>
+<tr><td>信用利用率</td><td class="rate">30%</td><td class="yr">压到 30% 以下、最好 &lt;10%</td></tr>
+<tr><td>账龄</td><td class="rate">15%</td><td class="yr">老卡别关</td></tr>
+<tr><td>新信用 / 硬查询</td><td class="rate">10%</td><td class="yr">少申请、别扎堆</td></tr>
+<tr><td>信用类型组合</td><td class="rate">10%</td><td class="yr">顺其自然，别硬凑</td></tr>
+</tbody>
+</table>
+<p class="note">信用利用率（utilization）= 已用额度 ÷ 总额度。分数段大致：670+ 算“好”、740+ “很好”、800+ “顶尖”。数值随 FICO 版本略有差异，方向稳定。</p>
+<div class="miss"><span class="lbl">常见误区：</span>“查自己的信用分会掉分。” —— 不会。自查是<strong>软查询</strong>(soft pull)，不影响分；掉分的是你申请新信贷时对方发起的<strong>硬查询</strong>(hard pull)。放心随时查自己的分。</div>
+<div class="do"><span class="lbl">本周一试：</span>用银行 app 或发卡行免费查一次你的 FICO / VantageScore，记下五因子里被标红的那一项。<b>思考题：</b>你最弱的因子，是习惯问题还是时间问题？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>建立与优化：三个不花钱的杠杆</h3>
+<p class="en">Building and Optimizing Credit</p>
+<div class="oneline">建立信用靠时间与一致性；优化靠三个免费杠杆：按时、利用率、账龄。</div>
+<p><span class="lbl">机制。</span>信用是一段“证明你能负责任地借钱”的历史，从零起步需要时间——但把它拉高，几乎不用花钱，只需管好三件事。</p>
+<p><span class="lbl">可执行。</span></p>
+<ul class="ratios">
+<li><b>从零起步：</b>用<strong>担保信用卡</strong>(secured card，押金即额度)，或请信用好的家人把你加为<strong>授权用户</strong>(authorized user)，蹭上对方的账龄与记录。</li>
+<li><b>100% 按时：</b>哪怕只还最低额，也绝不 miss——设自动还款。逾期满 30 天才上报征信，但一次 30 天逾期能砸掉 50–100 分，且留档数年。</li>
+<li><b>压低利用率：</b>多张卡分散额度、主动申请提额、账单日前先还一部分；看的是账单快照，不是月底。</li>
+<li><b>别关最老的卡：</b>关卡会砍掉总额度（抬高利用率）并在几年后拉低平均账龄。</li>
+<li><b>少开新卡：</b>每次硬查询约 −5 到 −10 分、影响约 12 个月；但为同一笔房贷/车贷在 14–45 天内的多次查询，算作一次。</li>
+</ul>
+<div class="miss"><span class="lbl">常见误区：</span>“背一点余额能养信用。” —— 错得很贵。养信用只需<strong>按时还清全款</strong>，背余额只是白送利息（信用卡 APR，即年化利率，常在 20–24%）。利用率看的是账单日的快照，跟你是否留余额无关。</div>
+<div class="do"><span class="lbl">本周一试：</span>给所有卡设上自动全额还款；确认你最老的那张卡处于开启状态、偶尔小额消费保持活跃。<b>思考题：</b>你有没有为了“省年费”关掉过老卡，反而损失了账龄？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>信用卡积分：玩转 vs 被玩</h3>
+<p class="en">Credit Card Rewards: Playing vs. Being Played</p>
+<div class="oneline">只有全额还款的人才在玩积分；一旦背上余额，就是积分在玩你。</div>
+<p><span class="lbl">机制。</span>返现 / 积分（1–5%）是发卡行从商户手续费、以及“背余额者付的利息”里返给你的<strong>诱饵</strong>。银行真正的利润来自利息和年费。数学很硬：你拿 2% 返现，却背着 22% APR 的余额，每月净亏约 20%——积分连零头都补不上。</p>
+<p><span class="lbl">可执行。</span></p>
+<ul class="ratios">
+<li><b>铁律：</b>只有能<strong>每月全额还清</strong>，才碰任何奖励卡；做不到，先用最朴素的卡、专注还债。</li>
+<li><b>返现 vs 旅行积分：</b>返现简单、确定；旅行积分上限高但要会兑、且会被<strong>贬值</strong>（发卡行随时调整兑换比例）。</li>
+<li><b>年费卡：</b>只有当你真能<strong>用满</strong>它的权益（且这些权益是你本就要花的钱）时才划算，否则年费 &gt; 返现。</li>
+<li><b>别为积分多消费：</b>为“省 100”而多花 1000，是最经典的营销陷阱。</li>
+</ul>
+<div class="miss"><span class="lbl">常见误区：</span>“我为了攒里程多刷卡。” —— 除非那笔钱本来就要花，否则你为了 1–5% 的返利，付出了 100% 的本金。<strong>积分永远不该驱动消费</strong>，只该顺带回收你本就会有的支出。</div>
+<div class="do"><span class="lbl">本周一试：</span>挑一张你的卡，算：年费 −（你过去 12 个月真正用到的返现 + 权益）= 正还是负？负的就降级或注销。<b>思考题：</b>你的消费里，有多少是被“赚积分”悄悄放大的？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>身份盗窃防护（附中美征信差异）</h3>
+<p class="en">Identity-Theft Protection</p>
+<div class="oneline">最强的防护是免费的：把三大征信局的“信用冻结”全部打开。</div>
+<p><span class="lbl">机制。</span>身份盗窃 = 别人拿你的身份去开信贷、借你的名义欠债。美国有三大征信局：<strong>Equifax、Experian、TransUnion</strong>。<strong>信用冻结</strong>(credit freeze) 自 2018 年起在三家都<strong>免费</strong>——冻结后，任何人（包括你自己）都无法用你的信息开新账户，除非先临时解冻。这是事前上锁，比事后告警强得多。</p>
+<p><span class="lbl">可执行。</span></p>
+<ul class="ratios">
+<li>在三家<strong>各自冻结</strong>（各约 5 分钟，一次搞定）；日后真要申请信贷时临时解冻、办完再冻上。</li>
+<li>用官方的 <strong>AnnualCreditReport.com</strong> 定期免费拉三家报告（现已支持每周一次），核对有无陌生账户。</li>
+<li>轻量替代：设<strong>欺诈警报</strong>(fraud alert)，让机构在以你名义开户前先核实身份。</li>
+<li><b>中美差异：</b>中国没有 FICO。个人征信主要由<strong>央行征信中心</strong>（中国人民银行）统一管理，芝麻信用等是商业机构的<strong>私有评分</strong>，不等于官方征信；查询、纠错与“冻结/异议”流程都与美国不同。在美国建立的信用<strong>不会自动带到中国</strong>，反之亦然——跨境者两边都要从头建。</li>
+</ul>
+<div class="miss"><span class="lbl">常见误区：</span>“买个信用监控服务就能防身份盗窃。” —— 监控只是<strong>事后告警</strong>，冻结才是<strong>事前上锁</strong>；且冻结完全免费。很多付费监控，卖的是你本可以免费做的事。</div>
+<div class="do"><span class="lbl">本周一试：</span>今天就把三家征信局的信用冻结全部打开（各 5 分钟）。<b>思考题：</b>如果明天有人以你的名义开了张卡，你多久能发现？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高流动性这个群体的特殊处境。</p>
+<ul>
+<li><b>“厚钱包、薄信用档”是新移民高薪者的典型坑。</b> 收入很高、但美国信用史几乎为零，申房贷或租房时反被卡。别急着背余额刷分——用<strong>担保卡 / 授权用户 / 100% 按时还</strong>，几个月就能起步，一两年就能进优良段。</li>
+<li><b>高净值是身份盗窃的高价值目标。</b> 优先把三家征信局<strong>冻结</strong>，别只靠付费监控；你的名字值得被人冒用去开信贷，防线要前置。</li>
+<li><b>大额贷款前，别在窗口期乱动信用。</b> 申房贷前的几个月，别扎堆开新卡、做硬查询或大额刷卡抬高利用率——这会压低分、抬高你三十年房贷的利率，代价远超任何积分。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>信用分高，就等于财务健康吗？</summary>
+<div class="body">不。信用分只衡量“你还债的可靠度”，不衡量净值或储蓄。一个背着大量债、但每月都按时还的人，信用分可以很高，财务却很脆弱——一次失业就崩。信用分是你<strong>借钱的价格标签</strong>，不是财务体检表（体检看比率，见 Day 1）。别把高分当成有钱的证据。</div>
+</details>
+<details>
+<summary>完全不用信用卡、只用借记卡，行不行？</summary>
+<div class="body">在美国，这会让你的信用档太“薄”，申房贷、租房、办某些服务时吃亏。更理性的做法：用 1–2 张无年费卡，当借记卡来用——每月<strong>全额还清</strong>，只为维护一段良好的信用史，而不是为了消费或积分。信用工具本身中性，关键是你用它，而不是它用你。</div>
+</details>
+<details>
+<summary>关掉一张不用的卡会怎样？</summary>
+<div class="body">通常会小幅压低分：它砍掉了你的总可用额度（瞬间抬高利用率），并在若干年后拉低平均账龄。除非这张卡有你用不上的高年费，一般<strong>留着比关掉划算</strong>——每隔几个月用它买一笔小额、自动还清，让它保持活跃即可。要关就先关新的、别关最老的。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资 / 税务 / 法律建议；涉及你的具体情况请咨询持牌专业人士。文中的因子权重、分数段、APR 区间为特定时点的<strong>说明性描述</strong>——FICO 有多个版本、征信规则会随时间与机构调整，请以官方与你的发卡行/征信局为准。默认以美国征信与账户为背景，中美差异处已标注。
+</div>
+</div>
+</body>
+</html>
