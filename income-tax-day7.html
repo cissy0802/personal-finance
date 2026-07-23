@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 7 · 收入税机制</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 7</span>
+<h1>收入税机制</h1>
+<p class="sub">税几乎是大多数人一生最大的单笔开支——先把它的运作原理搞懂，再谈怎么合法少交。</p>
+<p class="meta">Personal Finance · How Income Tax Works　|　2026-07-23</p>
+</header>
+<div class="lede">
+一个不那么好听的真相：<b>税，通常是你这辈子花掉的最大一笔钱</b>，比房子、比养娃都多。可大多数人对它的理解停留在“年底 TurboTax 点几下”，甚至因为一个流传极广的误解——<b>“别加薪了，跳到更高税档反而更亏”</b>——而做出真正让自己吃亏的决定。这一期不教你钻空子，只把机制讲透：边际税率和有效税率到底差在哪、累进制怎么一档档算、你被税的其实不是全部收入、以及打工人(W-2)和承包商(1099)在税上到底差了什么。看懂机制，Day 8、9 讲的省税工具才用得对。
+</div>
+<h2 class="section">四块机制</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>边际税率 vs 有效税率</h3>
+<p class="en">Marginal vs Effective Tax Rate</p>
+<div class="oneline">“下一块钱”被税多少 ≠ 你整体被税多少，别把两者混为一谈。</div>
+<p><span class="lbl">机制。</span><strong>边际税率</strong>是你<strong>最后、最高那一块钱</strong>所在税档的税率——决定“再多赚 1 块、再省 1 块”的价值。<strong>有效税率</strong>是<strong>总税 ÷ 总收入</strong>，是你真实的平均税负。因为美国联邦税是累进的（见要点 2），有效税率<strong>永远低于</strong>边际税率，而且常常低很多。你日常被“税很重”的痛感来自边际；但衡量真实税负、算真实储蓄率，要用有效税率。</p>
+<p><span class="lbl">可执行。</span>做任何“值不值”的决策——加班、接私活、卖股、退休账户存钱——用<strong>边际税率</strong>；评估自己整体交了多少税、算到手可支配收入，用<strong>有效税率</strong>。两个数都写下来，你会发现有效税率往往比你以为的低。<span class="note">储蓄率（=没花掉、并投出去的钱占收入的比例，不是银行存款）对高收入者应按<strong>税后</strong>口径算，用有效税率把税先扣掉再算分子分母。</span></p>
+<div class="miss"><span class="lbl">常见误区：</span>“我在 24% 税档，所以我 24% 的收入都交税了。” —— 错。24% 只是你<em>最后一段</em>收入的税率；前面每一段按更低档累进，你的有效税率可能只有 15%–18%。</div>
+<div class="do"><span class="lbl">本周一试：</span>翻出去年报税表，用“总联邦税 ÷ 总收入”算出你的有效税率，再对照你所在的边际档，看看差多少。<b>思考题：</b>你之前是用哪个税率在心里做决策的？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>累进制怎么运作：“跳档更亏”是错的</h3>
+<p class="en">How Brackets Work — the Bracket Myth</p>
+<div class="oneline">进入更高税档，只有超出那条线的部分按新税率，绝不会让你整体到手变少。</div>
+<p><span class="lbl">机制。</span>税档是<strong>一层层的水桶</strong>，不是一个开关。收入从低往高填：第一段填进 10% 桶、下一段填 12% 桶……只有<strong>溢出到某档的那部分</strong>才按那档税率。所以“跨过某条线，全部收入都跳到高税率”从来不会发生。加薪后你到手的<strong>绝对金额一定增加</strong>，只是新增那部分的边际税率变高了。</p>
+<p><span class="lbl">可执行——一个算例。</span>假设你的边际正好从 22% 跨到 24%（示意税档，非当年精确值）。你多赚 <strong>$1,000</strong> 落在 24% 那档：只有这 $1,000 被扣 24% = $240，你<strong>净得 $760</strong>，其余收入的税一分没变。多赚永远是净赚。</p>
+<table>
+<thead><tr><th>示意联邦税档（单身·近似）</th><th>该档税率</th></tr></thead>
+<tbody>
+<tr><td class="yr">头 ~$11k</td><td class="rate">10%</td></tr>
+<tr><td class="yr">到 ~$47k</td><td class="rate">12%</td></tr>
+<tr><td class="yr">到 ~$100k</td><td class="rate">22%</td></tr>
+<tr><td class="yr">到 ~$192k</td><td class="rate">24%</td></tr>
+<tr><td class="yr">更高</td><td class="rate">32% / 35% / 37%</td></tr>
+</tbody>
+</table>
+<p class="note">数字为示意（近似 2025 单身档），逐年随通胀调整、已婚合报门槛更高，报税前请查当年官方数值。真正可能出现“多赚反而亏”的，不是税档本身，而是<strong>福利/补贴的悬崖</strong>（如某些抵免、医保补贴按收入卡线突然消失）——那是另一回事，见思考题。</p>
+<div class="miss"><span class="lbl">常见误区：</span>“奖金/加薪把我推进高税档，不如不要。” —— 几乎总是错的。你唯一该警惕的是<strong>基于收入卡线的福利悬崖</strong>，而不是税档；税档永远是“多赚多得”。</div>
+<div class="do"><span class="lbl">本周一试：</span>找出你当前边际税档的上沿离你还有多远，算一下再赚 $5,000 里你能净留多少。<b>思考题：</b>有没有哪个决策，你曾因为“怕进高税档”而放弃了？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>被税的不是全部收入：从总收入到应税收入</h3>
+<p class="en">Gross → AGI → Taxable Income</p>
+<div class="oneline">税率乘的是“应税收入”，不是工资总额；中间隔着两层可以合法缩小的漏斗。</div>
+<p><span class="lbl">机制。</span>税不是直接乘在你的 gross（税前总收入）上，而是经过两道收窄：<strong>总收入 −「线上调整」= AGI（调整后总收入，Adjusted Gross Income）</strong>；<strong>AGI −「标准或逐项扣除」= 应税收入</strong>，税率才乘上去。线上调整包括传统 401(k)/IRA 供款、HSA(健康储蓄账户)供款等——这些钱在算税前就被挪出去了。扣除则是标准扣除（2025 单身约 $15,000，逐年调整、已婚更高）与逐项扣除二选一，取大的。</p>
+<div class="formula">总收入 − 线上调整 = AGI − 扣除 = 应税收入 × 税档 = 税</div>
+<p><span class="lbl">可执行。</span>省税的杠杆几乎都在<strong>缩小应税收入</strong>这一步：往税前退休账户和 HSA 多放钱，直接把最高那几块钱从 24%/32% 档里拿走——这是 Day 8 的主题。先记住这个漏斗，你才知道每个工具在动哪一层。</p>
+<div class="miss"><span class="lbl">常见误区：</span>“我年薪 $150k，就按 $150k 交税。” —— 不是。扣掉税前供款和扣除后，真正进入税档计算的应税收入通常明显更低，有效税率也随之下降。</div>
+<div class="do"><span class="lbl">本周一试：</span>在工资单或报税表上找到你的 AGI 和应税收入，和 gross 对比，看这两道漏斗替你收窄了多少。<b>思考题：</b>哪一层你还没用满？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>W-2 vs 1099：打工人与承包商的税差</h3>
+<p class="en">Employee (W-2) vs Contractor (1099)</p>
+<div class="oneline">同样的收入，谁替你预扣税、谁多付一半工资税、谁能扣成本，规则完全不同。</div>
+<p><span class="lbl">机制。</span><strong>W-2</strong>是雇员：雇主每次发薪就替你<strong>预扣(withhold)</strong>联邦/州所得税，并<strong>替你付一半 FICA（社保+医保工资税，共 15.3% 里的一半）</strong>，你几乎不用自己操心缴税节奏。<strong>1099</strong>是独立承包商/自雇：没人替你预扣，你要<strong>自付全部 15.3% 自雇税</strong>（雇主那半也落你头上），并且通常要<strong>按季预缴(quarterly estimated tax)</strong>，漏缴会罚。代价的另一面：1099 能扣除真实经营成本、可开 SEP-IRA/Solo 401(k) 等更大额度的退休账户。</p>
+<div class="miss"><span class="lbl">常见误区：</span>“1099 时薪报价高，等于赚得多。” —— 要先扣掉多出的 ~7.65% 自雇税、自付的医保、无带薪假、需自理退休账户。1099 报价通常要比 W-2 高<strong>20%–30%</strong>才算打平。</div>
+<div class="do"><span class="lbl">本周一试：</span>若你有任何 1099/私活收入，确认你在按季预缴、并把该缴的税单独存起来（别花掉）。<b>思考题：</b>如果同一份活给你 W-2 和 1099 两种报价，你会怎么算真实差额？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>RSU 的预扣常常不够，会给你留一张补税单。</b> RSU(限制性股票单位)到账按“补充工资”默认只预扣 <strong>22% 联邦</strong>，但你的边际档很可能是 32%–37%——差额报税季要补。到账当季就估算缺口、单独存起来或调高预扣，别被 4 月的税单打个措手不及。</li>
+<li><b>你的边际税率是叠加的，别只看联邦。</b> 高薪科技聚集地往往还有高<strong>州税</strong>（加州最高档两位数），叠上联邦 + Medicare 附加税(收入超 $200k 那部分 +0.9%)，真实边际可以逼近 50%。所有“值不值”的决策都要用这个<strong>合并边际税率</strong>。</li>
+<li><b>有私活/咨询收入就是 1099 世界。</b> 顾问费、开源赞助、Kaggle 奖金都要自付自雇税、按季预缴；把它和 W-2 工资分开记账，别到年底才发现欠了一大笔。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>既然税档不会让你“多赚反亏”，那什么情况真的会？</summary>
+<div class="body">是<strong>基于收入卡线的悬崖</strong>，不是税档本身。某些抵免/补贴（如医保市场补贴、部分教育或育儿抵免、Roth 供款资格、学生贷款减免的收入线）在 AGI 越过一个阈值时<strong>骤降或消失</strong>，那一小段的“隐含边际税率”可以非常高甚至超过 100%。所以真正要盯的是这些 phase-out 门槛，而不是普通税档——普通税档永远是多赚多得。</div>
+</details>
+<details>
+<summary>有效税率低，是不是就说明税其实不重？</summary>
+<div class="body">别被平均数安慰。做<strong>边际决策</strong>时（该不该多存税前账户、该不该加班、卖不卖股），起作用的是又高又叠加的边际税率，那才是你能撬动的杠杆。有效税率告诉你“整体交了多少”，边际税率告诉你“下一步动作值多少”——省税几乎全发生在边际这一侧。</div>
+</details>
+<details>
+<summary>中美在个人所得税上最大的机制差别是什么？</summary>
+<div class="body">美国以<strong>年度自主申报</strong>为核心：你（或会计）主动报、多退少补，扣除和账户选择空间大，责任也在你。中国综合所得同样累进（3%–45%），但很大程度靠<strong>单位代扣代缴</strong>加汇算清缴，个人主动规划空间相对小。跨境的人尤其要注意：美国按<strong>公民/税务居民全球征税</strong>，海外账户有 FBAR/FATCA 申报义务——这些坑本系列 Day 21 专门讲。</div>
+</details>
+<details>
+<summary>该不该为了少交税而刻意少赚？</summary>
+<div class="body">几乎不该。税是<strong>赚到钱之后</strong>才发生的成本，税率再高也 &lt;100%，多赚永远净留一部分。正确的顺序是：先把收入做大，再用合法工具（税前账户、扣除、抵免、时机）压低<strong>应税</strong>那部分。为了避税而放弃收入，是被“边际税率痛感”骗了。唯一例外仍是前面说的福利悬崖。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化税务 / 投资 / 法律建议；你的具体情况请咨询持牌税务顾问(CPA/EA)。文中税档、扣除额、工资税比例均为<strong>示意性近似值</strong>（约 2025 单身申报口径），逐年随通胀与立法调整，报税前请以 IRS 当年官方数字为准。默认以美国税制为背景，中美差异处已标注。
+</div>
+</div>
+</body>
+</html>
