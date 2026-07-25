@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 8 · Map of Tax-Advantaged Accounts</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",system-ui,sans-serif;
+  line-height:1.72;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:15px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+td.step{font-weight:700;color:#fff;background:var(--teal);text-align:center;width:34px;border-radius:0}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 8</span>
+<h1>Map of Tax-Advantaged Accounts</h1>
+<p class="sub">What 401(k)s, IRAs, Roth, HSAs, and 529s each solve—and the order your money should fill them.</p>
+<p class="meta">Personal Finance · Tax-Advantaged Accounts　|　2026-07-25</p>
+</header>
+<div class="lede">
+Day 7 covered how tax is computed: the rates multiply your <b>taxable</b> income, not your gross pay. This issue covers the <b>containers</b> that legally shrink that taxable number. The uncomfortable truth: most people aren't failing to save—they're <b>saving into the wrong container and overpaying tax for decades</b>. These accounts aren't investments; they're <b>tax wrappers</b>. The same money in the same investment, wrapped differently, can land you in a very different place thirty years out. Here's the whole map: only three tax treatments exist, what the pre-tax vs Roth choice is actually comparing, the legal doors left once your income is too high, and a waterfall for where each dollar should go.
+</div>
+<h2 class="section">Four maps</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Learn the Tax Treatments, Not the Account Names</h3>
+<p class="en">Three treatments, one exception</p>
+<div class="oneline">There are a dozen account names but only three tax treatments—plus one exception.</div>
+<p><span class="lbl">Mechanism.</span> 401(k) (employer retirement plan), IRA (Individual Retirement Account), Roth, HSA, 529—the names sprawl, the treatments don't. There are three: <strong>pre-tax</strong> (deducted from this year's taxable income, grows untaxed, taxed as ordinary income when withdrawn—skip tax now, pay later); <strong>Roth</strong> (funded with already-taxed money, grows untaxed, qualified withdrawals fully tax-free—pay now, skip later); and <strong>taxable</strong> (an ordinary brokerage account: no limits, no breaks, dividends and realized capital gains taxed in the year they happen). The one exception is the <strong>HSA</strong> (Health Savings Account): deductible going in, untaxed growth, and tax-free out for qualified medical costs—<strong>triple tax-free</strong>, available only if you're on a high-deductible health plan (HDHP).</p>
+<p><span class="lbl">Actionable.</span> The magnitude of the limits (2025 figures; indexed annually—check the official current-year numbers before filing):</p>
+<table>
+<thead><tr><th>Container</th><th>Annual limit, order of magnitude</th></tr></thead>
+<tbody>
+<tr><td class="yr">401(k) employee deferral</td><td class="rate">$23,500 (plus $7,500 if 50+)</td></tr>
+<tr><td class="yr">401(k) total annual additions</td><td class="rate">$70,000 (incl. employer match &amp; after-tax)</td></tr>
+<tr><td class="yr">IRA</td><td class="rate">$7,000 ($8,000 if 50+)</td></tr>
+<tr><td class="yr">HSA (requires HDHP)</td><td class="rate">$4,300 self-only / $8,550 family</td></tr>
+<tr><td class="yr">529 (education)</td><td class="rate">No federal cap; bounded by the annual gift exclusion</td></tr>
+</tbody>
+</table>
+<p class="note">These limits <strong>expire unused</strong>: 401(k) at December 31, IRA/HSA at the following year's filing deadline. Miss the window and it's gone permanently—there's no catching up. <strong>US–China note</strong>: mainland China's analogues are the personal pension account (¥12,000/year cap, contributions deductible, taxed at a flat 3% on withdrawal) and enterprise annuities; there is no direct equivalent of the HSA or 529.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Roth is great because the growth is tax-free." Growth inside a pre-tax account is <strong>equally</strong> untaxed. The only difference between them is which end you pay tax on—not whether growth is sheltered.</div>
+<div class="do"><span class="lbl">Try this Monday:</span> File every account you own into one of the three treatments and see whether your money is overwhelmingly piled in "taxable." <b>Prompt:</b> what percentage of this year's 401(k)/HSA room have you actually used?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Pre-Tax vs Roth: You're Comparing Two Rates</h3>
+<p class="en">Pre-Tax vs Roth</p>
+<div class="oneline">One variable decides it—your marginal rate now versus your rate when you withdraw.</div>
+<p><span class="lbl">Mechanism.</span> If both rates are identical, pre-tax and Roth are <strong>mathematically equivalent</strong> (taxing before growth or after growth multiplies out the same). So the only thing that decides it is the <strong>rate differential</strong>: high now, lower later → pre-tax wins (deduct at your most expensive bracket, pay it back at a cheaper one). Low now, higher later (early career, a gap year, a low-income startup year) → Roth wins.</p>
+<p><span class="lbl">Actionable.</span> Three things:<br>
+① <strong>Default rule</strong>: if you're working and sitting at a 24%+ marginal bracket, favor pre-tax in the 401(k); if you're at 12%/22% or this year's income is clearly below your long-run expectation, favor Roth.<br>
+② <strong>An overlooked asymmetry</strong>: at the cap, Roth holds more. $7,000 of Roth is purely yours; $7,000 of pre-tax has a future tax bill embedded in it.<br>
+③ <strong>Tax diversification</strong>: nobody knows the tax code thirty years out. Holding both kinds of bucket lets you dial year by year which one you draw from in retirement, actively controlling which bracket you land in. That optionality is itself worth something.</p>
+<p class="note">While we're here, a calibration on a widely repeated rule: "save 15% of gross income (match included)." Rules <strong>anchored to income</strong> like this systematically <strong>overstate</strong> what's achievable for high earners, people in high marginal brackets, and those paid largely in equity—pre-tax income overstates the money actually available (the tax burden rises faster than income), and the rule quietly assumes you earn today's number for a whole career. The sturdier yardsticks are <strong>expense-based</strong>: your <strong>savings rate</strong> (the share of income you didn't spend and <em>did</em> invest—cash sitting in a bank account doesn't count) and <strong>net worth ÷ annual spending</strong>. A percentage rule is a fine starting point, a poor progress benchmark.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "My rate is high now, so everything goes pre-tax." Go all-in on pre-tax and you retire with one enormous bucket where every dollar out is ordinary income—plus RMDs (Required Minimum Distributions, forced withdrawals once you hit the age), which can push you into a higher bracket than you planned for.</div>
+<div class="do"><span class="lbl">Try this Monday:</span> Work out your <strong>combined</strong> federal + state marginal rate, keep it next to your 401(k) portal, then pick your deferral type. <b>Prompt:</b> how many of your future retirement income sources are tax-free?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>Once Your Income Is Too High: Backdoor and Mega-Backdoor</h3>
+<p class="en">Backdoor &amp; Mega-Backdoor Roth</p>
+<div class="oneline">High income closes Roth's front door. The back doors are legal—but one rule can cost you badly.</div>
+<p><span class="lbl">Mechanism.</span> Cross the thresholds and two things happen at once: you can no longer contribute directly to a Roth IRA (in 2025 it phases out for a single filer at roughly $150k–$165k MAGI—Modified Adjusted Gross Income, a variant of AGI), and traditional IRA deductibility disappeared well before that. Two legal doors remain. <strong>Backdoor Roth</strong>: make a <strong>non-deductible</strong> contribution to a traditional IRA, then convert it to Roth, reporting it on Form 8606. <strong>Mega-backdoor Roth</strong>: make <strong>after-tax</strong> contributions inside the 401(k) (note: after-tax, not Roth deferral), then do an in-plan Roth conversion or in-service rollover. Your room = total annual additions − your deferrals − employer match, which for many people is tens of thousands of extra Roth dollars a year. <strong>It only exists if your plan supports both after-tax contributions and prompt conversion</strong>—no support, no door.</p>
+<p><span class="lbl">Actionable—the pro-rata trap (the expensive, common mistake).</span> When you convert, the tax code treats <strong>every</strong> traditional/Rollover/SEP/SIMPLE IRA in your name as <strong>one pool</strong> and taxes the conversion in proportion to the pre-tax balance. Illustrative example: if you already hold $93,000 of pre-tax IRA money and add $7,000 of non-deductible money to convert, only 7% of the conversion comes out tax-free—the other 93% is taxable this year.</p>
+<div class="formula">tax-free share = non-deductible basis ÷ total IRA balance</div>
+<p>The fix: <strong>before</strong> converting, roll the pre-tax IRA balance into your current employer's 401(k) (if the plan accepts rollovers in) to empty the pool—what counts is the balance on December 31.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "A 'backdoor' sounds like a loophole—will it get flagged?" It's a routine move with an explicit reporting path. The real risks aren't compliance; they're <strong>botching the pro-rata math</strong> and "converting the money, then forgetting to actually invest it, so it sat in cash for three years."</div>
+<div class="do"><span class="lbl">Try this Monday:</span> Search your 401(k) plan document for "after-tax contributions" and "in-plan Roth conversion" to confirm whether the mega-backdoor exists for you. <b>Prompt:</b> is there a forgotten rollover IRA in your name blocking your back door?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>The Funding Waterfall: What Order Money Should Flow</h3>
+<p class="en">The Funding Waterfall</p>
+<div class="oneline">Get the order wrong and you're volunteering to overpay tax—or leaving free money on the table.</div>
+<p><span class="lbl">Mechanism.</span> Each tier's "return" is a different kind of thing: the employer match is <strong>immediate and certain</strong>, paying off high-rate debt is a <strong>risk-free</strong> certain return, tax-advantaged room is a scarce resource that <strong>expires unused</strong>, and taxable accounts trade tax efficiency for flexibility. Rank by certainty and scarcity and you get a default waterfall.</p>
+<table>
+<thead><tr><th></th><th>Tier</th><th>Why here</th></tr></thead>
+<tbody>
+<tr><td class="step">1</td><td class="yr">401(k) up to the full employer match</td><td>Free money; nothing competes</td></tr>
+<tr><td class="step">2</td><td class="yr">Pay off high-rate debt (~7%+)</td><td>Risk-free certain return (Day 5)</td></tr>
+<tr><td class="step">3</td><td class="yr">Emergency fund, 3–6 months</td><td>The foundation under every tier above (Day 3)</td></tr>
+<tr><td class="step">4</td><td class="yr">Max the HSA (if on an HDHP)</td><td>The only triple-tax-free container</td></tr>
+<tr><td class="step">5</td><td class="yr">Max the rest of the 401(k)</td><td>Type chosen per Point 2</td></tr>
+<tr><td class="step">6</td><td class="yr">Max the IRA / backdoor Roth</td><td>Small room, but it expires</td></tr>
+<tr><td class="step">7</td><td class="yr">Mega-backdoor (if the plan allows)</td><td>The largest block of Roth space</td></tr>
+<tr><td class="step">8</td><td class="yr">529 / education savings</td><td>After your own retirement</td></tr>
+<tr><td class="step">9</td><td class="yr">Taxable brokerage</td><td>No cap, available any time</td></tr>
+</tbody>
+</table>
+<p class="note">This is a default ordering, not a law. Things that legitimately reorder it: a state income-tax deduction for 529 contributions where you live (tier 8 may move up); planning to retire before 59½, which needs a taxable "bridge" (tier 9 may move up); a home purchase soon, where liquidity wins. And <strong>education after retirement</strong> has a hard rationale: you can borrow for school, you cannot borrow for retirement.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Front-load the 401(k) in January." Filling it too fast can cost you: if your employer matches per paycheck and the plan has no true-up provision, hitting the cap mid-year leaves the remaining months with no deferral—and no match.</div>
+<div class="do"><span class="lbl">Try this Monday:</span> Log into your 401(k) portal and confirm two things—the match formula, and whether the plan has a true-up. <b>Prompt:</b> which tier of the waterfall are you currently stuck on?</div>
+</div>
+<div class="tech">
+<h4>A note for high-earning tech workers</h4>
+<p class="cap">One per issue, on the specific situation of equity comp / high tax / volatile income.</p>
+<ul>
+<li><b>The mega-backdoor is the most-wasted room in a big-tech 401(k).</b> Plenty of tech-company plans support after-tax contributions <em>and</em> automatic in-plan conversion—an extra block of Roth space every year that most people never switch on. Confirm the door exists before optimizing anything else.</li>
+<li><b>The year you change jobs, check for excess deferrals.</b> The employee deferral cap is <strong>per person</strong>, not per plan; two employers each withholding on their own schedule makes it easy to exceed. If you do, you must ask the plan to return the excess before the filing deadline, or the same dollars get taxed twice.</li>
+<li><b>Cash from vesting equity is the natural fuel for filling tax-advantaged room.</b> Proceeds from vested RSUs (Restricted Stock Units) and sold ESPP (Employee Stock Purchase Plan) shares default straight into a taxable account. Top off this year's unused tax-advantaged room first, then talk about the rest.</li>
+<li><b>Don't let a forgotten rollover IRA block the back door.</b> Rolling a former employer's 401(k) into an IRA on the way out is common, but it contaminates your pro-rata math for years. For a high earner, the default should be rolling into your <strong>current employer's 401(k)</strong>, not an IRA.</li>
+</ul>
+</div>
+<h2 class="section">Deeper questions</h2>
+<details>
+<summary>Is there a right answer to pre-tax vs Roth?</summary>
+<div class="body">No. You're betting between two rates that are both uncertain: your future rate depends on your retirement spending, your state, your other income, and a tax code thirty years out. So the honest answer is "hold some of each"—tax diversification isn't fence-sitting, it's the sensible allocation when you admit your forecasting is limited. Only one thing is certain: <strong>this year's room expires</strong>, and agonizing over the type while contributing nothing is the most expensive choice available.</div>
+</details>
+<details>
+<summary>The money is locked until 59½—what if I want to retire early?</summary>
+<div class="body">"Locked" is overstated, but every exit has conditions and costs. <strong>Rule of 55</strong>: leave a job at 55 or later and you can withdraw penalty-free from <em>that employer's</em> 401(k). <strong>72(t)/SEPP</strong>: substantially equal periodic payments by formula—change it midstream and penalties are retroactive, so flexibility is near zero. <strong>Roth conversion ladder</strong>: convert pre-tax to Roth year by year; each converted amount is accessible five years later, so it requires planning half a decade ahead. And Roth IRA <strong>contributions</strong> (not earnings) can always be withdrawn tax- and penalty-free. Most early retirees still lean on a taxable account as the bridge—which is exactly why tier 9 sometimes moves up.</div>
+</details>
+<details>
+<summary>What if the kid in the 529 never goes to college?</summary>
+<div class="body">Several exits: change the beneficiary (another child, or yourself); use it for graduate school, some vocational programs, or capped K-12 tuition; and since SECURE 2.0 you can roll up to a <strong>$35,000 lifetime</strong> amount into the beneficiary's Roth IRA—provided the account has been open 15 years and it consumes that year's Roth room. Do none of that and a non-qualified withdrawal is taxed plus a 10% penalty <strong>on the earnings only</strong>; the principal isn't penalized. The 529's risk is usually overstated—but it still belongs after your own retirement.</div>
+</details>
+<details>
+<summary>Could these doors be closed?</summary>
+<div class="body">Possibly. The backdoor and mega-backdoor have been named in legislative proposals more than once; they're still here, but nothing guarantees they stay. The reasonable posture: <strong>use them in the years you can</strong> (the room expires, so waiting earns you nothing), while not staking your entire retirement plan on a channel that could close. If the rules change, change route—which is precisely why you want to understand the three tax treatments rather than memorize account names.</div>
+</details>
+<details>
+<summary>So what should I actually buy inside these accounts?</summary>
+<div class="body">Out of scope here. This site covers <strong>containers and setup</strong>: which to open, how much to contribute, in what order, and how to automate it. What assets go inside—and how to place assets across accounts with different tax treatments—belongs to the investing repo (cross-ref investing Day 46). Keep the two questions separate and you'll notice that "choosing the account" is far simpler, and far more certain in its payoff, than "choosing the holding."</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not individualized investment, tax, or legal advice; consult a licensed professional (CPA/EA) about your situation. Contribution limits and income thresholds here are <strong>illustrative 2025 figures</strong>, indexed annually and subject to legislation—use the IRS's official current-year numbers before acting or filing; the pro-rata example is an illustrative model under stated assumptions. The default context is US accounts and tax law, with US–China differences flagged; asset selection inside these accounts belongs to the investing repo.
+</div>
+</div>
+</body>
+</html>
