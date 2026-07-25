@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 9 · Legal Tax Reduction</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+td.step{font-weight:700;color:#fff;background:var(--teal);text-align:center;width:34px;border-radius:0}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 9</span>
+<h1>Legal Tax Reduction</h1>
+<p class="sub">Deductions vs credits, whether itemizing still pays, how to harvest losses, what asset to donate—and why tax is a multi-year account, not an annual one.</p>
+<p class="meta">Personal Finance · Legal Tax Reduction　|　2026-07-25</p>
+</header>
+<div class="lede">
+Day 8 covered the <b>containers</b>—the tax-advantaged accounts. This issue covers what's left outside them. The uncomfortable truth: most people's mental model of "tax saving" comes from overheard tricks—buy a house for the write-off, open a company and run personal spending through it—and for someone on a paycheck those are either useless or illegal. What actually saves money is far more ordinary: knowing a deduction from a credit, working out whether you should itemize at all, turning paper losses into a tax asset when markets fall, and giving the right asset in the right year. Plus one deeper shift: <b>tax is a lifetime account, not something settled one year at a time</b>.
+</div>
+<h2 class="section">Four things that actually work</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Deductions Shrink Income, Credits Shrink Tax</h3>
+<p class="en">Deductions vs credits</p>
+<div class="oneline">The same dollar is usually worth several times more as a credit—check credits first, deductions second.</div>
+<p><span class="lbl">Mechanism.</span> A <strong>deduction</strong> comes off your <strong>taxable income</strong>, so what it's worth depends on your marginal rate (Day 7): $1,000 deducted in the 24% bracket saves $240. A <strong>credit</strong> comes off the <strong>tax itself</strong>, dollar for dollar—$1,000 is $1,000, whatever bracket you're in. Credits come in two flavors: <strong>refundable</strong> (once tax hits zero, the rest comes back as cash) and <strong>nonrefundable</strong> (it can only take you to zero).</p>
+<table>
+<thead><tr><th>Your marginal rate</th><th>$1,000 deduction saves</th><th>$1,000 credit saves</th></tr></thead>
+<tbody>
+<tr><td class="yr">12%</td><td class="rate">$120</td><td class="rate">$1,000</td></tr>
+<tr><td class="yr">24%</td><td class="rate">$240</td><td class="rate">$1,000</td></tr>
+<tr><td class="yr">35%</td><td class="rate">$350</td><td class="rate">$1,000</td></tr>
+</tbody>
+</table>
+<p class="note">Illustrative model: federal only, ignoring state tax and income phase-outs.</p>
+<p><span class="lbl">Actionable.</span> Two ordering rules. ① <strong>Above-the-line first.</strong> The HSA, a deductible traditional IRA when you qualify, student-loan interest, self-employed retirement plans—these come off <em>before</em> AGI (Adjusted Gross Income) is computed. AGI is the denominator behind a pile of other thresholds, so pushing it down buys eligibility elsewhere too; that makes these worth more than itemized deductions. ② <strong>Nearly every credit has an income ceiling.</strong> Child, education, and energy credits mostly phase down to zero as income rises, and high earners are often simply out—confirm eligibility before you plan around one.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "It's deductible, so it's basically free." Spending $1,000 to save $240 still leaves you $760 out of pocket. A deduction never makes a purchase you didn't want worth making; it only makes something you were going to buy anyway a bit cheaper.</div>
+<div class="do"><span class="lbl">Try this week:</span> Pull last year's return, find the AGI line and the total-tax line, and compute your effective rate. <b>Question:</b> Of everything that cut your bill last year, was the biggest item a credit or a deduction?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Standard vs Itemized: Most People No Longer Itemize</h3>
+<p class="en">Standard vs itemized</p>
+<div class="oneline">You take the larger of the two—unless you can stack several years of giving into one.</div>
+<p><span class="lbl">Mechanism.</span> At filing you take either the <strong>standard deduction</strong> or your <strong>itemized</strong> total, whichever is bigger. The 2017 tax law raised the standard deduction sharply and capped SALT (State And Local Tax), and the share of filers who itemize fell from roughly 30% to around 10%. Itemizing is essentially four things: mortgage interest, SALT (state income tax plus property tax), charitable gifts, and out-of-pocket medical costs above 7.5% of AGI.</p>
+<p><span class="lbl">Actionable.</span> 2025 magnitudes: the standard deduction is roughly <strong>$15,750 (single) / $31,500 (married filing jointly)</strong>; the SALT cap rises to <strong>$40,000</strong> for 2025 and phases back down at higher incomes—this one carries a sunset provision, so check the current-year rule before filing. The test is one line:</p>
+<div class="formula">Mortgage interest + SALT + gifts + excess medical &gt; standard deduction ?</div>
+<p>If you land just short of that line year after year, use <strong>bunching</strong>: pile two or three years of charitable giving—and any property-tax payment whose timing you control—into a single year, itemize that year, and take the standard deduction in the others. Giving is the easiest piece to bunch; the tool for it is in Point 4.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "A mortgage is a tax break, so buying beats renting." Mortgage interest only creates value if you itemize <strong>and</strong> only for the part of your total that exceeds the standard deduction—for many people that part is zero. Don't let the tax tail wag the housing dog (Days 15/16).</div>
+<div class="do"><span class="lbl">Try this week:</span> Add up last year's mortgage interest, state tax, property tax, and gifts, and compare the total with the standard deduction. <b>Question:</b> If you combined two years of giving into one, would you clear the line?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>Taxable Accounts: Holding Periods and Loss Harvesting</h3>
+<p class="en">Holding periods &amp; tax-loss harvesting</p>
+<div class="oneline">In a taxable account, your bill depends heavily on when you sell and which lot you sell.</div>
+<p><span class="lbl">Mechanism.</span> Hold <strong>more than a year</strong> and gains are taxed at long-term capital-gains rates (0 / 15 / 20%, plus the 3.8% NIIT—Net Investment Income Tax—above MAGI of $200k single / $250k joint, thresholds that aren't inflation-indexed). Sell inside a year and it's ordinary income, a gap that can run well over ten percentage points. Losses offset gains of the same type first, then the other type; up to <strong>$3,000</strong> of what's left offsets ordinary income each year, and the remainder carries forward indefinitely. <strong>Tax-loss harvesting</strong> is deliberately realizing a paper loss during a drawdown to convert it into that tax asset, while buying something not "substantially identical" so you stay invested.</p>
+<p><span class="lbl">Actionable—three rules.</span> ① <strong>The wash-sale rule:</strong> buy a substantially identical security within 30 days before or after the sale (a 61-day window) and the loss is disallowed. It follows <em>you</em>, including your spouse's accounts and your IRA—repurchase inside an IRA and the loss is <strong>permanently gone</strong>, not deferred. ② <strong>Specific ID:</strong> change your broker's default cost-basis method away from FIFO, or it will sell your cheapest lot for you and hand you a bill you didn't need. ③ <strong>Harvesting defers tax, it doesn't erase it:</strong> the replacement has a lower basis, so the future gain is bigger. The real benefit is pushing tax into the future—possibly into a lower-rate year—plus that $3,000 a year against ordinary income.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "It's down, so harvest it." If you're in the 0% long-term capital-gains bracket this year (a low-income year), harvesting losses is worth almost nothing. Consider the opposite move: realize <strong>gains</strong> and buy back, stepping up your basis for free.</div>
+<div class="do"><span class="lbl">Try this week:</span> Log into your brokerage and switch the default cost-basis method to specific ID. <b>Question:</b> Was your last sale long-term or short-term? What was the difference worth?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>Giving, Done Right—and the Multi-Year View</h3>
+<p class="en">Charitable giving &amp; the multi-year view</p>
+<div class="oneline">For the same gift, what you give and which year you give it matter more than how much.</div>
+<p><span class="lbl">Mechanism.</span> Three tools:<br/>
+① <strong>Give appreciated shares, not cash.</strong> Securities held more than a year, donated directly to a charity, are deductible at <strong>fair market value</strong>, and the capital-gains tax on the embedded gain is never paid—one gift, two savings. The deduction is capped as a share of AGI (roughly 60% for cash, 30% for appreciated securities), with a five-year carryforward.<br/>
+② <strong>DAF</strong> (Donor-Advised Fund): you take the deduction the year you fund it, then grant the money out to specific charities over time. It's the natural instrument for the bunching in Point 2.<br/>
+③ <strong>QCD</strong> (Qualified Charitable Distribution): from age 70½ you can send money straight from an IRA to a charity (on the order of $100k per person per year, indexed). It never enters your income and it counts toward your RMD (Required Minimum Distribution)—especially valuable if you take the standard deduction, since it sidesteps the itemizing question entirely.</p>
+<p><span class="lbl">Actionable—smooth the tax across years.</span> Real tax planning isn't "how much can I deduct this year," it's lowering the <strong>lifetime</strong> bill: in trough years (a gap year, an early startup year, the window after retiring but before Social Security and RMDs) do Roth conversions and realize gains; in peak years (a big vest, a bonus year) concentrate deductions and giving. The same action in the right year is worth roughly twice as much.</p>
+<p class="note"><strong>Calibrating a common rule of thumb</strong>—"give 10% of your income away." Rules <strong>anchored to income</strong> systematically <strong>overstate</strong> available room for people with high incomes, high marginal rates, or equity-heavy pay: gross income is far from take-home (tax rises super-linearly with income), and the rule quietly assumes you earn today's income for life. For gauging your own capacity, <strong>spending-based</strong> yardsticks are sturdier: your <strong>savings rate</strong> (money you didn't spend <em>and</em> invested, as a share of income—cash sitting in a bank account doesn't count) and <strong>net worth ÷ annual spending</strong>. How much to give is a values question; a percentage rule works as a starting point, not a scoreboard.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Giving saves tax, so more giving is a better deal." A donated dollar saves at most about 37 cents; you're still out the rest. The reason to give is that you want to support the thing. Tax only decides <strong>which asset</strong> and <strong>which year</strong>.</div>
+<div class="do"><span class="lbl">Try this week:</span> If you hold securities with a meaningful gain owned more than a year, make your next gift in shares rather than cash. <b>Question:</b> Which of the next five years is most likely to be your income trough?</div>
+</div>
+<div class="tech">
+<h4>A note for high-earning tech workers</h4>
+<p class="cap">One per issue, on the specific situation of equity comp / high tax / volatile income.</p>
+<ul>
+<li><b>Withholding on vested equity is often short—fix the shortfall before optimizing anything.</b> Supplemental income such as RSUs (Restricted Stock Units) is withheld at a flat 22% federal by default (37% on amounts above $1M in a year), while your marginal bracket may be 32–37%. The gap only surfaces at filing. Use the <strong>safe harbor</strong> to avoid underpayment penalties: pay in 110% of last year's tax (the threshold that applies at higher AGI) or 90% of this year's.</li>
+<li><b>Before harvesting a loss, look at next month's equity calendar.</b> An automatic ESPP (Employee Stock Purchase Plan) purchase or a dividend reinvestment can land inside that 61-day wash-sale window—especially when the thing you're harvesting is your own company's stock or the same index fund. An automatic buy voiding the whole loss is the most avoidable mistake there is.</li>
+<li><b>Concentrated holdings and giving fit together naturally.</b> That block of very-low-basis company stock is the best asset you own to donate: deductible at market value, with the embedded gain never taxed—and it quietly reduces the double concentration of having both your paycheck and your portfolio at one employer.</li>
+<li><b>Don't assume you itemize just because you always did.</b> With the SALT cap, high earners in high-tax states often gain little from itemizing and do better on the standard deduction. The AMT (Alternative Minimum Tax) exposure from ISOs is a separate thread—Day 11.</li>
+</ul>
+</div>
+<h2 class="section">Deeper questions</h2>
+<details>
+<summary>Why do most of the tax tricks you hear about not apply?</summary>
+<div class="body">Because nearly all of them attach to <strong>owning a business or property</strong>—self-employed retirement plans, depreciation, the QBI deduction. On a W-2 the room is far smaller, and the effective moves are few: fill the tax-advantaged room (Day 8), manage holding periods, harvest losses, donate appreciated assets, smooth tax across years. That's more or less the whole list; most of what's left is complexity mistaken for return.</div>
+</details>
+<details>
+<summary>What about registering a company and running personal spending through it?</summary>
+<div class="body">No. Deductible expenses must be "ordinary and necessary" <em>business</em> expenses; dressing personal consumption up as business spending is fraud, not planning. A real side business does open real tools (a Solo 401(k), a SEP-IRA, possibly the QBI deduction), but the registration, compliance, bookkeeping, and audit-risk costs are equally real. Manufacturing a business purely for tax reasons is almost always negative expected value—have the business first, then talk about its tax room.</div>
+</details>
+<details>
+<summary>Can any of this be automated?</summary>
+<div class="body">Partly. Automated loss harvesting at brokerages and robo-advisors is genuinely useful but oversold: it can't necessarily see your outside accounts, your spouse's accounts, or purchases in your 401(k), and the wash-sale rule is applied per person. More importantly, the multi-year calls—which year to convert to Roth, which year to bunch giving—come down to human judgment, because they depend on what you expect your income to do next.</div>
+</details>
+<details>
+<summary>How does this differ in China?</summary>
+<div class="body">The structure differs. China's individual income tax runs on <strong>special additional deductions</strong> (children's education, mortgage interest or rent, elder support, major medical costs), which are deductions rather than credits and mostly fixed amounts; charitable gifts are generally deductible up to 30% of taxable income. Gains on individual sales of domestically listed A-shares are currently exempt from individual income tax, so "loss harvesting" has no direct counterpart there. Being tax-resident in both countries at once carries its own set of traps—Day 21.</div>
+</details>
+<details>
+<summary>Where does the saved tax actually go?</summary>
+<div class="body">The question people skip. Tax saved only becomes wealth if the money is <strong>actually invested</strong>; otherwise it was just consumed sooner (back to Day 1). The other trap is treating tax optimization as a puzzle: twenty hours of research to save a few hundred dollars, or buying something you don't need for the write-off. Tax optimization is a layer on top of decisions already made well—not the main line.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not individualized investment, tax, or legal advice; consult a licensed professional (CPA/EA) about your situation. Deduction amounts, thresholds, and percentages here are <strong>illustrative 2025 figures</strong>, indexed annually and subject to legislation (the SALT cap and related provisions carry sunset dates)—use the IRS's official current-year numbers before filing or acting; the table is an illustrative model under stated assumptions, not a promise. The default context is US tax law, with US–China differences flagged; asset selection inside accounts belongs to the investing repo.
+</div>
+</div>
+</body>
+</html>

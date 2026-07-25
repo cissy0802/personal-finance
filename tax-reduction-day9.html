@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 9 · 合法节税</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+td.step{font-weight:700;color:#fff;background:var(--teal);text-align:center;width:34px;border-radius:0}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 9</span>
+<h1>合法节税</h1>
+<p class="sub">抵扣与抵免差在哪、逐项还划不划算、亏损怎么收割、慈善捐什么资产——以及为什么税要按多年算，不按单年算。</p>
+<p class="meta">Personal Finance · Legal Tax Reduction　|　2026-07-25</p>
+</header>
+<div class="lede">
+上一期讲了<b>容器</b>（税优账户），这一期讲容器之外还剩下什么。一个不太好听的事实是：多数人脑子里的「节税」来自道听途说的技巧——买房抵税、开个公司把生活开支走账——这些对领工资的人要么无效，要么违法。真正省下钱的是几件朴素得多的事：分清抵扣和抵免、算清该不该逐项、下跌时把亏损兑现成税务资产、用对的资产在对的年份捐赠。以及一个更根本的视角转换：<b>税是一辈子的账，不是一年一结的账</b>。
+</div>
+<h2 class="section">四件真正有效的事</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>抵扣减收入，抵免减税额</h3>
+<p class="en">Deductions vs Credits</p>
+<div class="oneline">同样一美元，抵免通常比抵扣值钱好几倍——先看抵免，再谈抵扣。</div>
+<p><span class="lbl">机制。</span><strong>抵扣</strong>（deduction）从<strong>应税收入</strong>里减掉，它值多少钱取决于你的边际税率（Day 7）：$1,000 的抵扣在 24% 档只省下 $240。<strong>抵免</strong>（credit）直接从<strong>最终税额</strong>里 1:1 扣掉，$1,000 就是 $1,000，和你在哪一档无关。抵免还分<strong>可退还</strong>（税额减到零之后还能退现金）和<strong>不可退还</strong>（最多减到零）。</p>
+<table>
+<thead><tr><th>你的边际税率</th><th>$1,000 抵扣省下</th><th>$1,000 抵免省下</th></tr></thead>
+<tbody>
+<tr><td class="yr">12%</td><td class="rate">$120</td><td class="rate">$1,000</td></tr>
+<tr><td class="yr">24%</td><td class="rate">$240</td><td class="rate">$1,000</td></tr>
+<tr><td class="yr">35%</td><td class="rate">$350</td><td class="rate">$1,000</td></tr>
+</tbody>
+</table>
+<p class="note">说明性模型：只算联邦，忽略州税与收入门槛。</p>
+<p><span class="lbl">可执行。</span>两条排序原则：① <strong>线上扣除优先</strong>——HSA、有资格时的传统 IRA、学生贷款利息、自雇者的退休计划等，是在算 AGI（Adjusted Gross Income，调整后总收入）<em>之前</em>扣的。AGI 又是一大堆门槛的分母，压低它等于顺带买到别的资格，比逐项扣除更值钱。② <strong>抵免几乎都有收入门槛</strong>：子女、教育、能源类抵免多随收入逐步减少直至归零，高收入者常常直接出局，先确认资格再规划。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「这笔支出能抵税，所以等于不要钱。」—— 花 $1,000 省 $240，你净支出仍是 $760。抵扣不会让一笔你本不想花的钱变得划算，只让本来就要花的钱便宜一点。</div>
+<div class="do"><span class="lbl">本周一试：</span>翻出去年的报税表，找到 AGI 和总税额两行，算出有效税率。<b>思考题：</b>去年为你省下最多钱的那项，是抵免还是抵扣？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>标准扣除 vs 逐项：多数人已经不逐项了</h3>
+<p class="en">Standard vs Itemized</p>
+<div class="oneline">你只能二选一取大的那个；除非你能把几年的支出堆进同一年。</div>
+<p><span class="lbl">机制。</span>报税时你在<strong>标准扣除</strong>和<strong>逐项扣除</strong>之间取大的一个。2017 年税改把标准扣除大幅提高、又给 SALT（State And Local Tax，州与地方税）加了上限，逐项的人从约三成掉到一成上下。逐项主要就四项：房贷利息、SALT（州所得税 + 房产税）、慈善捐赠、超过 AGI 7.5% 的自付医疗支出。</p>
+<p><span class="lbl">可执行。</span>2025 年口径的量级：标准扣除约 <strong>$15,750（单身）/ $31,500（夫妻合报）</strong>；SALT 上限自 2025 年起提高到 <strong>$40,000</strong>，并对高收入逐步回退——带日落条款，报税前查当年规则。判断只有一步：</p>
+<div class="formula">房贷利息 + SALT + 捐赠 + 超额医疗 &gt; 标准扣除 ？</div>
+<p>如果你常年「差一点」够不到那条线，用<strong>集中</strong>（bunching）：把两三年的捐赠、以及时点可控的房产税缴纳堆进同一年，那年逐项，其余年份照拿标准扣除。捐赠最容易集中，工具见要点 4。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「买房能抵税，所以买比租划算。」—— 房贷利息只有在你逐项、且总额<strong>超出标准扣除的那部分</strong>才真正产生价值，对很多人这部分是零。别让税务的尾巴去摇买房这条狗（Day 15/16 细讲）。</div>
+<div class="do"><span class="lbl">本周一试：</span>把去年的房贷利息、州税、房产税、捐赠加总，和标准扣除比一比。<b>思考题：</b>把两年的捐赠并到一年，你会跨过那条线吗？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>应税账户：持有期与亏损收割</h3>
+<p class="en">Holding Periods &amp; Tax-Loss Harvesting</p>
+<div class="oneline">在应税账户里，你交多少税很大程度取决于你什么时候卖、卖的是哪一批。</div>
+<p><span class="lbl">机制。</span>持有<strong>超过一年</strong>再卖，收益按长期资本利得课税（0 / 15 / 20% 三档，另有 3.8% 的 NIIT 净投资收入税，门槛是 MAGI $200k 单身 / $250k 合报且不随通胀调整）；不到一年就卖按普通收入课税，两者能差出十几个百分点。亏损先抵同类利得、再抵另一类，还有剩的每年最多 <strong>$3,000</strong> 抵普通收入，再有剩的无限期结转。<strong>tax-loss harvesting（亏损收割）</strong>就是在下跌时主动兑现浮亏、换成税务资产，同时买入一个不「实质相同」的替代品，仓位不下车。</p>
+<p><span class="lbl">可执行——三条纪律。</span>① <strong>wash sale（洗售）规则</strong>：卖出日前后各 30 天（共 61 天窗口）内买入「实质相同」的证券，这笔亏损不认。它管的是<em>你</em>，包括配偶的账户和你的 IRA——在 IRA 里买回，亏损<strong>永久作废</strong>，不是递延。② <strong>指定批次</strong>（specific ID）：把券商默认的成本基准法从 FIFO 改掉，否则它替你卖掉成本最低的那批，凭空多缴税。③ <strong>收割是递延，不是免税</strong>：替代品成本更低，将来利得更大。好处在于把税推到将来、可能推到税率更低的年份，加上每年 $3,000 的普通收入抵扣。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「跌了就该收割。」—— 若你今年正处在长期资本利得 0% 档（收入低的年份），收割亏损几乎没价值，反而该考虑反向操作：主动兑现<strong>利得</strong>再买回，等于免费抬高成本基准。</div>
+<div class="do"><span class="lbl">本周一试：</span>登录券商，把默认成本基准法改成指定批次。<b>思考题：</b>你最近一次卖出是长期还是短期？差别值多少钱？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>慈善的正确姿势，与多年视角</h3>
+<p class="en">Charitable Giving &amp; the Multi-Year View</p>
+<div class="oneline">同一笔捐赠，捐什么资产、在哪一年捐，比捐多少更影响税单。</div>
+<p><span class="lbl">机制。</span>三个工具：<br/>
+① <strong>捐增值股票，别捐现金。</strong>持有超过一年的证券直接捐给公益机构，可按<strong>公允市值</strong>抵扣，浮盈那部分的资本利得税永远不用交——一笔捐赠省两处。抵扣受 AGI 比例上限约束（现金约 60%、增值证券约 30%），超出可结转五年。<br/>
+② <strong>DAF</strong>（Donor-Advised Fund，捐赠人建议基金）：捐进去当年就拿抵扣，钱留在里面再慢慢发给具体机构。它是要点 2 那个「集中」策略的天然工具。<br/>
+③ <strong>QCD</strong>（Qualified Charitable Distribution，合格慈善分配）：70½ 岁后可直接从 IRA 汇款给慈善机构（每人每年十万美元量级，逐年调整），这笔钱不进你的收入，还能抵 RMD（到龄强制最低提取）——对拿标准扣除的人尤其划算，它绕过了逐项这道题。</p>
+<p><span class="lbl">可执行——把税拉平到多年。</span>真正的节税不是「今年多抵掉多少」，而是压低<strong>一生</strong>的税：收入洼地年（间隔年、创业初期、退休后到开始领社保与 RMD 之间的窗口）做 Roth 转换、兑现利得；收入尖峰年（大额股权兑现、奖金年）集中抵扣与捐赠。同样的动作放对年份，价值差一倍。</p>
+<p class="note"><strong>校准一条常见法则</strong>：「每年捐出收入的 10%」。这类<strong>按收入锚定</strong>的经验规则，对高收入 / 高边际税档 / 股权薪酬为主的人会系统性<strong>高估</strong>可支配的余力——税前收入远不等于到手的钱（税负随收入超线性上升），且它默认你一辈子都拿当前这个收入。判断自己的余力，用<strong>基于支出</strong>的标尺更硬：<strong>储蓄率</strong>（= 没花掉、并且投出去的钱占收入的比例，躺在银行里的存款不算）和<strong>净值 ÷ 年支出</strong>。捐多少是价值观问题，百分比法则只适合当起点。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「捐款能省税，所以捐得越多越划算。」—— 捐出 $1 最多省下三毛多，你净支出仍是七毛。捐赠的理由永远是你想支持这件事；税务只决定<strong>捐什么资产、在哪一年</strong>捐。</div>
+<div class="do"><span class="lbl">本周一试：</span>如果手上有持有超过一年、浮盈明显的证券，下一笔捐款改捐股票而非现金。<b>思考题：</b>未来五年里，哪一年最可能是你的收入洼地？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>股权到账的预扣往往不够，先解决欠税再谈节税。</b> RSU（Restricted Stock Unit，限制性股票单位）等补充性收入的联邦预扣默认按 22%（当年超过 $1M 的部分按 37%），而边际档可能在 32–37%，差额到报税季才炸出来。用<strong>安全港</strong>避掉少缴罚金：全年预缴达到上年度税额的 110%（AGI 较高时的门槛）或本年度税额的 90%。</li>
+<li><b>收割亏损前，先看未来一个月的股权日程表。</b> ESPP（员工持股计划）的自动买入、DRIP 分红再投，都可能落进那 61 天的洗售窗口——尤其当你收割的正是自家公司股票或同一只指数基金。一次自动扣款让整笔亏损作废，最冤。</li>
+<li><b>集中持股与慈善天然搭配。</b> 那批成本极低、浮盈巨大的自家股票是最该拿去捐的资产：按市值抵扣 + 免掉这部分资本利得，顺带降低「工资与持股押在同一家公司」的双重集中。</li>
+<li><b>别按老经验假设「我肯定逐项」。</b> SALT 上限之下，高税州的高薪者往往逐项也占不到便宜，标准扣除反而更大。至于 ISO 的 AMT（Alternative Minimum Tax，替代性最低税），Day 11 专讲。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>为什么听来的那些「节税神操作」大多用不上？</summary>
+<div class="body">因为它们绝大多数依附于<strong>有生意或有房产</strong>——自雇退休计划、折旧、QBI 抵扣。领 W-2 工资的人空间小得多，有效的就那么几件：填满税优额度（Day 8）、管住持有期、收割亏损、捐增值资产、把税拉平到多年。这基本就是全部，剩下的多是把复杂度误当成收益。</div>
+</details>
+<details>
+<summary>那注册个公司，把生活开支走账，行不行？</summary>
+<div class="body">不行。可扣除的必须是「普通且必要」的<em>经营</em>支出，把私人消费包装成经营支出是税务欺诈，不是筹划。有真实副业时确实会多出工具（Solo 401(k)、SEP-IRA、可能的 QBI 抵扣），但注册、合规、记账与审计风险的成本同样真实。为节税而凭空创造一门生意几乎总是负期望——先有生意，再谈税务空间。</div>
+</details>
+<details>
+<summary>这些能不能交给自动化？</summary>
+<div class="body">部分能。券商与智能投顾的自动亏损收割有价值，但常被夸大：它未必看得见你在别处、配偶、以及 401(k) 里的买入，而洗售规则按人算。更重要的是，多年视角的决策——哪年做 Roth 转换、哪年集中捐赠——要人判断，它取决于你对未来几年收入的预期。</div>
+</details>
+<details>
+<summary>中美有什么不同？</summary>
+<div class="body">结构不同。中国个税走<strong>专项附加扣除</strong>（子女教育、住房贷款利息或租金、赡养老人、大病医疗等），性质是「抵扣」不是「抵免」，且多为定额；公益捐赠一般在应纳税所得额 30% 以内扣除。个人转让境内上市公司股票的差价所得目前暂免征个税，所以「亏损收割」在 A 股语境下没有直接对应物。两边同时是税务居民的情况另有一堆坑，Day 21 专讲。</div>
+</details>
+<details>
+<summary>省下来的税，最后去哪儿了？</summary>
+<div class="body">这是最容易被跳过的一问。节税只有在省下的钱<strong>真的被投出去</strong>时才变成财富，否则只是提前消费掉了（回到 Day 1）。另一个陷阱是把省税玩成智力游戏：花二十小时研究怎么省五百块，或为拿抵扣去买不需要的东西。税务优化是<strong>做对的事情上面的一层加成</strong>，不是主线。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资 / 税务 / 法律建议；涉及你的具体情况请咨询持牌专业人士（CPA/EA）。文中扣除额、门槛与比例均为 <strong>2025 年口径的说明性数字</strong>，逐年通胀调整并随立法变动（SALT 上限等条款带日落安排），报税或操作前请以 IRS 当年官方数字为准；表格是特定假设下的说明性模型，非承诺。默认以美国税制为背景，中美差异处已标注；账户内的资产选择属 investing 仓范畴。
+</div>
+</div>
+</body>
+</html>
