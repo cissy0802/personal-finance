@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 10 · 股权薪酬入门</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 10</span>
+<h1>股权薪酬入门</h1>
+<p class="sub">RSU、ISO、NSO、ESPP 到底各是什么——以及为什么「到手即卖」通常才是那个该被默认执行的答案。</p>
+<p class="meta">Personal Finance · Equity Compensation 101　|　2026-07-26</p>
+</header>
+<div class="lede">
+股权薪酬是这个行业最容易被误读的一块钱。不好听的事实有两条：<b>offer 上那串股权数字不是钱，是一张附条件的时间表</b>；而当它真的变成钱之后，绝大多数人什么都不做——于是把工资、身家、有时还有房贷，全押在了同一家公司上。这一期只讲四件机制：四种股权怎么计税、归属给了你什么、为什么「持有」是一个你从没主动做过的买入决定、以及单一股票的风险有多偏斜。期权更深的税务地雷（AMT、83(b)、行权时机）留到 Day 11。
+</div>
+<h2 class="section">四个要点</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>四种股权，四套完全不同的税</h3>
+<p class="en">RSU / NSO / ISO / ESPP: Four Different Tax Machines</p>
+<div class="oneline">名字只差几个字母，但计税时点、税率性质和归零风险完全不同。</div>
+<p><span class="lbl">机制。</span>背缩写没用，真正要分清的只有两件事：<strong>哪一天算成你的收入</strong>，以及<strong>那笔钱按普通收入（同工资）还是资本利得计税</strong>。差别全在这两个格子里。</p>
+<table>
+<thead><tr><th>类型</th><th>你拿到的是</th><th>计税时点</th><th>税的性质</th></tr></thead>
+<tbody>
+<tr><td class="rate">RSU<br/><span class="note">限制性股票单位</span></td><td>不用掏钱，归属后直接给股</td><td>vest（归属）当天</td><td>按当天市价全额算<strong>普通收入</strong></td></tr>
+<tr><td class="rate">NSO<br/><span class="note">非法定期权</span></td><td>按行权价买股的权利</td><td>行权当天</td><td>价差算<strong>普通收入</strong>＋工资税</td></tr>
+<tr><td class="rate">ISO<br/><span class="note">激励性期权</span></td><td>同上，但有税收优惠</td><td>常规税下行权不计税，价差计入 AMT</td><td>满条件卖出可<strong>全部按长期资本利得</strong></td></tr>
+<tr><td class="rate">ESPP<br/><span class="note">员工购股计划</span></td><td>折扣价买自家股（常见 ≤15%，多带回看价）</td><td>购买日／卖出时</td><td>折扣部分算普通收入，其余按资本利得</td></tr>
+</tbody>
+</table>
+<p class="note">缩写释义：<strong>RSU</strong>＝限制性股票单位；<strong>NSO</strong>＝不享税收优惠的股票期权；<strong>ISO</strong>＝符合税法条件、可享优惠税率的激励性期权；<strong>ESPP</strong>＝按折扣价定期买入自家股票的员工计划；<strong>AMT</strong>＝替代最低税，与常规所得税并行、择高征收（Day 11 详解）。</p>
+<p><span class="lbl">可执行。</span>美国现行规则下有两个硬限额：ESPP（§423 合格计划）每人每年最多买入约 <strong>$25,000</strong>；ISO 每年可首次行权额度上限 <strong>$100,000</strong>（均按授予日市价计），超出部分自动按 NSO 处理。ISO 要拿到全部长期资本利得待遇，需<strong>授予满 2 年且行权满 1 年</strong>后再卖。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「期权和 RSU 差不多，都是股票。」—— 差别是致命的：只要股价大于零，RSU 就有价值；而股价一旦跌破行权价，期权的价值就是<strong>零</strong>。同样面值的 offer，风险根本不是一回事。</div>
+<div class="do"><span class="lbl">本周一试：</span>把股权账户里每一笔按「类型 / 授予日 / 归属日 / 行权价或授予日市价」列成一张表。<b>思考题：</b>你能立刻说出手上每一笔属于哪一类、下一个计税事件是哪天吗？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>你拥有的是一张时间表，不是一笔钱</h3>
+<p class="en">Vesting, Cliffs, and What You Actually Own</p>
+<div class="oneline">未归属的股权不是资产，是公司为了留住你而设的分期条件。</div>
+<p><span class="lbl">机制。</span>典型安排是 <strong>4 年归属 + 1 年悬崖（cliff）</strong>：满一年拿 25%，之后按月或按季释放；不满一年离职，这部分归零。也有公司用后置型（前少后多）加大留任粘性。未上市公司常用<strong>双触发（double trigger）</strong>：除时间条件外，还要发生 IPO 或收购这类流动性事件才真正归属——你可能干满四年，手上仍一股没有。</p>
+<p><span class="lbl">可执行。</span>把 offer 拆成两栏：<strong>现金（确定）</strong>与<strong>股权（附条件）</strong>。比较工作机会时，用「未来 12 个月真正能到手的税后现金流」，而不是招聘方给的那个总包数字。</p>
+<p class="note"><strong>校准提醒。</strong>凡是拿税前总收入当锚的经验法则——「存收入的 X%」「N 岁该有几倍年薪」——对<strong>高边际税档、股权占比高的人系统性高估</strong>：① 税前口径高估了真正能留下的钱；② 把未来四年的纸面价值摊到今天，默认股价不跌、人不离职、公司按期上市。衡量进度请换成基于支出的硬标尺：<strong>净值 ÷ 年支出</strong>，以及储蓄率。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「我有 XX 万的股权。」—— 未归属部分不能卖、不能抵押、离职就没有，还随股价浮动。把它记进净值表，你会长期高估自己的安全垫。</div>
+<div class="do"><span class="lbl">本周一试：</span>在日历上标出未来 12 个月的每个归属日和 cliff 日期。<b>思考题：</b>如果明天股价腰斩，你的留任决定会变吗？如果会，那你的留任理由里有多少其实是沉没成本？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>到手即卖，应该是你的默认选项</h3>
+<p class="en">Sell at Vest Is the Default</p>
+<div class="oneline">对 RSU 来说，归属后立刻卖几乎不产生额外的税——「不敢卖是因为税」多半是误解。</div>
+<p><span class="lbl">机制。</span>RSU 在归属当天已按市价<strong>全额计过普通收入</strong>，这个价格同时成为你的<strong>成本基差（cost basis）</strong>。当天卖出，买卖价差接近零，几乎不产生额外的税。归属日发生的事等价于：公司发了一笔奖金，并立刻用税后的钱替你全仓买入自家股票。<strong>持有就是默认同意了这次买入</strong>——只是你从没主动做过这个决定。</p>
+<p><span class="lbl">可执行。</span>用一个反向检验：<em>如果公司把这些股票折成等值现金发给你，你会用这笔税后现金按今天的价格全部买回自家股票吗？</em>答案是否，持有就没有理由。卖出所得投进宽基组合，这才叫<strong>储蓄 = 没花掉、并且投出去的钱，不是躺在银行的存款</strong>。</p>
+<p class="note"><strong>预扣缺口（很多人的四月惊吓）。</strong>美国对补充性工资（supplemental wages，含 RSU 归属）的联邦默认预扣是 <strong>22%</strong>（年度补充工资超 $1,000,000 的部分按 37%）。边际税档高于 22% 的人，归属时代扣的税天生不够，差额报税时要补，州税另计。做法：归属后核对预扣，必要时调 W-4 或做季度预缴，并用<strong>安全港</strong>（缴足上年度应纳税额的 100%，上年度调整后总收入超 $150,000 则为 110%；或本年度的 90%）避开罚息。</p>
+<p>纪律比判断可靠：把规则写死（如「归属后两个交易日内全卖」），并尽量放进 10b5-1 类的<strong>预设交易计划</strong>——它须在你不掌握重大非公开信息时设立并经冷静期，好处是能穿过禁售窗口、也让你不临时改主意。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「再拿一年，按长期资本利得卖能省税。」—— 对 RSU，这个税率差只作用于<strong>归属之后</strong>那段涨幅，你为此承担的却是<strong>整笔头寸</strong>的单一股票风险。税是尾巴，风险是狗。</div>
+<div class="do"><span class="lbl">本周一试：</span>为下一次归属写下一条一句话规则。<b>思考题：</b>如果这些股票不是公司发的，你会主动拿多少钱去买？差额就是你正在承担、却没承认的风险。</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>单一股票的危险：你已经押了两次</h3>
+<p class="en">Concentration: You Bet Twice on the Same Company</p>
+<div class="oneline">工资和股票来自同一家公司，是同一个风险押了两遍，还常常在最糟的时刻同时兑现。</div>
+<p><span class="lbl">机制。</span>你的<strong>人力资本</strong>（未来工资）已经全押在这家公司；股权是第二次押注；若你还因为这份工作在同一座城市背了房贷，那是第三次。要命的是相关性：裁员常和股价下跌同时发生——最需要现金时，资产也在缩水。</p>
+<p>更硬的一层是概率。Bessembinder（2018）对 1926 年以来美股的研究发现：<strong>大多数个股的终身买入持有回报跑不赢短期国债</strong>，全部净财富创造集中在约 4% 的公司身上。摩根大通《Agony &amp; Ecstasy》研究也发现，1980 年以来罗素 3000 成分股约 40% 曾从高点下跌 70% 以上且再未恢复。这不是说你的公司不行，而是说<strong>单只股票的结果分布极度偏斜，中位数远差于平均数</strong>——而你只有一次人生。</p><p><span class="lbl">可执行。</span>设一个明确上限，超过就按计划减持：</p>
+<div class="formula">自家公司股票 ÷ 流动净值 ≤ 10%</div>
+<p class="note">10% 是常见实践，不是规定；有人放宽到 20%，取决于其他资产的厚度与工作稳定性——越接近要用钱的日子（首付、学费），上限越该收紧。ESPP 值得例外参与：折扣是接近确定的回报（15% 折扣即买入时约 17.6% 的账面收益），但<strong>参与不等于持有</strong>，规则允许就尽快卖出。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「我最了解自己公司。」—— 熟悉不是信息优势（真有优势那叫内幕交易，不能用）。它真正的作用，是让你把「我喜欢这份工作」误读成「这是一笔好投资」。</div>
+<div class="do"><span class="lbl">本周一试：</span>算出「自家公司股票 ÷ 流动净值」这个比率。<b>思考题：</b>如果这个数字印在别人的对账单上，你会建议对方怎么做？你对自己的建议为什么不一样？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>归属日是你最好的自动化钩子。</b> 把「归属 → 卖出 → 转入投资账户 → 按既定比例买入」做成固定流水线。反复要做判断的地方，就是纪律漏水的地方。</li>
+<li><b>默认预扣不是为你设的。</b> 22% 的补充工资预扣对更高边际档的人天生不足；把「四月要补税」提前算进现金流，别到时候被迫卖股票交税。</li>
+<li><b>收入的年际波动是特征，不是 bug。</b> 股权集中兑现的年份，收入和税档会跳一档。慈善捐赠、Roth 转换、行权节奏都该按<strong>多年视角</strong>安排（见 Day 9）。</li>
+<li><b>换工作的真实成本，是你放弃的未归属部分。</b> 谈新 offer 时把这笔损失算成一次性成本，并据此争取签约补偿——这可以谈，前提是你算得出数。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>如果我公司真的是下一个大赢家呢？</summary>
+<div class="body">诚实承认边界：分散化的代价就是放弃极端上行。这不是纯数学问题，而是「你能承受多大遗憾」的偏好问题——两个方向事后都会有人后悔。可操作的折中：划出一个你明确愿意归零的比例当「彩票仓」，其余按纪律卖出。危险的从来不是持有，而是<strong>没上限地、被动地</strong>持有。</div>
+</details>
+<details>
+<summary>ESPP 到底值不值得参与？</summary>
+<div class="body">在「买到就尽快卖出」的前提下，折扣加回看价让它接近确定性很高的回报（15% 折扣即买入时约 17.6% 的账面收益），代价是持有期内的股价风险和资金占用；若应急基金还没建起来（Day 3），先补那个洞。持有到符合条件的处置能把部分收益变成长期资本利得，但代价是更长的单一股票暴露——多数情况下不值。</div>
+</details>
+<details>
+<summary>卖出亏损的股票有什么坑？</summary>
+<div class="body"><strong>洗售规则（wash sale）</strong>：卖出产生亏损后，若在前后各 30 天（共 61 天）窗口内取得同一只股票，该亏损当期不能抵扣，只能加进新头寸的成本基差。关键陷阱是：<strong>RSU 归属本身就算一次「取得」</strong>——按月或按季归属的人极易在不知情下触发。要做税损收割（Day 9），先打开归属日历再动手。</div>
+</details>
+<details>
+<summary>中美差异要注意什么？</summary>
+<div class="body">本文默认美国联邦税制。中国境内居民从<strong>境内上市公司</strong>取得的股权激励，现行政策可不并入当年综合所得、单独计税（该优惠有明确期限，最近一次延续至 2027 年底，以最新文件为准）；<strong>境外</strong>公司的股权激励另有备案与申报要求，还叠加外汇与跨境申报（FBAR、CRS）。中美两边都有纳税义务的人更复杂，Day 21 专门讲——务必找持牌顾问，别照搬美国框架。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资 / 税务 / 法律建议，具体情况请咨询持牌顾问。本期机制以<strong>美国现行联邦规则</strong>为背景（州税另计），限额、预扣比例与优惠政策随年度和立法调整，请以你所在年度的官方规则与公司计划文件为准；文中比例（如单一股票不超过流动净值 10%）是特定假设下的<strong>说明性基准</strong>，非规定亦非承诺。不推荐个股，不预测股价。中美差异处已另行标注。
+</div>
+</div>
+</body>
+</html>

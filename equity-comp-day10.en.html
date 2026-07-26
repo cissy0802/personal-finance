@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 10 · Equity Compensation 101</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <span class="kicker">Personal Finance <span class="dot"></span> Day 10</span>
+  <h1>Equity Compensation 101</h1>
+  <p class="sub">What RSUs, ISOs, NSOs, and ESPPs actually are—and why "sell at vest" is usually the answer that should run by default.</p>
+  <p class="meta">个人理财 · 股权薪酬入门　|　2026-07-26</p>
+</header>
+
+<div class="lede">
+Equity comp is the most widely misread money in this industry. Two uncomfortable facts: <b>the equity number on your offer isn't money, it's a conditional schedule</b>; and once it finally does become money, most people do nothing—so their salary, their net worth, and sometimes their mortgage all end up riding on one company. This issue covers four mechanics only: how each of the four instruments is taxed, what vesting actually gives you, why "holding" is a buy decision you never consciously made, and how skewed single-stock risk really is. The deeper option tax landmines (AMT, 83(b), exercise timing) are Day 11.
+</div>
+
+<h2 class="section">Four Points</h2>
+
+<!-- 1 -->
+<div class="card">
+  <span class="num">POINT 1</span>
+  <h3>Four Instruments, Four Completely Different Tax Machines</h3>
+  <div class="oneline">The names differ by a few letters; the timing, the tax character, and the go-to-zero risk do not.</div>
+  <p><span class="lbl">Mechanism.</span> Memorizing acronyms is useless. There are really only two things to pin down: <strong>which day it counts as your income</strong>, and <strong>whether that money is taxed as ordinary income (like salary) or as capital gains</strong>. Every difference lives in those two cells.</p>
+  <table>
+    <thead><tr><th>Type</th><th>What you get</th><th>Taxed when</th><th>Tax character</th></tr></thead>
+    <tbody>
+      <tr><td class="rate">RSU<br/><span class="note">Restricted Stock Unit</span></td><td>Shares delivered at vest, no cash from you</td><td>The day it vests</td><td>Full market value that day is <strong>ordinary income</strong></td></tr>
+      <tr><td class="rate">NSO<br/><span class="note">Non-qualified Stock Option</span></td><td>Right to buy shares at the strike price</td><td>The day you exercise</td><td>The spread is <strong>ordinary income</strong> + payroll tax</td></tr>
+      <tr><td class="rate">ISO<br/><span class="note">Incentive Stock Option</span></td><td>Same, but with preferential tax treatment</td><td>No regular-tax hit at exercise; the spread counts for AMT</td><td>If holding rules are met, the whole gain can be <strong>long-term capital gain</strong></td></tr>
+      <tr><td class="rate">ESPP<br/><span class="note">Employee Stock Purchase Plan</span></td><td>Buy your employer's stock at a discount (commonly ≤15%, often with a lookback)</td><td>At purchase / at sale</td><td>The discount is ordinary income; the rest is capital gain</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Acronyms: <strong>RSU</strong> = a promise of shares that convert to real stock on a schedule; <strong>NSO</strong> = a stock option with no special tax treatment; <strong>ISO</strong> = an option that meets tax-code conditions and can qualify for preferential rates; <strong>ESPP</strong> = an employee plan to buy company stock at a discount on a recurring schedule; <strong>AMT</strong> = Alternative Minimum Tax, a parallel calculation run alongside the regular one, with the higher amount owed (detailed on Day 11).</p>
+  <p><span class="lbl">Actionable.</span> Two hard caps under current US rules: an ESPP (a qualified §423 plan) allows roughly <strong>$25,000</strong> of purchases per person per year; ISOs are capped at <strong>$100,000</strong> becoming first exercisable per year (both measured at grant-date market value), and anything above that is automatically treated as an NSO. For ISOs to get full long-term capital gain treatment, you must sell <strong>more than 2 years after grant and more than 1 year after exercise</strong>.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Options and RSUs are basically the same—both are stock." — The difference is fatal. As long as the share price is above zero, RSUs are worth something; the moment the price falls below the strike, an option is worth <strong>zero</strong>. Two offers with the same headline value are not the same risk.</div>
+  <div class="do"><span class="lbl">This week:</span> List every grant in your equity account by type / grant date / vest date / strike or grant-date price. <b>Reflection:</b> can you name, right now, which type each grant is and what your next taxable event is?</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <span class="num">POINT 2</span>
+  <h3>What You Own Is a Schedule, Not a Pile of Money</h3>
+  <div class="oneline">Unvested equity isn't an asset—it's the installment condition your employer set to keep you.</div>
+  <p><span class="lbl">Mechanism.</span> The typical structure is <strong>4-year vesting with a 1-year cliff</strong>: nothing for a year, 25% at the cliff, then monthly or quarterly releases; leave before the cliff and it's zero. Some companies back-load the schedule (less early, more late) to increase stickiness. Private companies often use a <strong>double trigger</strong>: beyond the time condition, a liquidity event (IPO or acquisition) must also occur before anything truly vests—meaning you can work the full four years and still hold no shares.</p>
+  <p><span class="lbl">Actionable.</span> Split any offer into two columns: <strong>cash (certain)</strong> and <strong>equity (conditional)</strong>. Compare jobs on "after-tax cash you can actually collect in the next 12 months," not on the total-comp number the recruiter quotes.</p>
+  <p class="note"><strong>Calibration warning.</strong> Any rule of thumb anchored to pretax total income—"save X% of income," "have N× your salary by age N"—<strong>systematically overstates for people in high marginal brackets with equity-heavy pay</strong>: (1) the pretax figure overstates what you actually keep; (2) spreading four years of paper value over today assumes the share price doesn't fall, you don't leave, and the company lists on schedule. To measure progress, switch to spending-based yardsticks: <strong>net worth ÷ annual spending</strong>, plus your savings rate.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "I have $XXX,000 in equity." — The unvested part can't be sold, can't be pledged, disappears if you leave, and moves with the share price. Put it on your net worth statement and you'll systematically overestimate your own safety cushion.</div>
+  <div class="do"><span class="lbl">This week:</span> Mark every vest date and your cliff date for the next 12 months on a calendar. <b>Reflection:</b> if the share price halved tomorrow, would your decision to stay change? If it would, how much of your reason for staying is sunk cost?</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <span class="num">POINT 3</span>
+  <h3>Sell at Vest Should Be Your Default</h3>
+  <div class="oneline">For RSUs, selling immediately after vest creates almost no extra tax—"I can't sell because of taxes" is mostly a misunderstanding.</div>
+  <p><span class="lbl">Mechanism.</span> On the vest date an RSU has already been taxed as <strong>ordinary income at full market value</strong>, and that same price becomes your <strong>cost basis</strong>. Sell that day and the gain is near zero, so there's essentially no additional tax. What actually happens at vest is equivalent to: the company paid you a bonus and instantly used the after-tax proceeds to buy your employer's stock for you. <strong>Holding is you consenting to that purchase</strong>—you just never made the decision consciously.</p>
+  <p><span class="lbl">Actionable.</span> Use the reversal test: <em>if the company handed you the equivalent cash instead, would you take that after-tax cash and buy back all of your employer's stock at today's price?</em> If not, there's no case for holding. Put the proceeds into a broad-market portfolio—that is what <strong>saving</strong> means: <strong>money you didn't spend and then actually invested, not cash sitting in a bank account</strong>.</p>
+  <p class="note"><strong>The withholding gap (April's most common surprise).</strong> The default US federal withholding on supplemental wages—which includes RSU vests—is <strong>22%</strong> (37% on supplemental wages above $1,000,000 in a year). If your marginal bracket is above 22%, the tax withheld at vest is structurally insufficient and you owe the difference at filing, with state tax on top. What to do: check the withholding after each vest, adjust your W-4 or make quarterly estimated payments if needed, and use the <strong>safe harbor</strong> (pay 100% of last year's tax—110% if last year's adjusted gross income was over $150,000—or 90% of this year's) to avoid underpayment penalties.</p>
+  <p>Discipline beats judgment: write the rule down (for example, "sell everything within two trading days of vest") and put it into a 10b5-1-style <strong>pre-set trading plan</strong>—it must be adopted while you hold no material non-public information and is subject to a cooling-off period, but it trades through blackout windows and stops you from changing your mind in the moment.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "Hold another year and sell at long-term capital gains rates to save tax." — For RSUs that rate difference applies only to the appreciation <strong>after</strong> vest, while what you take on is the single-stock risk of the <strong>entire position</strong>. Tax is the tail; risk is the dog.</div>
+  <div class="do"><span class="lbl">This week:</span> Write one sentence of rule for your next vest, in writing. <b>Reflection:</b> if these shares hadn't come from your employer, how much of your own money would you put into that one stock? The gap is risk you're carrying without admitting it.</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <span class="num">POINT 4</span>
+  <h3>Single-Stock Danger: You've Already Bet Twice</h3>
+  <div class="oneline">Your paycheck and your shares come from the same company—one risk taken twice, and it tends to pay off badly at the same moment.</div>
+  <p><span class="lbl">Mechanism.</span> Your <strong>human capital</strong> (future salary) is already fully committed to this company; the equity is a second bet; and if this job also put you into a mortgage in the same city, that's a third. What makes it dangerous is the correlation: layoffs and price declines tend to arrive together—right when you most need cash, the assets are shrinking too.</p>
+  <p>The harder layer is probability. Bessembinder (2018), studying US stocks since 1926, found that <strong>most individual stocks' lifetime buy-and-hold returns fail to beat short-term Treasury bills</strong>, with all net wealth creation concentrated in roughly 4% of companies. J.P. Morgan's much-cited <em>Agony &amp; Ecstasy</em> research likewise found that about 40% of Russell 3000 constituents since 1980 suffered a decline of 70%+ from peak from which they never recovered. This is not a claim about your company—it's the point that <strong>single-stock outcomes are extremely skewed, and the median is far worse than the average</strong>, while you only get one life.</p>
+  <p><span class="lbl">Actionable.</span> Set an explicit ceiling and trim on a plan when you cross it:</p>
+  <div class="formula">Employer stock ÷ liquid net worth ≤ 10%</div>
+  <p class="note">10% is common practice, not a rule; some stretch to 20%, depending on how thick your other assets are and how stable the job is—the closer the money is to being needed (down payment, tuition), the tighter the cap should be. ESPP is a worthwhile exception to participate in: the discount is a near-certain return (a 15% discount is about a 17.6% paper gain at purchase), but <strong>participating isn't holding</strong>—sell as soon as the rules allow.</p>
+  <div class="miss"><span class="lbl">Common myth:</span> "I understand my own company best." — Familiarity isn't an information edge (a real edge would be inside information, which you can't act on). What it actually does is let you misread "I like this job" as "this is a good investment."</div>
+  <div class="do"><span class="lbl">This week:</span> Compute the single ratio: employer stock ÷ liquid net worth. <b>Reflection:</b> if that number were printed on someone else's statement, what would you advise them to do? Why is your advice to yourself different?</div>
+</div>
+
+<div class="tech">
+  <h4>Note for High-Earning Tech Workers</h4>
+  <p class="cap">One per issue, focused on the specific situation of this group: equity comp / heavy taxes / volatile income.</p>
+  <ul>
+    <li><b>Vest dates are your best automation hook.</b> Turn "vest → sell → transfer to the brokerage → buy at your set allocation" into a fixed pipeline. Wherever you have to make a judgment call repeatedly is where discipline leaks.</li>
+    <li><b>The default withholding wasn't set for you.</b> The 22% supplemental rate is structurally short for anyone in a higher bracket; build "I'll owe more in April" into your cash flow so you're not forced to sell shares to pay the tax bill.</li>
+    <li><b>Year-to-year income swings are a feature, not a bug.</b> In years when a lot of equity converts, both income and bracket jump. Charitable giving, Roth conversions, and exercise timing should be planned on a <strong>multi-year</strong> view (see Day 9).</li>
+    <li><b>The real cost of changing jobs is the unvested equity you forfeit.</b> When negotiating a new offer, price that forfeiture as a one-time cost and use it to argue for sign-on compensation—it's negotiable, provided you can show the math.</li>
+  </ul>
+</div>
+
+<h2 class="section">Deeper Questions</h2>
+
+<details>
+  <summary>What if my company really is the next big winner?</summary>
+  <div class="body">Be honest about the boundary: the price of diversifying is giving up the extreme upside. This isn't a pure math question, it's a preference question about how much regret you can live with—people regret both directions after the fact. The workable compromise: carve out a share you're genuinely willing to see go to zero as a "lottery slice," and sell the rest on a rule. The danger was never holding; it's holding <strong>passively and without a ceiling</strong>.</div>
+</details>
+<details>
+  <summary>Is an ESPP worth participating in?</summary>
+  <div class="body">On the assumption that you sell as soon as you can, the discount plus lookback makes it a high-certainty return (a 15% discount is about a 17.6% paper gain at purchase); the costs are share-price risk during the holding period and the cash tied up—if your emergency fund isn't built yet (Day 3), fill that hole first. Holding to a qualifying disposition converts part of the gain to long-term capital gain, but the price is a longer single-stock exposure—in most cases not worth it.</div>
+</details>
+<details>
+  <summary>What's the trap in selling shares at a loss?</summary>
+  <div class="body">The <strong>wash sale rule</strong>: if you acquire the same stock within 30 days before or after realizing a loss (a 61-day window), the loss isn't currently deductible—it just gets added to the basis of the new position. The key trap: <strong>an RSU vest itself counts as an acquisition</strong>, so anyone vesting monthly or quarterly can trigger it without knowing. Before doing any tax-loss harvesting (Day 9), open the vesting calendar first.</div>
+</details>
+<details>
+  <summary>What differs between the US and China here?</summary>
+  <div class="body">This issue assumes US federal rules. For China-resident taxpayers, equity incentives from <strong>domestically listed companies</strong> can currently be taxed separately rather than folded into that year's comprehensive income (the preference has a stated expiry—most recently extended through the end of 2027; check the latest official document). Equity from <strong>overseas</strong> companies carries separate filing and registration requirements, plus foreign-exchange and cross-border reporting (FBAR, CRS). Anyone with tax obligations on both sides faces a much more complex picture—Day 21 covers cross-border status specifically. In those cases, use a licensed advisor rather than transplanting the US framework here.</div>
+</details>
+
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment / tax / legal advice; consult a licensed professional about your own situation. The mechanics here assume <strong>current US federal rules</strong> (state tax is separate); limits, withholding rates, and preferential provisions change with the year and with legislation, so rely on the official rules for your tax year and on your company's plan documents. Ratios in the text (such as keeping employer stock under 10% of liquid net worth) are <strong>illustrative benchmarks</strong> under specific assumptions—neither a rule nor a promise. No individual stock is recommended and no price forecast is made. China-specific differences are flagged separately.
+</div>
+
+</div>
+</body>
+</html>
