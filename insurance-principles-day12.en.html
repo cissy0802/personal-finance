@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 12 · First Principles of Insurance</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 12</span>
+<h1>First Principles of Insurance</h1>
+<p class="sub">The first eleven issues were about growing the money. This one starts on how to keep a single event from erasing it.</p>
+<p class="meta">个人理财 · 保险第一原则　|　2026-07-28</p>
+</header>
+
+<div class="lede">
+Here's the unflattering fact: <b>every insurance policy you own is, in expectation, a loss</b>. That isn't the insurer being predatory—it's the definition of insurance. Premiums must exceed expected claims, or the business doesn't exist. Which means "is this policy worth it?" is the wrong question (by expected value, none of them are). There is only one right question: <b>which holes can I not absorb myself?</b> No product recommendations here—just four principles nailed down: insurance transfers risk rather than growing money, insure only the low-probability catastrophes, the deductible is the self-insurance line you draw, and the real content of a policy lives in its exclusions. Product specifics come in the next two issues.
+</div>
+
+<h2 class="section">Four Principles</h2>
+
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Insurance Transfers Risk—It Does Not Grow Money</h3>
+<div class="oneline">The expected return on a premium is necessarily negative. That's the precondition for insurance existing, not a flaw in it.</div>
+<p><span class="lbl">Mechanism.</span> Pricing = expected claims + operating and distribution costs + return on capital (the industry calls the markup the <em>loading</em>). So across the whole pool, premiums paid in must exceed claims paid out—<strong>on average, you are supposed to lose</strong>. What you're buying isn't a return; it's the removal of the <strong>tail</strong> of the loss distribution: a small, budgetable, predictable expense in place of a low-probability event that would wreck the entire plan. The key is that the utility of money isn't linear—the same large loss is annihilation against a thin balance sheet and merely an ugly number against a thick one.</p>
+<p><span class="lbl">Actionable.</span> Replace the test with one sentence: <strong>if this actually happened, would it wreck my financial plan?</strong> Yes → transfer it. No → keep it. And stop asking "did I waste all those premiums?"—nothing happening is precisely the outcome you paid for.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Buy the kind that gives your money back, otherwise you lose it." Return-of-premium, cash-value, and investment-linked policies bundle protection with investing: opaque fees, more expensive per dollar of coverage, punishing early-surrender losses. <strong>Buy protection as protection and investments as investments—separately is almost always cheaper and always clearer.</strong> (The sales scripts get their own treatment in Day 23.)</div>
+<div class="do"><span class="lbl">Try this week:</span> List every policy you currently hold and the total annual premium. <b>Question:</b> For each one, can you name in a single sentence the specific catastrophe it defends against? The ones you can't name are exactly what the next principle filters out.</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Insure Only "Low Probability × Catastrophic"</h3>
+<div class="oneline">Insure what you can't afford, not what's most likely to happen.</div>
+<p><span class="lbl">Mechanism.</span> Two dimensions finish the job: <strong>frequency × severity</strong>.</p>
+<table>
+<thead><tr><th>　</th><th>Small consequence</th><th>Catastrophic consequence</th></tr></thead>
+<tbody>
+<tr><td class="rate">High frequency</td><td>Self-insure (the insurer knows it happens often; the premium is priced accordingly)</td><td class="yr">Usually uninsurable (prohibitive premium, or declined)</td></tr>
+<tr><td class="rate">Low frequency</td><td>Ignore</td><td class="yr">← the only battlefield for insurance</td></tr>
+</tbody>
+</table>
+<p><span class="lbl">Actionable.</span> In a US context, typically <strong>worth buying</strong>: health insurance, term life (only if someone depends on you financially), long-term disability, homeowners/renters, the <strong>liability</strong> portion of auto, and umbrella. Typically <strong>not worth buying</strong>: extended warranties, phone screen protection, AD&amp;D (Accidental Death &amp; Dismemberment—pays only for specific causes of death that life insurance already covers), credit-card payment protection, most trip-cancellation cover.</p>
+<p class="note">Liability is the most under-weighted piece: what keeps an auto policy from bankrupting you is the <strong>liability limit</strong>, not the collision coverage—a car can only cost you the car, while a serious-injury claim has no ceiling. <strong>US / China contrast:</strong> mainland China's mainstream stack is public medical insurance + a high-limit reimbursement medical policy + critical-illness cover (a lump sum, used to replace lost income); the US market runs on health insurance + disability, with critical-illness cover a niche add-on. Same framework, different product names.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'm healthy and I drive carefully, so I'll buy less." What you're insuring is precisely the scenario that doesn't look like you. Conversely, buying the high-frequency small-ticket policies is paying pure fees.</div>
+<div class="do"><span class="lbl">Try this week:</span> Drop your policy list into this 2×2 and circle the ones sitting in "high frequency, small consequence." <b>Question:</b> Does your single biggest "can't absorb it" risk right now have a policy pointed at it?</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>Where Self-Insurance Ends: The Deductible</h3>
+<div class="oneline">The deductible isn't a trick for shaving premiums—it's the self-insurance limit you deliberately set.</div>
+<p><span class="lbl">Mechanism.</span> Every policy is shared risk: <strong>below the deductible you carry it; above it, the risk actually transfers</strong>. Higher deductible, lower premium—because you've taken the "high frequency, small ticket" band back onto your own books. So "how high should the deductible be?" is the same question as: <strong>how much cash can I produce at once without touching credit, selling assets, or changing how I live?</strong> That line connects straight back to the emergency fund in Day 3: the thicker the buffer, the cheaper the insurance; the better-targeted the coverage, the less infinite the buffer needs to be. (<strong>Savings</strong> here means money not spent and actually moved into a liquid account or invested—not "whatever is left in the checking account.")</p>
+<p><span class="lbl">Actionable.</span> Set the per-claim retention at a slice of your emergency fund that doesn't hurt. If the buffer covers 3–6 months of essential expenses, a common practice is <strong>one-sixth to one-third</strong> of it. That's not a law, it's an assumption: one claim shouldn't eat the whole buffer. The one precondition for a high-deductible health plan (HDHP) is that the deductible money is <strong>actually set aside</strong>—in the US it can sit in an HSA (see Day 8).</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "The lowest deductible is the safest." The premium surcharge for the lowest deductible often exceeds, within a few years, the extra amount you would have carried yourself. The real danger was never a high deductible—it's <strong>a high deductible with no cash behind it</strong>.</div>
+<div class="do"><span class="lbl">Try this week:</span> Pull the deductible off one existing policy and set it beside the cash you can access immediately. <b>Question:</b> If you raised that deductible one notch, how many years of premium savings would it take to equal the extra risk you just took on?</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>The Policy Lives in Its Exclusions and Limits</h3>
+<div class="oneline">The biggest risk isn't being uninsured—it's believing you're insured.</div>
+<p><span class="lbl">Mechanism.</span> What decides whether it pays on the day of the disaster is the fine print: <strong>coverage limits, exclusions, waiting periods, renewability and insurability terms</strong>. Frequent traps: insuring a home at market value rather than <strong>replacement cost</strong>; standard homeowners policies excluding flood and earthquake (US flood cover is bought separately); the definition of disability splitting into own-occupation (can't do your job) versus any-occupation (can't do any job), the latter a far higher bar; term life that may require fresh underwriting after the level term ends; group coverage that <strong>terminates the day you leave</strong>.</p>
+<p><span class="lbl">Actionable.</span> Check only four lines per policy: ① is the limit enough for the worst case (for liability, size it against your <strong>net worth and attachable assets</strong>, not the value of the car); ② the deductible; ③ the exclusions list; ④ renewability and portability. Run a ten-minute policy checkup annually, and re-check <strong>beneficiary designations</strong> the moment family structure, property, or net worth changes—the beneficiary line overrides the will (detail in Day 20).</p>
+<p class="note">On sizing coverage: the most widely circulated rule of thumb is "<strong>life insurance ≈ 10× annual income</strong>." <strong>It needs calibration</strong>: income-anchored rules distort systematically for high earners, high marginal brackets, and equity-heavy pay—① pre-tax income overstates the cash flow the household actually depends on (what needs replacing is after-tax, net of the insured person's own consumption); ② when income swings year to year, there's no principled answer to which year you multiply by ten. Whenever an <strong>expense-based</strong> yardstick exists, use it instead—the needs-gap method:</p>
+<div class="formula">Coverage ≈ (household annual spending × years to cover) + outstanding debt + expected education costs − existing accessible assets</div>
+<p class="note">It tracks where the money has to go, not what you once earned. The full calculation comes in Day 13.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "More coverage is always safer." A large limit on the wrong product (a stack of accident policies but no disability cover) is reinforcing a wall on the side no one is attacking. <strong>Get the product right first, then argue about the amount.</strong></div>
+<div class="do"><span class="lbl">Try this week:</span> Find one policy's declaration page and copy out those four lines. <b>Question:</b> On your most expensive policy, does the exclusions list happen to name the exact thing you're worried about?</div>
+</div>
+
+<div class="tech">
+<h4>Note for High-Earning Tech Workers</h4>
+<p class="cap">One per issue, focused on the specific situation of this group: equity comp / heavy taxes / volatile income.</p>
+<ul>
+<li><b>Employer group coverage is usually sized off base salary alone.</b> RSUs, bonus, and option gains generally don't enter the benefit base—the larger the equity share of pay, the smaller the fraction of income group cover replaces. And it <strong>ends the day you resign or get cut; it isn't portable</strong>. Treat it as a top-up layer; the base layer should be a policy in your own name that travels with you.</li>
+<li><b>How disability benefits are taxed depends on who pays the premium.</b> If the employer pays with pre-tax dollars, the benefit is taxable income; if you pay with after-tax dollars, the benefit is generally tax-free. <strong>At a high marginal bracket, the same nominal benefit lands very differently</strong>—compare coverage on an after-tax basis.</li>
+<li><b>Equity concentration raises the value of insurance.</b> When human capital (your salary) and the main asset (your employer's stock) ride on the same company, a disability or an early death isn't a diversified shock. Insurance is one of the few protection lines <strong>completely uncorrelated with the share price</strong>.</li>
+<li><b>Liability exposure rises with net worth—it doesn't disappear.</b> Umbrella coverage (a layer stacked above the liability limits on auto and home) is typically sold in million-dollar increments and requires the underlying limits to meet a floor first. The more attachable assets you have, the more it belongs in the stack—one of the rare policies you need <em>more</em> as you get wealthier.</li>
+</ul>
+</div>
+
+<h2 class="section">Deeper Questions</h2>
+
+<details>
+<summary>If the expected value is negative, why does a rational person buy?</summary>
+<div class="body">Because long-run wealth doesn't compound on the arithmetic expectation of each period—it <strong>multiplies</strong>. A single wipeout erases the whole compounding path; ruin is an absorbing state, and you don't come back out of it. So even a positive-expected-value bet shouldn't be taken at full size if it carries a small chance of removing you from the game; conversely, even a negative-expected-value premium is rational when what it blocks is exactly that removal. Insurance doesn't buy return—it buys <strong>the right to stay at the table</strong>.</div>
+</details>
+
+<details>
+<summary>At what net worth can you self-insure everything?</summary>
+<div class="body">Split it in two. <strong>Bounded losses</strong>—a wrecked car, home repairs, a few months of interrupted income—become self-insurable quite quickly as net worth grows, which is why wealthy households often carry fewer policies. But <strong>unbounded losses</strong> don't vanish with wealth: a liability claim has no ceiling. So the typical path is: the thicker the balance sheet, the more small-ticket property cover you drop and the more <strong>liability and umbrella cover you add</strong>. "Self-insure everything" holds on the bounded half and never holds on the unbounded half.</div>
+</details>
+
+<details>
+<summary>What if the insurer itself fails?</summary>
+<div class="body">This is the question worth taking seriously when buying long-dated protection. In the US, each state has a guaranty association that backstops policies when an insurer becomes insolvent, but only up to <strong>limited amounts</strong> that vary by state and line of business—not full payment. Check an independent agency's financial-strength rating before buying. Mainland China has an insurance security fund, and the Insurance Law provides that when a life insurer is dissolved or goes bankrupt, its life policies and the corresponding reserves <strong>must be transferred to another life insurer</strong>. The practical conclusion is the same: don't concentrate long-dated, large-face-amount protection in one small carrier.</div>
+</details>
+
+<details>
+<summary>Does this framework hold when money is tight?</summary>
+<div class="body">The framework holds; the sequence changes. To be honest about it: this issue assumes a reader with surplus to allocate. When cash flow is tight, "buy everything you should have" is the wrong main thread. Instead, <strong>cover the one or two lethal risks first</strong> (health, liability, and term life if someone genuinely depends on you), deliberately choose <strong>high deductibles for low premiums</strong>, and put the limited cash into the emergency fund first—then raise coverage year by year. The other honest boundary: insurance solves catastrophes, not insufficient income. The main thread for the latter is earning more, not a policy.</div>
+</details>
+
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized insurance, investment, tax, or legal advice; consult a licensed professional about your own situation. The ratios and thresholds here (e.g., setting retention at one-sixth to one-third of the emergency fund) are <strong>illustrative references</strong> under stated assumptions—neither promises nor industry standards. Policy terms, exclusions, and regulatory backstop limits vary by state/jurisdiction, carrier, and year; your policy wording and the rules in force that year govern. US accounts and tax law are the default background, with China contrasts noted where relevant.
+</div>
+
+</div>
+</body>
+</html>
