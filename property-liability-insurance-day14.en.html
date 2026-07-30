@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 14 · Property &amp; Liability Insurance</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 14</span>
+<h1>Property &amp; Liability Insurance</h1>
+<p class="sub">A house burning down is a bounded loss. Injuring someone is not—this issue is about the risks with no ceiling.</p>
+<p class="meta">个人理财 · 财产与责任保险　|　2026-07-30</p>
+</header>
+<div class="lede">
+People who buy homeowners insurance are thinking about the house. People who buy auto insurance are thinking about the car. But the lines that actually determine whether you go bankrupt are the <b>liability</b> ones—property losses top out at what the thing is worth, while harm you cause another person has <b>no physical ceiling</b>. Four things this issue: what you're really buying in a home/auto/renters policy, why umbrella coverage is too cheap not to own, how to settle the HDHP + HSA question in three lines of arithmetic, and why your deductible is the layer you underwrite yourself. All of it comes back to the Day 12 rule: insure only what you can't absorb.
+</div>
+<h2 class="section">Four Points</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Home, Auto, Renters: You're Buying Liability</h3>
+<div class="oneline">Property payouts have a ceiling. Liability payouts don't—so that's where the policy's weight belongs.</div>
+<p><span class="lbl">Mechanism.</span> All three policies share a structure: <strong>property</strong> (your stuff is damaged) + <strong>liability</strong> (you damaged someone else) + <strong>additional living expenses</strong> (ALE, the cost of living elsewhere while the home is uninhabitable). The property side has a bounded worst case: a house pays out at most its rebuild cost, a car at most its current value. Liability has no bound—the other party's medical bills, lost wages, and long-term care after a serious crash can run far past your policy limit, and the excess comes out of your assets and future income. So premium dollars belong on higher liability limits, not on a lower deductible.</p>
+<p><span class="lbl">Actionable.</span> Pull up your auto <strong>declarations page</strong> and find the three bodily-injury numbers: per person / per accident / property damage. Many state minimums sit in the tens of thousands per person—one serious injury blows straight through. Moving to 100/300/100 or 250/500/100 usually costs surprisingly little: large claims are rare, so the marginal price of that layer is very low. On the property side, confirm two things: that the basis is <strong>replacement cost</strong> rather than depreciated <strong>actual cash value</strong> (ACV), and that your coverage meets the policy's coinsurance requirement (commonly 80% of rebuild cost, below which claims are reduced proportionally).</p>
+<p class="note"><strong>Renters insurance</strong> typically runs on the order of a hundred-odd dollars a year, yet it carries both liability coverage and off-premises coverage for your belongings—the most skipped and best-value policy on this list. <strong>US/China contrast:</strong> in China, raising third-party auto liability from ¥1M to ¥3M likewise costs very little extra—identical logic—but landlord-liability and renters-insurance norms are far weaker.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "My house is worth $800k, so I'll insure it for $800k." Coverage is anchored to <strong>rebuild cost</strong>, which excludes land: expensive-land markets tend to over-insure, and when materials and labor inflate, policies quietly become underinsured. A lot of older policies are sitting in exactly that state.</div>
+<div class="do"><span class="lbl">Try this week:</span> Find the liability limits on your auto declarations page and ask your carrier what 250/500/100 would cost. <b>Question:</b> If the other party's injuries exceed your limit, which pot of your money pays the difference?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Umbrella Liability: Absurdly Cheap Tail Coverage</h3>
+<div class="oneline">It only fires after the underlying limits are exhausted—which is why the odds are tiny, the price is tiny, and the protection is enormous.</div>
+<p><span class="lbl">Mechanism.</span> An <strong>umbrella policy</strong> (personal excess liability) sits on top of the liability limits in your auto and home policies and picks up where they run out, usually sold in $1M increments. It targets exactly the risk Day 12 described: minuscule probability, unbounded consequence. A typical $1M layer runs on the order of a few hundred dollars a year (varying by state and by the specific risk factors in your household). The catch is the underlying-limits requirement—carriers generally want your auto liability at something like 250/500 first.</p>
+<p><span class="lbl">Sizing it.</span> The usual advice is "buy some multiple of your annual income." That kind of <strong>income-anchored</strong> rule of thumb needs calibration: (1) a judgment reaches your attachable assets and your garnishable future income, which have no fixed relationship to a multiple of today's pre-tax income—and the higher the marginal bracket, the more that figure overstates what's actually available; (2) when income swings year to year (bonuses and equity vesting clustered into a few years), "multiply which year?" has no defensible answer. An asset-based measure is firmer:</p>
+<div class="formula">Umbrella limit ≈ net worth − legally protected assets + some slice of garnishable future income</div>
+<p class="note">In the US, employer plans like a 401(k) carry strong creditor protection; IRAs have an inflation-adjusted cap in bankruptcy and depend on state law outside it; and homestead exemptions on a primary residence vary enormously by state. So "protected assets" is a state-specific number—don't copy someone else's conclusion.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'm not wealthy enough to need this." It's precisely people whose assets are just starting to build and whose careers still run long who have the most to lose—a judgment reaches both what you've saved and years of what you haven't earned yet. The other mistake is assuming an umbrella covers your own losses. It doesn't: it covers your liability to <strong>others</strong> (including defamation claims, landlord liability, and a teenage driver in the household), and it excludes professional and business liability.</div>
+<div class="do"><span class="lbl">Try this week:</span> Estimate a number with the formula above, then ask your current auto carrier what one umbrella layer costs. <b>Question:</b> Does your household have a "liability amplifier"—a pool, a trampoline, a dog, a newly licensed driver?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>HDHP + HSA: A Three-Line Decision</h3>
+<div class="oneline">Choosing a health plan isn't a comparison of deductibles. It's a comparison of worst-case total spend.</div>
+<p><span class="lbl">Mechanism.</span> An <strong>HDHP</strong> (High-Deductible Health Plan) has a low premium and a high deductible, and it's the only ticket to opening an <strong>HSA</strong> (Health Savings Account). The HSA is the only triple-tax-free account in the US code: contributions go in untaxed, growth is untaxed, and withdrawals for qualified medical expenses come out untaxed—and payroll-deducted contributions through an employer also escape FICA (the federal Social Security and Medicare payroll tax). The investing side is Day 8; this point is only about picking a plan.</p>
+<p><span class="lbl">Actionable.</span> Pull six numbers off the two plans—premium, deductible, and <strong>out-of-pocket maximum</strong> (OOP max, the ceiling on what you can pay yourself in a year)—and run three lines:</p>
+<ul class="ratios">
+<li><b>Best case</b>: barely any care → compare annual premiums, and the HDHP wins.</li>
+<li><b>Worst case</b>: annual premium + OOP max − employer HSA contribution ± tax savings. This is the line that captures what insurance is for.</li>
+<li><b>Break-even</b>: if (low-deductible premium − HDHP premium) + employer HSA contribution &gt; the difference between the two deductibles, the HDHP still wins even if you burn through the whole deductible.</li>
+</ul>
+<p class="note">The IRS publishes the HDHP thresholds and HSA contribution limits each year—use the current year's figures, not remembered ones. Also, in-network and out-of-network are two separate OOP maximums, and the out-of-network one often has no real ceiling at all: that line matters far more than the deductible. <strong>US/China contrast:</strong> China's "public insurance + high-limit private medical" pairing is structurally also high-deductible-plus-high-ceiling, but there's no HSA-style triple-tax-free container, so there's no tax motive pushing you toward the high deductible.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "A high deductible means weak coverage." What determines catastrophic protection is the OOP max, not the deductible; in a genuinely bad year both plans push you to their respective ceilings, and the gap is often smaller than the premium gap. The inverse mistake is choosing an HDHP purely for the tax break: with a chronic condition, a pregnancy, or steady high-frequency care in the household, the cash-flow strain is real.</div>
+<div class="do"><span class="lbl">Try this week:</span> Copy the six numbers into one table and compute each plan's worst-case total. <b>Question:</b> If you hit the OOP max this year, could your emergency fund absorb it?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>Deductibles Are Self-Insurance</h3>
+<div class="oneline">A low deductible is paying money to buy back the small losses you could already absorb.</div>
+<p><span class="lbl">Mechanism.</span> Your deductible is the layer of risk you deliberately retain. Every small claim costs the insurer inspection, adjustment, and administration, plus profit—so the slice of premium that "buys the deductible down" is the most expensive slice per dollar of protection, and it violates the Day 12 rule directly: <strong>insure only what you can't absorb</strong>. The thicker your buffer, the more entitled you are to keep that layer yourself and convert the saved premium into higher liability limits—or simply save it. (<strong>Saving</strong> means money you didn't spend <em>and</em> actually invested, not a bank balance.)</p>
+<p><span class="lbl">Actionable.</span> Raise the deductible to a level your emergency fund can absorb in one go, then compute the payback:</p>
+<div class="formula">Payback years = increase in deductible ÷ annual premium saved</div>
+<p>An illustration (assumed values, not a quote): raise the deductible from $500 to $1,500 and save $200 a year, and payback is $1,000 ÷ $200 = 5 years. As long as you claim less often than once every five years, the trade is worth making.</p>
+<p><span class="lbl">And a hidden cost.</span> Filing itself raises your premium. The true return on a small claim = payout − deductible − several years of higher premiums − the claims-free discount you lose. In the US, <strong>CLUE</strong> (the property-claims history database) follows you to your next carrier, and frequent claims can get you non-renewed—especially in disaster-prone regions. The conclusion is counterintuitive: the protection a low deductible buys is coverage you'll <strong>probably never actually use</strong>.</p>
+<p class="note"><strong>US/China contrast:</strong> China's auto no-claims discount factor is tied directly to claim counts, so next year's premium increase after a small claim is more mechanical—and easier to compute in advance.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I paid the premium, so I'd be a fool not to claim." Small claims are frequently net-negative: a few hundred dollars paid out, more than that in higher premiums over the next three to five years, plus a record that affects renewal and rating. Insurance exists to catch catastrophes, not to reimburse minor repairs.</div>
+<div class="do"><span class="lbl">Try this week:</span> Look up the deductibles on your home and auto policies and ask whether your buffer could absorb each one the same day. <b>Question:</b> Of the claims you filed in the last five years, which ones would you be ahead on today if you hadn't?</div>
+</div>
+<div class="tech">
+<h4>A Note for High-Earning Tech Workers</h4>
+<p class="cap">One note per issue, on the specific situation of readers with equity compensation, high tax burdens, and volatile income.</p>
+<ul>
+<li><b>Liability limits do not follow net worth on their own.</b> An equity vest can move net worth up a tier in a very short window, while the liability limits on your auto and home policies still sit where you set them in your first job. Put "re-check liability limits and umbrella coverage after any major liquidity event" on the checklist, next to the Day 11 tax moves.</li>
+<li><b>Renting plus high-value portable gear are the two most common gaps.</b> Long-term renters in expensive cities frequently carry no renters policy—which for many people is the only personal liability coverage they'd have at all. And valuable electronics, cameras, instruments, and jewelry fall under <strong>sub-limits</strong> in a standard policy; anything above them has to be separately scheduled (scheduled personal property) to actually be paid.</li>
+<li><b>The HSA tax shield is worth most in a high marginal bracket—but don't let the tax break drive the medical decision.</b> Triple-tax-free treatment plus the FICA break rises in value with the bracket, and you still choose the plan on worst-case math. A tax saving is a discount, not protection.</li>
+<li><b>Employer benefits contain no personal liability coverage.</b> Group plans handle health, disability, and group life; umbrella, home, auto, and renters coverage exists only in the individual market—which also means it doesn't lapse when you change jobs. That's a feature.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Why is liability coverage so cheap and property coverage so expensive?</summary>
+<div class="body">Because pricing is <strong>frequency × severity</strong>. Property claims are frequent and mid-sized (burst pipes, hail, fender-benders); insurers are paying them nearly every year, so premiums have to cover that steady outflow. Large liability judgments are far rarer, so the marginal price of the next million in coverage is very low. That's also the source of the asymmetric conclusion running through this whole issue: <strong>high limits, high deductible</strong>—buy the layer you couldn't afford, keep the layer you can.</div>
+</details>
+<details>
+<summary>Why aren't flood and earthquake in a standard homeowners policy?</summary>
+<div class="body">Because those losses are highly correlated: one event triggers claims across an entire region at once, the risk doesn't diversify across policyholders, and the commercial model collapses. So the US carves flood out (the federal flood program or private flood carriers), and California earthquake coverage runs through its own mechanism. The practical consequence: <strong>if you don't buy it deliberately, you don't have it</strong>—and most such policies have waiting periods, so buying once a forecast appears is too late. Look up your flood zone once; it beats reading ten pages of policy language.</div>
+</details>
+<details>
+<summary>Who does the high-deductible strategy not work for?</summary>
+<div class="body">Anyone with a thin buffer. A deductible is a written promise that you can cover it out of pocket when something happens; without the buffer, a high deductible doesn't buy savings, it buys a credit card balance after the first minor accident—and the interest eats the premium you saved. The honest sequence is <strong>build the emergency fund first</strong> (Day 3), then raise deductibles. This issue's framework holds best for readers who already have three to six months of buffer.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal finance <strong>education</strong>, not individualized insurance, investment, tax, or legal advice; consult a licensed professional about your own situation. The figures here (liability limit tiers, umbrella premium magnitudes, the payback illustration, the coinsurance percentage) are <strong>illustrative models</strong> under stated assumptions or common market ranges—not quotes and not promises. Policy language, exclusions, creditor protection, and exemption rules vary by carrier, state, and year; HSA/HDHP thresholds and limits follow the IRS figures for the current year, and your own policy and current law govern. US context by default, with US/China differences flagged.
+</div>
+</div>
+</body>
+</html>
