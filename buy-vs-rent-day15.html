@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 15 · 买房 vs 租房</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 15</span>
+<h1>买房 vs 租房</h1>
+<p class="sub">这不是「扔钱租房」和「买房必赚」的对决，而是一道能算清的账——只要把月供之外的成本也放进去。</p>
+<p class="meta">Personal Finance · Buy vs Rent　|　2026-07-31</p>
+</header>
+<div class="lede">
+「租房是给房东打工」是流传最广、也最经不起计算的一句理财口号。真相是：<b>买房和租房都在花钱，只是花的方式不同</b>——租房付房租，买房付房产税、维护、利息和一大笔首付的机会成本，这些钱同样一去不回。这一期不劝买也不劝租，只给四件工具：算出真实持有成本、用回本年数判断值不值、分清房子里哪部分是消费哪部分是投资，以及一张「什么时候才该买」的条件表。结论有点反直觉：<b>决定买房划不划算的，主要不是房价涨跌，而是你会住多久。</b>
+</div>
+<h2 class="section">四个判断工具</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>拥有的真实成本，不是月供</h3>
+<p class="en">The Real Cost of Owning Isn't the Mortgage Payment</p>
+<div class="oneline">买房也有一部分钱有去无回，和房租是同一类东西。</div>
+<p><span class="lbl">机制。</span>月供里变成房子净值的那部分（还本金）不是成本，是左口袋换右口袋。真正的成本是<strong>不可回收成本</strong>：房贷利息、房产税、房屋保险、维护与折旧、HOA（业主协会费），以及首付那笔钱本可投在别处的<strong>机会成本</strong>。拿房租比月供，是拿「全部支出」比「部分支出加还本金」，结构上就不对。正确的比法是：<strong>年房租 vs 年不可回收成本</strong>。</p>
+<p><span class="lbl">可执行。</span>一个流传较广的粗算（Ben Felix 的「5% 法则」）把三块加总：</p>
+<div class="formula">年不可回收成本 ≈ 房价 × 5%<br/>= 房产税约 1% ＋ 维护约 1% ＋ 资本成本约 3%</div>
+<p class="note">假设：房产税约房价 1%（各州从 0.3% 到 2% 以上）、维护与折旧约 1%、资本成本约 3%（房贷利率与首付机会成本的加权，高利率年份明显更高）。用法：房价 × 5% ÷ 12，与同类房子的月租比。<strong>租金低于这个数，租更划算；高于它，买更划算。</strong></p>
+<div class="miss"><span class="lbl">常见误区：</span>「月供 3000，房租 3000，那当然买。」——月供里可能只有几百块在还本金，其余是利息；再加房产税、保险、维护与 HOA，真实年成本常比房租高出三到五成。头几年的摊销对还本金尤其不友好（Day 16 细讲）。</div>
+<div class="do"><span class="lbl">本周一试：</span>选一套你真会买的房子，算出「房价 × 5% ÷ 12」，与现在的房租并排写下来。<b>思考题：</b>差额如果每月投出去，十年是多少？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>回本年数：买房是一笔有摩擦的交易</h3>
+<p class="en">Break-Even Horizon: Transaction Costs Dominate</p>
+<div class="oneline">买卖一次来回要摩擦掉房价的一成左右，摊几年才不疼，取决于你住几年。</div>
+<p><span class="lbl">机制。</span>股票买卖几乎零成本，房子不是。买入端过户费用（贷款手续、产权保险、评估、税费）常为房价的 2%–5%；卖出端佣金与过户成本历史上在 5%–8%（美国 2024 年行业和解后佣金更可协商，差异变大）。一次来回<strong>摩擦掉房价的 8%–10% 是常见量级</strong>，且只能靠拉长持有年限来摊薄。</p>
+<p><span class="lbl">可执行。</span>把交易摩擦摊进年成本，再和房租比：</p>
+<div class="formula">年化总成本 ≈ 5%（持有）＋ 往返摩擦 ÷ 持有年数</div>
+<table>
+<thead><tr><th>持有年数</th><th>摩擦摊到每年（按往返 9%）</th><th>年化总成本（未计升值）</th></tr></thead>
+<tbody>
+<tr><td class="rate">2 年</td><td>4.5%</td><td class="yr">9.5%</td></tr>
+<tr><td class="rate">3 年</td><td>3.0%</td><td class="yr">8.0%</td></tr>
+<tr><td class="rate">5 年</td><td>1.8%</td><td class="yr">6.8%</td></tr>
+<tr><td class="rate">7 年</td><td>1.3%</td><td class="yr">6.3%</td></tr>
+<tr><td class="rate">10 年</td><td>0.9%</td><td class="yr">5.9%</td></tr>
+<tr><td class="rate">15 年</td><td>0.6%</td><td class="yr">5.6%</td></tr>
+</tbody>
+</table>
+<p class="note">说明性模型，假设往返交易成本 9%、持有成本 5%、房价不涨不跌。看趋势即可：曲线在<strong>五到七年之间明显变平</strong>——这就是「买房至少住五年」的算术来源。房价上涨会抵消一部分，但升值不确定，摩擦确定。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「大不了两年后卖掉，还能赚一笔。」——两年持有等于每年多背 4.5% 的摩擦，需房价年涨 5% 以上才勉强打平租房。而工作调动、家庭变化恰是短持有最常见的触发器。</div>
+<div class="do"><span class="lbl">本周一试：</span>诚实写下「我打算住几年」，再看表里那一行的年化成本。<b>思考题：</b>若两年内换城市的概率超过三成，这笔账还成立吗？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>房子是消费，附带一点投资</h3>
+<p class="en">A Home Is Consumption With an Investment Rider</p>
+<div class="oneline">你住的那部分是消费；算作投资的部分主要来自杠杆和强制储蓄，不是房产本身回报高。</div>
+<p><span class="lbl">机制。</span>自住房是两样东西：一份<strong>住房服务</strong>（消费，与房租等价）和一份<strong>资产</strong>。但资产这一面被高估了：Shiller 的长期美国实际房价指数显示，扣通胀后房价的长期年化涨幅只有<strong>一个百分点上下</strong>，远低于股票。买房仍让很多人积累了净值，主要靠三件事：<strong>杠杆</strong>（首付两成、涨幅按全额算）、<strong>强制储蓄</strong>（每月还本金逼你存下钱——<strong>储蓄</strong>指没花掉、且真的投出去或转成资产的钱，不是银行卡余额），以及免税的<strong>自住收益</strong>（省下的房租不计入应税收入）。</p>
+<p><span class="lbl">校准一个常见规则。</span>「住房支出不超过税前收入 28%、总负债不超过 36%」（28/36 规则，配合 DTI＝负债收入比使用）是银行的<strong>放贷上限</strong>，不是你的<strong>目标</strong>。这类按收入锚定的经验公式需要校准：① 税前口径系统性<strong>高估</strong>可支配能力，边际税档越高差距越大；② 股权与奖金让收入年际波动大，「按哪一年算」没有可辩护的答案，而月供三十年不变。更硬的标尺按支出与净值来：</p>
+<div class="formula">房价 ÷ 年支出　·　住房总成本 ÷ 税后到手现金流　·　净值 ÷ 年支出</div>
+<p class="note">税务上两点常被高估：房贷利息抵扣只在<strong>逐项抵扣</strong>时才有意义，而标准扣除额提高后选逐项的比例已大幅下降；SALT（州与地方税抵扣，含房产税）设有上限，近年多次调整且对高收入者递减——按当年规则核。<strong>中美差异：</strong>中国住宅目前无普遍开征的房产税（仅个别城市试点），住宅建设用地使用权到期依法自动续期；但一线城市年租金常仅为房价的 1.5%–2%，按同一把尺子算租金远低于持有成本，账面更偏向租——买房逻辑多来自户口、学区与资产配置渠道有限，而非现金流。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「房子是最好的投资。」——真是最好的投资，你不会同时住在里面、还要给它交税修屋顶。把自住房当投资会忽略两点：它高度<strong>不分散</strong>（一栋房子、一个城市），且<strong>流动性极差</strong>（急用钱时要么卖几个月，要么举债）。</div>
+<div class="do"><span class="lbl">本周一试：</span>算出「房价 ÷ 年支出」，再问：这个倍数换成金融资产够撑几年生活？<b>思考题：</b>你买房的动机里，多少是消费（想要的生活），多少是投资（怕踏空）？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>什么时候才该买：条件表，不是时机表</h3>
+<p class="en">When to Buy: A Checklist, Not a Market Call</p>
+<div class="oneline">该不该买由你的稳定性和缓冲决定，不由「现在是不是好时机」。</div>
+<p><span class="lbl">机制。</span>预测房价与利率拐点和预测股市一样不可靠。可控的是自己这侧：持有年限、缓冲、收入与地点的稳定性。买房失败的典型剧本几乎都不是「买在高点」，而是<strong>被迫在错误的时间卖出</strong>——失业、调动、修屋顶时没现金。门槛该按抗冲击能力设，不按市场设。</p>
+<p><span class="lbl">可执行——五条门槛，全过再买：</span></p>
+<ul class="ratios">
+<li><b>时间</b>：大概率会住 <b>5 年以上</b>（见要点 2 的曲线）。</li>
+<li><b>缓冲</b>：首付与过户费付完后，应急基金仍在 3–6 个月（Day 3），另留一笔<strong>修缮金</strong>（年化约房价 1%）。</li>
+<li><b>现金流</b>：PITI（本金＋利息＋房产税＋保险）＋HOA＋维护，占<strong>税后</strong>现金流的比例，在收入下滑三成时仍能承受。</li>
+<li><b>首付</b>：到 20% 可免 PMI（私人房贷保险，年费常为贷款额的 0.3%–1.5%，LTV＝贷款价值比降到 80% 可申请取消）；不够也未必错，但要把 PMI 算进成本。</li>
+<li><b>动机</b>：说得出一个与住房本身有关的理由（稳定、空间、学区、装修自由），而非「再不买就来不及了」。</li>
+</ul>
+<p class="note">诚实标边界：这套框架假设租赁市场正常、租房不影响子女入学与居住安全感。在租约不稳、涨租无上限或租房带来实质社会成本的地方，买房的价值有一大块是<strong>确定性</strong>——它不在上面的算式里，但真实存在，只是别当成投资收益。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「等利率降下来再买 / 趁利率低赶紧买。」——利率影响月供却无法预测，且利率下行时房价往往同步上行，两者部分抵消。更实际的顺序：先过条件表，再挑房子，最后才谈价格与利率（贷款能再融资，买错的位置不能）。</div>
+<div class="do"><span class="lbl">本周一试：</span>对着五条门槛打勾，把没过的那条写成可执行目标。<b>思考题：</b>如果明年被裁员，这套房子是缓冲还是压力源？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>买房会让地理集中度触顶。</b> 工资、股权、房产同时押在一个科技就业中心：行业下行时裁员、股价与本地房价往往一起走弱。这不是不能买，而是买之前要知道在下什么注。</li>
+<li><b>用股票凑首付是一次应税事件，要提前一个税年规划。</b> 卖 RSU（限制性股票单位）会实现资本利得，行权 ISO 换首付可能触发 AMT（替代最低税，见 Day 11）。把「首付来源与税」放在买房流程第一步，别签约后再算。</li>
+<li><b>高成本城市的价租比通常把账推向租。</b> 科技中心房价相对租金极高，按要点 1 的尺子常是「租金远低于持有成本」；此时买房的理由是生活确定性，不是财务优化。</li>
+<li><b>三十年固定月供 vs 波动的收入。</b> 用<strong>基本工资</strong>而非含股权的总包测承受力：股权与奖金是变量，月供是常量。银行按总包批更大额度——那是它的风险偏好，不是你的。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>「租房是给房东打工」错在哪里？</summary>
+<div class="body">错在只看到一侧的沉没支出。租客付房租，业主付利息、房产税、保险与维护——两边都有一去不回的钱，区别只是流向谁。真正的差别是：业主多担了<strong>集中风险与流动性风险</strong>，换来<strong>控制权与居住确定性</strong>，并靠还本金被迫存钱。把「租房 = 纯损失」当前提，会让人跳过唯一该做的那步：两边各算一遍再比。</div>
+</details>
+<details>
+<summary>租房的人怎么才能不落后？</summary>
+<div class="body">关键在<strong>真的把差额投出去</strong>。省下的钱若被消费掉，业主的强制储蓄确实会赢——不是房子回报高，而是它替人执行了纪律。所以租房者要用自动转账把差额做成一条不经手的现金流（Day 2、Day 4 正为此）。诚实说：多数人做不到，这也是买房在现实中常「意外地有效」的原因。</div>
+</details>
+<details>
+<summary>首付该不该动用退休账户？</summary>
+<div class="body">通常不该。美国 401(k) 借款在离职时可能被要求短期还清，否则按提取处理（税＋罚金）；Roth IRA 本金可取，但额度永久损失，免税增长空间补不回。更根本的是：如果首付要拆退休账户才凑得出，说明缓冲那条门槛本就没过。诚实的答案常是「再等一年」或「买便宜点的」。</div>
+</details>
+<details>
+<summary>什么情况下明显应该买？</summary>
+<div class="body">几个信号同时出现时：大概率长住（≥7 年）、租金已接近或超过房价 × 5% ÷ 12、收入与地点都稳定、首付付完缓冲仍在、且确实需要这套房子提供的确定性（有孩子、租约风险高）。反之，只有「大家都在买」或「怕以后买不起」这一个信号时，买的通常是情绪，不是房子。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资 / 税务 / 法律或房地产建议；涉及具体情况请咨询持牌专业人士。文中数字（5% 法则拆分、往返交易成本 8%–10%、回本年数表、PMI 与房产税区间）为特定假设下的<strong>说明性模型</strong>或常见区间，非报价也非预测；实际税费与佣金因州、城市、年份与谈判而异，抵扣规则以当年税法为准。默认美国背景，中美差异已标注。
+</div>
+</div>
+</body>
+</html>

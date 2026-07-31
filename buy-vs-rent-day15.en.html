@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 15 · Buy vs Rent</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 15</span>
+<h1>Buy vs Rent</h1>
+<p class="sub">This isn't "renting is throwing money away" versus "buying always wins." It's arithmetic—once you put the costs beyond the mortgage payment into it.</p>
+<p class="meta">个人理财 · 买房 vs 租房　|　2026-07-31</p>
+</header>
+<div class="lede">
+"Renting is paying your landlord's mortgage" is the most repeated and least survivable-under-arithmetic line in personal finance. The truth: <b>buying and renting both cost money—they just spend it differently</b>. Renters pay rent; owners pay property tax, maintenance, interest, and the opportunity cost of a large down payment. That money is equally gone. This issue argues for neither side; it hands you four tools: compute the real cost of owning, use a break-even horizon to judge whether it's worth it, separate the consumption part of a house from the investment part, and run a checklist of when you're actually ready. The conclusion is mildly counterintuitive: <b>what decides whether buying pays off isn't which way prices move—it's how long you'll stay.</b>
+</div>
+<h2 class="section">Four Tools</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>The Real Cost of Owning Isn't the Mortgage Payment</h3>
+<div class="oneline">Part of what an owner pays is gone forever too—it's the same category of money as rent.</div>
+<p><span class="lbl">Mechanism.</span> The slice of your payment that turns into home equity (principal) isn't a cost—it's moving money from one pocket to another. The actual cost is your <strong>unrecoverable costs</strong>: mortgage interest, property tax, homeowners insurance, maintenance and depreciation, HOA (homeowners association) dues, and the <strong>opportunity cost</strong> of the down payment you could have invested elsewhere. Comparing rent to a mortgage payment compares "all of one" against "part of the other plus forced saving"—structurally the wrong comparison. The right one is <strong>annual rent vs annual unrecoverable cost</strong>.</p>
+<p><span class="lbl">Actionable.</span> A widely circulated shortcut (Ben Felix's "5% rule") sums three pieces:</p>
+<div class="formula">Annual unrecoverable cost ≈ home price × 5%<br/>= property tax ~1% + maintenance ~1% + cost of capital ~3%</div>
+<p class="note">Assumptions: property tax around 1% of value (US states range from roughly 0.3% to well over 2%), maintenance and depreciation around 1%, cost of capital around 3% (a blend of mortgage rate and the opportunity cost of the down payment—materially higher in high-rate years). Usage: take price × 5% ÷ 12 and compare it with the monthly rent on a comparable home. <strong>Rent below that number favors renting; above it favors buying.</strong></p>
+<div class="miss"><span class="lbl">Common mistake:</span> "The payment is $3,000 and rent is $3,000, so obviously buy." Only a few hundred of that payment may be principal—the rest is interest; add property tax, insurance, maintenance and HOA and the true annual cost of the same house often runs 30%–50% above the rent. Early-year amortization is especially unkind to principal (Day 16 goes deep on this).</div>
+<div class="do"><span class="lbl">Try this week:</span> Pick a house you'd actually buy, compute price × 5% ÷ 12, and write it beside your current rent. <b>Question:</b> If the gap were invested monthly, what would ten years of it be?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Break-Even Horizon: Transaction Costs Dominate</h3>
+<div class="oneline">A round trip burns roughly a tenth of the price. How many years that has to be spread over is up to how long you stay.</div>
+<p><span class="lbl">Mechanism.</span> Trading stocks is nearly free; trading houses is not. Closing costs on the buy side (loan fees, title insurance, appraisal, transfer taxes) commonly run 2%–5% of price; on the sell side, commission plus closing costs have historically run 5%–8% (in the US, commissions became more openly negotiable after the 2024 industry settlement, so the spread has widened). A full round trip <strong>burning 8%–10% of the price is the normal order of magnitude</strong>, and the only way to thin it out is a longer holding period.</p>
+<p><span class="lbl">Actionable.</span> Amortize the friction into the annual cost, then compare with rent:</p>
+<div class="formula">Annualized total cost ≈ 5% (carrying) + round-trip friction ÷ years held</div>
+<table>
+<thead><tr><th>Years held</th><th>Friction per year (at 9% round trip)</th><th>Annualized total (no appreciation)</th></tr></thead>
+<tbody>
+<tr><td class="rate">2 years</td><td>4.5%</td><td class="yr">9.5%</td></tr>
+<tr><td class="rate">3 years</td><td>3.0%</td><td class="yr">8.0%</td></tr>
+<tr><td class="rate">5 years</td><td>1.8%</td><td class="yr">6.8%</td></tr>
+<tr><td class="rate">7 years</td><td>1.3%</td><td class="yr">6.3%</td></tr>
+<tr><td class="rate">10 years</td><td>0.9%</td><td class="yr">5.9%</td></tr>
+<tr><td class="rate">15 years</td><td>0.6%</td><td class="yr">5.6%</td></tr>
+</tbody>
+</table>
+<p class="note">Illustrative model assuming 9% round-trip cost, 5% carrying cost, and flat prices. The trend is the point: the curve <strong>flattens noticeably between years five and seven</strong>—that's where the old "don't buy unless you'll stay five years" rule actually comes from. Appreciation offsets some of this, but appreciation is uncertain and the friction is certain.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Worst case I sell in two years and still come out ahead." A two-year hold means carrying an extra 4.5% of friction every year—you'd need prices rising more than 5% a year just to draw level with renting. And job transfers and family changes are exactly the most common triggers for a short hold.</div>
+<div class="do"><span class="lbl">Try this week:</span> Write down honestly how many years you plan to stay, then read that row's annualized cost. <b>Question:</b> If the odds of moving cities within two years are above 30%, does the math still hold?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>A Home Is Consumption With an Investment Rider</h3>
+<div class="oneline">The part you live in is consumption. The part that counts as investment comes mostly from leverage and forced saving, not from housing being a high-return asset.</div>
+<p><span class="lbl">Mechanism.</span> An owner-occupied home is two things: <strong>housing services</strong> (consumption, equivalent to rent) and an <strong>asset</strong>. The asset side is overrated: Shiller's long-run US real home price index shows that after inflation, home prices have grown only <strong>around one percent a year</strong> over the long term—far below equities. Buying has still built net worth for many people, mainly through three things: <strong>leverage</strong> (20% down, appreciation on the full value), <strong>forced saving</strong> (monthly principal makes you save—and <strong>saving</strong> here means money you didn't spend <em>and</em> actually invested or converted into an asset, not a bank balance), and untaxed <strong>imputed rent</strong> (the rent you don't pay yourself isn't taxable income).</p>
+<p><span class="lbl">Calibrating a common rule.</span> "Housing under 28% of gross income, total debt under 36%" (the 28/36 rule, used alongside DTI—debt-to-income ratio) is a lender's <strong>ceiling</strong>, not your <strong>target</strong>. Income-anchored rules of thumb like this need calibration: (1) a pre-tax basis systematically <strong>overstates</strong> what you can actually deploy, and the higher the marginal bracket, the wider the gap; (2) equity and bonuses make income swing year to year, so "which year's income?" has no defensible answer—while the payment is fixed for thirty. Firmer yardsticks are built on spending and net worth:</p>
+<div class="formula">price ÷ annual spending　·　total housing cost ÷ after-tax cash flow　·　net worth ÷ annual spending</div>
+<p class="note">Two tax effects are routinely overstated. The mortgage-interest deduction only matters if you <strong>itemize</strong>, and the share of taxpayers who itemize fell sharply once the standard deduction was raised. SALT (the state and local tax deduction, which includes property tax) is capped, and the cap has been adjusted repeatedly in recent years with a phase-down for high earners—check the current year's rules. <strong>US/China contrast:</strong> China has no broadly levied residential property tax today (only pilot cities), and residential land-use rights renew automatically on expiry by law; but annual rent in tier-one cities is often just 1.5%–2% of price, so by the same yardstick rent sits far below carrying cost and the arithmetic tilts toward renting—the case for buying there comes more from household registration, school access, and limited alternatives for deploying capital than from cash flow.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Real estate is the best investment there is." If it truly were, you wouldn't also be living in it, paying tax on it, and replacing its roof. Treating your home as an investment hides two things: it's extremely <strong>undiversified</strong> (one house, one city) and extremely <strong>illiquid</strong> (needing cash means either months on the market or new debt).</div>
+<div class="do"><span class="lbl">Try this week:</span> Compute price ÷ annual spending, then ask: as financial assets, how many years of living would that multiple fund? <b>Question:</b> How much of your motive to buy is consumption (a life you want) and how much is investment (fear of missing out)?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>When to Buy: A Checklist, Not a Market Call</h3>
+<div class="oneline">Readiness is decided by your stability and your buffer, not by whether "now is a good time."</div>
+<p><span class="lbl">Mechanism.</span> Calling turns in home prices and rates is as unreliable as calling the stock market. What you control is your own side: holding period, buffer, income stability, location stability. The classic script for a bad outcome is almost never "bought at the top"—it's <strong>being forced to sell at the wrong moment</strong>: a layoff, a transfer, no cash when the roof goes. So set the bar by shock absorption, not by the market.</p>
+<p><span class="lbl">Actionable—five gates, clear all of them first:</span></p>
+<ul class="ratios">
+<li><b>Time</b>: you'll most likely stay <b>5+ years</b> (see the curve in Point 2).</li>
+<li><b>Buffer</b>: after the down payment and closing costs, the emergency fund is still 3–6 months (Day 3), plus a separate <strong>repair reserve</strong> (roughly 1% of value a year).</li>
+<li><b>Cash flow</b>: PITI (principal + interest + taxes + insurance) + HOA + maintenance, as a share of <strong>after-tax</strong> cash flow, still bearable if income dropped 30%.</li>
+<li><b>Down payment</b>: reaching 20% avoids PMI (private mortgage insurance, often 0.3%–1.5% of the loan a year; cancellable on request once LTV—loan-to-value—drops to 80%). Less isn't necessarily wrong, but price PMI into the cost.</li>
+<li><b>Motive</b>: you can state a reason about the housing itself (stability, space, schools, freedom to renovate), not just "it's now or never."</li>
+</ul>
+<p class="note">Marking the boundary honestly: this framework assumes a functioning rental market where renting doesn't jeopardize school access or a sense of security at home. Where leases are unstable, rent increases are uncapped, or renting carries real social cost, a large share of what buying buys is <strong>certainty</strong>—it isn't in the equations above, but it's real. Just don't file it as investment return.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'll wait for rates to fall / better lock in while rates are low." Rates move the payment but can't be forecast, and when rates fall prices often rise in step, partly cancelling out. The practical order is: clear the checklist, then choose the house, and only then argue about price and rate (you can refinance a loan; you can't refinance the wrong location).</div>
+<div class="do"><span class="lbl">Try this week:</span> Tick off the five gates and turn the one you fail into a concrete goal. <b>Question:</b> If you were laid off next year, would this house be a buffer or a source of pressure?</div>
+</div>
+<div class="tech">
+<h4>A Note for High-Earning Tech Workers</h4>
+<p class="cap">One note per issue, on the specific situation of readers with equity compensation, high tax burdens, and volatile income.</p>
+<ul>
+<li><b>Buying takes your geographic concentration to its maximum.</b> Salary, equity, and property all staked on one tech employment hub: in a downturn, layoffs, the share price, and local home prices tend to weaken together. This isn't an argument against buying—it's an argument for knowing what you're betting on before you do.</li>
+<li><b>Funding a down payment with stock is a taxable event; plan it a tax year ahead.</b> Selling RSUs (restricted stock units) realizes capital gains, and exercising ISOs to raise a down payment can trigger AMT (the alternative minimum tax—see Day 11). Make "where the down payment comes from, and its tax" step one of the buying process, not an afterthought once you're under contract.</li>
+<li><b>Price-to-rent ratios in expensive cities usually push the math toward renting.</b> In tech hubs, prices are extremely high relative to rents, so by the Point 1 yardstick rent typically sits well below carrying cost. There, the reason to buy is life certainty, not financial optimization.</li>
+<li><b>A thirty-year fixed payment against volatile income.</b> Test affordability against <strong>base salary</strong>, not total comp including equity: equity and bonuses are variables, the payment is a constant. A lender will approve more against total comp—that's its risk appetite, not yours.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>What's actually wrong with "renting is paying your landlord's mortgage"?</summary>
+<div class="body">It only counts the sunk spending on one side. Renters pay rent; owners pay interest, property tax, insurance, and maintenance—both have money that never comes back, and the only difference is who receives it. The real difference is that an owner takes on more <strong>concentration and liquidity risk</strong> in exchange for <strong>control and residential certainty</strong>, and is forced to save through principal payments. Treating "renting = pure loss" as a premise makes people skip the one step that matters: computing the unrecoverable costs on both sides before comparing.</div>
+</details>
+<details>
+<summary>How does a renter avoid falling behind?</summary>
+<div class="body">By <strong>actually investing the difference</strong>. If the money saved by renting gets consumed, the owner's forced-saving mechanism does win—not because housing returns are high, but because it enforces discipline on the owner's behalf. So renters need an automatic transfer that turns the gap into cash flow they never touch (that's what Day 2 and Day 4 are for). Honestly: most people don't do it, which is why buying so often works "by accident" in practice.</div>
+</details>
+<details>
+<summary>Should a down payment come out of retirement accounts?</summary>
+<div class="body">Usually not. A US 401(k) loan may have to be repaid on a short clock if you leave the job, and otherwise gets treated as a distribution (tax plus penalty); Roth IRA contributions can be withdrawn, but the contribution room is lost permanently and that tax-free growth can't be rebuilt. The deeper issue: if the down payment only works by raiding retirement accounts, the buffer gate was never cleared. The honest answer is usually "wait another year" or "buy something cheaper."</div>
+</details>
+<details>
+<summary>When is buying clearly the right call?</summary>
+<div class="body">When several signals line up: you'll likely stay long (7+ years), rent is at or above price × 5% ÷ 12, income and location are stable, the buffer survives the down payment, and you genuinely need what this house provides in certainty (children, lease risk). Conversely, when the only signal is "everyone's buying" or "I'll be priced out forever," what's being bought is usually an emotion, not a house.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment, tax, legal, or real-estate advice; consult a licensed professional about your own situation. The figures here (the three components of the 5% rule, 8%–10% round-trip transaction costs, the break-even table, PMI and property-tax ranges) are <strong>illustrative models</strong> under stated assumptions or commonly observed ranges—not quotes and not forecasts; actual taxes, fees, and commission structures vary by state, city, year, and negotiation, and deduction rules follow the current year's tax law. US context by default; US/China contrasts are noted.
+</div>
+</div>
+</body>
+</html>
