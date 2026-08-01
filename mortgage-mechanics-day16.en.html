@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 16 · How Mortgages Work</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 12px;letter-spacing:-.01em}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 16</span>
+<h1>How Mortgages Work</h1>
+<p class="sub">A thirty-year contract that most people evaluate on a single number—the monthly payment. Four other things decide what it actually costs you.</p>
+<p class="meta">个人理财 · 房贷机制　|　2026-08-01</p>
+</header>
+<div class="lede">
+A mortgage is usually the largest contract a person ever signs, and most people understand it in two sentences: how much is the payment, and will I qualify. Here's the unflattering part: <b>the amount a bank approves is calculated from the limit you can bear, not from the amount you should borrow</b>—and the monthly payment is the least informative number in the whole document. It doesn't tell you where the money goes, what you've locked in, or when to switch. This issue takes apart four things: why amortization makes the early years almost pure interest, what fixed and adjustable are each betting on, the real arithmetic of the down payment and PMI, and what to do when you have extra cash—pay down or invest. Every number below comes from one stated example; swap in your own and run the same math.
+</div>
+<h2 class="section">Four Things</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Read the Amortization Schedule</h3>
+<div class="oneline">The payment is fixed, but its split between interest and principal changes every month—and early on it's almost all interest.</div>
+<p><span class="lbl">Mechanism.</span> A mortgage is an amortizing loan: <strong>this month's interest = remaining balance × monthly rate</strong>, and whatever the payment leaves over goes to principal. At the start the balance is at its largest, so interest is highest and principal repaid is smallest; only as the balance falls does the interest share decline. This isn't a bank conspiracy—it's the arithmetic of pricing interest off a balance. But the consequence is real: <strong>in the first years of a loan you are barely building equity.</strong></p>
+<p><span class="lbl">Actionable.</span> Assumptions: a $500,000 loan, 30-year fixed at 6.5%, principal and interest only (no property tax or insurance). Payment ≈ <strong>$3,160</strong>.</p>
+<table>
+<thead><tr><th>Point in time</th><th>Interest that month</th><th>Principal that month</th><th>Balance</th></tr></thead>
+<tbody>
+<tr><td class="rate">Month 1</td><td>2,708</td><td class="yr">452</td><td>499,548</td></tr>
+<tr><td class="rate">End of year 5</td><td>2,539</td><td class="yr">622</td><td>468,055</td></tr>
+<tr><td class="rate">End of year 10</td><td>2,301</td><td class="yr">860</td><td>423,881</td></tr>
+<tr><td class="rate">End of year 20</td><td>1,517</td><td class="yr">1,644</td><td>278,326</td></tr>
+<tr><td class="rate">End of year 30</td><td>17</td><td class="yr">3,143</td><td>0</td></tr>
+</tbody>
+</table>
+<p class="note">Principal doesn't exceed interest until month 233 (about 19.4 years). Total interest over 30 years is roughly $638,000—more than the loan itself. In the first five years you hand over about $189,000, of which only about $32,000 becomes equity. The shorter you stay, the more exclusively you consume the most expensive stretch of the contract.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "The early years all go to the bank—the rules are rigged." Interest is the price of using money and scales with the balance; every loan works this way. The question isn't whether the split is fair, it's <strong>how much you borrowed and for how long</strong>—only principal and term change total interest.</div>
+<div class="do"><span class="lbl">Try this week:</span> Pull up your amortization schedule (every servicer posts one) and find the month where principal first exceeds interest. <b>Question:</b> If you'll likely move in seven years, which stretch of a 30-year contract are you actually using?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Fixed vs Adjustable, and When to Refinance</h3>
+<div class="oneline">A fixed rate is an insurance policy you bought; an adjustable rate is you collecting the premium on that policy.</div>
+<p><span class="lbl">Mechanism.</span> The 30-year fixed hands interest-rate risk entirely to the lender (a peculiar product that the US secondary market makes possible; most countries don't have it). An ARM (adjustable-rate mortgage) is typically fixed for the first 5, 7, or 10 years, then resets periodically off an index—now usually SOFR—plus a margin, with <strong>caps</strong> on each adjustment and over the life of the loan. Its lower starting rate is precisely your compensation for carrying reset risk. US borrowers also hold an underrated privilege: on most conventional loans <strong>there's no penalty for prepaying or refinancing</strong>—if rates fall you can switch, if they rise you don't have to. That asymmetry makes a 30-year fixed close to a free option.</p>
+<p><span class="lbl">Actionable.</span> Refinancing and buying points (prepaid interest for a lower rate; 1 point = 1% of the loan) run on the same one line of arithmetic:</p>
+<div class="formula">Break-even months = one-time cost ÷ monthly saving</div>
+<p>Example: a $500,000 balance, rate dropping 6.5% → 5.5%, payment 3,160 → 2,839, saving about $320 a month; closing costs of $8,000 → roughly <strong>25 months</strong> to break even. If you're not confident you'll hold that long, don't do it.</p>
+<p class="note">US–China difference: Chinese mortgages are predominantly floating against the LPR, with essentially no true 30-year fixed; prepayment often requires an appointment and some banks charge a penalty. "Rates dropped, so refinance" is routine in the US and largely doesn't apply in China.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "The payment went down, so I saved money." A refinance resets the term back to 30 years by default—the payment looks better, but you may be paying interest over a longer stretch. Either compare at the <strong>same remaining term</strong> or compare remaining total interest directly. Cash-out refinancing deserves more caution still: it converts existing equity into new debt.</div>
+<div class="do"><span class="lbl">Try this week:</span> Confirm whether your loan (or the one you're considering) is fixed or adjustable; if adjustable, write down the first reset year and the caps. <b>Question:</b> If it reset straight to the lifetime cap, could you still afford that payment?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>Down Payment and PMI: The Truth About 20%</h3>
+<div class="oneline">20% down isn't a legal threshold—it's the threshold for avoiding PMI, and PMI protects the bank, not you.</div>
+<p><span class="lbl">Mechanism.</span> PMI (private mortgage insurance) is charged to you when your down payment is under 20%, but it pays out to the lender. The annual cost runs roughly 0.3%–1.5% of the loan, rising as credit scores fall and down payments thin. The good news is that it ends: under the Homeowners Protection Act of 1998, on a conventional loan you can request cancellation once the original amortization schedule brings you to <strong>80%</strong> of the original value (with a good payment record), and it terminates automatically at <strong>78%</strong>. FHA loans differ: with less than 10% down the premium typically lasts the life of the loan, and refinancing is the only way out.</p>
+<p><span class="lbl">Actionable.</span> Same house, same 6.5% / 30-year fixed.</p>
+<table>
+<thead><tr><th>Down payment</th><th>Loan</th><th>Payment (P&amp;I)</th><th>PMI (at 0.75%/yr)</th></tr></thead>
+<tbody>
+<tr><td class="rate">20%</td><td>500,000</td><td class="yr">3,160</td><td>0</td></tr>
+<tr><td class="rate">10%</td><td>562,500</td><td class="yr">3,555</td><td>≈ 352 / mo</td></tr>
+<tr><td class="rate">5%</td><td>593,750</td><td class="yr">3,753</td><td>≈ 371 / mo</td></tr>
+</tbody>
+</table>
+<p class="note">In the 10%-down row, scheduled payments alone take about 8 years to reach 80% LTV (loan-to-value). Appreciation plus a new appraisal can get you there sooner—but you have to <strong>ask</strong>; the servicer won't do it for you. Honestly: waiting two or three extra years to reach 20% has its own cost (rent, prices, and rates all move meanwhile). This is a calculation with two sides, not a rule that you must hit 20% first.</p>
+<p><span class="lbl">Calibration: what a bank approves ≠ what you should borrow.</span> The familiar 28/36 rule (housing ≤ 28% of pre-tax income, all debt ≤ 36%) and lenders' DTI (debt-to-income) ceilings are all anchored to <strong>pre-tax</strong> income. Income-anchored yardsticks share a flaw: a pre-tax measure <strong>systematically overstates</strong> disposable capacity at high marginal tax rates, and for people whose pay is mostly equity and swings year to year, extrapolating today's peak income across thirty years is riskier still. The sturdier measure is spending-based: divide total housing cost (P&amp;I + property tax + insurance + maintenance) by <strong>actual take-home cash flow</strong>, then look at where your <strong>net worth ÷ annual spending</strong> lands once this loan is on your back.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "PMI is pure waste—avoid it at any cost." Not necessarily. Draining your emergency fund or dumping assets you should hold long-term to reach 20% buys you a bigger risk. PMI is a <strong>temporary cost that can be cancelled</strong>; a zero buffer isn't temporary.</div>
+<div class="do"><span class="lbl">Try this week:</span> If you're paying PMI, compute the balance equal to 80% of the original price and see how far off you are. <b>Question:</b> If appreciation already qualifies you to cancel, is it worth paying for an appraisal yourself?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>Prepay the Mortgage or Invest?</h3>
+<div class="oneline">Paying down early earns a risk-free, tax-free return equal to your mortgage rate—the only question is whether that's high enough.</div>
+<p><span class="lbl">Mechanism.</span> Every extra dollar erases all the future interest that dollar would have generated: a certain return, untaxed. To compare it with investing you have to compare after-tax and risk-adjusted. Two things get overlooked. First, most people's mortgage interest <strong>isn't actually deducted</strong>—the standard deduction rose sharply under TCJA, itemized totals don't clear the threshold, and the deduction simply never happens. (Separately, for loans taken after December 15, 2017, deductible acquisition debt is capped at $750,000.) Second, money paid in <strong>becomes illiquid</strong>: it's locked in the walls, and getting it back means a HELOC or a cash-out refinance—exactly the things hardest to qualify for when you've lost your job.</p>
+<p><span class="lbl">Actionable.</span> Order first, then compare (a general ordering, not personalized advice).</p>
+<ul class="ratios">
+<li><b>High-interest debt</b> (credit cards, consumer loans) — always first</li>
+<li><b>Employer 401(k) match</b> — an immediate certain return; don't skip it</li>
+<li><b>Emergency fund, 3–6 months</b> — liquidity outranks a certain return</li>
+<li><b>Only then ask</b>: after-tax mortgage rate vs a reasonable expectation for long-run real returns</li>
+</ul>
+<p class="note">Terminology: <strong>saving</strong> here means money not spent and actually invested (or applied to principal)—not a balance sitting in a checking account.</p>
+<p>If you do pay extra: under the same assumptions, an additional $200 a month shortens 30 years to about 25.3 and saves roughly $118,000 in interest. A lesser-known tool is a <strong>recast</strong>: after paying a lump sum toward principal, ask the servicer to recompute the payment off the new balance while keeping the term. Most (not all) conventional loans allow it, typically for a few hundred dollars—far cheaper than refinancing.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "You should never prepay a 3% mortgage." In expected-value terms that's usually right, but expected value is all it is. Paying a premium for certainty and sleep is a rational choice; conversely, "debt-free feels good" shouldn't cost you a certain return like the 401(k) match.</div>
+<div class="do"><span class="lbl">Try this week:</span> Write down your after-tax mortgage rate (for most people it equals the nominal rate, because the interest isn't actually deducted), and beside it: how much liquidity am I willing to trade to erase it. <b>Question:</b> If you lost your job tomorrow, would you rather the extra be home equity or cash in the account?</div>
+</div>
+<div class="tech">
+<h4>Notes for High-Earning Tech Professionals</h4>
+<p class="cap">One per issue, on the particular situation of people with equity comp, high tax burdens, and volatile income.</p>
+<ul>
+<li><b>Equity income gets discounted in underwriting.</b> Lenders generally want roughly a two-year history of RSU (restricted stock unit) and bonus income, plus a judgment that it will continue, before counting it as qualifying income—and they convert it conservatively. Approval amounts that don't match the numbers on your offer letter are normal. Don't read the result as a verdict on your finances, and don't reshuffle holdings or job plans just to make the file look better.</li>
+<li><b>Using employer stock for the down payment: run the tax first, don't add leverage.</b> Selling a concentrated position to fund a down payment is often good for diversification, but price out the capital gains and the timing first. Funding it with a securities-backed loan stacks leverage on leverage—when the market falls, the collateral call and the job risk arrive together.</li>
+<li><b>Prepay-vs-invest carries an extra correlation problem for you.</b> Employer stock falling, layoffs, and options going underwater tend to be three faces of one event. Under that correlation, cash is worth more than a modest certain return: thicken the buffer first, then talk about extra principal.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Is a 30-year fixed always better than a 15?</summary>
+<div class="body">Not automatically. The 15-year usually carries a lower rate and far less total interest, but the payment is higher and the cash-flow commitment more rigid. The alternative is a 30-year plus voluntary extra principal: it nearly replicates the 15-year outcome while preserving the option to drop back to the minimum payment at any time—at the cost of a slightly higher rate, and on the condition that you actually follow through. The real trade is <strong>buying flexibility with a bit of rate</strong>, and whether that's worth it depends on your income stability and your discipline.</div>
+</details>
+<details>
+<summary>Should you buy when rates are high and refinance later?</summary>
+<div class="body">"Marry the house, date the rate" hides a bet: that rates will fall <em>and</em> that you'll still qualify to refinance when they do—income, credit, and appraisal all have to clear. None of that is guaranteed. The sound approach is to decide whether to buy based on whether the payment at <strong>today's</strong> rate is sustainable for the long haul, and treat a future refinance as a bonus rather than part of the plan.</div>
+</details>
+<details>
+<summary>Is a mortgage "good debt"?</summary>
+<div class="body">Relatively, yes: the collateral is an asset you use, the rate is far below consumer credit, the term is long, and in the US you can prepay without penalty. But it is still debt—it converts your cash flow into a long-term obligation and it magnifies how much house-price swings move your net worth. The Day 5 dividing line still holds: what makes debt good is <strong>the rate and the use</strong>, not the word "house."</div>
+</details>
+<details>
+<summary>What does inflation mean for a mortgage?</summary>
+<div class="body">A long-dated fixed-rate loan is one of the few contracts that favors the borrower during inflation: the nominal payment stays put while the money you repay it with gets cheaper each year. Don't invert that into "so borrow more"—inflation paths aren't predictable, and the certainty of a fixed payment cuts both ways: when income doesn't rise, the obligation doesn't shrink either.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment, tax, or legal advice; consult a licensed professional about your situation. The tables and figures are <strong>illustrative models</strong> under stated assumptions ($500,000 loan, 30-year fixed at 6.5%, principal and interest only, PMI at 0.75% of the loan per year, $8,000 closing costs), not quotes; rates, premiums, and rules change over time and with individual circumstances—your actual terms govern. The default backdrop is US accounts and tax rules, with US–China differences flagged where relevant.
+</div>
+</div>
+</body>
+</html>
