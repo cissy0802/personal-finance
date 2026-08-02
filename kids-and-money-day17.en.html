@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 17 · Kids &amp; Money</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 17</span>
+<h1>Kids &amp; Money</h1>
+<p class="sub">What the real bill looks like, where education money belongs, how financial sense is actually learned, and how much to leave without doing harm.</p>
+<p class="meta">Personal Finance · Kids &amp; Money　|　2026-08-02</p>
+</header>
+<div class="lede">
+The two things most widely repeated about kids and money are a terrifying total and a vow to pay for college at any cost. The less flattering fact: <b>the most expensive item never appears on any "cost of raising a child" list—it's the income and retirement compounding lost during the years one parent scales back work</b>. And the most common mistake is funding education ahead of your own retirement accounts. Four things here: the time shape of the cost, the trade-offs among education-funding vehicles, how money sense is actually taught, and where to draw the line between inheritance and self-reliance. Parenting itself is out of scope—see the parenting repo, Day 20 / Day 39.
+</div>
+<h2 class="section">Four Things</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">Point 1</span>
+<h3>Real Cost: Model the Monthly Shape, Not the Total</h3>
+<p class="en">The Real Cost of a Child</p>
+<div class="oneline">Most of the money doesn't go to things you buy the child—it goes to housing, childcare, and the career you set aside.</div>
+<p><span class="lbl">Mechanism.</span> The USDA's last report (published 2017, for a child born in 2015) estimated roughly <strong>$233,600</strong> to raise one child to 17 in a middle-income two-parent household, college excluded; Brookings updated it for inflation to about $310,000. The total misleads three ways: ① the largest line is <strong>housing</strong> (roughly 30%) and food—not toys or activities; ② childcare is concentrated in the first five years, precisely when career earnings are lowest; ③ the priciest item isn't in the statistics at all—data across many countries show one parent's earnings (most often the mother's) decline for years after a birth, eating both current wages and decades of retirement compounding.</p>
+<table>
+<thead><tr><th>Stage</th><th>Dominant cost</th><th>Cash-flow character</th></tr></thead>
+<tbody>
+<tr><td class="rate">Ages 0–5</td><td>Childcare, housing</td><td class="yr">Peak—and it lands at your income trough</td></tr>
+<tr><td class="rate">Ages 6–17</td><td>Housing, food, activities</td><td class="yr">Flat but constant; easy to overlook</td></tr>
+<tr><td class="rate">Ages 18–22</td><td>College</td><td class="yr">Large but foreseeable a decade-plus ahead</td></tr>
+</tbody>
+</table>
+<p class="note">These are statistical averages; regional spread is enormous—full-time infant care in a major metro can run two to three times the average. It's a reference point, not a budget.</p>
+<p><span class="lbl">Actionable.</span> Price local childcare before deciding your return-to-work pace; use your employer's Dependent Care FSA (pre-tax dollars for childcare; the cap is whatever the IRS publishes for the year); and cost out "a few years of reduced work" in <strong>retirement compounding</strong>, not just that year's salary. Judge the impact by your <strong>savings rate</strong>—the share of income not spent and actually invested, not a bank balance.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "It costs $300k to raise a kid; I can't afford one." That compresses eighteen years of cash flow into one frightening stock figure. It arrives monthly and moves with income; the real questions are monthly cash flow and buffer depth.</div>
+<div class="do"><span class="lbl">Try this week:</span> List the next 12 months of child-related fixed costs (childcare, insurance, housing delta) on one line and compute its share of monthly take-home pay. <b>Question:</b> Does that spending crowd out consumption, or your savings rate?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">Point 2</span>
+<h3>Education Money: 529s and the Alternatives</h3>
+<p class="en">Funding Education</p>
+<div class="oneline">Fill your own retirement accounts first—you can borrow for college, not for retirement.</div>
+<p><span class="lbl">Mechanism.</span> A 529: after-tax dollars in, tax-free growth, tax-free withdrawals for qualified education expenses, and in most states a state income-tax deduction or credit on top. Qualified expenses cover tuition, required fees, books, and room and board at least half-time; federally they also include up to $10,000/year of K-12 tuition. Non-qualified withdrawals: <strong>earnings taxed as ordinary income plus a 10% penalty</strong> (a scholarship waives the penalty, not the tax). Two underrated flexibilities: the beneficiary can be changed to another family member (including yourself); and since SECURE 2.0, once conditions like a 15-year-old account are met, up to $35,000 lifetime can roll into the beneficiary's Roth IRA.</p>
+<table>
+<thead><tr><th>Vehicle</th><th>Whose money</th><th>Tax</th><th>Financial-aid treatment</th></tr></thead>
+<tbody>
+<tr><td class="rate">529</td><td>Parent (beneficiary changeable)</td><td class="yr">Tax-free growth and qualified withdrawals</td><td>Parent asset, assessed up to 5.64%</td></tr>
+<tr><td class="rate">UTMA custodial</td><td>Child (theirs at the age of majority)</td><td class="yr">Subject to the kiddie tax on unearned income</td><td>Student asset, assessed at 20%</td></tr>
+<tr><td class="rate">Taxable brokerage</td><td>Parent</td><td class="yr">Capital gains and dividends taxed</td><td>Parent asset</td></tr>
+<tr><td class="rate">Custodial Roth IRA</td><td>Child (needs earned income)</td><td class="yr">Tax-free growth</td><td>Retirement accounts generally excluded</td></tr>
+</tbody>
+</table>
+<p class="note">Reference points: 2024–25 published prices ran about $25,000/year for in-state public four-year tuition plus room and board and roughly $60,000 at private nonprofits (College Board basis); published price is not what's paid—net price after grants and scholarships is usually meaningfully lower. Since FAFSA simplification, distributions from a grandparent-owned 529 no longer count as student income—that old trap is gone.</p>
+<p><span class="lbl">Actionable.</span> In sequence, education money comes <strong>after</strong> the emergency fund, the employer 401(k) match, and your own tax-advantaged accounts (Day 3 / Day 8). The reason isn't sentiment, it's borrowability: college has loans, grants, and state schools; retirement has no loan.</p>
+<p class="note">US–China contrast: China has no 529-style tax-free growth account; the personal income tax offers only the children's-education special deduction (RMB 2,000 per child per month, split between parents or claimed in full by one).</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Fund the kid first; I'll deal with myself later." Twenty years on, the person absorbing your retirement shortfall is that same child. The opposite error is over-front-loading a 529: if the child skips college or wins a full ride, the beneficiary change and Roth rollover only backstop so much—the excess owes tax plus penalty.</div>
+<div class="do"><span class="lbl">Try this week:</span> Check your state's tax treatment of 529 contributions (some deduct current-year contributions; some states have no income tax at all). <b>Question:</b> Are you underwriting "all of it" or "the price of a state school"? Define the target first, then back into the monthly number.</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">Point 3</span>
+<h3>Money Sense Is Practiced, Not Lectured</h3>
+<p class="en">Teaching Kids About Money</p>
+<div class="oneline">Give a child money they can genuinely blow—it beats explaining compounding a hundred times.</div>
+<p><span class="lbl">Mechanism.</span> A 2013 Cambridge review for the UK government (Whitebread &amp; Bingham) found that basic money habits are largely formed by around age seven; explaining principles after that works poorly. And the strongest signal at home isn't what you say—it's what the child watches you do: how money gets discussed, whether anyone has ever waited for something. (In the 2018 large-sample replication by Watts and colleagues, the marshmallow test's predictive power shrank sharply once family background was controlled for—don't read it as destiny.)</p>
+<p><span class="lbl">Actionable.</span> Four moves, by age:</p>
+<ul class="ratios">
+<li><b>Decouple allowance from chores.</b> Chores are what family members owe the household; allowance is a practice tool (Ron Lieber's position in <em>The Opposite of Spoiled</em>). Keep the amount small enough that mistakes don't hurt, and the timing fixed.</li>
+<li><b>Three jars: spend / save / give.</b> Add a family match on the "save" jar—a dollar for a dollar. It's their first felt intuition for a 401(k) employer match.</li>
+<li><b>Make them wait.</b> Write the want down; buy it in two weeks if it survives.</li>
+<li><b>Open a custodial Roth IRA once they earn.</b> The cap is the lesser of that year's earned income and the annual IRA limit.</li>
+</ul>
+<div class="miss"><span class="lbl">Common mistake:</span> Both directions fail—"too young to understand" and "I'll just explain compound interest." Abstractions barely land; deciding how to spend a small sum and living with the result is what constitutes learning. The thing to avoid isn't a bad purchase—it's <strong>never having had the chance to make one</strong>.</div>
+<div class="do"><span class="lbl">Try this week:</span> Let your child run one complete small decision: they choose, they pay, and a bad call isn't rescued. <b>Question:</b> What was the first thing about money you learned at home? Which of today's decisions does it still steer?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">Point 4</span>
+<h3>Inheritance vs Self-Reliance: Give Options, Not an Exit</h3>
+<p class="en">Inheritance vs Self-Reliance</p>
+<div class="oneline">How much to leave isn't a sentiment question, it's a structure question—form drives the outcome more than size.</div>
+<p><span class="lbl">Mechanism.</span> Buffett's line is widely quoted: enough money that they feel they could do anything, but not so much that they could do nothing. It's more than an aphorism—the 1993 Holtz-Eakin, Joulfaian and Rosen study known as the "Carnegie conjecture" found that people inheriting over $150,000 left the labor force at roughly four times the rate of those inheriting under $25,000. What corrodes is the unconditional, unrestricted, unscheduled lump sum—not money itself.</p>
+<p><span class="lbl">Actionable.</span> Separate three kinds of giving:</p>
+<ul class="ratios">
+<li><b>Obstacle-clearing</b> (tuition, medical bills, part of a down payment): removes a structural barrier; highest return.</li>
+<li><b>Platform</b> (startup capital, help with childcare): conditional, discussed, still requires their effort.</li>
+<li><b>Unconditional living expenses</b>: the fastest route to dependency and the hardest to unwind.</li>
+</ul>
+<p>Then use <strong>structure</strong> rather than a number: staged distributions (say at 25 / 30 / 35), use restrictions, and matching provisions (they earn a dollar, the trust adds one) all outperform "how much, all at once." Instrument details are Day 20.</p>
+<p>Two things to do now that have <strong>nothing to do with the amount</strong>: name a guardian for minor children in your will, and audit every beneficiary designation on retirement accounts and policies—<strong>designations override the will</strong>, and forgetting to update them is the single most common failure here. On gifting, the US allows an annual exclusion per donor per recipient (recently in the $19,000 range, indexed each year), and a 529 can front-load five years at once; paying tuition or medical bills directly to the institution doesn't use the exclusion at all.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'm not leaving much, so there's nothing to plan." Without a will and current beneficiary designations, the law decides who raises your children and who receives what—often after a year or two of process. Planning is about control and friction, not size.</div>
+<div class="do"><span class="lbl">Try this week:</span> Open one retirement account and one policy and check whether the beneficiary is still the person you'd choose today. <b>Question:</b> Do you want this money to be a safety net or a launchpad in your child's life? The two demand completely different structures.</div>
+</div>
+<div class="tech">
+<h4>Note for High-Earning Tech Workers</h4>
+<p class="cap">One per issue, for readers with equity comp, high marginal tax rates, and lumpy income.</p>
+<ul>
+<li><b>Don't put employer stock in your child's custodial account.</b> Your human capital is already bet on that company; handing the child the same ticker passes concentration risk to the next generation. Diversify first, then give. Custodial assets also become the child's outright at the age of majority—past a certain size, a trust is the right container (Day 20).</li>
+<li><b>A big vest year is the year to front-load.</b> The five-year 529 election, annual gift exclusions, and charitable moves all fit an income-peak year—still after your own tax-advantaged accounts (Day 8).</li>
+<li><b>Don't count on the Child Tax Credit.</b> It phases out above higher adjusted gross incomes, and many high-earning households get none of it. What this group can usually use is the employer-side Dependent Care FSA.</li>
+<li><b>The peer environment will define "normal" for your child.</b> High pay plus a big metro means their reference point is classmates' spending. What counters it isn't restriction—it's their own money and their own trade-offs.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Should you cover the full cost of college?</summary>
+<div class="body">No settled answer. The risk of covering everything isn't raising someone lazy—it's that they never grasp the magnitude and choose a school with no constraint at all. A common middle path is a stated family cap (say the published price of four years in-state), with anything beyond it covered by scholarships, work, or loans. Cutting the other way: full loan financing can crush their savings rate for a decade after graduation, and that's a real cost too.</div>
+</details>
+<details>
+<summary>Should allowance be tied to chores?</summary>
+<div class="body">Both camps have a case and the evidence is thin. Against tying: chores are an obligation, and once priced, children start negotiating—"not for that rate." For tying: work-for-pay is closer to how the world runs. A workable middle: baseline chores unpaid, genuinely extra work compensated. What matters more than the choice is whether the allowance is <strong>steady, predictable, and truly theirs to direct</strong>.</div>
+</details>
+<details>
+<summary>Is there ever an exception to retirement-before-education?</summary>
+<div class="body">One: the employer 401(k) match always comes first. And if your state gives a same-year tax credit on 529 contributions, the immediate return on that small contribution can beat a taxable account. But the exceptions are small and don't change the main line: yielding retirement-account space to education money spends an un-borrowable need on a borrowable one. Near-subsistence incomes are a different frame entirely.</div>
+</details>
+<details>
+<summary>What's the biggest US–China difference here?</summary>
+<div class="body">The vehicle. The US has long-horizon tax-advantaged containers—529s, custodial accounts, Roth IRAs—so education money can be its own automated track. China lacks these, so education money is effectively carried by household savings and property (including school-district housing), which is both less liquid and more concentrated.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment, tax, or legal advice; consult a licensed professional about your situation. Dollar figures and account rules here are <strong>illustrative references</strong> under specific years and assumptions (costs are statistical averages; published prices are not net prices), and limits and thresholds are adjusted annually—defer to the current official figures. US accounts and tax law are the default background, with US–China differences flagged where relevant.
+</div>
+</div>
+</body>
+</html>
