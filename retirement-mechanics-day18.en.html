@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 18 · Retirement Planning Mechanics</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 10px;letter-spacing:-.01em}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 18</span>
+<h1>Retirement Planning Mechanics</h1>
+<p class="sub">How much you need, what order to withdraw in, how Social Security is computed—and the variable that decides the outcome but almost nobody models.</p>
+<p class="meta">个人理财 · 退休规划机制　|　2026-08-03</p>
+</header>
+<div class="lede">
+The standard move in retirement planning is to multiply your current income by some factor, arrive at a terrifying number, and then either panic or give up. That first step is already wrong: <b>what you're buying in retirement is your life, and the cost of your life equals your spending, not your income</b>. Here's the less comfortable part—even with the right target, two people with identical savings and identical long-run average returns can land in completely different places, purely because the crash landed in the first years of retirement rather than the last. One never runs out; the other is empty in their seventies. This issue covers four mechanisms: how to size the target, how to defend against sequence risk, what order to draw accounts in, and how Social Security is actually calculated. Portfolio construction and rebalancing live in investing Day 47.
+</div>
+<h2 class="section">Four Mechanisms</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>The Target: Swap Income Replacement for 25× Spending</h3>
+<div class="oneline">Your retirement number is set by your annual spending, not your annual income.</div>
+<p><span class="lbl">Mechanism.</span> The two most widely repeated yardsticks are both anchored on income: "replace 70–80% of your pre-retirement income" and "have N times your salary saved by 67." Convenient, but anchored to the wrong thing. The line with actual evidence behind it comes from Bengen (1994) and the Trinity study (1998): backtested against US historical data, withdrawing 4% of the <strong>initial</strong> portfolio each year and adjusting for inflation thereafter survived 30 years in the overwhelming majority of start years. Invert it and you get a target anchored on spending.</p>
+<div class="formula">Target ≈ annual spending ÷ withdrawal rate = spending × 25 (at 4%)</div>
+<table>
+<thead><tr><th>Initial withdrawal rate</th><th>Multiple needed</th><th>Tends to fit</th></tr></thead>
+<tbody>
+<tr><td class="rate">5%</td><td class="yr">20×</td><td>Short horizon, other income sources</td></tr>
+<tr><td class="rate">4%</td><td class="yr">25×</td><td>The classic ~30-year benchmark</td></tr>
+<tr><td class="rate">3.5%</td><td class="yr">≈29×</td><td>40+ years, or leaving a legacy</td></tr>
+<tr><td class="rate">3%</td><td class="yr">≈33×</td><td>Very early retirement, conservative</td></tr>
+</tbody>
+</table>
+<p class="note">Assumptions: a stock/bond portfolio, a fixed real withdrawal set off the initial balance, no fees or individual taxes modeled. 4% is a <strong>starting point, not a law</strong>—it rests on US historical data, and international data generally gives lower safe rates; recent annual estimates from various firms have drifted between roughly 3.7% and 4% depending on starting valuations and bond yields; for horizons materially longer than 30 years, most research lands closer to 3–3.5%.</p>
+<p><span class="lbl">Calibration.</span> Any income-anchored retirement rule (income replacement, N× salary) systematically <strong>overstates</strong> the target for people with high incomes, high marginal tax rates, or equity-heavy pay: ① pre-tax income overstates what's actually disposable, and payroll tax plus saving itself both disappear in retirement; ② the higher the savings rate (here "saving" means money you didn't spend <em>and</em> did invest—not cash sitting in a bank), the wider the gap between income and real living costs, so replacing 80% of income can far exceed what you actually spend; ③ "N× salary" assumes today's income is your lifetime level. For a progress benchmark, use <strong>net worth ÷ annual spending</strong>.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Just multiply my current pre-tax income by some factor." In retirement you stop paying payroll tax and stop saving; commuting and childcare may end; healthcare and insurance go up. Net those out and the answer is usually nowhere near an income multiple. Build it from a spending list.</div>
+<div class="do"><span class="lbl">Try this week:</span> Total your real spending over the last 12 months (including annual insurance premiums and lumpy items), then multiply by 25. <b>Question:</b> how much of that number survives into retirement, and how much disappears?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>Sequence Risk: Same Returns, Different Order, Different Ending</h3>
+<div class="oneline">Once you start withdrawing, the order of returns matters as much as their size.</div>
+<p><span class="lbl">Mechanism.</span> During accumulation the order is irrelevant—the geometric mean decides everything. During withdrawal it's a different game: shares sold in a bear market are <strong>permanently</strong> gone, so when the rebound arrives you own fewer shares to ride it. That's sequence-of-returns risk, and its densest window is the "fragile decade"—roughly the 5 years before retirement through the 10 years after. Same set of returns, simply reversed:</p>
+<table>
+<thead><tr><th>Year</th><th>Order A (bad first)</th><th>Order B (good first)</th></tr></thead>
+<tbody>
+<tr><td class="rate">Start</td><td>100</td><td>100</td></tr>
+<tr><td class="rate">1</td><td>−30% → 67.2</td><td>+20% → 115.2</td></tr>
+<tr><td class="rate">2</td><td>−10% → 56.9</td><td>+15% → 127.9</td></tr>
+<tr><td class="rate">3</td><td>+15% → 60.8</td><td>+15% → 142.5</td></tr>
+<tr><td class="rate">4</td><td>+15% → 65.3</td><td>−10% → 124.6</td></tr>
+<tr><td class="rate">5</td><td>+20% → <strong>73.6</strong></td><td>−30% → <strong>84.4</strong></td></tr>
+</tbody>
+</table>
+<p class="note">Assumptions: start at 100, withdraw 4 at the <strong>beginning</strong> of each year (no inflation adjustment); the two columns are the same return series forward and reversed. Five years produces a ~15% gap on identical average returns. Stretch it to 30 years and that gap is the difference between enough and not enough. Illustrative model only.</p>
+<p><span class="lbl">What to do.</span> Three mitigations, none of them free: ① a <strong>cash bucket</strong>—1–3 years of expenses somewhere you never have to sell risk assets from, at the cost of lower returns on that slice; ② <strong>flexible withdrawals</strong> (guardrail rules)—cut the withdrawal (say 10%) in bad years and restore it after recovery, which raises success rates materially at the cost of a variable standard of living; ③ a <strong>variable retirement date</strong>—even modest part-time income in the first years offsets the most expensive withdrawals of your life.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "My long-run return is 7%, so 4% is safe." Averages only behave that way when you're not withdrawing. Once you are, order becomes a first-order variable: two people with identical average returns can end up one with money left over and one out early.</div>
+<div class="do"><span class="lbl">Try this week:</span> Assume you had to live off your current portfolio starting next year—how many years of spending could you cover without selling risk assets? <b>Question:</b> could you actually cut spending in a crash year? If not, your safe withdrawal rate has to be lower.</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>Withdrawal Sequencing: Fill Tax Brackets, Don't Drain Accounts</h3>
+<div class="oneline">The unit of decision is "which bracket do I use up this year," not "which account do I empty first."</div>
+<p><span class="lbl">Mechanism.</span> Conventional advice: taxable first → then pre-tax (Traditional 401(k)/IRA) → Roth last, so tax-advantaged space compounds longer and Roth survives to the end (no lifetime forced distributions, and it's the best asset to inherit). The direction is right; following it mechanically digs a hole. The pre-tax account keeps compounding until an age threshold forces money out as an RMD (Required Minimum Distribution), and stacked on top of Social Security and Medicare premium surcharges, your marginal rate late in retirement can end up <strong>higher</strong> than it was early on.</p>
+<ul class="ratios">
+<li><b>Find the gap years.</b> The stretch between stopping work and claiming Social Security or hitting RMDs is often the lowest-tax period of your life. Deliberately drawing from pre-tax accounts—or doing Roth conversions—in those years flattens future RMDs at a discount.</li>
+<li><b>The thresholds are cliffs, not slopes.</b> ACA premium subsidies, IRMAA (the Medicare high-income premium surcharge, assessed on income from <strong>two years prior</strong>), the 0% long-term capital gains bracket, state tax. How far you fill is set by the threshold you refuse to cross.</li>
+<li><b>Legal access before 60.</b> The Rule of 55 (leave an employer in or after the year you turn 55 and you can take penalty-free 401(k) withdrawals from <strong>that</strong> employer's plan), 72(t)/SEPP (substantially equal periodic payments—once started you can't casually stop), Roth IRA contributions which are always withdrawable (each conversion carries its own 5-year clock), and the simplest bridge of all: a taxable account.</li>
+<li><b>RMD start.</b> Under SECURE 2.0 it's age 73; for those born in 1960 or later, 75. Roth IRAs—and, since 2024, Roth 401(k)s—have no RMD during the owner's lifetime. Thresholds are adjusted periodically; check the current official figures.</li>
+</ul>
+<div class="miss"><span class="lbl">Common mistake:</span> "Draining the taxable account first minimizes tax." It frequently manufactures a late-life tax spike instead, and it wastes the low-tax years when Roth conversions were cheap. Sequence by <strong>the tax rate of the year</strong>, not by account queue.</div>
+<div class="do"><span class="lbl">Try this week:</span> Write down what share of your total sits in each of the three buckets (taxable / pre-tax / Roth)—that mix is your future flexibility. <b>Question:</b> if next year were the lowest-tax year of your life, what would you use it for?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>How Social Security Is Calculated (US)</h3>
+<div class="oneline">It's an inflation-adjusted lifetime annuity with a progressive formula, and claiming age moves the number a lot.</div>
+<p><span class="lbl">Mechanism.</span> Social Security takes your highest <strong>35 years</strong> of wage-indexed earnings to compute AIME (Average Indexed Monthly Earnings), then runs it through a three-tier formula to get your PIA (Primary Insurance Amount): <strong>90%</strong> of earnings below the first bend point, <strong>32%</strong> in the middle tier, <strong>15%</strong> above the second. The bend points are adjusted annually. That structure means <strong>the higher your earnings, the smaller the share Social Security replaces</strong>—high earners depend far more on their own accounts. Fewer than 35 years of work? The missing years enter the average as zeros.</p>
+<table>
+<thead><tr><th>Claiming age</th><th>Share of PIA</th></tr></thead>
+<tbody>
+<tr><td class="rate">62 (earliest)</td><td class="yr">70%</td></tr>
+<tr><td class="rate">65</td><td class="yr">≈86.7%</td></tr>
+<tr><td class="rate">67 (full retirement age)</td><td class="yr">100%</td></tr>
+<tr><td class="rate">70 (latest worth waiting for)</td><td class="yr">124%</td></tr>
+</tbody>
+</table>
+<p class="note">Assumes full retirement age (FRA) of 67, i.e. born 1960 or later. Claiming early is a <strong>permanent</strong> reduction; each year of delay past FRA adds roughly 8%, capped at 70.</p>
+<p><span class="lbl">What to do.</span> Treat delaying as a purchase: you spend down your own accounts between 62 and 70 to buy an inflation-adjusted annuity that pays for as long as you live. When the <strong>higher-earning</strong> spouse delays, it usually raises the future survivor benefit too. The arguments the other way are equally real: health, family longevity, needing the cash flow now.</p>
+<p><span class="lbl">Being honest about limits.</span> Recent Trustees reports project the retirement trust fund depleting in the early 2030s, after which payroll taxes alone would still cover roughly three-quarters of scheduled benefits. Planning for a haircut is prudent; planning for zero is overcorrection.<br/><span class="note"><strong>US–China contrast:</strong> China's urban employee pension = a basic pension (tied to years of contribution and the local average wage) plus a personal account; the private pension account rolled out nationwide at the end of 2024 with a ¥12,000 annual contribution cap—not remotely comparable to 401(k)/IRA limits or investment freedom.</span></p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Take it at 62 and enjoy it early." That's a permanent reduction, not an advance on the same money; it costs the most for people who live long and for a spouse who will later rely on the survivor benefit. Claiming early out of fear the program will change trades a certain cut for an uncertain risk.</div>
+<div class="do"><span class="lbl">Try this week:</span> Create an account at ssa.gov, verify your earnings record, and look at the estimates for all three claiming ages. <b>Question:</b> if Social Security paid only 75% of what's scheduled, does your plan still work? What covers the gap?</div>
+</div>
+<div class="tech">
+<h4>Note for High-Earning Tech Workers</h4>
+<p class="cap">One per issue, focused on this group's specific situation: equity compensation, high tax burden, volatile income.</p>
+<ul>
+<li><b>"Annual income" is an unusually bad anchor for you.</b> Equity comp turns a few years into peaks, so multiplying by a factor produces a target that's both inflated and unstable. Size the goal off <strong>annual spending × a multiple</strong>, and treat peak years separately as a tax opportunity.</li>
+<li><b>A layoff, sabbatical, or startup year may be the lowest-tax window of your life.</b> Using it for Roth conversions or to realize long-term gains at a low rate is often worth more than saving extra in a peak year. The window opens by <strong>tax year</strong>—miss it and it's gone.</li>
+<li><b>If employer stock sits in your 401(k), check NUA first.</b> NUA (Net Unrealized Appreciation) means that in a qualifying lump-sum distribution, the cost basis is taxed as ordinary income while the appreciation is taxed at long-term capital gains rates—potentially far better than reflexively rolling everything to an IRA. The rules are strict and irreversible; get professional advice before acting.</li>
+<li><b>Sequence risk arrives earlier for you.</b> Retiring early means a longer withdrawal phase and a fragile window that starts sooner—while your portfolio is often still loaded with employer stock. Your human capital is already bet on that company; your retirement portfolio shouldn't bet on it twice.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Does the 4% rule still hold?</summary>
+<div class="body">It was never a "rule"—it's the conclusion of one backtest: US markets, 30 years, a stock/bond mix, fixed withdrawals. The criticisms all land: international data gives lower safe rates; start years with high valuations and low bond yields fare worse; a fixed withdrawal doesn't behave like a real person. But the opposite criticism lands too—real people spend less when markets are bad. The takeaway isn't a more precise number, it's to <strong>treat it as a dial, not an insurance policy</strong>.</div>
+</details>
+<details>
+<summary>Do people really spend the same amount every year in retirement?</summary>
+<div class="body">No. The observed shape looks more like a smile: high early on when you're active, declining through the middle as energy drops, then rising at the end with healthcare and long-term care. So a fixed-withdrawal model is conservative. The trap: that curve is a population average, not your guarantee, and the variance at the tail end is enormous. It buys you psychological slack—it is <strong>not</strong> a license to spend more up front.</div>
+</details>
+<details>
+<summary>Pre-tax or Roth right now?</summary>
+<div class="body">The comparison is today's marginal rate against your marginal rate when you withdraw (the account choice itself is Day 8). But that future number gets pushed up by RMDs, the taxable share of Social Security, and Medicare surcharges—easy to underestimate while accumulating. The practical answer usually isn't either/or, it's <strong>tax diversification</strong>.</div>
+</details>
+<details>
+<summary>What do early retirees do about health insurance?</summary>
+<div class="body">In the US this is the single biggest variable in retiring early: you have to cover the gap before Medicare at 65, and ACA premium subsidies are assessed on that year's income—so "how much income do I recognize this year" simultaneously determines your tax, your subsidy, and whether a Roth conversion is affordable. All of it has to be solved on <strong>one sheet</strong> (early retirement itself is Day 19).</div>
+</details>
+<div class="disc">
+This site is evidence-based personal-finance <strong>education</strong>, not personalized investment, tax, or legal advice; consult a licensed professional about your situation. Withdrawal rates, multiples, and the sequence comparison are <strong>illustrative models</strong> under stated assumptions (historical backtests, fixed withdrawals, no fees or individual taxes), not promises; age thresholds and contribution limits are adjusted periodically—check the current official figures. US accounts and tax rules are the default background, with China contrasts noted.
+</div>
+</div>
+</body>
+</html>
