@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 19 · Financial Independence (FIRE)</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head><body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 19</span>
+<h1>Financial Independence (FIRE)</h1>
+<p class="sub">Where 25× comes from, what Coast and Barista each solve, and why "optionality" is a steadier goal than "retire early."</p>
+<p class="meta">Personal Finance · Financial Independence　|　2026-08-04</p>
+</header>
+<div class="lede">
+The most common misreading of FIRE (Financial Independence, Retire Early) is putting the stress on the RE. The part of it that actually does the work has nothing to do with quitting: <b>it computes when income from assets covers the cost of living — and how fast that moment arrives is driven almost entirely by your savings rate, not by the absolute size of your paycheck</b>. The less flattering part: plenty of people hit the number and discover they don't want to retire, while others have counted money they can't actually spend. Four things this issue: what the FI math is really computing, the intermediate states on the spectrum, why optionality beats retirement as a target, and the three places acceleration goes wrong.
+</div>
+<h2 class="section">Four Mechanisms</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>The FI Math: Spending Sets the Target, Savings Rate Sets the Clock</h3>
+<div class="oneline">The absolute size of your income cancels out of the equation. What's left is your savings rate and how far along you already are.</div>
+<p><span class="lbl">Mechanism.</span> Your FI number = annual spending ÷ safe withdrawal rate, which at 4% means <strong>annual spending × 25</strong> (where that 4% comes from and its criticisms: see Day 18). What gets underrated is the two-sided effect of your <strong>savings rate</strong> (= the share of take-home pay you don't spend <em>and</em> do invest — not cash sitting in a bank account). Saving more grows the numerator faster; spending less shrinks the target itself. Because both move together, the absolute income level cancels out of "how many years left." Only two variables remain: your savings rate, and <strong>how many years of spending your net worth already equals</strong>.</p>
+<div class="formula">FI number = annual spending × 25　｜　Progress = net worth ÷ annual spending</div>
+<table>
+<thead><tr><th>Savings rate</th><th>Net worth = 0 yr of spending</th><th>= 5 yr</th><th>= 10 yr</th><th>= 15 yr</th></tr></thead>
+<tbody>
+<tr><td class="rate">20%</td><td class="yr">37 yr</td><td class="yr">23</td><td class="yr">15</td><td class="yr">9</td></tr>
+<tr><td class="rate">30%</td><td class="yr">28 yr</td><td class="yr">19</td><td class="yr">13</td><td class="yr">8</td></tr>
+<tr><td class="rate">40%</td><td class="yr">22 yr</td><td class="yr">16</td><td class="yr">11</td><td class="yr">7</td></tr>
+<tr><td class="rate">50%</td><td class="yr">17 yr</td><td class="yr">13</td><td class="yr">9</td><td class="yr">6</td></tr>
+<tr><td class="rate">60%</td><td class="yr">13 yr</td><td class="yr">10</td><td class="yr">7</td><td class="yr">5</td></tr>
+</tbody>
+</table>
+<p class="note">Assumptions: 5% long-run <strong>real</strong> (inflation-adjusted) return, a target of 25× annual spending, flat spending, savings rate measured on <strong>take-home</strong> pay, taxes and fees ignored. Illustrative model, not a promise. Columns are years of spending already banked; rows are the share you save each year.</p>
+<p><span class="lbl">Calibration.</span> Any rule of thumb anchored to <strong>income</strong> — "save 15% of income," "25× your salary," "replace 80% of pre-retirement income" — <strong>systematically overshoots</strong> for high earners, high marginal brackets, and equity-heavy pay: (1) pre-tax income overstates what's actually spendable; (2) the higher the savings rate, the wider the gap between income and real living costs, so an income-anchored target can far exceed what you actually spend; (3) these formulas assume today's income is a lifetime level. Use <strong>net worth ÷ annual spending</strong> as the progress benchmark.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Once my income doubles I can retire early." — If a doubled income is absorbed by proportionally higher spending, the savings rate is unchanged and not a single year comes off the table above — while the higher spending has just raised the FI number by 25× the increase. A raise only shortens the timeline when it <strong>isn't spent</strong>.</div>
+<div class="do"><span class="lbl">Try this week:</span> Compute two numbers: real total spending over the last 12 months, and net worth ÷ annual spending. Find yourself in the table. <b>Question:</b> How many years forward does your row jump if you raise the savings rate by 10 points? What are those years worth?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>A Spectrum, Not a Switch: Coast / Barista / Lean / Fat</h3>
+<div class="oneline">Before full FI there are several intermediate states that are far cheaper and arrive far sooner.</div>
+<p><span class="lbl">Mechanism.</span> The four familiar labels are really two dimensions crossed. On <strong>spending level</strong>: Lean FIRE (suppressed spending, small target, thin buffer as the price) vs. Fat FIRE (current lifestyle preserved, large target). On <strong>degree of coverage</strong>: <strong>Coast FI</strong> — existing assets receive <em>no further contributions</em> and still compound to the target by traditional retirement age; <strong>Barista FI</strong> — light work covers <em>part</em> of spending (in the US, often for employer health coverage) so assets aren't drawn down heavily.</p>
+<p><span class="lbl">Executable.</span> Coast number = FI number ÷ (1 + real return)<sup>years remaining</sup>. At a 5% real return:</p>
+<table>
+<thead><tr><th>Years to traditional retirement age</th><th>Share of the FI number needed today</th></tr></thead>
+<tbody>
+<tr><td class="rate">30 years</td><td class="yr">≈23%</td></tr>
+<tr><td class="rate">25 years</td><td class="yr">≈30%</td></tr>
+<tr><td class="rate">20 years</td><td class="yr">≈38%</td></tr>
+<tr><td class="rate">15 years</td><td class="yr">≈48%</td></tr>
+<tr><td class="rate">10 years</td><td class="yr">≈61%</td></tr>
+</tbody>
+</table>
+<p class="note">Assumptions: 5% real return, no further contributions, target and spending unchanged. The point of Coast isn't actually to stop saving — it's that "I must keep this income" becomes "I could take a lower-paying job I'd rather do."</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Once I hit my Coast number I can stop saving." — That assumes compounding shows up on schedule, spending never rises, you're never laid off, and you never tap the money early. If any one fails, your future self covers the gap. Treat Coast as a <strong>floor</strong>, not a stop button.</div>
+<div class="do"><span class="lbl">Try this week:</span> Compute your Coast number from the table and compare it to your current invested assets (excluding your primary residence). <b>Question:</b> If you hit Coast tomorrow, what would you rather trade that "income you must earn" for?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>Optionality, Not Escape</h3>
+<div class="oneline">FI buys the ability to say no. Early retirement is only one of the options it unlocks — and often not the best one.</div>
+<p><span class="lbl">Mechanism.</span> Two patterns show up repeatedly in FIRE communities. One is "one-more-year syndrome" — the number is hit but nobody leaves, because what actually drives the anxiety is <strong>uncertainty</strong>, and money only relieves part of it. The other is the weightlessness after quitting: work supplies income, structure, identity, and social contact at once, and only the first is replaceable by assets. So treating FI as an escape hatch from a bad job is expensive and slow: if the problem is the work, the manager, or the industry, changing jobs beats saving for twenty years. <strong>The steadier target isn't retirement — it's the specific optionality each rung unlocks.</strong></p>
+<p><span class="lbl">Executable.</span> Break FI into rungs, and name what each one buys:</p>
+<ul class="ratios">
+<li><b>Buffer</b> (3–6 months of spending, see Day 3): you can turn down a bad offer instead of taking it because rent is due</li>
+<li><b>FU money</b> (roughly 1–2 years of spending): you can leave on your own terms, negotiate, absorb a layoff without derailing the plan</li>
+<li><b>Coast FI</b>: you can switch to lower-paid work you'd rather do — your retirement is already handled</li>
+<li><b>Barista FI</b>: you can work part-time without drawing down assets heavily</li>
+<li><b>Full FI</b> (25× annual spending): work becomes fully optional</li>
+</ul>
+<div class="miss"><span class="lbl">Common mistake:</span> "Once I've saved enough, I'll be free." — Freedom is always relative to something specific. Those who haven't worked out what they're free <em>for</em> tend to reach the number and simply swap the anxiety of "is it enough" for "who am I." <strong>The number removes constraints, not the need for meaning.</strong></div>
+<div class="do"><span class="lbl">Try this week:</span> For each rung above, write one sentence: at this point, the one thing I'd change immediately is ___. <b>Question:</b> Which of those doesn't actually require waiting for that rung?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>The Arithmetic of Acceleration — and Where It Breaks</h3>
+<div class="oneline">Cutting a recurring expense works on both sides at once; what most often gets miscounted in an FI number is money you can't actually spend.</div>
+<p><span class="lbl">Mechanism.</span> The two levers aren't symmetric. Earning more does nothing if it's absorbed by spending. <strong>Cutting a recurring expense raises the savings rate and permanently lowers the target</strong> — at 25×, spending $10k less per year drops the FI number by $250k. That's also why Lean and Fat arrive so far apart: it isn't only the numerator that moves.</p>
+<p><span class="lbl">Executable — three traps and their fixes.</span></p>
+<ul class="ratios">
+<li><b>1. Computing the FI number pre-tax.</b> Money in pre-tax accounts (Traditional 401(k)/IRA) is taxed as ordinary income on withdrawal, and unrealized gains in taxable accounts owe capital gains tax when sold. Only after <strong>discounting</strong> both at your expected future rates is it spendable money — and the discount depends on your future brackets, so don't paper over it with one generic percentage.</li>
+<li><b>2. Forgetting the health-insurance bridge.</b> In the US there's no Medicare before 65, so early retirees typically use the ACA (Affordable Care Act) marketplace. Its premium subsidies are determined by <strong>MAGI</strong> (Modified Adjusted Gross Income) — early retirees have low taxable income and often qualify for substantial help, which also means Roth conversions or realized gains <strong>directly raise your premiums</strong>. Both belong on the same worksheet. Rules change annually; go by the current official figures. <span class="note">US/China difference: in China, health coverage must be continued by the individual after leaving a job, and contribution years directly affect post-retirement eligibility — check your city's continuation rules before stepping away.</span></li>
+<li><b>3. Forgetting how to get at the money before 59½.</b> If the assets are all locked in retirement accounts, FI can arrive and still be unspendable. The mechanics — Rule of 55, 72(t)/SEPP, Roth contributions, taxable-account bridge — are in Day 18; the point is to <strong>plan the account mix in advance</strong>, not improvise later.</li>
+</ul>
+<div class="miss"><span class="lbl">Common mistake:</span> Counting home equity and unvested equity comp toward the 25×. <strong>A primary residence produces no withdrawable cash flow</strong> (and keeps consuming maintenance, taxes, and insurance — see Day 15), and unvested equity isn't yours yet. An FI number should consist only of investable assets you can sell and draw from.</div>
+<div class="do"><span class="lbl">Try this week:</span> Split net worth into three buckets — taxable / pre-tax / Roth — and list home equity and unvested equity separately. See what share can genuinely support withdrawals. <b>Question:</b> If you had to live on it starting next year, which account funds the first five years?</div>
+</div>
+<div class="tech">
+<h4>For High-Earning Tech Professionals</h4>
+<p class="cap">One note per issue on this group's specific situation: equity comp, high tax burden, volatile income.</p>
+<ul>
+<li><b>A peak year gives you a flattering savings-rate reading.</b> Equity vesting makes certain years stand out. The honest version is a <strong>three-year rolling average</strong> measured on take-home pay — otherwise a normal year pushes you several rows down the table.</li>
+<li><b>Your accelerator and your concentration risk are the same asset.</b> What makes a high savings rate physically possible is often employer stock — and your human capital (salary) is already bet on that company once. The closer FI gets, the more "diversify on vest" should be the default, not something handled after the number is hit.</li>
+<li><b>Peer spending raises the denominator and the target together.</b> Big-city costs plus the spending baseline around you mean every upward step in spending gets multiplied by 25 into the FI number. The thing to hold is that baseline, not another increment of income.</li>
+<li><b>Coast FI is especially valuable with volatile income.</b> It converts "I must hit this number every year" into "the plan survives income being cut in half" — for anyone whose annual comp is decided by a share price, that stability is itself a return.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Is 25× too optimistic, especially for retirements over 40 years?</summary>
+<div class="body">Quite possibly. The 4% figure comes from 30-year US historical backtests; retiring early means a materially longer horizon and an earlier fragile window (see the sequence risk in Day 18). Most research on long horizons lands closer to 3–3.5% initial withdrawal, i.e. 29–33×. But pushing to extreme conservatism has a price too: the extra years worked to bank another 8× of spending trade certain time for an uncertain risk. The more practical move is to <strong>preserve flexibility</strong> — variable withdrawals, employable skills — rather than simply stacking multiples.</div>
+</details>
+<details>
+<summary>Is Lean FIRE the smarter choice?</summary>
+<div class="body">Mathematically it's tempting: smaller target, sooner arrival. The risk is that <strong>the buffer is compressed at the same time</strong> — the same medical surprise or roof replacement takes a far larger share of a Lean budget, and the discretionary spending you'd normally cut is already gone. Lean essentially trades margin of safety for time. People it suits usually have another hedge: re-employable skills, a low-cost location, family support. A plan that assumes nothing ever goes wrong isn't a plan.</div>
+</details>
+<details>
+<summary>Why do so many people hit the number and stay?</summary>
+<div class="body">Partly rational: valuations, health insurance, and family changes are real uncertainties. Partly psychological — an identity and a set of habits built over years of saving don't switch to "person who spends" on the day you quit, and retirees are frequently observed to underspend. Two implications: the <strong>withdrawal side needs practice too</strong> — try living on the planned withdrawal amount while you still have income — and validating rung by rung (Coast → Barista) fits actual human behavior better than a single cliff jump.</div>
+</details>
+<details>
+<summary>Does retiring early hurt Social Security or a state pension?</summary>
+<div class="body">Yes. US Social Security uses your highest 35 years of earnings, with missing years counted as zero — leaving the workforce a decade or more early lowers the eventual benefit (mechanics in Day 18). China's urban employee pension has minimum contribution-year thresholds, where an interruption bites more directly. So "early retirement" in both countries isn't purely a personal-finance question; it also involves accruing eligibility inside a system. Budget for that separately rather than assuming it holds.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal finance <strong>education</strong>, not personalized investment, tax, or legal advice; consult a licensed professional about your situation. Tables here are <strong>illustrative models</strong> under stated assumptions (5% long-run real return, a 25× annual-spending target, flat spending, taxes and fees ignored), not promises. US accounts and tax rules are the default background, with US/China differences flagged; account and subsidy rules change annually — go by the current official figures.
+</div>
+</div>
+</body>
+</html>
