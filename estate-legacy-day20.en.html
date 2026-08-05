@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 20 · Estate &amp; Legacy</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 20</span>
+<h1>Estate &amp; Legacy</h1>
+<p class="sub">Why a beneficiary form outranks your will, why incapacity is the likelier event, and what belongs in the "if I died tomorrow" file.</p>
+<p class="meta">Personal Finance · Estate &amp; Legacy　|　2026-08-05</p>
+</header>
+<div class="lede">
+"I'm young" and "I don't have much" are the two standard reasons to put this off. The less flattering fact: <b>you already have an estate plan — you're just using the default one</b>, namely your state's intestacy rules plus a beneficiary form you ticked years ago when you opened an account. What it protects was never you; it's whether the people left behind can get at money and make decisions during the worst few weeks of their lives. Four things this issue: why a beneficiary form outranks a will, what wills / trusts / probate each actually solve, why incapacity planning gets used more often than a will does, and what belongs in the "if I died tomorrow" file.
+</div>
+<h2 class="section">Four Mechanisms</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>Beneficiary Designations Override Your Will</h3>
+<div class="oneline">Retirement accounts, life insurance, and TOD/POD accounts pay by form. Your will has no authority over that money.</div>
+<p><span class="lbl">Mechanism.</span> US assets pass along two separate tracks. One runs through <strong>probate</strong>, the court process where a will — or, absent one, state intestacy law — decides who gets what. The other is <strong>contractual</strong>: 401(k)s, IRAs, life insurance policies, annuities, and any brokerage or bank account registered TOD (Transfer on Death) or POD (Payable on Death) pay directly to whoever is named on the form, without a court, and <strong>without regard to anything the will says</strong>. For most households, the bulk of net worth sits on that second track. If the form names an ex, names a parent who has died, or is simply blank (→ it falls back into the estate and into probate), no amount of care in the will fixes it.</p>
+<p><span class="lbl">Executable.</span> Build a beneficiary audit table, three columns per account: primary beneficiary, contingent beneficiary, date last updated. Four categories to check: old 401(k)s left behind at previous employers (the most commonly missed), IRA/Roth IRA, individual and employer group life insurance, and TOD/POD registrations at brokerages and banks. Re-check after marriage, a birth, a divorce, or a death in the family. Don't name a minor directly — insurers generally won't pay a minor and will force a court-supervised guardianship instead; route it through a trust or an UTMA account (a custodial account for minors under state law).</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I have a will, so it's handled." — A will has no effect on assets covered by a beneficiary form. The classic failure: divorced years ago, will long since updated, 401(k) still names the ex-spouse.</div>
+<div class="do"><span class="lbl">Try this week:</span> Log into one retirement account tonight and screenshot the beneficiary page. <b>Question:</b> If your primary beneficiary is in the same accident as you, who is in the contingent line?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>Wills, Trusts, and Probate: What Each One Solves</h3>
+<div class="oneline">A will decides who gets it and who raises your kids; a trust mostly solves how it's given and staying out of court.</div>
+<p><span class="lbl">Mechanism.</span> Probate is the <strong>public</strong> court process of inventorying assets, notifying creditors, and distributing what's left per the will or state law — typically several months to over a year, with cost and duration varying widely by state. A will does not avoid probate; a will is the instruction sheet handed to the court. What it does do, irreplaceably, is two things: direct assets that carry no beneficiary form, and <strong>name a guardian for minor children — the only document that can</strong>. A revocable living trust instead holds assets in a container you fully control and can change at any time while alive; at death a successor trustee distributes directly, bypassing probate and keeping it private.</p>
+<p><span class="lbl">Executable.</span> Order of operations: fix the beneficiary forms first (free, doable today) → make a will if you have minor children or real property → then evaluate a trust. Three tests for whether a trust earns its cost: is probate expensive and slow in your state, do you own real property in more than one state (otherwise each state runs its own process), do you need control over the timing of distributions. The key: <strong>a trust only works once assets have actually been retitled into it</strong> — property deeds re-recorded, accounts re-registered. Signing the documents without funding the trust is the most common failure here.</p>
+<p class="note">US/China difference: China has no probate; inheritance runs through a notarized succession process or the courts. Under the Civil Code, handwritten, dictated, printed, and audio/video wills can all be valid, and since 2021 a <strong>notarized will no longer takes precedence — the most recent one governs</strong>. Domestic family trusts are used mainly for asset segregation and distribution control, not for avoiding probate.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "An online template takes fifteen minutes." — Fine for simple situations, but witnessing and execution requirements are set by <strong>state law</strong>, and a formal defect can void the entire will. The moment the picture gets complicated, use an attorney licensed in your state.</div>
+<div class="do"><span class="lbl">Try this week:</span> Write two sentences: who raises the children if you and your partner are both gone; who receives the house and anything without a beneficiary form. <b>Question:</b> Is either sentence currently carried by any legal document?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>Incapacity Is the Likelier Event, Not Death</h3>
+<div class="oneline">Three documents that take effect while you're alive — far likelier to be used in your lifetime than a will.</div>
+<p><span class="lbl">Mechanism.</span> A will takes effect only at death. The higher-probability scenario is that you're alive but temporarily or permanently unable to decide — surgery, an accident, cognitive decline. Without authorization documents, family (spouse included) cannot automatically operate accounts in your name, file your taxes, or deal with your property; their only route is a court guardianship: expensive, public, slow. Three documents close that gap: a <strong>durable power of attorney</strong> (financial; "durable" means it survives your incapacity), a <strong>healthcare proxy</strong> (someone empowered to make medical decisions for you), and an <strong>advance directive / living will</strong> (your own stated wishes on life-sustaining treatment).</p>
+<p><span class="lbl">Executable.</span> Do all three together, usually in the same session as the will. Points to get right: (1) the financial agent and the healthcare agent <strong>can be different people</strong> — pick whoever decides well under pressure, not whoever is closest; (2) banks and brokerages often insist on their own forms, so send copies to your main institutions once signed; (3) hospitals also need a separate HIPAA authorization (the US medical privacy law) before they can disclose anything to your agent; (4) your healthcare agent needs to have <strong>actually talked with you</strong> about what you want — the document cannot substitute for that conversation.</p>
+<p class="note">US/China difference: China's Civil Code provides for "designated guardianship by agreement," letting an adult name in writing who will act as guardian upon future incapacity (usually notarized in practice) — similar in function, different in procedure.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "My spouse can obviously handle it." — Outside jointly held accounts, a spouse has no inherent authority over retirement accounts, brokerage accounts, or property titled in your name alone. Marriage is not authorization.</div>
+<div class="do"><span class="lbl">Try this week:</span> Choose your financial agent and healthcare agent, and have the conversation with one of them this week. <b>Question:</b> Does that person know where your accounts even are?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>The "If I Died Tomorrow" File: First, Make the Money Findable</h3>
+<div class="oneline">Most losses in transfer aren't tax. They're heirs not knowing what exists or not being able to get in.</div>
+<p><span class="lbl">Mechanism.</span> Federal estate tax reaches very few people: from 2026 the exemption is roughly $15 million per person (indexed annually — go by the current official figure), and transfers between spouses are unlimited when the spouse is a US citizen. <span class="note">A dozen-plus states levy their own estate or inheritance tax, sometimes at thresholds far below the federal one.</span> The universal loss is an <strong>information</strong> loss: the policy nobody finds, the account nobody knew about, the phone nobody can unlock. Two more mechanisms get overlooked: (1) inherited assets generally receive a <strong>step-up in basis</strong> — cost basis resets to date-of-death value, so prior unrealized gains escape capital gains tax; (2) most non-spouse heirs of an IRA/401(k) must <strong>empty it within ten years</strong> under the SECURE Act, which can drop large withdrawals into the heir's highest-tax years.</p>
+<p><span class="lbl">Executable.</span> Write a two-page "asset map" and tell your executor where it lives: institutions and account types (<strong>no passwords</strong>), insurance policies, property and how it's titled, debts, employer benefits, your accountant's and attorney's contact details. Digital assets get their own section: your password manager's emergency access, two-factor backup codes, Google's Inactive Account Manager and Apple's Legacy Contact (in most states these platform "online tools" <strong>take precedence over</strong> will provisions), and keys to self-custodied crypto — lose those and it's gone permanently.</p>
+<p class="note">One calibration in passing: "leave your family 10× your annual income in life insurance" and similar <strong>income</strong>-anchored rules of thumb <strong>systematically overshoot</strong> for high earners, high marginal brackets, and equity-heavy pay — pre-tax income overstates the cash flow a household actually lives on. Use a spending basis instead: the survivors' annual spending gap × the number of years to cover, minus liquidatable net worth.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'll just write the passwords on paper for my family." — Password lists go stale, they leak, and logging into someone else's account without authorization violates most platforms' terms. Use the password manager's emergency access and the platform's own legacy-contact mechanism.</div>
+<div class="do"><span class="lbl">Try this week:</span> Two ten-minute jobs tonight: set an emergency contact in your password manager, and turn on Legacy Contact in your phone's settings. <b>Question:</b> If you went missing today, which bill would go unpaid first?</div>
+</div>
+<div class="tech">
+<h4>For High-Earning Tech Professionals</h4>
+<p class="cap">One note per issue on this group's specific situation: equity comp, high tax burden, volatile income.</p>
+<ul>
+<li><b>The post-death exercise window is short, and unvested equity simply vanishes.</b> Equity plans typically give heirs a limited window to exercise (commonly a few months to a year) before options lapse; unvested equity isn't part of the estate at all. Pull both clauses out of the plan document and into your asset map — don't leave an heir to wade through sixty pages.</li>
+<li><b>Concentration meets step-up.</b> When employer stock carries a large unrealized gain, gifting it during life hands over your very low cost basis with it, while holding to death gets the basis reset. That isn't an argument for holding forever (the concentration risk is still there — see Day 10), but it does reorder "donate, gift, or hold."</li>
+<li><b>The stronger your security, the harder the inheritance.</b> Hardware keys, authenticator apps, SSO on a company device — all of it locks heirs out. Treat emergency access and backup codes as part of the security setup, configured at the same time.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>I don't have much. Can I skip this issue entirely?</summary>
+<div class="body">Not entirely, but you can stage it. <strong>Independent of asset size</strong>: the three incapacity documents, the beneficiary forms, and naming a guardian for minor children — that last one is about people, not money. <strong>Safe to defer</strong>: trusts, estate-tax planning, charitable structures. The costs are asymmetric: skip the trust and your heirs spend extra time and money; skip the guardian and a court decides for you.</div>
+</details>
+<details>
+<summary>Attorney, or online template?</summary>
+<div class="body">The dividing line isn't how much you have, it's <strong>structural complexity</strong>. Assets concentrated in accounts with beneficiary forms, no minor children, property in a single state — a reputable online service is usually enough. But once there's a blended family or stepchildren, property across states or countries, a non-citizen spouse, a business or private-company shares, or a wish to control the timing of distributions, use an attorney licensed in your state. Then re-check every three to five years, or after any major life change: an out-of-date document and no document can amount to the same thing.</div>
+</details>
+<details>
+<summary>Does "fair" mean "equal shares"?</summary>
+<div class="body">Not necessarily. A child who carried the caregiving, or the sibling who worked in the family business versus the one who didn't — an equal split isn't always experienced as fair. But what actually fractures families is more often the <strong>surprise</strong> than the split: nobody knew the arrangement, and nobody knew the reasoning. The practical move is to explain both while you're alive, or leave a letter beside the documents that states your motives and carries no legal weight.</div>
+</details>
+<details>
+<summary>Should I give money to my kids or family now instead?</summary>
+<div class="body">These are two different ledgers. Lifetime gifting has an annual exclusion per recipient (roughly $19,000, indexed annually — check the current official figure); above it you generally just use up lifetime exemption rather than owing tax immediately. But gifted assets <strong>carry your original cost basis</strong> — no step-up. So the crude ordering is: cash and low-gain assets are the better lifetime gifts, highly appreciated assets are better held to death or donated outright. There's also the non-financial side — how the timing and size of a gift affects the recipient; see Day 17. China currently has neither estate nor gift tax, so this particular trade-off doesn't apply there.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal finance <strong>education</strong>, not personalized investment, tax, or legal advice; wills, trusts, and powers of attorney are governed by <strong>state law</strong>, so consult an attorney licensed in your state about your situation. Exemptions and thresholds cited here <strong>change annually and are subject to legislation</strong> — always go by the current official figures. US rules are the default background, with US/China differences flagged.
+</div>
+</div>
+</body>
+</html>

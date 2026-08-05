@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 20 · 遗产与传承</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 20</span>
+<h1>遗产与传承</h1>
+<p class="sub">受益人表格压过遗嘱、失能比身故更常用得上，以及那份「如果我明天走了」的清单该怎么写。</p>
+<p class="meta">Personal Finance · Estate &amp; Legacy　|　2026-08-05</p>
+</header>
+<div class="lede">
+「我还年轻」和「我资产不多」是推迟这件事的两个标准理由。但不那么好听的事实是：<b>你已经做过遗产规划了——只是用的是默认版本</b>：所在州的法定继承顺序，加上多年前开户时随手勾的一张受益人表格。它保护的从来不是你，是留下来的人在最糟的那几周里能不能拿到钱、能不能替你做决定。这一期四件事：受益人表格为什么压过遗嘱、遗嘱／信托／probate 各自解决什么、失能规划为什么更常用上，以及「如果我明天走了」的清单该写什么。
+</div>
+<h2 class="section">四块机制</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>受益人表格，压过你的遗嘱</h3>
+<p class="en">Beneficiary Designations Override Your Will</p>
+<div class="oneline">退休账户、寿险、TOD/POD 账户按表格支付，遗嘱管不着这部分钱。</div>
+<p><span class="lbl">机制。</span>美国的资产传承分两条路。一条进 <strong>probate</strong>（遗嘱认证法院程序），由遗嘱或法定继承顺序决定；另一条是<strong>合同型传承</strong>——401(k)、IRA、寿险保单、年金，以及登记了 TOD（Transfer on Death，身故转让）／POD（Payable on Death，身故支付）的券商与银行账户，直接按受益人表格付给指定人，不进法院，也<strong>不受遗嘱条款约束</strong>。对多数家庭来说，净值的大头恰恰在第二条路上。表格上写着前任、写着已故的父母、或干脆空白（→ 落回遗产、进 probate），遗嘱再周全也纠正不了。</p>
+<p><span class="lbl">可执行。</span>做一张受益人审计表，每个账户三列：主受益人（primary）、备选受益人（contingent）、上次更新日期。四类必查：换工作后留下的旧 401(k)（最容易漏）、IRA／Roth IRA、个人与雇主团体寿险、券商与银行的 TOD/POD 登记。婚姻、生育、离婚、丧亲之后各复查一次。别直接把未成年人写成受益人——保险公司通常不会把钱交给未成年人，而会转成法院指定监管；改用信托或 UTMA（州法下的未成年人托管账户）承接。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「我立了遗嘱，所以都安排好了。」—— 遗嘱对受益人表格覆盖的资产没有效力。最常见的翻车是：离婚多年、遗嘱早已改过，401(k) 的受益人栏还写着前配偶。</div>
+<div class="do"><span class="lbl">本周一试：</span>今晚登录一个退休账户，把受益人页面截图存档。<b>思考题：</b>如果主受益人和你在同一场意外里出事，contingent 那一栏写的是谁？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>遗嘱、信托、probate：各自解决什么</h3>
+<p class="en">Wills, Trusts, and Probate</p>
+<div class="oneline">遗嘱决定「给谁」和「谁照顾孩子」；信托主要解决「怎么给」和「不进法院」。</div>
+<p><span class="lbl">机制。</span>probate 是法院清点资产、通知债权人、再按遗嘱或法定顺序分配的<strong>公开</strong>程序，通常数月到一年以上，费用与耗时因州而异。遗嘱并不能避开它——遗嘱是给法院看的说明书。但它有两个不可替代的作用：指明没有受益人表格的资产归谁，以及<strong>为未成年子女指定监护人——唯一能做这件事的文件</strong>。可撤销生前信托（revocable living trust）则把资产装进一个你生前完全控制、随时可改的容器，身故时由继任受托人直接分配，绕开 probate、保住隐私。</p>
+
+<p><span class="lbl">可执行。</span>顺序：先修受益人表格（免费、当天可完成）→ 有未成年子女或不动产就立遗嘱 → 再评估信托。信托是否值得看三条：所在州 probate 是否昂贵冗长、是否在多个州持有不动产（否则每州各走一次）、是否需要控制分配节奏。关键：<strong>信托只有在资产真的过户进去之后才起作用</strong>——房产改登记、账户改所有人。只签文件不过户，是最常见的失败。</p>
+<p class="note">中美差异：中国没有 probate 制度，继承走继承公证或法院诉讼；《民法典》下自书、代书、打印、录音录像等遗嘱均可有效，且 2021 年起<strong>公证遗嘱不再优先，以最后一份为准</strong>；国内家族信托主要用于财产隔离与分配，与美国「避 probate」用途不同。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「网上模板十五分钟搞定。」—— 简单情形确实可行，但见证与签署的形式要求由<strong>州法</strong>规定，形式瑕疵能让整份遗嘱失效。情况一复杂就找本州执业律师。</div>
+<div class="do"><span class="lbl">本周一试：</span>写下两句话：我和伴侣同时不在时孩子由谁照顾；房产与没有受益人表格的资产给谁。<b>思考题：</b>这两句话，现在有任何一份法律文件承载吗？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>更可能用上的是失能，不是身故</h3>
+<p class="en">Incapacity Planning Comes First</p>
+<div class="oneline">三份「活着时生效」的文件，在你有生之年被用到的概率远高于遗嘱。</div>
+<p><span class="lbl">机制。</span>遗嘱只在身故后生效。但概率更高的情形是你还活着、却暂时或长期无法做决定——手术、事故、认知退化。此时若无授权文件，家人（包括配偶）不能自动动你名下的账户、替你报税或处置房产，只能去法院申请监护：昂贵、公开、慢。三份文件补这个洞：<strong>Durable POA</strong>（Durable Power of Attorney，持久财务授权书；durable 指失能后仍然有效）、<strong>Healthcare Proxy</strong>（医疗代理人，替你做医疗决定）、<strong>Advance Directive／Living Will</strong>（预立医疗指示，写明你对生命维持治疗的意愿）。</p>
+<p><span class="lbl">可执行。</span>三份一起做，通常和遗嘱同一套流程完成。要点：① 财务授权人和医疗代理人<strong>可以是不同的人</strong>，选「能在压力下做决定」的；② 银行券商常要求用自家表格，签完把副本送到主要机构；③ 医院还需一份 HIPAA（美国医疗隐私法）授权才能向代理人披露病情，通常另签；④ 医疗代理人要<strong>真的和你谈过</strong>你的意愿，文件替代不了那次对话。</p>
+<p class="note">中美差异：中国《民法典》的「意定监护」允许成年人事先书面指定失能后的监护人（实务中一般办公证），功能相近但程序不同。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「配偶当然可以替我处理。」—— 共同账户之外，配偶对你单独名下的退休账户、券商账户、房产没有当然处分权。婚姻不等于授权。</div>
+<div class="do"><span class="lbl">本周一试：</span>选定财务授权人和医疗代理人人选，本周约其中一位把话说清楚。<b>思考题：</b>那个人知道你的账户都在哪里吗？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>「如果我明天走了」清单：先让钱被找到</h3>
+<p class="en">The "If I Died Tomorrow" File</p>
+<div class="oneline">大多数传承损失不来自税，来自继承人根本不知道资产在哪、也进不去。</div>
+<p><span class="lbl">机制。</span>联邦遗产税只落在极少数人身上：2026 年起每人约 1,500 万美元免税额（逐年随通胀调整，以当年官方数字为准），配偶间转移无限额（配偶为美国公民时）。<span class="note">十几个州另有州级遗产／继承税，门槛可能远低于联邦。</span>真正普遍的损失是<strong>信息损失</strong>：找不到的保单、没人知道的账户、打不开的手机。另有两条常被忽略的机制：① 继承资产通常享受<strong>成本基准提升</strong>（step-up in basis，按去世日市值重置），此前浮盈不再课资本利得税；② 非配偶继承的 IRA／401(k) 在 SECURE 法案下多数须<strong>十年内清空</strong>，可能把大笔提取砸进继承人的高税档年份。</p>
+<p><span class="lbl">可执行。</span>写一份两页的「资产地图」，把存放位置告诉执行人：账户机构与类型（<strong>不写密码</strong>）、保单、房产与产权形式、债务、雇主福利、会计师／律师联系方式。数字资产单列：密码管理器的紧急访问（emergency access）、双因素验证备份码、Google 闲置账号管理器与 Apple 遗产联系人（这类「在线工具」的设置在多数州<strong>优先于</strong>遗嘱条款）、自托管加密货币的私钥——丢了就是永久归零。</p>
+<p class="note">顺带校准一条常见口径：「留 10 倍年收入的寿险给家人」这类按<strong>收入</strong>定标的经验法则，对高收入、高边际税档、以股权薪酬为主者会系统性<strong>高估</strong>——税前收入高估了家庭真正依赖的现金流。改用支出口径：遗属年支出缺口 × 需覆盖年数，减去可变现净值。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「把密码抄在纸上给家人就行。」—— 密码清单会过期、会泄露，而且未经授权登录他人账户在多数平台条款下并不合法。用密码管理器的紧急访问和平台官方的遗产联系人机制。</div>
+<div class="do"><span class="lbl">本周一试：</span>今晚做两件十分钟的事：给密码管理器设一个紧急联系人；打开手机设置里的「遗产联系人」。<b>思考题：</b>如果你今天失联，家里最先付不出的是哪一笔账？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>身故后的期权行权窗口很短，未 vest 的部分则直接消失。</b> 股权计划通常规定继承人须在有限期内行权（常见几个月到一年），过期作废；未 vest 的股权不属于遗产。把计划书里这两条摘进资产地图，别让继承人去啃六十页的 plan document。</li>
+<li><b>集中持股遇上 step-up。</b> 单一雇主股票浮盈巨大时，生前赠与会把极低的成本基准一起送出去，持有至身故则可获基准提升。这不是「持有到死」的理由（集中风险仍在，见 Day 10），但会改变「捐赠、赠与、留着」的排序。</li>
+<li><b>安全性越强，继承越难。</b> 硬件密钥、authenticator、公司设备上的 SSO 都会把继承人挡在外面。紧急访问与备份码，要当成安全设置的一部分一起做完。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>资产不多，是不是可以先跳过这一整期？</summary>
+<div class="body">不能整期跳过，但可以分层。<strong>与资产规模无关</strong>的：三份失能文件、受益人表格、未成年子女的监护人指定——最后一条关乎人不关乎钱。<strong>可以往后放</strong>的：信托、遗产税筹划、慈善结构。代价不对称：没做信托，继承人多花时间和钱；没指定监护人，由法院替你决定。</div>
+</details>
+<details>
+<summary>找律师，还是用在线模板？</summary>
+<div class="body">分界不在资产多少，在<strong>结构复杂度</strong>。资产集中在有受益人表格的账户、无未成年子女、房产只在一个州——正规在线服务通常够用。只要出现再婚家庭或继子女、跨州跨国不动产、非公民配偶、自有生意或私司股权、想控制分配节奏，就该找本州执业律师。做完后每三到五年、或每逢重大生活变化复查一次：过期的文件和没有文件，效果有时一样。</div>
+</details>
+<details>
+<summary>「公平」是不是等于「平均分」？</summary>
+<div class="body">不必然。承担照护责任的子女、家族生意里出力的和没出力的，平均分未必被感受为公平。但真正引发家庭破裂的更多是<strong>意外</strong>而非份额——事先没人知道安排，也没人知道理由。做法：生前把安排和理由讲一遍，或写一封只说明动机、没有法律效力的信附在文件旁。</div>
+</details>
+<details>
+<summary>该不该现在就把钱给孩子或家人？</summary>
+<div class="body">这是两套账。生前赠与有年度免税额度（每位受赠人每年约 1.9 万美元，逐年调整，以当年官方数字为准），超出部分一般只占用终身免税额、并不立刻交税；但受赠资产<strong>继承的是你的原始成本基准</strong>，拿不到 step-up。粗糙的排序因此是：现金与低浮盈资产适合生前给，高浮盈资产适合留到身故或捐赠。还有非财务的一面——什么时候给、给多少会如何影响对方，见 Day 17。中国目前没有遗产税与赠与税，这套取舍在国内并不成立。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资、税务或法律建议；遗嘱、信托、授权书的效力由<strong>州法</strong>决定，具体情况请咨询本州执业律师。文中免税额与门槛<strong>逐年调整且可能修法</strong>，一律以当年官方数字为准。默认美国背景，中美差异处已另行标注。
+</div>
+</div>
+</body>
+</html>
