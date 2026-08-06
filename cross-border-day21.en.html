@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 21 · Cross-Border &amp; Residency</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 21</span>
+<h1>Cross-Border &amp; Residency</h1>
+<p class="sub">What decides your tax fate isn't where you live, it's your status — and why an unremarkable foreign fund turns into a landmine.</p>
+<p class="meta">Personal Finance · Cross-Border &amp; Residency　|　2026-08-06</p>
+</header>
+<div class="lede">
+The most expensive financial mistakes cross-border households make are almost never "picked the wrong investment." <b>They're not filing, and holding the money in the wrong container.</b> The US is one of very few countries that taxes by <strong>status</strong> rather than by residence — a citizen or green card holder owes a return on worldwide income and reports foreign accounts no matter where they live. And an ordinary fund bought back home may, in the eyes of US tax law, be a "passive foreign investment company" subject to a punitive regime. Four things this issue: establish your status first, the three reporting obligations, the cost of choosing the wrong container, and the hard constraints on remittances, currency, and cross-border families.
+</div>
+<h2 class="section">Four Mechanisms</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>Establish Status Before Anything Else</h3>
+<div class="oneline">"What should I do" depends first on whether each country counts you as a tax resident.</div>
+<p><span class="lbl">Mechanism.</span> The US taxes <strong>citizens and green card holders</strong> on worldwide income by status, and moving abroad changes nothing — globally, that is a rare rule. Holders of other visas become tax residents too if they meet the <strong>substantial presence test</strong>: at least 31 days in the US this year, and "days this year + prior year ÷3 + year before that ÷6" of at least 183. F/J students and scholars have a limited number of years as "exempt individuals" whose days aren't counted. On the China side: 183 days of residence in a tax year makes you a tax resident, and for individuals without a domicile there is also the "six-year rule" — only after six consecutive years of 183-plus days with no single absence over 30 days does China tax <strong>foreign-source income paid from abroad</strong>.</p>
+<p><span class="lbl">Executable.</span> Before touching any account, write down three things: (1) how many days you spent in each country this year (keep entry/exit records — you can't reconstruct this later); (2) your status category and its start and end dates; (3) whether your moving year is a "dual-status year" (part of it non-resident, part resident, with different rules for each). <strong>The date you move is itself a tax decision</strong> — landing in December versus January can decide whether a year of worldwide income is reportable at all.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I don't live in the US and the income isn't from the US, so there's nothing to file." — For citizens and green card holders, the filing obligation is unrelated to where you live. Whether you <em>owe tax</em> (there's the foreign tax credit and the foreign earned income exclusion) and whether you must <strong>file</strong> are two different questions; the second has no exemption.</div>
+<div class="do"><span class="lbl">Try this week:</span> Build a "status and days" table and fill in the last three years of residence days in both countries. <b>Question:</b> If your country of residence changed next year, which piece of your current account structure would break first?</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>Three Reporting Regimes: FBAR, FATCA, CRS</h3>
+<div class="oneline">Reporting isn't taxation — but the penalties for not reporting are far harsher than the tax.</div>
+<p><span class="lbl">Mechanism.</span> The three get conflated constantly. <strong>FBAR</strong> (Report of Foreign Bank and Financial Accounts, FinCEN Form 114): if the foreign accounts you own or hold signature authority over exceed $10,000 <strong>in aggregate</strong> at any point during the year, you report all of them. <strong>FATCA</strong> (the Foreign Account Tax Compliance Act, Form 8938) is filed with your return, at higher thresholds that vary with filing status and where you live (a single filer in the US: over $50,000 at year end or over $75,000 at any point; thresholds for those living abroad are considerably higher). <strong>CRS</strong> (the Common Reporting Standard) is not your obligation at all, it's the <strong>bank's</strong>: over a hundred jurisdictions including China exchange non-resident account information. The US doesn't participate in CRS; it runs its own FATCA agreements. Either way, the account information is already moving.</p>
+<p><span class="lbl">Executable.</span> Run an account census at year end, and don't count only investment accounts: checking and time deposits, brokerage, payment-app balances, an account you hold signature authority over for a parent, and the cash value of foreign insurance can all count toward the FBAR aggregate. For each, note the institution, the account number, and the <strong>highest balance</strong> of the year — that last number is the only one you need. Already behind: <strong>non-willful</strong> cases have official correction procedures, far gentler than being found out, but the eligibility conditions are strict and this is worth paying a professional for once.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "The account earned nothing and I never sent money back, so there's nothing to report." — FBAR reports the <strong>existence of the account and its peak balance</strong>, not income; and $10,000 is the <strong>aggregate</strong> across all accounts, not a per-account test.</div>
+<div class="do"><span class="lbl">Try this week:</span> List every account you hold outside your filing country, mark last year's peak balance, and total them up. <b>Question:</b> Is there an account you only have "signature authority" over and have never thought of as yours?</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>The Cost of the Wrong Container: PFICs and Non-Resident Estate Tax</h3>
+<div class="oneline">The same assets, held in a shell registered in a different country, can differ in tax by an order of magnitude.</div>
+<p><span class="lbl">Mechanism.</span> For a US taxpayer, nearly every <strong>non-US-registered</strong> fund or ETF (domestic Chinese funds, money market funds, Hong Kong funds, and some foreign insurance products with an investment component) is classified as a <strong>PFIC</strong> (passive foreign investment company). The default "excess distribution" regime allocates gains back across the years you held it, taxes them at each year's top ordinary rate, <strong>and adds an interest charge</strong>; long holding periods earn no preferential rate, and each fund needs its own annual form. A QEF election can in theory soften this, but it requires the fund to issue a specific annual statement, which foreign funds generally don't. There's a symmetric trap in the other direction: a <strong>non-US tax resident</strong> holding US-situs assets (US stocks being the obvious case) gets only a $60,000 estate tax exemption at death, and <strong>there is no US–China estate tax treaty</strong> to invoke.</p>
+<p><span class="lbl">Executable.</span> The rule is simple enough to tape to a wall: <strong>if you're a US taxpayer, build your global allocation out of US-registered funds and ETFs</strong> (want China exposure? Buy a US-listed ETF, not a fund bought locally); <strong>if you're not a US tax resident, be careful about holding US-situs assets</strong>. If you're already in it, don't rush to liquidate — redemption is itself a taxable event; get a PFIC-literate accountant to sequence it. Individual stocks generally aren't PFICs; what causes the damage is almost always a <strong>fund-shaped</strong> container.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "It's an index fund with a low expense ratio, so the country of registration doesn't matter." — For a US taxpayer, the tax penalty on a foreign fund routinely dwarfs the fee savings. <strong>Where the container is registered matters more than the product inside it.</strong></div>
+<div class="do"><span class="lbl">Try this week:</span> Go through your holdings and mark each fund's country of registration (domestic Chinese funds, Hong Kong funds, and UCITS are all foreign here). <b>Question:</b> If your tax residency changed in three years, how many of these become a problem?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>Remittances, Currency, and Cross-Border Families</h3>
+<div class="oneline">The limits on moving money sit on the China side; the duty to explain it sits on the US side.</div>
+<p><span class="lbl">Mechanism.</span> The two constraints are different in kind. <strong>China's side is exchange control</strong>: individuals have an annual facilitation quota equivalent to $50,000, and its permitted uses are current-account purposes (study abroad, travel, medical care); <strong>buying property or securities abroad is a capital-account use and falls outside that quota</strong>, and splitting a transfer across relatives' quotas is a clear violation. <strong>The US side isn't control, it's reporting</strong>: your own money moved in, or a gift from family, is not income and isn't subject to income tax — but gifts from foreign persons totaling over $100,000 in a year require Form 3520. Pure reporting, with penalties that are anything but light. Two more that get overlooked: if your spouse is <strong>not a US citizen</strong>, the unlimited marital deduction doesn't apply and deferral at death requires a QDOT (qualified domestic trust); and there is <strong>no US–China totalization agreement</strong> for social security.</p>
+<p><span class="lbl">Executable.</span> Large cross-border transfers, in three steps: (1) establish the <strong>character</strong> first (your own funds repatriated / a gift / income / proceeds from selling property) — character determines the form and the tax; (2) keep the full documentary chain (source of funds, family relationship, tax clearance), because a bank's compliance question may arrive years later; (3) spread it across years and use compliant channels. Exchange rates are a real cost too: convert assets in both countries into <strong>one currency</strong> before reading your net worth, or "it went up" may be nothing but the currency moving.</p>
+<p class="note">One calibration in passing: "save X times your annual income" and similar <strong>income</strong>-anchored rules of thumb shouldn't be used as a progress benchmark — they <strong>systematically overshoot</strong> for high earners, high marginal brackets, and equity-heavy pay (pre-tax income overstates what's actually disposable), and across a border the income and tax systems belong to different currencies and different regimes entirely. Use a spending basis instead: <strong>net worth ÷ annual spending</strong>, computed against the spending and tax system of the country you actually plan to live in. Savings rate = (income − spending) / income, where <strong>savings means money not spent and actually invested, not money sitting in a bank</strong>.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "My parents wired me money, so I owe tax on it." — Receiving a gift generally creates no US income tax; the real obligation is <strong>reporting</strong> (Form 3520 above the threshold) and keeping proof of the source. Confusing "paying tax" with "reporting" makes people skip what they owe and worry about what they don't.</div>
+<div class="do"><span class="lbl">Try this week:</span> Write one line for every large cross-border transfer of the past two years: date, amount, character, where the documentation is. <b>Question:</b> If a bank asked about one of them five years from now, what could you produce?</div>
+</div>
+<div class="tech">
+<h4>For High-Earning Tech Professionals</h4>
+<p class="cap">One note per issue on this group's specific situation: equity comp, high tax burden, volatile income.</p>
+<ul>
+<li><b>Equity that vests across a border gets sourced by where you worked.</b> RSU income is generally apportioned by the ratio of workdays in each country between grant and vest, and both countries may claim a share — while the statements you receive often show withholding in only one. After a transfer, an assignment, or a stretch of cross-border remote work, this is the piece that most often goes wrong.</li>
+<li><b>Leaving the US doesn't end the equity relationship.</b> Tranches that keep vesting after you go, the post-termination exercise window, and company stock held at a foreign broker (which counts toward the FBAR aggregate) all need to be settled <strong>before</strong> you move — plenty of US brokers restrict trading for clients who relocate abroad, or ask them to transfer out.</li>
+<li><b>Status uncertainty is a planning input, not background noise.</b> Visa timelines and green card queues make "which tax system will I be living under in a few years" genuinely unknown, and that feeds directly into pre-tax versus Roth, when to buy a home, and whether to buy assets abroad that are hard to unwind. <strong>Preserve optionality first, optimize tax second.</strong></li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>I'm only here to study / on a short assignment. Does this apply to me?</summary>
+<div class="body">Partly. F/J visa holders get a limited number of years as "exempt individuals" whose days don't count toward the substantial presence test, and they generally file as non-resident aliens during that time. But it runs out, after which you fall into the resident regime automatically — and plenty of people discover the switch happened years earlier. On a short assignment, ask early: which treaty article applies, what your employer's tax equalization policy actually covers, and what happens to your US accounts once you leave. <strong>The rules change your status on their own, and nobody sends a notice.</strong></div>
+</details>
+<details>
+<summary>Does double taxation actually happen?</summary>
+<div class="body">Full double taxation is relatively rare, and three tools do the work: the foreign tax credit (foreign tax paid offsets US tax), the foreign earned income exclusion (excludes part of foreign earned income if you meet the tax home plus residence/presence tests, with the amount indexed annually), and bilateral treaties. But treaties normally carry a "saving clause" that lets the US still tax its own citizens and residents under domestic rules, so the exceptions you can actually invoke are limited. What's genuinely heavy about being cross-border is usually not the tax — it's the <strong>compliance cost</strong>.</div>
+</details>
+<details>
+<summary>Should I give up the green card or citizenship?</summary>
+<div class="body">It's a tax question, but never only a tax question. If renouncing makes you a "covered expatriate" (net worth of $2 million, or five-year average annual income tax above an indexed threshold, or an inability to certify five years of compliance), it triggers the <strong>exit tax</strong> — a deemed sale of everything at market value. Long-term green card holders (held in 8 of the last 15 years) are covered the same way, and a history of non-compliance doesn't disappear on the way out. The non-tax side weighs more: re-entry, family status, where your healthcare and retirement live. For most people the real move isn't renouncing — it's <strong>fixing the structure and filing what's owed</strong>.</div>
+</details>
+<details>
+<summary>What about the apartment, social insurance, and retirement accounts back home?</summary>
+<div class="body">Take them separately. <strong>Rental income</strong> from property in China is part of a US taxpayer's worldwide income and must be reported (the foreign tax credit is available); capital gains on sale are recomputed under US rules using historical exchange rates — so a sale that "made nothing" on paper can still generate a US-taxable currency gain. On social insurance, there is <strong>no US–China totalization agreement</strong>: contribution years can't be combined, and long-term cross-border workers often fall short of the best terms in both systems. Domestic investment products and pensions have to clear the PFIC and reporting questions before you even discuss returns. Individual circumstances vary enormously here — worth paying someone who knows both systems, once.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal finance <strong>education</strong>, not personalized investment, tax, or legal advice. Cross-border tax and currency rules <strong>vary enormously by individual case and are revised annually</strong>; the thresholds cited here (the $10,000 FBAR aggregate, the $100,000 foreign gift reporting threshold, the $60,000 non-resident estate tax exemption, the $50,000 currency facilitation quota) are current as of writing and should <strong>always be checked against the official figures for the year</strong>. For your own situation, consult a licensed accountant or attorney familiar with both systems. US rules are the default background, with US/China differences flagged.
+</div>
+</div>
+</body>
+</html>

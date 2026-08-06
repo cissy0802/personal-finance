@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 21 · 跨境与身份</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 21</span>
+<h1>跨境与身份</h1>
+<p class="sub">决定你税务命运的不是住在哪，而是身份；以及为什么一只普通的境外基金会变成地雷。</p>
+<p class="meta">Personal Finance · Cross-Border &amp; Residency　|　2026-08-06</p>
+</header>
+<div class="lede">
+跨境家庭最贵的财务错误，几乎从来不是「投得不好」。<b>是没申报，和把钱装错了容器。</b>美国是全球极少数按<strong>身份</strong>而非居住地征税的国家——公民或绿卡持有人无论住哪，都要就全球收入报税、就境外账户申报。而一只在国内随手买的基金，在美国税法眼里可能是「被动外国投资公司」，适用一套惩罚性算法。这一期四件事：定身份、三套申报义务、容器选错的代价，以及汇款换汇与跨境家庭的硬约束。
+</div>
+<h2 class="section">四块机制</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>先定身份，再谈钱</h3>
+<p class="en">Tax Residency Comes First</p>
+<div class="oneline">「我该怎么办」，先取决于你在两国各自算不算税务居民。</div>
+<p><span class="lbl">机制。</span>美国对<strong>公民与绿卡持有人</strong>按身份征全球所得税，搬去哪儿都不改变——这在全球是极少数派。持其它签证的人满足<strong>实质居留测试</strong>（Substantial Presence Test）也会成为税务居民：当年在美 ≥31 天，且「当年天数 + 前一年 ÷3 + 前两年 ÷6」≥183 天；F/J 学生与学者有若干年可作为「豁免个人」不计天数。中国这边：一个纳税年度内境内居住满 183 天即为税收居民；无住所个人另有「六年规则」——连续六年满 183 天且无单次离境超 30 天，才对<strong>境外支付的境外所得</strong>征税。</p>
+<p><span class="lbl">可执行。</span>动账户之前先写清三件事：① 今年在两国各住多少天（存出入境记录，事后补不出来）；② 身份类别与起止日期；③ 搬迁当年是不是「双重身份年度」（dual-status year，前后分属非居民与居民，规则不同）。<strong>搬家的日期本身就是税务决策</strong>——年底还是年初落地，可能决定当年全球收入要不要报。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「我人不在美国，收入也不来自美国，就不用报。」—— 公民和绿卡持有人的申报义务与居住地无关。<em>要不要交税</em>（有外国税收抵免和海外劳动所得排除额）与<strong>要不要申报</strong>是两回事，后者没有豁免。</div>
+<div class="do"><span class="lbl">本周一试：</span>建一张「身份与天数」表，补齐过去三年在两国的居住天数。<b>思考题：</b>如果明年居住国变了，今天这套账户结构里哪个最先出问题？</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>三套申报义务：FBAR、FATCA、CRS</h3>
+<p class="en">FBAR, FATCA, and CRS</p>
+<div class="oneline">申报不等于交税，但漏申报的罚则比税本身狠得多。</div>
+<p><span class="lbl">机制。</span>三套制度常被混为一谈。<strong>FBAR</strong>（境外金融账户报告，FinCEN 114 表）：你名下或有签字权的境外账户，<strong>合计</strong>在一年中任一时点超过 1 万美元，就要申报全部账户。<strong>FATCA</strong>（《海外账户税收合规法案》，8938 表）随报税表提交，门槛更高且随婚况与居住地变化（境内单身为年末超 5 万或年内任一时点超 7.5 万美元，旅居海外更高）。<strong>CRS</strong>（共同申报准则）不是你的义务，是<strong>银行的</strong>：中国等上百个辖区互换非居民账户信息；美国不参与 CRS，走自己的 FATCA 协议。账户信息本就在交换。</p>
+<p><span class="lbl">可执行。</span>年底做一次账户普查，别只数投资账户：活期与定期、券商、支付平台余额、替父母代管而有签字权的账户、境外保险现金价值，都可能计入 FBAR。逐一记下机构、账号、当年<strong>最高余额</strong>——这是唯一需要的数字。已经漏报了：<strong>非故意</strong>的情形有官方补正通道，比被动发现后轻得多，但条件严格，值得付一次专业费用。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「账户里没赚钱，也没往回汇，不用报。」—— FBAR 报的是<strong>账户的存在与最高余额</strong>，不是收益；1 万美元是所有账户<strong>合计</strong>，不是每个各算。</div>
+<div class="do"><span class="lbl">本周一试：</span>列出报税国之外的每个账户，标出去年最高余额，加总看一眼。<b>思考题：</b>有没有哪个账户你只是「有签字权」，从没当成自己的想过？</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>容器选错的代价：PFIC 与非居民遗产税</h3>
+<p class="en">The PFIC Trap and Where You Hold Assets</p>
+<div class="oneline">同样的资产，装在哪国注册的壳里，税负能差一个数量级。</div>
+<p><span class="lbl">机制。</span>对美国纳税人而言，几乎所有<strong>非美国注册</strong>的基金与 ETF（国内基金、货币基金、港股基金，某些带投资成分的境外保险也算）都会被归为 <strong>PFIC</strong>（Passive Foreign Investment Company，被动外国投资公司）。默认适用「超额分配」制度：收益被摊回持有期各年、按各年最高普通所得税率课税、<strong>再加利息</strong>，长期持有也不享优惠税率，每只基金每年还要单独报表。理论上 QEF 等选择可缓解，但需基金方出具特定报表，境外基金通常不提供。反方向有个对称的坑：<strong>非美国税务居民</strong>持有美国境内资产（美股是典型），身故时美国遗产税免税额只有 6 万美元，且<strong>中美没有遗产税协定</strong>。</p>
+<p><span class="lbl">可执行。</span>规则简单到可以贴墙上：<strong>做美国纳税人，就用美国注册的基金/ETF 做全球配置</strong>（想投中国市场，买在美上市的 ETF，而非境内基金）；<strong>不是美国税务居民，就慎持美国境内资产</strong>。已经踩了的别急着清仓，赎回本身就是应税事件，先找熟悉 PFIC 的会计师排顺序。个股一般不是 PFIC，出问题的几乎都是<strong>基金型</strong>容器。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「买的是指数基金，费率低，哪国注册无所谓。」—— 对美国纳税人，境外基金的税务惩罚常常远超省下的那点费率。<strong>容器的注册地，比产品本身重要。</strong></div>
+<div class="do"><span class="lbl">本周一试：</span>翻一遍持仓，标出每只基金的注册地（境内基金、港基、UCITS 都属境外）。<b>思考题：</b>如果三年后换了税务居民身份，这份持仓里有几只会变麻烦？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>汇款、换汇与跨境家庭</h3>
+<p class="en">Moving Money and Cross-Border Families</p>
+<div class="oneline">搬钱的限制在中国一侧，说清楚的义务在美国一侧。</div>
+<p><span class="lbl">机制。</span>两侧约束的性质完全不同。<strong>中国侧是外汇管制</strong>：个人每年有等值 5 万美元便利化购汇额度，用途限于经常项目（留学、旅游、就医等）；<strong>境外购房与证券投资属资本项目，不在该额度范围内</strong>，借亲友额度拆分汇出是明确违规。<strong>美国侧不是管制而是申报</strong>：汇入的自有资金或家人赠与不是收入、不征所得税，但一年内自外国人处收到的赠与合计超 10 万美元须提交 3520 表——纯申报，罚则却不轻。另两条常被忽略：配偶若<strong>非美国公民</strong>，无限婚姻扣除不适用，身故转移要靠 QDOT（合格境内信托）递延；中美之间<strong>没有社保总额协定</strong>。</p>
+<p><span class="lbl">可执行。</span>大额跨境资金分三步：① 先确定<strong>性质</strong>（自有资金调回 / 赠与 / 收入 / 售产所得）——性质决定申报表和税；② 留全链条凭证（资金来源、亲属关系、完税证明），银行问询可能在数年之后；③ 分年、走合规路径。汇率也是真实成本：两国资产统一到<strong>一种货币口径</strong>再看净值，否则「涨了」可能只是汇率变动。</p>
+<p class="note">顺带校准一条：「攒够 X 倍年收入」这类按<strong>收入</strong>定标的经验法则不该当进度基准——它对高收入、高边际税档、以股权薪酬为主者系统性<strong>高估</strong>（税前收入高估了真正可支配的钱），跨境后收入与税制还分属不同货币与制度。改用支出口径：<strong>净值 ÷ 年支出</strong>，按「打算在哪国生活」的支出与税制算。储蓄率 =（收入 − 支出）/ 收入，<strong>储蓄指没花掉、并且投出去的钱，不是银行存款</strong>。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「爸妈给我汇钱，我要交税。」—— 收到赠与通常不产生美国所得税；真正的义务是<strong>申报</strong>（超门槛填 3520 表）与留存资金来源证明。混淆「交税」和「申报」，会让人既漏了该做的、又白担心不该担心的。</div>
+<div class="do"><span class="lbl">本周一试：</span>给过去两年每笔大额跨境资金写一行：日期、金额、性质、凭证在哪。<b>思考题：</b>如果五年后银行来问某笔资金的来源，你能拿出什么？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>跨境期间归属的股权，要按工作地分摊。</b> RSU（限制性股票单位）的收入来源通常按 grant 到 vest 期间在各国的工作日比例划分，两国可能各自主张一部分——报表却往往只体现一国的预扣。调动、外派、跨境远程之后，这块最容易出错。</li>
+<li><b>离开美国不等于股权关系结束。</b> 离境后仍在 vest 的份额、离职后的行权窗口、境外券商托管的公司股票（计入 FBAR 合计），都要在搬家<strong>之前</strong>问清楚——不少美国券商对迁居海外的客户会限制交易或要求转出。</li>
+<li><b>身份的不确定性是规划的输入项。</b> 签证与绿卡排期让「几年后在哪个税制下生活」充满变数，直接影响税前与 Roth 的取舍、买房时点、要不要在境外买难以处置的资产。<strong>先保留选择权，再优化税负。</strong></li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>我只是来读书 / 短期外派，也要管这些吗？</summary>
+<div class="body">部分要。F/J 签证持有人有若干年可作为「豁免个人」不计入实质居留测试的天数，期间通常按非居民外国人报税；但这有年限，超期就自动落入居民口径，很多人几年后才发现身份早已切换。短期外派要早问：协定里哪条适用、雇主的税务均衡政策覆盖什么、回国后美国这边的账户怎么办。<strong>规则会自动改变身份，没人通知你。</strong></div>
+</details>
+<details>
+<summary>双重征税真的会发生吗？</summary>
+<div class="body">完全的双重征税相对少见，主要靠三样工具化解：外国税收抵免（境外已缴的税抵美国的税）、海外劳动所得排除额（满足税务住所与居住/停留测试时可排除一部分，额度逐年调整）、以及双边税收协定。但协定通常带「保留条款」（saving clause），美国仍可按本国规则对公民与居民征税，能援引的例外有限。跨境真正沉重的往往不是税，而是<strong>合规成本</strong>。</div>
+</details>
+<details>
+<summary>该不该放弃绿卡或公民身份？</summary>
+<div class="body">这是税务问题，但绝不只是税务问题。放弃时若被认定为「covered expatriate」（净值达 200 万美元、或过去五年平均年度所得税额超过逐年调整的门槛、或无法证明五年合规），会触发<strong>弃籍税</strong>——视同按市价出售全部资产算收益；长期绿卡（15 年中持有 8 年）同样适用，不合规的历史也不会因放弃而消失。非税的一面更重：再入境、家人身份、医疗与养老。多数人该做的不是放弃身份，而是<strong>把结构理顺、把该报的报上</strong>。</div>
+</details>
+<details>
+<summary>国内的房子、社保和退休账户怎么办？</summary>
+<div class="body">分开看。境内房产的<strong>出租收入</strong>对美国纳税人属全球所得，要申报（可用外国税收抵免）；出售的资本利得按美国规则重算、以历史汇率换算——账面「没赚」也可能产生美国税上的汇兑收益。社保方面中美<strong>没有总额协定</strong>，缴费年限不能合并，长期跨境者往往两边都够不上最优领取条件。境内理财与养老金则先过 PFIC 与申报这关，再谈收益。个案差异极大，值得找熟悉两国的人做一次。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资、税务或法律建议。跨境税务与外汇规则<strong>个案差异极大、逐年修订</strong>，文中门槛（FBAR 1 万、赠与申报 10 万、非居民遗产税 6 万美元免税额、便利化购汇 5 万美元）均为撰写时口径，<strong>以当年官方规定为准</strong>；具体情况请咨询熟悉两国规则的持牌会计师或律师。默认美国背景，中美差异处已标注。
+</div>
+</div>
+</body>
+</html>
