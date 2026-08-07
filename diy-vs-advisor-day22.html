@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 22 · 自己管 vs 找顾问</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 22</span>
+<h1>自己管 vs 找顾问</h1>
+<p class="sub">顾问卖的其实是三样东西——先想清楚你要买哪一样，再谈值不值那个价。</p>
+<p class="meta">Personal Finance · DIY vs Hiring an Advisor　|　2026-08-07</p>
+</header>
+<div class="lede">
+「要不要找理财顾问」这个问题问错了。顾问卖的不是一件东西，是三件：<b>投资管理、财务规划、行为约束</b>。第一件已经被低成本指数基金彻底商品化——单为它每年付 1%，很难划算；后两件才可能真值钱，却也最难验货。更麻烦的是，「顾问」在美国不是受保护的头衔：同一个称呼下，有法定受托人，也有按佣金考核的销售。这一期讲四件事：你到底要买什么、收费模式如何反向决定你听到的建议、fiduciary 保证了什么又不保证什么、以及一次会面里怎么把人验清楚。
+</div>
+<h2 class="section">四块机制</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>先问「买什么」，不是「要不要买」</h3>
+<p class="en">Buy a Service, Not a Person</p>
+<div class="oneline">顾问卖三样东西，你多半只需要其中一两样。</div>
+<p><span class="lbl">机制。</span>拆开看：① <strong>投资管理</strong>（选品、再平衡）——已被商品化，三只低成本指数基金能做到的事，撑不起每年 1%；② <strong>财务规划</strong>——多年税务布局、股权薪酬的时点、保险缺口、买房与现金流、退休提取顺序，高度个人化、错一次代价大；③ <strong>行为约束</strong>——暴跌时不割、暴涨时不梭哈。Vanguard 曾估算顾问可带来约每年 3% 的净回报增益，其中最大一块来自行为指导；但要诚实：那是资管公司自己的<strong>情景建模</strong>，不是实测业绩，行为价值也几乎无法被证伪。</p>
+<p><span class="lbl">可执行。</span>用<strong>触发点</strong>决定，而不是用余额决定。值得买一次专业时间的窗口：大额股权归属或 IPO、跨境身份变动、继承、离婚、创业、临近退休开始提取、家里有需长期照护的成员。这些时点一次决策管几十年；平稳年份自己管足够。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「等钱够多了再找顾问。」—— 决定要不要付费的是<strong>决策复杂度</strong>，不是余额。反过来也成立：资产可观但结构简单的人，未必需要常年托管。</div>
+<div class="do"><span class="lbl">本周一试：</span>列出未来 12 个月你会遇到的「复杂度事件」。<b>思考题：</b>过去三年你最贵的那个财务决定，错在知识不足还是情绪？前者该买规划，后者该买约束。</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>收费模式决定你听到什么建议</h3>
+<p class="en">How They Get Paid Shapes What You Hear</p>
+<div class="oneline">先看钱怎么收，再看话怎么说——报酬结构比人品更能预测建议内容。</div>
+<p><span class="lbl">机制。</span>四种主流：<strong>AUM</strong>（按管理资产比例收，常见 1% 上下，大额递减）、<strong>固定年费/月费</strong>、<strong>小时费</strong>、<strong>佣金</strong>（卖产品拿提成）。每种都有结构性倾向：按资产收费者天然不喜欢任何让管理规模变小的建议——提前还房贷、全款买房、大额赠与；佣金制天然偏向高佣金产品（投资型寿险、指数年金）；小时与固定费冲突最小，但执行要你自己扛。注意 <strong>fee-only</strong>（只收客户的钱）与 <strong>fee-based</strong>（也收产品方的钱）只差一个词、含义相反，后者是营销造词。</p>
+<div class="formula">1% 资产管理费 ÷ 4% 可持续提取率 = 吃掉约 25% 的可提取现金流</div>
+<table>
+<thead><tr><th>每年总费率</th><th>30 年后终值被侵蚀</th></tr></thead>
+<tbody>
+<tr><td class="rate">0.05%（自持指数基金）</td><td class="yr">~1.4%</td></tr>
+<tr><td class="rate">0.25%（智能投顾）</td><td class="yr">~7%</td></tr>
+<tr><td class="rate">1.00%（全托 AUM）</td><td class="yr">~24%</td></tr>
+<tr><td class="rate">1.60%（AUM + 高费基金）</td><td class="yr">~36%</td></tr>
+</tbody>
+</table>
+<p class="note">假设：30 年、7% 名义年回报、忽略税与追加投入，只比较费前费后的终值差。说明性模型，非承诺。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「才 1%，很便宜。」—— 它按你<strong>全部资产</strong>每年收，且随资产自动涨价，而顾问的工作量并不同比例增加。资产已有规模的人，固定年费常便宜一个数量级。</div>
+<div class="do"><span class="lbl">本周一试：</span>把顾问费写成三个口径：绝对金额、占年支出的比例、占可持续提取额的比例。<b>别用「占收入的百分之几」判断</b>——按收入锚定会系统性低估费用的分量：税前收入高估了真正可支配的钱，收入越高、边际税档越高偏差越大。能用支出与净值做标尺，就别用收入（同理，储蓄率 = 没花掉、并投出去的钱占收入的比例，不是躺在银行的存款）。</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>fiduciary：必要，但不充分</h3>
+<p class="en">What Fiduciary Duty Does and Doesn't Guarantee</p>
+<div class="oneline">受托义务是及格线不是保证书，而且它可能只在部分时间对你成立。</div>
+<p><span class="lbl">机制。</span>美国并行两套标准。<strong>受托义务（fiduciary duty，须把客户利益置于自身之上）</strong>适用于注册投资顾问（RIA）及其代表。<strong>Reg BI</strong>（最佳利益规则，2020 年生效）适用于券商销售端：要求推荐「符合客户最佳利益」，但门槛低于受托义务，且只覆盖<strong>推荐的那一刻</strong>，不覆盖持续关系。真正的坑是<strong>双重注册</strong>：同一个人做规划时是顾问，卖产品时切换成经纪人——帽子换了，义务也换了。受托义务保证的是<strong>动机结构</strong>，不保证能力、不保证收费合理、更不保证业绩。</p>
+<p><span class="lbl">可执行。</span>一句话测试：<strong>「你在与我的全部往来中、所有时间都承担受托义务吗？请书面写明。」</strong>肯口头答应却不肯落纸，本身就是答案。再要三份文件：Form ADV Part 2A/2B（业务、收费、利益冲突、从业者背景）与 Form CRS（关系摘要）；到 SEC 的 IAPD 与 FINRA BrokerCheck 查纪律记录。CFP 持证人依其执业准则，在提供理财建议时须尽受托义务；NAPFA 成员为 fee-only。</p>
+<p class="note"><strong>中美差异：</strong>中国目前没有对标美式个人理财受托义务的制度，银行与券商的「理财经理」多为按产品销售考核的岗位；2019 年起的基金投顾试点是少数按账户收费的持牌形态。同一句话在中国要换成问：你的收入来自我付的费，还是产品方的提成？</p>
+<div class="miss"><span class="lbl">常见误区：</span>「他说他是 fiduciary，那就放心了。」—— 这个词在营销里被稀释得厉害。要看的是<strong>书面的、不限时间与业务范围</strong>的承诺，以及 ADV 里那一栏冲突披露实际写了什么。</div>
+<div class="do"><span class="lbl">本周一试：</span>找一位你（或家人）正在用的理财人员，去 IAPD / BrokerCheck 搜一次他的注册类型与纪律记录。<b>思考题：</b>他上一次给你的建议，如果按他的收费方式反推，是不是也正好对他有利？</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>如何验货：一次会面的检查表</h3>
+<p class="en">Due Diligence in One Meeting</p>
+<div class="oneline">一小时会面里能问清的四件事，比看三年业绩有用得多。</div>
+<p><span class="lbl">机制。</span>要验的是：<strong>报酬</strong>（钱从哪来）、<strong>义务与资质</strong>（受托与否、有无纪律记录）、<strong>托管</strong>（钱在谁手里）、<strong>协作</strong>（愿不愿与你的会计师、律师配合）。第三件最要命：资产必须放在<strong>独立第三方托管机构</strong>，顾问只有交易权限、没有取款权限，你能自己登录查账。历史上最大的理财骗局，几乎都有「自己托管 + 自己出对账单」这一共同点。</p>
+<p><span class="lbl">可执行。</span>六个问题，逐条问完：</p>
+<ul class="ratios">
+<li><b>1</b> 你怎么赚钱？除我付的费用外，还有任何其他收入来源吗？</li>
+<li><b>2</b> 你在所有时间、所有业务上都负受托义务吗？（要书面）</li>
+<li><b>3</b> 我的钱由谁托管？我能独立登录查看吗？</li>
+<li><b>4</b> 第一年总费用是多少<strong>金额</strong>？含与不含什么（基金费率、交易费、报税）？</li>
+<li><b>5</b> 除投资外，你覆盖税、保险、股权、遗产吗？会与我的会计师协作吗？</li>
+<li><b>6</b> 我随时能离开吗？账户搬走要多久、有无费用？</li>
+</ul>
+<p><span class="lbl">阶梯。</span>纯 DIY → 智能投顾（0.25% 上下）→ <strong>一次性付费买一份规划、自己执行</strong>（小时制或项目制）→ 全托 AUM。中间那一档最被低估：拿到决策，省掉常年按比例收费。撰写时常见区间：小时制每小时数百美元，综合规划或年度固定费数千美元；差异极大，以书面报价为准。</p>
+<div class="miss"><span class="lbl">常见误区：</span>「先看三年业绩再决定。」—— 短期业绩几乎没有预测力，而顾问的主要价值本就不在选品。红旗清单：不肯把费用写成金额、初次见面就推具体产品、暗示「保证收益」、只晒业绩不谈规划、资产不在第三方托管、拒绝提供 ADV、催你当场签字。</div>
+<div class="do"><span class="lbl">本周一试：</span>约两位收费模式不同的顾问各做一次初谈，把上面六个问题问完，比较回答。<b>思考题：</b>如果对你最好的建议是「你不需要我」，他的收费模式允许他说出口吗？</div>
+</div>
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>你要买的是懂股权的规划，不是选基金。</b> RSU（限制性股票单位）归属节奏、ISO 的 AMT（替代性最低税）、83(b) 选择、10b5-1 计划、集中持股的减持顺序，都属于「一次决定管很多年」；组合本身用低成本指数基金自己就能搭。面谈先问：你手上有多少同类客户？跟 CPA 怎么分工？</li>
+<li><b>看清 AUM 计费与集中持股的<em>双向</em>冲突。</b> 按资产收费者可能不情愿你把钱拿去还贷或买房（管理基数变小），也可能过度积极地劝你卖掉公司股票、转入他管理的账户。两个方向都要看到——判断依据是理由是否成立，不是结论听着顺不顺耳。</li>
+<li><b>收入年际波动大，按项目买规划通常更划算。</b> 把钱花在 IPO 年、大额归属年、跨境调动年这些窗口，价值最集中；平稳年份不必续费。按资产比例收费则与你的实际需求脱钩——资产涨了，费用涨了，问题却没变多。</li>
+<li><b>别让一个人卖你所有东西。</b> 报税找 CPA、遗产文件找律师、规划找 CFP。角色分开，冲突才看得见——一个人全包，你失去的是交叉验证。</li>
+</ul>
+</div>
+<h2 class="section">深入思考</h2>
+<details>
+<summary>「行为价值」是真的吗？</summary>
+<div class="body">诚实说：难以证伪。Vanguard、Morningstar 那类估算都是<strong>情景建模</strong>而非随机对照实验，样本还有选择偏差——愿意请顾问的人本就更有规划意识。但反方向的证据也真实：市场剧烈下跌期间的赎回数据，确实显示大量个人投资者在低点离场。合理的读法是——行为价值对「知道自己会慌」的人是真的，对已经能十年不动仓位的人接近于零。你付的其实是<strong>对自己的了解</strong>。</div>
+</details>
+<details>
+<summary>智能投顾（robo-advisor）够用吗？</summary>
+<div class="body">对资产结构简单、主要需求是自动再平衡与税损收割的人，够用。它的边界很清楚：不处理股权薪酬的时点、不做跨年度税务布局、不谈保险与遗产、不会在你想干蠢事的那天给你打电话。它是<strong>投资管理</strong>的廉价替代，不是<strong>规划</strong>的替代。把它当阶梯的第一级，别当终点。</div>
+</details>
+<details>
+<summary>找了顾问，是不是就不用自己懂了？</summary>
+<div class="body">恰恰相反。你无法验证一个自己完全不懂的领域的服务质量——这是所有专业服务的通病，医疗、法律皆然。目标不是自己会做，而是<strong>懂到能提问、能识别红旗、能判断答案是否自洽</strong>。这也是本系列的用途：把你抬到能验货的高度。</div>
+</details>
+<details>
+<summary>顾问费到底怎么算才叫贵？</summary>
+<div class="body">唯一有意义的口径是<strong>相对于它替你避免的错误</strong>——麻烦在于这个反事实不可观测。次优办法：把年费换成金额，再问「同样这笔钱付给小时制规划师，能买多少小时？」多数情况下答案会让人一愣。这不等于全托一定不值：持续关系、代为执行、危机时有人接电话，都有真实价值。但值不值应当是<strong>算出来的</strong>，不是被百分号的小数点催眠出来的。</div>
+</details>
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资、税务或法律建议，也不推荐任何具体机构或从业者。文中收费区间与监管口径为撰写时情况，各家差异极大且会调整，<strong>以对方书面披露与当年官方规定为准</strong>。费用侵蚀表为特定假设（30 年、7% 名义回报、忽略税与追加投入）下的<strong>说明性模型</strong>，非承诺。默认美国监管与账户体系为背景，中美差异处已标注。
+</div>
+</div>
+</body>
+</html>

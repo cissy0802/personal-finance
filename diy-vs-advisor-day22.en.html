@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 22 · DIY vs Hiring an Advisor</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 10px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 22</span>
+<h1>DIY vs Hiring an Advisor</h1>
+<p class="sub">An advisor is really selling you three separate things — decide which one you're buying before arguing about the price.</p>
+<p class="meta">Personal Finance · DIY vs Hiring an Advisor　|　2026-08-07</p>
+</header>
+<div class="lede">
+"Should I hire a financial advisor?" is the wrong question. An advisor isn't selling one thing, they're selling three: <b>investment management, financial planning, and behavioral restraint</b>. The first has been thoroughly commoditized by low-cost index funds — paying 1% a year for that alone rarely pencils out. The other two are where the real value can live, and they're also the hardest to inspect. Worse, "advisor" is not a protected title in the US: the same word covers legal fiduciaries and people compensated on product sales. Four things this issue: what you're actually buying, how the fee model works backwards into the advice you hear, what fiduciary duty does and doesn't guarantee, and how to vet someone in a single meeting.
+</div>
+<h2 class="section">Four Mechanisms</h2>
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>Ask What You're Buying, Not Whether to Buy</h3>
+<div class="oneline">Advisors sell three things; most people need only one or two of them.</div>
+<p><span class="lbl">Mechanism.</span> Unbundle it. (1) <strong>Investment management</strong> — selection and rebalancing — is commoditized; what three low-cost index funds can do cannot support 1% a year. (2) <strong>Financial planning</strong> — multi-year tax sequencing, the timing of equity comp, insurance gaps, housing and cash flow, retirement withdrawal order — is highly individual and expensive to get wrong once. (3) <strong>Behavioral restraint</strong> — not capitulating in a crash, not going all-in at a top. Vanguard has estimated that an advisor can add roughly 3% a year in net return, with the largest slice attributed to behavioral coaching. Be honest about what that is: an asset manager's own <strong>scenario model</strong>, not measured performance, and the behavioral component is close to unfalsifiable.</p>
+<p><span class="lbl">Executable.</span> Decide by <strong>trigger event</strong>, not by account balance. Windows worth paying for professional time: a large vesting tranche or an IPO, a change in residency or immigration status, an inheritance, a divorce, starting a business, the switch from accumulating to withdrawing, a family member who will need long-term care. Those decisions set the next few decades; the quiet years you can handle yourself.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "I'll get an advisor once I have enough money." — What justifies paying is <strong>decision complexity</strong>, not balance. The reverse holds too: substantial assets in a simple structure don't necessarily need ongoing management.</div>
+<div class="do"><span class="lbl">Try this week:</span> List the complexity events coming in your next 12 months. <b>Question:</b> Your most expensive financial decision of the past three years — was it a knowledge failure or an emotional one? The first buys planning; the second buys restraint.</div>
+</div>
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>The Fee Model Shapes the Advice</h3>
+<div class="oneline">Look at how they're paid before you weigh what they say — compensation structure predicts advice better than character does.</div>
+<p><span class="lbl">Mechanism.</span> Four dominant models: <strong>AUM</strong> (a percentage of assets under management, commonly around 1%, sliding down at larger balances), <strong>flat annual or monthly retainer</strong>, <strong>hourly</strong>, and <strong>commission</strong> (paid by the product manufacturer). Each carries a structural tilt. Someone paid on assets has no natural enthusiasm for anything that shrinks the managed pool — paying off a mortgage early, buying a house in cash, making large gifts. Commission tilts toward high-commission products (cash-value life insurance, indexed annuities). Hourly and flat fees carry the least conflict, but you own the execution. Note that <strong>fee-only</strong> (paid solely by clients) and <strong>fee-based</strong> (also paid by product manufacturers) differ by one word and mean opposite things; the second is a marketing coinage.</p>
+<div class="formula">1% asset fee ÷ 4% sustainable withdrawal = roughly 25% of your spendable cash flow</div>
+<table>
+<thead><tr><th>All-in annual fee</th><th>Terminal wealth lost over 30 years</th></tr></thead>
+<tbody>
+<tr><td class="rate">0.05% (DIY index funds)</td><td class="yr">~1.4%</td></tr>
+<tr><td class="rate">0.25% (robo-advisor)</td><td class="yr">~7%</td></tr>
+<tr><td class="rate">1.00% (full-service AUM)</td><td class="yr">~24%</td></tr>
+<tr><td class="rate">1.60% (AUM + expensive funds)</td><td class="yr">~36%</td></tr>
+</tbody>
+</table>
+<p class="note">Assumptions: 30 years, 7% nominal annual return, taxes and additional contributions ignored; this compares terminal values before and after fees only. An illustrative model, not a promise.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "It's only 1%, that's cheap." — It's charged annually on <strong>everything you have</strong>, and it raises itself automatically as your assets grow, while the advisor's workload does not scale in proportion. Once assets are substantial, a flat fee is often an order of magnitude cheaper.</div>
+<div class="do"><span class="lbl">Try this week:</span> Restate the fee three ways: as a dollar amount, as a share of your annual spending, and as a share of your sustainable withdrawal. <b>Don't judge it as "a few percent of income"</b> — income-anchored framing systematically understates what a fee costs: pre-tax income overstates what's actually disposable, and the gap widens the higher the income and the marginal bracket. Where a spending or net-worth yardstick exists, use it instead of income. (Same principle: savings rate = money not spent and <strong>actually invested</strong> as a share of income — not cash sitting in a bank.)</div>
+</div>
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>Fiduciary Duty: Necessary, Not Sufficient</h3>
+<div class="oneline">It's a floor, not a guarantee — and it may only apply to part of your relationship.</div>
+<p><span class="lbl">Mechanism.</span> Two standards run in parallel in the US. <strong>Fiduciary duty</strong> — putting the client's interest above your own — applies to registered investment advisers (RIAs) and their representatives. <strong>Reg BI</strong> (Regulation Best Interest, effective 2020) applies to the brokerage side: recommendations must be in the client's best interest, but the bar sits below fiduciary duty and it attaches to <strong>the moment of recommendation</strong>, not to an ongoing relationship. The real trap is <strong>dual registration</strong>: the same person is an adviser while planning and a broker while selling you a product — the hat changes, and so does the duty. Fiduciary duty guarantees an <strong>incentive structure</strong>. It does not guarantee competence, a reasonable price, or performance.</p>
+<p><span class="lbl">Executable.</span> One question does most of the work: <strong>"Will you act as a fiduciary in all of our dealings, at all times? Please put that in writing."</strong> Someone who agrees verbally but won't sign has answered you. Then collect the documents: Form ADV Part 2A/2B (business, fees, conflicts, the individual's background) and Form CRS (the relationship summary); check registration type and disciplinary history on the SEC's IAPD and FINRA BrokerCheck. CFP certificants are bound by their code of ethics to act as fiduciaries when giving financial advice; NAPFA members are fee-only.</p>
+<p class="note"><strong>US/China contrast:</strong> China has no equivalent statutory fiduciary regime for personal financial advice. Bank and brokerage "wealth managers" are largely sales roles measured on product distribution; the fund-advisory pilot program launched in 2019 is one of the few licensed formats charging a fee on the account rather than on the product. The equivalent question to ask there is simply: does your income come from the fee I pay, or from the product's manufacturer?</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "He said he's a fiduciary, so we're fine." — The word has been heavily diluted in marketing. What matters is a <strong>written commitment with no carve-out by time or line of business</strong>, plus what the conflicts section of the ADV actually discloses.</div>
+<div class="do"><span class="lbl">Try this week:</span> Take one financial professional you or a family member currently uses and look them up on IAPD or BrokerCheck. <b>Question:</b> Their last recommendation to you — read backwards from how they're paid, did it happen to benefit them too?</div>
+</div>
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>Due Diligence in One Meeting</h3>
+<div class="oneline">Four things you can settle in an hour beat three years of performance history.</div>
+<p><span class="lbl">Mechanism.</span> You're testing four things: <strong>compensation</strong> (where the money comes from), <strong>duty and credentials</strong> (fiduciary or not, disciplinary record), <strong>custody</strong> (who holds your money), and <strong>collaboration</strong> (will they work with your accountant and attorney). Custody is the one that can ruin you: assets must sit at an <strong>independent third-party custodian</strong>, with the advisor holding trading authority but not withdrawal authority, and you able to log in and see the account yourself. The largest advisory frauds in history share one feature — self-custody plus statements produced in-house.</p>
+<p><span class="lbl">Executable.</span> Six questions, asked to the end:</p>
+<ul class="ratios">
+<li><b>1</b> How do you get paid? Any source of income besides the fee I pay you?</li>
+<li><b>2</b> Are you a fiduciary at all times and across all business with me? (In writing.)</li>
+<li><b>3</b> Who custodies my money? Can I log in independently?</li>
+<li><b>4</b> What is the total first-year cost <strong>in dollars</strong>? What's included and what isn't (fund expense ratios, trading costs, tax preparation)?</li>
+<li><b>5</b> Beyond investments, do you cover tax, insurance, equity comp, estate? Will you coordinate with my CPA?</li>
+<li><b>6</b> Can I leave whenever I want? How long does moving the accounts take, and does it cost anything?</li>
+</ul>
+<p><span class="lbl">The ladder.</span> Pure DIY → robo-advisor (around 0.25%) → <strong>pay once for a plan and execute it yourself</strong> (hourly or project-based) → full-service AUM. That third rung is the most underrated: you get the decisions without the perpetual percentage. Typical ranges as of writing: a few hundred dollars an hour hourly, a few thousand for a comprehensive plan or an annual retainer. Ranges vary enormously — go by the written quote.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> "Let me see three years of performance first." — Short-run performance has almost no predictive power, and selection was never where the value was. Red flags instead: won't state fees in dollars, pitches a specific product at the first meeting, implies guaranteed returns, shows returns but won't discuss planning, assets not at a third-party custodian, refuses to hand over the ADV, pushes you to sign on the spot.</div>
+<div class="do"><span class="lbl">Try this week:</span> Book intro calls with two advisors on different fee models, ask all six questions, and compare the answers. <b>Question:</b> If the best advice for you were "you don't need me," does their fee model let them say it out loud?</div>
+</div>
+<div class="tech">
+<h4>For High-Earning Tech Professionals</h4>
+<p class="cap">One note per issue on this group's specific situation: equity comp, high tax burden, volatile income.</p>
+<ul>
+<li><b>What you're buying is equity-literate planning, not fund selection.</b> RSU vesting cadence, AMT exposure on ISOs, the 83(b) election, 10b5-1 plans, the sequencing of a concentrated position — these are "decide once, live with it for years" problems, while the portfolio itself is something you can build from low-cost index funds. Open with: how many clients like me do you have, and how do you divide work with a CPA?</li>
+<li><b>See the <em>two-way</em> conflict between AUM billing and a concentrated position.</b> Someone paid on assets may be reluctant to see money leave for a mortgage payoff or a house, and may also push a little too eagerly to sell company stock into an account they manage. Watch both directions, and judge the reasoning rather than whether the conclusion sounds agreeable.</li>
+<li><b>With income that swings year to year, buying planning by the project usually wins.</b> Spend on the windows where value concentrates — an IPO year, a heavy vesting year, a year you move across a border — and skip the renewal in quiet years. Percentage-of-assets billing is decoupled from need: assets grow, the fee grows, the questions don't.</li>
+<li><b>Don't let one person sell you everything.</b> CPA for the return, attorney for estate documents, CFP for planning. Separated roles make conflicts visible; a single provider costs you the cross-check.</li>
+</ul>
+</div>
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Is the "behavioral value" real?</summary>
+<div class="body">Honestly: hard to falsify. The Vanguard and Morningstar style estimates are <strong>scenario models</strong>, not randomized trials, and the samples carry selection bias — people who hire advisors were already more planning-minded. Evidence in the other direction is real too: redemption data through sharp drawdowns does show large numbers of individual investors selling near lows. The reasonable reading is that behavioral value is real for people who <em>know they will panic</em>, and close to zero for someone who has already sat still through a decade. What you're paying for is really <strong>self-knowledge</strong>.</div>
+</details>
+<details>
+<summary>Is a robo-advisor enough?</summary>
+<div class="body">For a simple asset structure whose main needs are automatic rebalancing and tax-loss harvesting, yes. Its limits are clear: it won't time equity comp, won't sequence taxes across years, won't discuss insurance or estate, and won't call you on the day you're about to do something stupid. It's a cheap substitute for <strong>investment management</strong>, not for <strong>planning</strong>. Treat it as the first rung of the ladder, not the destination.</div>
+</details>
+<details>
+<summary>If I hire an advisor, do I still need to understand this stuff?</summary>
+<div class="body">More than ever. You cannot evaluate the quality of service in a field you understand nothing about — that's true of medicine and law as well. The goal isn't to do it yourself, it's to <strong>understand enough to ask, to recognize red flags, and to tell whether an answer is internally consistent</strong>. That's what this series is for: getting you to the altitude where you can inspect the goods.</div>
+</details>
+<details>
+<summary>So when is an advisory fee actually too expensive?</summary>
+<div class="body">The only meaningful measure is <strong>relative to the mistakes it prevents</strong> — and that counterfactual is unobservable. Second best: convert the annual fee to a dollar amount and ask, "how many hours of an hourly planner's time would that same money buy?" The answer is usually startling. That doesn't mean full service is never worth it — an ongoing relationship, someone to execute, someone who picks up the phone in a crisis all carry real value. It means the verdict should be <strong>calculated</strong>, not hypnotized out of you by a decimal point in front of a percent sign.</div>
+</details>
+<div class="disc">
+This site is evidence-based personal finance <strong>education</strong>, not personalized investment, tax, or legal advice, and it does not recommend any specific firm or practitioner. Fee ranges and regulatory descriptions reflect conditions as of writing; they vary widely between providers and change over time — <strong>go by the written disclosure you receive and the official rules for the year</strong>. The fee-drag table is an <strong>illustrative model</strong> under stated assumptions (30 years, 7% nominal return, taxes and contributions ignored), not a promise. US regulation and account structures are the default background, with US/China differences flagged.
+</div>
+</div>
+</body>
+</html>
