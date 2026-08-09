@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Personal Finance · Day 24 · The One-Page Financial Checkup</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<span class="kicker">Personal Finance <span class="dot"></span> Day 24</span>
+<h1>The One-Page Financial Checkup</h1>
+<p class="sub">Compressing 23 issues onto a single page: one net worth statement, five ratios, one annual checklist, one automated pipeline.</p>
+<p class="meta">个人理财 · 一页纸财务体检　|　2026-08-09</p>
+</header>
+
+<div class="lede">
+The usual outcome after reading two dozen issues on personal finance isn't "I learned it"—it's that <strong>nothing changes</strong>, because the knowledge never landed in a container that actually gets executed once a year. This issue introduces no new concepts. It closes the loop by compressing the whole system onto <b>one page</b> with four blocks: the net worth statement (where I am), the ratios (whether I'm healthy), the annual checklist (assumptions re-verified once a year), and automation (an execution layer that doesn't run on willpower). Done right, it costs you 90 minutes a year; the other 364 days, the system runs itself.
+</div>
+
+<h2 class="section">The Four Blocks</h2>
+
+<!-- 1 -->
+<div class="card">
+<span class="num">POINT 1</span>
+<h3>The Net Worth Statement: The One Line That Doesn't Lie</h3>
+<div class="oneline">Block one isn't a budget—it's assets minus liabilities, updated quarterly, read as a trend.</div>
+<p><span class="lbl">Mechanism.</span> Net worth compresses every account, every debt, and the result of every decision you made last year into a single number. Its value isn't the absolute figure on any given day—the market sets that—but the <strong>slope</strong>, and where the slope came from: of last year's increase, how much did you contribute and how much was just the market? The first is yours; the second can be handed back at any time. So split the statement into two columns: <strong>net contributions</strong> and <strong>market change</strong>.</p>
+<p><span class="lbl">Actionable.</span> Five rows. Don't turn it into accounting:</p>
+<table>
+<thead><tr><th>Layer</th><th>What goes in</th><th>How to value it</th></tr></thead>
+<tbody>
+<tr><td class="rate">Liquid</td><td>Cash, HYSA (high-yield savings account), money market funds</td><td>Face value</td></tr>
+<tr><td class="rate">Invested</td><td>Taxable brokerage</td><td>Market value; note unrealized gains</td></tr>
+<tr><td class="rate">Retirement</td><td>401(k), IRA, HSA</td><td>Market value; flag pre-tax accounts</td></tr>
+<tr><td class="rate">Restricted / illiquid</td><td>Home equity, vested but locked-up shares</td><td>Conservative estimate; keep separate</td></tr>
+<tr><td class="rate">Liabilities</td><td>Mortgage, student loans, auto, credit cards</td><td>Current balance and rate</td></tr>
+</tbody>
+</table>
+<p class="note">Two valuation disciplines: (1) <strong>pre-tax balances are not after-tax money</strong>—traditional 401(k) balances and unrealized gains owe tax on the way out, so for long-range planning haircut them by your own expected rate (an illustrative practice, not a precise method); (2) value a home at a conservative market price minus transaction costs—not what you paid, and not what your neighbor's place sold for.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> counting <strong>unvested equity</strong> as net worth. It's conditional future income, not a present asset—departure, share price, or performance conditions can all take it to zero. Keep it in a footnote, off the balance sheet.</div>
+<div class="do"><span class="lbl">Try this week:</span> build the five-row table in ten minutes. Filling it once is enough. <b>Question:</b> of your net worth change over the last 12 months, how much was money you actually put in?</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<span class="num">POINT 2</span>
+<h3>Five Ratios: A Checkup Reads Indicators, Not Balances</h3>
+<div class="oneline">Balances make you calm or anxious; ratios tell you what's actually broken.</div>
+<p><span class="lbl">Mechanism.</span> A medical report doesn't tell you how much blood you have—it reports concentrations and ratios. Same here. Five numbers cover both "can I take a hit now" and "will I get there later":</p>
+<table>
+<thead><tr><th>Ratio</th><th>Formula</th><th>Illustrative band</th></tr></thead>
+<tbody>
+<tr><td class="rate">Savings rate</td><td>(after-tax income − spending) ÷ after-tax income</td><td class="yr">&lt;10% needs work; 20%+ solid</td></tr>
+<tr><td class="rate">Emergency buffer</td><td>liquid assets ÷ monthly essential spending</td><td class="yr">3–6 months; take the high end if income is volatile</td></tr>
+<tr><td class="rate">Debt ratio</td><td>total liabilities ÷ total assets</td><td class="yr">Should fall with age; trend beats level</td></tr>
+<tr><td class="rate">Housing load</td><td>total housing cost ÷ after-tax income</td><td class="yr">Structurally high in expensive metros—watch it consciously</td></tr>
+<tr><td class="rate">FI progress</td><td>net worth ÷ (25 × annual spending)</td><td class="yr">This is the real progress bar</td></tr>
+</tbody>
+</table>
+<p class="note">Say it plainly the first time <strong>savings rate</strong> appears: it means money <strong>you didn't spend and did invest</strong>—not cash sitting in a bank account. Parking it in checking is just deferred consumption; it doesn't compound. The 25× in <strong>FI</strong> (financial independence) progress is a rough inversion of a 4% withdrawal rate (Day 19)—an illustrative model, not a promise.</p>
+<p><span class="lbl">Calibrating income-anchored rules.</span> The two most widely circulated yardsticks—"by age X you should have N times salary saved" and <em>The Millionaire Next Door</em>'s <span class="formula" style="display:inline-block;padding:2px 10px;margin:0">expected net worth ≈ age × pre-tax income ÷ 10</span>—are both anchored to <strong>pre-tax income</strong>, and they systematically <strong>overstate</strong> the target for people with high incomes, high marginal brackets, or equity-heavy pay: (1) tax rises faster than income, so the pre-tax figure overstates what can actually be saved; (2) an "age × income" cross term implicitly assumes a lifetime at today's peak income, whereas earnings curves usually rise steeply mid-career and then flatten. The sturdier move is to switch the yardstick to the <strong>spending side</strong>: net worth ÷ annual spending, FI progress, savings rate. Spending is the life you actually have to fund; income isn't.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> using "multiples of salary" as your personal progress bar. That denominator climbs every time you get a raise—so the harder you earn, the further behind the bar reads. It's a mathematically wrong dashboard.</div>
+<div class="do"><span class="lbl">Try this week:</span> compute all five and write them under the net worth table. <b>Question:</b> your weakest ratio—which habit does it expose, rather than which number?</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<span class="num">POINT 3</span>
+<h3>The Annual Review: Re-verify the Assumptions Once a Year</h3>
+<div class="oneline">Most financial damage isn't a wrong decision—it's a right decision from three years ago that nobody looked at again.</div>
+<p><span class="lbl">Mechanism.</span> Coverage amounts, beneficiaries, withholding, fees, wills—all of these are "set once, then quietly go stale." Life changed (marriage, a child, a move, a new job, a house); the settings didn't. Once a year is enough: most of these variables don't move within a year, and what genuinely triggers an off-cycle review is a <strong>life event</strong>, not market noise.</p>
+<p><span class="lbl">Actionable.</span> Four blocks, checkbox by checkbox, 90 minutes:</p>
+<ul class="ratios">
+<li><b>1. Defense.</b> Beneficiary designations (on retirement accounts and policies these <strong>override your will</strong>—the single most commonly stale field); life and disability coverage still sized right; umbrella limits; home and auto re-rated (Days 12–14, 20)</li>
+<li><b>2. Tax.</b> Bracket changes this year; pre-tax vs Roth; backdoor and mega-backdoor completed; loss harvesting; W-4 withholding drift (Days 7–9)</li>
+<li><b>3. Accounts and fees.</b> Fund expense ratios, consolidating idle accounts, cash yield falling behind, subscription cleanup (Days 22–23)</li>
+<li><b>4. Documents.</b> Will/trust, POA (power of attorney), advance healthcare directive, password and digital-asset inventory, the "if I'm gone tomorrow" folder (Day 20)</li>
+</ul>
+<p class="note">US/China contrast: beneficiary designations, wills, and powers of attorney operate under different rules in each jurisdiction, and cross-border status adds reporting obligations (Day 21). The checklist structure is portable; the line items are local.</p>
+<div class="miss"><span class="lbl">Common mistake:</span> turning the annual review into "how much did I make last year." Returns aren't on the checklist—they aren't under your control. Only <strong>settings you can change</strong> belong there.</div>
+<div class="do"><span class="lbl">Try this week:</span> create a recurring annual calendar event (the week after you file taxes, or your birthday week) and paste the four lines above into the notes. <b>Question:</b> which setting should already have been changed last year?</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<span class="num">POINT 4</span>
+<h3>Automation: Keep It Running on the Days You Don't Care</h3>
+<div class="oneline">The mark of a good system: you make no decisions and the money still lands in the right place.</div>
+<p><span class="lbl">Mechanism.</span> Willpower is consumable; structure isn't. Automation is fundamentally about <strong>copying one decision made while clear-headed onto every tired day in the future</strong> (Day 4). It closes the two most expensive behavioral leaks at once: procrastination ("I'll skip saving this month") and wrong ordering (spend first, save the remainder).</p>
+<p><span class="lbl">Actionable.</span> Build a payday pipeline so the split happens before you ever see the money:</p>
+<div class="formula">Paycheck → retirement deferral → fixed-bills account → emergency / goal accounts → the rest is yours to spend</div>
+<p>Three rules that keep it from rotting: (1) <strong>auto-escalate on raises</strong>—at every pay change or annual review, route a fixed share of the increase into the automatic transfer before you discuss spending; this is the cheapest defense against lifestyle inflation. (2) <strong>Keep exactly three manual actions</strong>: the annual review, large purchase decisions, and handling variable income. Automate everything else. (3) <strong>Audit the automation itself once a year</strong>—autopay drifts (subscriptions raise prices, transfers get canceled, a 401(k) deferral never restarts after a job change).</p>
+<div class="miss"><span class="lbl">Common mistake:</span> reading "automated" as "never look again." Automation executes for you; it doesn't supervise for you. Unwatched autopay is where fees and price increases hide best.</div>
+<div class="do"><span class="lbl">Try this week:</span> convert one monthly manual transfer into an automatic one. <b>Question:</b> which step in your system still depends on remembering?</div>
+</div>
+
+<div class="tech">
+<h4>Note for High-Earning Tech Workers</h4>
+<p class="cap">One per issue, focused on this group's specific situation: equity comp, high marginal tax, volatile income.</p>
+<ul>
+<li><b>Automation covers base salary; the variable part leaks.</b> RSU vests, bonuses, and ESPP sales don't flow through the payday pipeline—they tend to sit in a brokerage account as "not decided yet." <strong>Write the rule in advance</strong>: on arrival, handle a preset share, reserve the tax, route the rest to a predetermined destination. When it lands you execute; you don't re-decide.</li>
+<li><b>Add a "concentration" row to the net worth statement.</b> Employer-linked assets (company stock plus vested-unsold shares) ÷ net worth. And remember your <strong>human capital sits at the same company</strong>: salary and holdings share one source, so you've bought that risk twice.</li>
+<li><b>Compute ratios on a rolling 12 months, never a single month.</b> When income concentrates into vest windows, any one month's savings rate is distorted—falsely high or alarmingly low. Take both numerator and denominator over the trailing year.</li>
+<li><b>Check withholding at the annual review.</b> In the US, supplemental wages (including RSU vesting) are commonly withheld at a flat statutory rate, with a higher rate applying above the $1M threshold under current rules. For people in higher marginal brackets that flat rate <strong>can fall short</strong>, and the gap only surfaces at filing. Reconcile once a year; if it's short, adjust the W-4 or pay estimated tax.</li>
+</ul>
+</div>
+
+<h2 class="section">Going Deeper</h2>
+<details>
+<summary>Doesn't one page oversimplify a complex problem?</summary>
+<div class="body">Yes, and that's the <strong>deliberate trade</strong>. The page doesn't replace deep analysis—rent-vs-buy math, option exercise timing, and trust structures all deserve their own sitting. Its job is to guarantee the <strong>base layer actually gets executed once a year</strong>. A crude checklist you genuinely complete beats an elegant model you never open. Complex decisions can still be outsourced to an advisor (Day 22)—but you need to know where you stand first.</div>
+</details>
+<details>
+<summary>How often should you look at your accounts?</summary>
+<div class="body">Net worth quarterly, full checkup annually, investment accounts as rarely as you can stand. Frequent checking raises anxiety and the urge to act, not returns—short-term noise carries almost no information. The inversion: your <strong>cash-flow accounts</strong> deserve a weekly glance, because that's where real information lives (unexpected charges, subscription price hikes, fraud). Watch what's worth watching; ignore the rest.</div>
+</details>
+<details>
+<summary>Do these ratios apply if income is close to subsistence?</summary>
+<div class="body">Honestly: not fully. Rent and food are rigid, so the numerator of the savings rate barely moves. In that situation "raise your savings rate" is the wrong main line—the main line is <strong>income, skills, and liquidity</strong>. This checkup is most useful once there's a surplus to allocate. If you keep only one item, keep the emergency buffer: the more fragile the cash flow, the higher its marginal value.</div>
+</details>
+<details>
+<summary>The system is built—now what?</summary>
+<div class="body">Now it's <strong>maintenance, not more studying</strong>. This roadmap ran from first principles to here, covering how to manage, protect, and plan your own money. Beyond this point, the marginal return usually isn't in reading more personal-finance content; it's in two places elsewhere: putting energy back into your income and your craft, and getting clear on what all of this is meant to buy. The tools are sufficient—the biggest risk in personal finance was never knowing too little, it's being permanently about to start.</div>
+</details>
+
+<div class="disc">
+This site offers evidence-based personal-finance <strong>education</strong>, not personalized investment, tax, or legal advice; consult a licensed professional about your situation. The ratio bands and the 25× annual-spending figure are <strong>illustrative models</strong> under specific assumptions (a 4% withdrawal rate, positive long-run real returns, stable spending), not promises, and not tailored to any individual. US accounts and tax rules are the default context, with China contrasts noted; tax law and account rules change, so verify the current year's rules before acting.
+</div>
+
+</div>
+</body>
+</html>

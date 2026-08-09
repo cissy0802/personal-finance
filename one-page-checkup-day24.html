@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>个人理财 · Day 24 · 一页纸财务体检</title>
+<style>
+:root{
+  --bg:#f4f7f6; --card:#ffffff; --ink:#16302b; --muted:#5b6f6a;
+  --teal:#0f766e; --teal-d:#0b5850; --gold:#b8863b; --line:#e2ebe8;
+  --warn-bg:#fbf3e7; --warn-line:#e7cfa3; --do-bg:#eef6f3;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;
+}
+.wrap{max-width:820px;margin:0 auto;padding:32px 20px 72px}
+header.top{border-bottom:2px solid var(--teal);padding-bottom:20px;margin-bottom:8px}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;letter-spacing:.04em;color:var(--teal);font-weight:600;text-transform:uppercase}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:29px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:15px;margin:0}
+.meta{color:var(--muted);font-size:13px;margin-top:10px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);
+  border-radius:10px;padding:18px 20px;margin:26px 0 34px;font-size:15.5px;color:#26433c}
+.lede b{color:var(--teal-d)}
+h2.section{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  margin:40px 0 16px;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:22px 22px 8px;margin:16px 0;box-shadow:0 1px 2px rgba(20,50,45,.03)}
+.card .num{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--teal);
+  border-radius:20px;padding:2px 11px;letter-spacing:.03em}
+.card h3{font-size:20px;margin:12px 0 4px;letter-spacing:-.01em}
+.card .en{color:var(--muted);font-size:13px;font-weight:500;margin:0 0 12px}
+.oneline{font-size:15.5px;font-weight:600;color:var(--teal-d);
+  background:#f0f6f4;border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.card p{margin:12px 0}
+.card p .lbl{font-weight:700;color:var(--ink)}
+strong{color:var(--teal-d)}
+.formula{font-size:16px;text-align:center;background:#f7faf9;border:1px dashed var(--line);
+  border-radius:8px;padding:12px;margin:12px 0;color:var(--teal-d);font-weight:600}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:#f0f6f4;color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.03em}
+td.rate{font-weight:700;color:var(--ink)}
+td.yr{color:var(--teal-d);font-weight:600}
+tr:last-child td{border-bottom:none}
+.miss{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:8px;
+  padding:11px 14px;margin:12px 0;font-size:14.5px}
+.miss .lbl{color:#9a6a1e;font-weight:700}
+.do{background:var(--do-bg);border:1px solid #cfe4dd;border-radius:8px;
+  padding:11px 14px;margin:12px 0 16px;font-size:14.5px}
+.do .lbl{color:var(--teal-d);font-weight:700}
+.tech{background:#eef2f7;border:1px solid #cdd8e6;border-left:3px solid #3a5a8c;
+  border-radius:12px;padding:18px 22px;margin:28px 0}
+.tech h4{margin:0 0 3px;color:#2f4a75;font-size:16.5px}
+.tech .cap{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.tech ul{margin:8px 0 2px;padding-left:20px}
+.tech li{margin:9px 0;font-size:14.5px}
+.tech b{color:#2f4a75}
+.ratios{list-style:none;padding:0;margin:10px 0}
+.ratios li{padding:8px 0;border-bottom:1px dashed var(--line)}
+.ratios li:last-child{border:none}
+.ratios b{color:var(--teal-d)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:2px 18px;margin:10px 0}
+details[open]{background:#fbfdfc}
+summary{cursor:pointer;font-weight:600;padding:14px 0;color:var(--ink);list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--teal);margin-right:10px;display:inline-block;transition:transform .2s}
+details[open] summary::before{transform:rotate(90deg)}
+details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px solid var(--line);margin-top:2px;padding-top:12px}
+.disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
+  color:var(--muted);font-size:12.5px;line-height:1.65}
+.note{font-size:13px;color:var(--muted);font-style:normal}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+<span class="kicker">个人理财 <span class="dot"></span> Day 24</span>
+<h1>一页纸财务体检</h1>
+<p class="sub">把前 23 期压成一张纸：一张净值表、五个比率、一份年度清单、一条自动化流水线。</p>
+<p class="meta">Personal Finance · The One-Page Financial Checkup　|　2026-08-09</p>
+</header>
+
+<div class="lede">
+读完二十几期理财知识，最常见的结局不是「学会了」，而是<strong>什么都没变</strong>——因为知识没有落进一个每年都会被执行一次的载体。这一期不讲新概念，只做收尾：把整个系统压缩成<b>一页纸</b>。它有四块——净值表（我现在在哪）、关键比率（我健不健康）、年度清单（一年验一次的假设）、自动化（不靠意志力的执行层）。做对了，你每年只需要 90 分钟；剩下的 364 天，系统自己跑。
+</div>
+
+<h2 class="section">一页纸的四块</h2>
+
+<!-- 1 -->
+<div class="card">
+<span class="num">要点 1</span>
+<h3>净值表：唯一不会骗人的那一行</h3>
+<p class="en">The Net Worth Statement</p>
+<div class="oneline">一页纸的第一块不是预算，是净值表：资产减负债，一季度更新一次，只看趋势。</div>
+<p><span class="lbl">机制。</span>净值把所有账户、所有债务、过去一年所有决策的结果，压缩成一个数。它的价值不在某一天的绝对值（那由市场决定），而在<strong>斜率</strong>——以及斜率的来源：一年里净值涨了，有多少来自你存进去的钱，有多少只是市场涨了？前者是你的功劳，后者随时会还回去。所以净值表要拆两栏：<strong>本期净存入</strong>与<strong>本期市值变动</strong>。</p>
+<p><span class="lbl">可执行。</span>五行搞定，别做成会计报表：</p>
+<table>
+<thead><tr><th>分层</th><th>放什么</th><th>记账口径</th></tr></thead>
+<tbody>
+<tr><td class="rate">流动</td><td>现金、高息储蓄账户 HYSA（High-Yield Savings Account，高收益储蓄账户）、货币基金</td><td>面值</td></tr>
+<tr><td class="rate">投资</td><td>应税券商账户</td><td>市值，另记未实现盈利</td></tr>
+<tr><td class="rate">退休</td><td>401(k)、IRA、HSA</td><td>市值，税前账户另标</td></tr>
+<tr><td class="rate">受限 / 非流动</td><td>房产净值、已 vest 但受锁定的股票</td><td>保守估值，单列不混入</td></tr>
+<tr><td class="rate">负债</td><td>房贷、学贷、车贷、信用卡</td><td>当前余额与利率</td></tr>
+</tbody>
+</table>
+<p class="note">两条口径纪律：① <strong>税前账户不是税后的钱</strong>——传统 401(k) 与未实现盈利提取时要交税，做长期规划时按你自己的预期税率打个折（说明性做法，不是精确算法）；② 房产用保守市价减去交易成本，别用买入价，也别用邻居的成交价。</p>
+<div class="miss"><span class="lbl">常见误区：</span>把<strong>还没 vest 的股权</strong>算进净值。它是未来的条件性收入，不是今天的资产——离职、股价、业绩条件都能让它归零。想记就记在表外备注栏。</div>
+<div class="do"><span class="lbl">本周一试：</span>用十分钟建这张五行表，填一次就行。<b>思考题：</b>过去 12 个月你的净值变化里，多少来自你存进去的钱？</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<span class="num">要点 2</span>
+<h3>五个比率：体检看指标，不看余额</h3>
+<p class="en">The Five Ratios That Matter</p>
+<div class="oneline">余额让你安心或焦虑，比率才告诉你哪里出了问题。</div>
+<p><span class="lbl">机制。</span>体检报告不写「你有多少血」，写的是浓度与比值。财务同理，五个比率覆盖了「现在扛不扛得住」和「将来到不到得了」：</p>
+<table>
+<thead><tr><th>比率</th><th>算法</th><th>说明性参考带</th></tr></thead>
+<tbody>
+<tr><td class="rate">储蓄率</td><td>（税后收入 − 支出）÷ 税后收入</td><td class="yr">&lt;10% 需修，20%+ 稳健</td></tr>
+<tr><td class="rate">应急缓冲</td><td>流动资产 ÷ 月必要支出</td><td class="yr">3–6 个月；收入波动大取上限</td></tr>
+<tr><td class="rate">负债率</td><td>总负债 ÷ 总资产</td><td class="yr">随年龄下降，趋势比数值重要</td></tr>
+<tr><td class="rate">住房负担</td><td>住房总成本 ÷ 税后收入</td><td class="yr">高成本城市普遍偏高，需自觉</td></tr>
+<tr><td class="rate">FI 进度</td><td>净值 ÷（25 × 年支出）</td><td class="yr">这是真正的进度条</td></tr>
+</tbody>
+</table>
+<p class="note"><strong>储蓄率</strong>第一次出现要说清：它指<strong>没花掉、并且投出去的钱</strong>，不是躺在银行里的存款——存进活期只是延后消费，不产生复利。<strong>FI</strong>（Financial Independence，财务独立）进度用的 25 倍来自 4% 提取率的粗略反推（见 Day 19），是说明性模型，不是承诺。</p>
+<p><span class="lbl">收入锚定公式的校准。</span>流传最广的两类标尺——「X 岁应存够 N 倍年薪」和《邻家的百万富翁》的<span class="formula" style="display:inline-block;padding:2px 10px;margin:0">期望净值 ≈ 年龄 × 税前年收入 ÷ 10</span>——都以<strong>税前收入</strong>为锚，对高收入、高边际税档、以股权薪酬为主的人群<strong>系统性高估</strong>：① 税负随收入超线性上升，税前数字高估了真正能存下的钱；② 「年龄 × 收入」这类交叉项默认一个人终身都拿当前的峰值收入，而收入曲线通常是中段陡升、后段走平。更稳的做法是把标尺换成<strong>支出侧</strong>：净值 ÷ 年支出、FI 进度、储蓄率。支出是你实际要供养的生活，收入不是。</p>
+<div class="miss"><span class="lbl">常见误区：</span>拿「几倍年薪」当面向自己的进度条。这个锚的分母会随加薪不断上移——你越努力赚钱，进度条反而越退，这在数学上就是个错误的仪表盘。</div>
+<div class="do"><span class="lbl">本周一试：</span>把五个比率算出来，写在净值表下面。<b>思考题：</b>最弱的那个比率，暴露了你哪个习惯而不是哪个数字？</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<span class="num">要点 3</span>
+<h3>年度复盘清单：一年验一次假设</h3>
+<p class="en">The Annual Review Checklist</p>
+<div class="oneline">大多数财务错误不是决策错，而是三年前对的决策没人再看一眼。</div>
+<p><span class="lbl">机制。</span>保额、受益人、预扣、费率、遗嘱，都是「设一次、然后默默失效」的东西——生活变了（结婚、生子、搬州、换工作、买房），设定没变。频率上一年一次足够：多数变量年内不动；真正需要临时重检的是<strong>生活事件</strong>，不是市场波动。</p>
+<p><span class="lbl">可执行。</span>四块，逐条打勾，90 分钟：</p>
+<ul class="ratios">
+<li><b>① 防守。</b>受益人指定（退休账户与保单的受益人<strong>优先于遗嘱</strong>，最容易过期的一栏）；寿险与伤残险保额是否还匹配；伞险额度；房车险重估（Day 12–14、20）</li>
+<li><b>② 税。</b>今年税档是否变化；税前 vs Roth 的取舍；backdoor 与 mega-backdoor 是否做完；亏损收割；W-4 预扣是否偏离（Day 7–9）</li>
+<li><b>③ 账户与费用。</b>基金费率、闲置账户合并、现金收益率是否落后、订阅账单清理（Day 22–23）</li>
+<li><b>④ 文件。</b>遗嘱 / 信托、POA（Power of Attorney，授权委托书）、医疗预嘱、密码与数字资产清单、「如果我明天走了」文件夹（Day 20）</li>
+</ul>
+<p class="note">中美差异：受益人指定、遗嘱与授权文件的效力规则两地不同；跨境身份还叠加申报义务（Day 21）。清单结构通用，具体条目按所在地调整。</p>
+<div class="miss"><span class="lbl">常见误区：</span>把年度复盘做成「看去年赚了多少」。收益率不在清单上——它不受你控制。清单上只放<strong>你能改的设定</strong>。</div>
+<div class="do"><span class="lbl">本周一试：</span>在日历上建一个每年重复的事件（建议挂在报税后一周或生日周），备注里贴上面四行。<b>思考题：</b>过去一年里，有哪个设定其实早就该改了？</div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<span class="num">要点 4</span>
+<h3>自动化：让系统在你不想理财的日子照常运转</h3>
+<p class="en">Automate the Whole System</p>
+<div class="oneline">好系统的标志是：你不做任何决定，钱也走到对的地方。</div>
+<p><span class="lbl">机制。</span>意志力是消耗品，纪律不是。自动化的本质是<strong>把一次清醒时的决定，复制到未来所有疲惫的日子</strong>（Day 4）。它同时消灭了两个最贵的行为漏洞：拖延（这月先不存了）和顺序错误（先花，剩下的再存）。</p>
+<p><span class="lbl">可执行。</span>建一条发薪日流水线，钱在你看见之前就分流完：</p>
+<div class="formula">工资 → 退休账户扣款 → 固定账单账户 → 应急 / 目标账户 → 剩下的随便花</div>
+<p>三条让它不腐坏的规则：① <strong>加薪自动升级</strong>——每次调薪或年度复盘时，先把其中固定一部分加到自动转账上，再谈消费，这是对抗生活方式通胀最省力的一招；② <strong>只留三个手动动作</strong>：年度复盘、大额支出决策、浮动收入到账处理，其余全部自动；③ <strong>每年审一次自动化本身</strong>——自动扣款会漂移（涨价的订阅、停掉的转账、换工作后没接上的 401(k) 扣款比例）。</p>
+<div class="miss"><span class="lbl">常见误区：</span>把「自动化」理解成「从此不用看」。自动化替你执行，不替你监督。无人看管的自动扣款是费用和涨价最好的藏身处。</div>
+<div class="do"><span class="lbl">本周一试：</span>把一笔你每月手动做的转账改成自动。<b>思考题：</b>你的系统里，哪一步还依赖「记得去做」？</div>
+</div>
+
+<div class="tech">
+<h4>给科技高薪人员的提示</h4>
+<p class="cap">本系列每期一条，聚焦股权薪酬 / 高税负 / 高波动收入这个群体的特殊处境。</p>
+<ul>
+<li><b>自动化只覆盖固定工资，浮动部分会漏。</b>RSU 归属、年终奖、ESPP 卖出都不走发薪日流水线，往往就停在券商账户里变成「暂时没决定」。<strong>提前写死规则</strong>：到账即按预设比例处理、预留税款、其余归入既定去向——事到临头只执行，不重新决策。</li>
+<li><b>净值表里加一行「集中度」。</b>雇主相关资产（本公司股票 + 已 vest 未卖部分）÷ 净值。别忘了你的<strong>人力资本也押在同一家公司</strong>：工资和持股同源，等于同一个风险买了两次。</li>
+<li><b>比率要用滚动 12 个月，别用单月。</b>收入按年集中到 vest 窗口时，任何单月的储蓄率都会失真——高得虚假或低得吓人。分子分母都取过去 12 个月。</li>
+<li><b>年度复盘务必查预扣。</b>美国对补充性工资（含 RSU 归属）常按法定固定比例代扣（当前规则下超过 100 万美元的部分适用更高比例），这个比例对处于较高边际税档的人<strong>可能不足</strong>，差额年底才现形。复盘时对一次，不足就调 W-4 或补预缴。</li>
+</ul>
+</div>
+
+<h2 class="section">深入思考</h2>
+<details>
+<summary>一页纸会不会把复杂问题过度简化？</summary>
+<div class="body">会，而且这是<strong>有意的取舍</strong>。一页纸的作用不是替代深度分析（买房测算、期权行权时机、信托结构都需要专门坐下来算），而是保证<strong>基础层每年一定被执行一次</strong>。一份每年真的做完的粗糙清单，胜过一套精美但从没打开过的模型。复杂决策仍然可以外包给顾问（Day 22）——但你得先知道自己在哪。</div>
+</details>
+<details>
+<summary>多久看一次账户才健康？</summary>
+<div class="body">净值一个季度一次，完整体检一年一次，投资账户越少看越好。频繁查看提高的是焦虑与操作欲，不是回报——短期波动里几乎没有信息量。反过来，<strong>现金流账户</strong>该每周扫一眼：那里才有真信息（异常扣款、订阅涨价、盗刷）。看该看的，别看不该看的。</div>
+</details>
+<details>
+<summary>这些比率对收入贴近生存线的人适用吗？</summary>
+<div class="body">诚实说：不完全适用。房租和吃饭是刚性的，储蓄率的分子几乎压不动，此时把「提高储蓄率」当主线是错的，主线应该是<strong>提高收入、技能与流动性</strong>。这套体检对已经有盈余可分配的人最有用。硬要保留一样，就保留应急缓冲——它对越是脆弱的现金流，边际价值越高。</div>
+</details>
+<details>
+<summary>系统建好了，接下来做什么？</summary>
+<div class="body">接下来是<strong>维护，而不是继续学</strong>。这条路线图从第一性原理走到这里，覆盖的是管好、守住、规划自己的钱；再往下的边际收益，多数不在读更多理财内容，而在两个别处：把精力投回你的收入与专业能力，以及想清楚这些钱到底要买来什么样的生活。工具已经够用了——理财最大的风险从来不是懂得少，而是永远在准备开始。</div>
+</details>
+
+<div class="disc">
+本站为循证的个人理财<strong>教育</strong>，不构成个性化投资 / 税务 / 法律建议；具体情况请咨询持牌专业人士。文中比率参考带与 25 倍年支出等数字是特定假设（4% 提取率、长期实际回报为正、支出结构稳定）下的<strong>说明性模型</strong>，非承诺，不针对任何个人情况。默认以美国账户与税制为背景，中美差异处已标注；税法与账户规则会变动，执行前请核对当年规则。
+</div>
+
+</div>
+</body>
+</html>
