@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -159,6 +163,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>换工作的真实成本，是你放弃的未归属部分。</b> 谈新 offer 时把这笔损失算成一次性成本，并据此争取签约补偿——这可以谈，前提是你算得出数。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>区分 RSU、NSO、ISO、ESPP 只看两件事：哪一天算成收入，以及按普通收入还是资本利得计税。</li>
+<li>股价跌破行权价时期权价值为零，而只要股价大于零 RSU 就有价值，同样面值风险完全不同。</li>
+<li>ISO 要全部按长期资本利得计税，须在授予满 2 年且行权满 1 年后再卖出。</li>
+<li>典型股权是 4 年归属加 1 年悬崖，未归属部分离职即归零，不该记进净值表。</li>
+<li>比较 offer 时用未来 12 个月真正到手的税后现金流，不用招聘方给的总包数字。</li>
+<li>RSU 归属当天已按市价全额计入普通收入，当天卖出几乎不产生额外的税。</li>
+<li>持有归属的 RSU 等于用税后奖金全仓买入自家股票，只是你从没主动做过这个决定。</li>
+<li>美国补充性工资的联邦默认预扣是 22%，边际税档更高的人归属时预扣天生不够，报税时要补。</li>
+<li>Bessembinder（2018）发现大多数美股个股的终身回报跑不赢短期国债，财富集中在约 4% 的公司。</li>
+<li>自家公司股票占流动净值以不超过 10% 为常见上限，ESPP 值得参与但规则允许就尽快卖出。</li>
+</ol>
 <h2 class="section" data-tts="81e831212e6c1103">深入思考</h2>
 <details>
 <summary>如果我公司真的是下一个大赢家呢？</summary>

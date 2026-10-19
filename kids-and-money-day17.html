@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -177,6 +181,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>同侪环境会替你定义孩子的「正常」。</b>高薪加大城市，他的参照系是同学的消费水平。对抗它的不是限制，是让他有自己的钱、自己取舍。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>美国农业部估算，把一个孩子养到 17 岁约 23.4 万美元（不含大学），最大支出项是住房，不是玩具和课外班。</li>
+<li>养孩子最贵的一笔不在任何成本清单里：父母一方减少工作那些年损失的收入和几十年的退休复利。</li>
+<li>养孩子的花费要按月度现金流看，不按总数看：托育峰值集中在 0–5 岁，恰好撞上职业收入低点。</li>
+<li>教育金排在应急基金、雇主 401(k) 匹配和自己的税优账户之后，因为大学能借钱，退休不能借。</li>
+<li>529 计划增长免税、用于合格教育支出时取出免税；不合格取出，收益部分按普通所得纳税再加 10% 罚金。</li>
+<li>SECURE 2.0 起，529 账户开满 15 年等条件满足后，终身最多 3.5 万美元可转入受益人的 Roth IRA。</li>
+<li>财商是练出来的：给孩子一笔小到犯错不痛的零花钱，与家务脱钩，让他自己挑、自己付、买错不补救。</li>
+<li>三个罐子「花 / 存 / 给」里给「存」那份做家庭匹配，孩子能提前体会 401(k) 雇主匹配的直觉。</li>
+<li>Holtz-Eakin 等人 1993 年的研究发现，继承 15 万美元以上者退出劳动力市场的比例约为继承 2.5 万以下者的四倍。</li>
+<li>留给孩子的钱，分段发放、限定用途、设匹配条款，比一次性给多少更有效；受益人指定还优先于遗嘱，要定期核对。</li>
+</ol>
 <h2 class="section" data-tts="5721c0a8b65ed261">深入思考</h2>
 <details>
 <summary>该不该把大学费用全包？</summary>

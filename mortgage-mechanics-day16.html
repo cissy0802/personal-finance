@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -175,6 +179,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>提前还贷 vs 投资，对你多一层相关性问题。</b> 雇主股价下跌、裁员、期权归零，往往是同一件事的三面。这种相关性下，现金的价值高于那点确定回报：先把缓冲做厚，再谈加付本金。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>房贷月供每月固定，但前期几乎全是利息，因为当月利息等于剩余本金乘以月利率。</li>
+<li>50 万美元、30 年固定 6.5% 的房贷，本金约到第 233 个月才首次超过利息，30 年总利息约 63.8 万。</li>
+<li>房贷利息按余额计价，任何贷款都如此；能改变总利息的只有借多少和借多久。</li>
+<li>ARM 浮动利率房贷的起始利率较低，那是借款人承担重置风险的补偿，并设有单次与终身调整上限。</li>
+<li>美国多数常规房贷提前还款和再融资都不罚息，这让 30 年固定利率近乎一份免费的期权。</li>
+<li>再融资或买点的回本月数等于一次性成本除以每月省下的钱，持有不到这么久就不该做。</li>
+<li>再融资默认把期限重置回 30 年，月供变低不等于省钱，要按相同剩余期限或剩余总利息比较。</li>
+<li>PMI 保的是放贷方而非借款人；常规贷款降到原值 80% 可申请取消，到 78% 自动终止。</li>
+<li>银行按税前收入批贷，会高估可支配能力；更硬的标尺是全部住房成本除以到手的现金流。</li>
+<li>提前还房贷前，先还高息债、拿到 401k 匹配、备好 3–6 个月应急基金，再比税后房贷利率与预期回报。</li>
+</ol>
 <h2 class="section" data-tts="20164799c7aeacb4">深入思考</h2>
 <details>
 <summary>30 年固定是不是一定优于 15 年？</summary>

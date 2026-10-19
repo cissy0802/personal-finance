@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -166,6 +170,19 @@ What actually hurts people in equity comp is rarely "the stock went down." It's 
 </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Exercising ISOs adds no income under the regular tax, but the AMT counts the exercise spread, so you can owe tax without selling a share.</li>
+<li>The AMT locks in the share price on the ISO exercise date; even if the stock later falls to zero, that year's AMT does not go away.</li>
+<li>Exercise ISOs each year only up to the AMT crossover, the share count that just avoids triggering AMT; slicing across years beats exercising everything at once.</li>
+<li>ISO shares get long-term capital gains treatment only if sold at least 2 years after grant and 1 year after exercise; otherwise the spread becomes ordinary income.</li>
+<li>An 83(b) election must be filed within 30 days of the stock transfer date, with no extensions and no fix if you miss it.</li>
+<li>RSUs are a promise rather than stock and are not property under the tax code, so no 83(b) is possible; they are taxed only when they vest and settle.</li>
+<li>Exercising means paying both the strike price and the tax in after-tax cash to buy concentrated, illiquid private stock that could go to zero.</li>
+<li>(Exercise cost + expected tax) / annual spending = years of living expenses lost if the stock goes to zero; above 1, shrink the position.</li>
+<li>When equity vests in a lump at IPO, default federal withholding on supplemental wages is only 22%, so anyone in a higher bracket faces a tax bill the next spring.</li>
+<li>Tax on RSUs is fixed at the share price on the vest date; the lock-up ending only restores your ability to sell and never rewrites that income.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

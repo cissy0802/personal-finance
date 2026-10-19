@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -154,6 +158,19 @@ An uncomfortable truth: <b>tax is likely the biggest single expense of your enti
 <li><b>Side/consulting income is the 1099 world.</b> Consulting fees, open-source sponsorship, contest winnings all owe self-employment tax and quarterly estimates; track them separately from W-2 wages so you don't discover a large bill at year-end.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Your marginal tax rate is the rate on your last, highest dollar, and it decides what one more dollar earned or saved is really worth.</li>
+<li>Your effective tax rate is total tax divided by total income; because US federal tax is progressive, it is always lower than your marginal rate, often by a lot.</li>
+<li>Use the marginal rate to judge overtime, side gigs or retirement contributions; use the effective rate for your real tax burden and after-tax savings rate.</li>
+<li>Federal tax brackets are stacked buckets, not a switch: only the income that spills into a higher bracket is taxed at that bracket’s rate.</li>
+<li>A raise that pushes you into a higher bracket never shrinks your take-home; the real risk of earning more is a benefit or subsidy cliff tied to an income line.</li>
+<li>Tax rates apply to taxable income: gross minus above-the-line adjustments gives AGI, and AGI minus the larger of the standard or itemized deduction is taxable income.</li>
+<li>Pre-tax contributions to a traditional 401(k)/IRA and an HSA are above-the-line adjustments that pull your highest dollars straight out of the top brackets.</li>
+<li>A W-2 employer withholds income tax from each paycheck and pays half your FICA; a 1099 contractor owes the full 15.3% self-employment tax and pays quarterly estimates.</li>
+<li>A 1099 offer usually needs to be 20%–30% higher than a W-2 offer just to break even, after the extra self-employment tax, self-paid health coverage and no paid leave.</li>
+<li>RSUs are withheld at a default 22% federal rate at vesting, so anyone in the 32%–37% bracket owes the gap at filing and should set it aside in the vesting quarter.</li>
+</ol>
 <h2 class="section">Deeper questions</h2>
 <details>
 <summary>If brackets never make you "earn more, keep less," what actually does?</summary>

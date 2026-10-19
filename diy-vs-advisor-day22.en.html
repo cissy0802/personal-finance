@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -160,6 +164,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>Don't let one person sell you everything.</b> CPA for the return, attorney for estate documents, CFP for planning. Separated roles make conflicts visible; a single provider costs you the cross-check.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>A financial advisor sells three things: investment management, financial planning and behavioral restraint, and most people need only one or two.</li>
+<li>Investment management is commoditized by low-cost index funds, so paying 1% a year just for selection and rebalancing rarely pencils out.</li>
+<li>Vanguard's estimate that an advisor adds about 3% a year is an asset manager's own scenario model, not measured performance.</li>
+<li>Whether to pay an advisor depends on decision complexity and trigger events like vesting, inheritance or starting withdrawals, not on account balance.</li>
+<li>An advisor paid as a percentage of assets (AUM) has no natural enthusiasm for advice that shrinks the pool, like paying off a mortgage early.</li>
+<li>Fee-only means paid solely by clients; fee-based means also paid by product manufacturers, so one word flips the meaning.</li>
+<li>A 1% asset fee against a 4% sustainable withdrawal rate eats roughly 25% of your spendable cash flow.</li>
+<li>Fiduciary duty guarantees an incentive structure, not competence, fair fees or performance; Reg BI covers only the moment of recommendation.</li>
+<li>Ask an advisor to commit in writing to fiduciary duty in all dealings at all times, and check their record on IAPD and BrokerCheck.</li>
+<li>Assets belong at an independent third-party custodian, with the advisor able to trade but not withdraw, and you able to log in yourself.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Is the "behavioral value" real?</summary>

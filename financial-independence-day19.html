@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -179,6 +183,19 @@ FIRE（Financial Independence, Retire Early，财务独立、提前退休）最�
 <li><b>Coast FI 对高波动收入者尤其有价值。</b> 它把「必须年年拿到这个数」变成「收入腰斩计划也不崩」——对靠股价决定年收入的人，这份稳定性本身就是回报。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>FI 数 = 年支出 × 25，对应 4% 安全提取率；FIRE 的终点由支出决定，不由收入决定。</li>
+<li>离财务独立还要几年，只取决于储蓄率和「净值 ÷ 年支出」，收入的绝对数字会被约掉。</li>
+<li>储蓄率指没花掉、并且投出去的钱占到手收入的比例，躺在银行的存款不算。</li>
+<li>加薪若被同比例的支出吸收，储蓄率不变、FI 时间表不动，FI 数还会跟着支出抬高。</li>
+<li>Coast FI 指现有资产不再新增也能复利到目标；按 5% 实际回报、离退休 20 年，今天约需 FI 数的 38%。</li>
+<li>到了 Coast 数不等于可以停止储蓄：它假设复利兑现、支出不涨、不失业，只能当底线保障。</li>
+<li>财务独立买的是「可以说不」的能力；工作还提供结构、身份和社交，资产只能替代其中的收入。</li>
+<li>把财务独立拆成台阶：3–6 个月缓冲、1–2 年 FU money、Coast、Barista、完全 FI，每级解锁一种选择权。</li>
+<li>削减一笔经常性支出既提高储蓄率又永久降低目标线：按 25 倍，每年少花 1 万，FI 数降 25 万。</li>
+<li>算 FI 数时，税前和应税账户要按未来税率打折，自住房和未 vest 的股权都不该计入 25 倍。</li>
+</ol>
 <h2 class="section" data-tts="621f947d5f89c1e6">深入思考</h2>
 <details>
 <summary>25 倍会不会太乐观，尤其对 40 年以上的退休期？</summary>

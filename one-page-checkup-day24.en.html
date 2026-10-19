@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -179,6 +183,19 @@ The usual outcome after reading two dozen issues on personal finance isn't "I le
 </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>The one-page financial checkup has just four blocks: a net worth statement, five key ratios, an annual review checklist, and a payday automation pipeline.</li>
+<li>Update the net worth statement quarterly, read it as a trend, and split each change into net new contributions versus market movement.</li>
+<li>Money in pre-tax accounts such as a traditional 401(k) is not after-tax money; discount it by your expected tax rate in long-term planning.</li>
+<li>Unvested equity is conditional future income, not net worth; if you track it at all, keep it in a footnote off the balance sheet.</li>
+<li>The five checkup ratios are savings rate, emergency buffer, debt ratio, housing burden, and FI progress, and they reveal problems that balances hide.</li>
+<li>FI progress is net worth divided by 25 times annual spending; the 25x comes from a rough inversion of the 4% withdrawal rate and is only an illustrative model.</li>
+<li>The Millionaire Next Door formula of age times pre-tax income divided by 10 is anchored to pre-tax income and systematically overstates targets for high earners.</li>
+<li>The annual review takes about 90 minutes once a year and covers defense, taxes, accounts and fees, and documents, listing only settings you can change.</li>
+<li>Beneficiary designations on retirement accounts and insurance policies override a will, and they are the line on the annual review most likely to go stale.</li>
+<li>A payday pipeline sends pay to retirement, bills, and emergency accounts before anything is spent, and the autopays themselves need an audit every year.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Doesn't one page oversimplify a complex problem?</summary>

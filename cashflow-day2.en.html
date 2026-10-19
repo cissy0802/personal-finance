@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -153,6 +157,19 @@ Last issue's conclusion: your <b>savings rate</b>—meaning income you don't spe
   </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Paying yourself first flips the order from "income minus spending equals savings" to "income minus savings equals spending money."</li>
+<li>A payday auto-transfer that moves savings out first turns saving from a monthly decision into a default you set once.</li>
+<li>Money routed at the source through your employer straight into a retirement account never touches checking, so it never gets spent.</li>
+<li>The 50/30/20 rule splits after-tax income into 50% needs, 30% wants, and 20% saving and debt payoff—just a memorable starting point.</li>
+<li>The anti-budget locks in only your target savings rate, auto-moves it off the top, and lets you spend the rest without line-item tracking.</li>
+<li>Fixed-percentage budgets aim too low for high earners; let the savings rate itself set the target, often 30% or more.</li>
+<li>Route pay into a hub account, then auto-split it to savings and investing, fixed bills, and daily spending, so the account structure enforces the budget.</li>
+<li>Keeping the emergency fund in a high-yield savings account (HYSA) separate from daily money earns interest and adds friction against raiding it.</li>
+<li>Tracking is a diagnostic tool and automation is the execution system: run a 30-day spending audit, then harden the findings into auto-transfers and review periodically.</li>
+<li>With volatile equity pay, tie fixed auto-savings to regular salary, and give each bonus or vest a preset plan that sets aside money for taxes.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

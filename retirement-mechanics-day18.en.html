@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -178,6 +182,19 @@ The standard move in retirement planning is to multiply your current income by s
 <li><b>Sequence risk arrives earlier for you.</b> Retiring early means a longer withdrawal phase and a fragile window that starts sooner—while your portfolio is often still loaded with employer stock. Your human capital is already bet on that company; your retirement portfolio shouldn't bet on it twice.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Your retirement target is set by annual spending, not annual income: roughly 25 times annual spending at a 4% starting withdrawal rate.</li>
+<li>The 4% figure from Bengen (1994) and the Trinity study is a starting point from US historical backtests, not a law; retirements well beyond 30 years point closer to 3–3.5%.</li>
+<li>Income-based rules like replacement ratios or "N times salary" overstate high earners' retirement targets; track progress as net worth divided by annual spending.</li>
+<li>Once withdrawals begin, the order of returns matters as much as their average, because shares sold in a bear market are gone before the rebound.</li>
+<li>Sequence-of-returns risk is concentrated in a fragile decade running from about 5 years before retirement to about 10 years after.</li>
+<li>Three ways to soften sequence risk: a cash bucket holding 1–3 years of spending, cutting withdrawals in crash years, and a little part-time income early in retirement.</li>
+<li>Sequence retirement withdrawals by which tax bracket you fill each year; mechanically draining the taxable account first often creates a late-life tax spike.</li>
+<li>The gap years between stopping work and starting Social Security or RMDs are often your lowest-tax years, ideal for pre-tax withdrawals or Roth conversions.</li>
+<li>US Social Security averages your highest 35 years into AIME, then applies a progressive 90% / 32% / 15% formula to get PIA, so higher earners get a lower replacement share.</li>
+<li>For anyone born in 1960 or later, claiming Social Security at 62 pays 70% of PIA, at 67 pays 100%, and at 70 pays 124%; claiming early is a permanent cut.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Does the 4% rule still hold?</summary>

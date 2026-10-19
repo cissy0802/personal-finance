@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -165,6 +169,19 @@ Most personal-finance content jumps straight to what to buy and where to invest.
   </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Net worth is all your assets minus all your debts; wealth is measured by that stock, not by the flow of income.</li>
+<li><em>The Millionaire Next Door</em> found that many high earners with luxury cars and big houses have low net worth, while low-key ordinary earners are often wealthier.</li>
+<li>Income-based net-worth formulas like "age × pre-tax income ÷ 10" systematically overestimate what high earners and equity-comp earners should have.</li>
+<li>Savings rate is (income − spending) ÷ income, and it works from both ends: assets grow faster and the financial-independence target shrinks.</li>
+<li>Assuming a 5% real return, 4% withdrawals and a start from zero, raising savings rate from 10% to 30% cuts roughly 51 working years to 28.</li>
+<li>If a raise is eaten by proportional lifestyle spending, the savings rate stays the same and the financial-independence date does not move.</li>
+<li>Under the 4% rule, every recurring annual expense raises your financial-independence target by 25 times that amount.</li>
+<li>Subscriptions, memberships and fixed monthly bills deserve the hardest look, because what gets overlooked is that spending recurs, not its size.</li>
+<li>A financial health check tracks four ratios over time: savings rate, an emergency buffer of 3–6 months of essentials, debt-to-assets, and liquidity.</li>
+<li>Tech earners should list unvested equity and employer-concentrated stock separately from usable net worth, and do all the math in after-tax dollars.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

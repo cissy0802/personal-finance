@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -183,6 +187,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>序列风险对你来得更早。</b> 提前退休 = 提取期更长 + 脆弱窗口提前；而你的组合往往还压着雇主股票——人力资本已经押过一次，退休组合不该再押第二次。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>退休目标按年支出算，不按年收入算：目标约等于年支出乘以 25，对应 4% 的起始提取率。</li>
+<li>Bengen 与 Trinity 研究的 4% 来自美国历史回测，是起点不是定律；退休期远长于 30 年宜取 3–3.5%。</li>
+<li>收入替代率和「N 倍年薪」这类按收入定标的法则会高估高收入者的退休目标，衡量进度应看净值 ÷ 年支出。</li>
+<li>一旦开始提取，回报的顺序和回报高低一样重要，因为熊市里卖掉的份额永久没了，等不到反弹。</li>
+<li>序列风险最集中在「脆弱十年」，即退休前约 5 年到退休后约 10 年这段时间。</li>
+<li>缓解序列风险有三种手段：留 1–3 年生活费的现金桶、大跌年主动下调提取额、退休头几年保留少量兼职收入。</li>
+<li>退休提取顺序应按每年要用掉哪档税率来排，机械地先花光应税账户常会制造晚年的税率高峰。</li>
+<li>从停止工作到社保开领、RMD 起点之间的空档期往往税率最低，适合从税前账户提取或做 Roth 转换。</li>
+<li>美国社保取收入最高的 35 年算 AIME，再按 90%、32%、15% 三段累退公式得出 PIA。</li>
+<li>1960 年及以后出生者 62 岁领社保拿 PIA 的 70%、67 岁拿 100%、70 岁拿 124%，提前领是永久减额。</li>
+</ol>
 <h2 class="section" data-tts="b993f1c98460aabf">深入思考</h2>
 <details>
 <summary>4% 法则今天还成立吗？</summary>

@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -174,6 +178,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>在收入上升期锁定可保性。</b> 保费锁在核保当年的年龄与健康。<strong>保证可保性 / 未来增额附加条款</strong>允许日后不重新体检就加保——收入曲线陡的人，这一条比省那点保费重要得多。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>定期寿险到期归零、是纯保障；终身寿险捆绑现金价值和佣金，同等保额贵出数倍到十几倍。</li>
+<li>多数人的默认做法是买定期寿险、把省下的保费投出去，期限对齐最后一个依赖者经济独立的那一年。</li>
+<li>美国社保署估计，约四分之一的 20 岁年轻人会在 67 岁前经历长期失能，概率高于身故。</li>
+<li>致残主因是肌肉骨骼疾病、癌症和心血管疾病而不是事故，所以意外险替代不了伤残险。</li>
+<li>伤残险只看四行：失能定义、替代率与月度封顶、等待期、保障到何时。</li>
+<li>雇主提供的团体长期伤残险（LTD）名义赔工资的 60%，但有月度封顶、只算基本工资、离职即失效。</li>
+<li>雇主用税前钱代缴的伤残险，理赔金要交所得税；自己用税后钱交通常免税，比较保额要按税后口径。</li>
+<li>「寿险保额等于 10 倍年收入」对高税档、收入波动大、积蓄多的人系统性失真，因为它不看已有资产。</li>
+<li>寿险保额按缺口算：依赖被保人的年支出乘覆盖年数，加债务和教育费，减去可动用资产与已有保障。</li>
+<li>寿险只在有人经济上依赖你时才需要；单身无人依赖者通常不必买寿险，但最需要伤残险。</li>
+</ol>
 <h2 class="section" data-tts="3a32670bc6ee2f5a">深入思考</h2>
 <details>
 <summary>「买定期、把差额投出去」真的更好吗？</summary>

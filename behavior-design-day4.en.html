@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -142,6 +146,19 @@ Personal finance rarely fails because you <b>did the math wrong</b>. It usually 
 <li><b>Volatile income needs "enough" as its anchor even more.</b> When income swings year to year, setting your lifestyle to the best year forces fire sales or borrowing in the lean ones. Live on a <strong>conservative spending baseline that holds across the cycle</strong>, and route the surplus of good years into savings and buffer rather than a permanently higher standard of living.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Personal finance is usually lost in the gap between knowing and doing; behavior design hands that gap to your environment and defaults, not willpower.</li>
+<li>Willpower is a finite resource that runs down, while defaults carry huge inertia: most people simply follow whatever path the system presets.</li>
+<li>Remove friction from good habits: an automatic payday transfer into savings and investments gets the saving done before you notice.</li>
+<li>Add friction to bad habits: delete stored payment methods from shopping apps and leave big impulse buys in the cart for 24 hours.</li>
+<li>Hedonic adaptation turns each new spending level into the everyday norm, so when spending quietly tracks income, the savings rate stays flat.</li>
+<li>When a raise or bonus arrives, automatically send a share of it (say, half) to investments first, and let only the rest reach everyday spending.</li>
+<li>Income-based rules like "have X times your salary saved by age Y" overstate progress for high earners; savings rate and net worth ÷ annual spending are anchored to spending and hold up better.</li>
+<li>Without a definition of "enough," desire has no finish line; write it down as a concrete monthly spending level, a way of life, or a financial-independence number.</li>
+<li>Much spending buys a status signal, and since the reference group keeps upgrading, the satisfaction is the first thing hedonic adaptation erases.</li>
+<li>Before a big purchase, ask whether you would still buy it if no one ever knew; that separates paying for real use and experience from paying for other people's eyes.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>If I automate everything, won't I lose the "feel" of money and spend more?</summary>

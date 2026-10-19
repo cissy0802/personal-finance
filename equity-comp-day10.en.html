@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -164,6 +168,20 @@ Equity comp is the most widely misread money in this industry. Two uncomfortable
     <li><b>The real cost of changing jobs is the unvested equity you forfeit.</b> When negotiating a new offer, price that forfeiture as a one-time cost and use it to argue for sign-on compensation—it's negotiable, provided you can show the math.</li>
   </ul>
 </div>
+
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>To tell RSUs, NSOs, ISOs and ESPP apart, ask two things: on which day it counts as income, and whether it's taxed as ordinary income or capital gain.</li>
+<li>An option is worth zero once the share price falls below the strike, while an RSU keeps value as long as the price is above zero.</li>
+<li>To get full long-term capital gains treatment on ISOs, sell only after two years from grant and one year from exercise.</li>
+<li>A typical grant vests over four years with a one-year cliff; unvested equity vanishes if you leave and doesn't belong on your net-worth sheet.</li>
+<li>Compare job offers on the after-tax cash you can actually receive in the next 12 months, not the recruiter's total-package number.</li>
+<li>RSUs are taxed in full as ordinary income at market price on the vest date, so selling that same day creates almost no extra tax.</li>
+<li>Holding vested RSUs is the same as using an after-tax bonus to buy your employer's stock with all of it, a purchase you never actively chose.</li>
+<li>Default US federal withholding on supplemental wages is 22%, so anyone in a higher bracket is under-withheld at vest and owes more at filing.</li>
+<li>Bessembinder (2018) found most individual US stocks' lifetime returns fail to beat T-bills, with net wealth creation concentrated in about 4% of companies.</li>
+<li>A common cap is employer stock at no more than 10% of liquid net worth; ESPP is worth joining, but sell as soon as the rules allow.</li>
+</ol>
 
 <h2 class="section">Deeper Questions</h2>
 

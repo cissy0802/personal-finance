@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -154,6 +158,19 @@ Before we talk about any investment, let's talk about the money that <b>looks th
   </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Build an emergency fund before investing heavily, so long-term investments never have to be sold at a market low.</li>
+<li>Size the emergency fund at 3–6 months of essential expenses, measured by monthly spending, not monthly income, or you will systematically over-save.</li>
+<li>With unstable income or a single income source, hold 6 months or more; dual earners with flexible spending can start with 3 months.</li>
+<li>Park the emergency fund in a HYSA or money market fund, accessible within T+0 to T+1 with stable principal, not in stocks.</li>
+<li>Keep the emergency fund in an account separate from everyday spending, so the friction of access discourages raiding it.</li>
+<li>The real return on an emergency fund is not interest but the leverage to walk away from a toxic job or a lowball offer.</li>
+<li>Counting only the yield gap undervalues a buffer: one forced sale at a bear-market bottom costs more than years of lost interest.</li>
+<li>Tap the emergency fund only for events that are unexpected, necessary, and urgent at once; foreseeable costs like annual premiums or a new phone get their own short-term account.</li>
+<li>After tapping the emergency fund, make refilling it the top automated savings goal, ahead of new investing.</li>
+<li>Tech workers should not count RSUs, employer stock, or credit lines as an emergency fund: in layoff waves the stock falls and credit limits get cut or frozen.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

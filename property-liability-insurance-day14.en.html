@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -153,6 +157,19 @@ People who buy homeowners insurance are thinking about the house. People who buy
 <li><b>Employer benefits contain no personal liability coverage.</b> Group plans handle health, disability, and group life; umbrella, home, auto, and renters coverage exists only in the individual market—which also means it doesn't lapse when you change jobs. That's a feature.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Home, auto, and renters policies all bundle property, liability, and additional living expenses; property payouts have a ceiling, liability payouts don't.</li>
+<li>Spend premium dollars on higher liability limits, not lower deductibles; raising auto liability to 100/300/100 or 250/500/100 usually costs little extra.</li>
+<li>Insure a home for its rebuild cost, which excludes land, and choose replacement-cost settlement over depreciated actual cash value (ACV).</li>
+<li>Renters insurance typically costs a hundred-odd dollars a year yet carries both personal liability and off-premises property coverage.</li>
+<li>An umbrella policy sits on top of auto and home liability limits and pays only once they are exhausted; a $1M layer usually costs hundreds of dollars a year.</li>
+<li>Size an umbrella on assets, not an income multiple: net worth minus legally protected assets, plus a slice of garnishable future income.</li>
+<li>An umbrella policy pays your liability to other people, not your own losses, and it excludes professional and business liability.</li>
+<li>An HDHP is the ticket to an HSA, but pick a health plan on worst-case total spend: annual premium plus OOP max, minus the employer HSA contribution.</li>
+<li>A deductible is self-insurance: raise it to what your emergency fund can absorb at once, and compute payback as the deductible increase divided by annual premium saved.</li>
+<li>Small claims are often net-negative once you subtract the deductible, several years of higher premiums, and the lost no-claims discount.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Why is liability coverage so cheap and property coverage so expensive?</summary>

@@ -77,6 +77,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -160,6 +164,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>别按老经验假设「我肯定逐项」。</b> SALT 上限之下，高税州的高薪者往往逐项也占不到便宜，标准扣除反而更大。至于 ISO 的 AMT（Alternative Minimum Tax，替代性最低税），Day 11 专讲。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>抵扣从应税收入里减、价值取决于边际税率，抵免从最终税额里 1:1 扣掉，同样一美元抵免通常值钱好几倍。</li>
+<li>HSA、传统 IRA 这类线上扣除在算 AGI 之前就扣掉，压低 AGI 还能顺带够上一批以 AGI 为门槛的资格。</li>
+<li>报税时只能在标准扣除和逐项扣除之间取大的一个，2017 年税改后逐项的人从约三成降到一成上下。</li>
+<li>房贷利息只有在逐项、且逐项总额超出标准扣除的那部分才真正省税，「买房能抵税所以买比租划算」常常不成立。</li>
+<li>常年差一点够不到标准扣除时，把两三年的捐赠和房产税集中到同一年逐项，其余年份照拿标准扣除。</li>
+<li>应税账户里持有超过一年再卖按长期资本利得课税，不到一年就卖按普通收入课税，税率能差出十几个百分点。</li>
+<li>资本亏损先抵资本利得，剩下的每年最多 $3,000 抵普通收入，再有剩余可以无限期结转到以后年份。</li>
+<li>洗售规则：卖出前后各 30 天内买入实质相同的证券，亏损不认；若在 IRA 里买回，这笔亏损永久作废。</li>
+<li>持有超过一年的增值股票直接捐给公益机构，可按公允市值抵扣，浮盈部分的资本利得税也永远不用交。</li>
+<li>节税要按一生算：收入洼地年做 Roth 转换、兑现利得，收入尖峰年集中抵扣与捐赠，同样的动作放对年份价值翻倍。</li>
+</ol>
 <h2 class="section" data-tts="735760b8a3f1ae87">深入思考</h2>
 <details>
 <summary>为什么听来的那些「节税神操作」大多用不上？</summary>

@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -144,6 +148,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>身份的不确定性是规划的输入项。</b> 签证与绿卡排期让「几年后在哪个税制下生活」充满变数，直接影响税前与 Roth 的取舍、买房时点、要不要在境外买难以处置的资产。<strong>先保留选择权，再优化税负。</strong></li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>美国对公民和绿卡持有人按身份征全球所得税，搬到哪国居住都不改变这项义务。</li>
+<li>实质居留测试：当年在美满 31 天，且当年天数 + 前一年 ÷3 + 前两年 ÷6 ≥183 天即成美国税务居民。</li>
+<li>一个纳税年度内在中国境内住满 183 天即为中国税收居民，无住所个人另有「六年规则」。</li>
+<li>跨境搬家的落地日期本身就是税务决策，年底还是年初到达可能决定当年全球收入要不要报。</li>
+<li>要不要交税和要不要申报是两回事：公民和绿卡持有人的境外账户申报义务没有居住地豁免。</li>
+<li>FBAR 门槛是全部境外账户合计在年内任一时点超 1 万美元，申报的是最高余额而非收益。</li>
+<li>CRS 是银行互换非居民账户信息的义务而非个人义务，美国不参与 CRS，走自己的 FATCA 协议。</li>
+<li>对美国纳税人，几乎所有非美国注册的基金都算 PFIC，收益按各年最高普通税率课税再加利息。</li>
+<li>非美国税务居民持有美股等美国境内资产，遗产税免税额只有 6 万美元，且中美没有遗产税协定。</li>
+<li>中国个人每年等值 5 万美元便利化购汇额度只限经常项目，境外购房和证券投资不在额度之内。</li>
+</ol>
 <h2 class="section" data-tts="97cc9aaa7c9c9131">深入思考</h2>
 <details>
 <summary>我只是来读书 / 短期外派，也要管这些吗？</summary>

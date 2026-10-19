@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -164,6 +168,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>别让一个人卖你所有东西。</b> 报税找 CPA、遗产文件找律师、规划找 CFP。角色分开，冲突才看得见——一个人全包，你失去的是交叉验证。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>理财顾问卖的是三样东西：投资管理、财务规划、行为约束，多数人只需要其中一两样。</li>
+<li>投资管理已被低成本指数基金商品化，单为选品和再平衡每年付 1% 很难划算。</li>
+<li>Vanguard 估算顾问每年约增益 3%，但那是资管公司自己的情景建模，不是实测业绩。</li>
+<li>要不要付费请顾问看决策复杂度和触发事件（股权归属、继承、开始退休提取），不看账户余额。</li>
+<li>按资产比例（AUM）收费的顾问，天然不爱提前还房贷、全款买房这类让管理规模变小的建议。</li>
+<li>fee-only 只收客户的钱，fee-based 也收产品方的钱，一词之差含义相反。</li>
+<li>1% 资产管理费配 4% 可持续提取率，约吃掉 25% 的可提取现金流。</li>
+<li>受托义务只保证动机结构，不保证能力、收费合理或业绩；Reg BI 只管推荐的那一刻。</li>
+<li>请顾问书面承诺在全部往来、所有时间都负受托义务，并用 IAPD 与 BrokerCheck 查纪律记录。</li>
+<li>资产必须放在独立第三方托管机构，顾问只有交易权限、没有取款权限，你能自己登录查账。</li>
+</ol>
 <h2 class="section" data-tts="4d5f7d1fc73055e7">深入思考</h2>
 <details>
 <summary>「行为价值」是真的吗？</summary>

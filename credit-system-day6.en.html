@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -168,6 +172,19 @@ Most people think a credit score measures how much money you have. It actually m
 <li><b>Don't disturb your credit right before a big loan.</b> In the months before a mortgage application, don't cluster new cards, hard inquiries, or big charges that spike utilization—it lowers your score and raises the rate on a 30-year loan, a cost that dwarfs any rewards.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>A FICO score runs from 300 to 850 and is a weighted sum of five factors; payment history (35%) and credit utilization (30%) together make up 65%.</li>
+<li>Credit utilization is balance used divided by total credit limit; keep it under 30%, ideally under 10%, measured at the statement-date snapshot.</li>
+<li>Checking your own credit score is a soft pull and never lowers it; only the hard pull a lender runs when you apply for new credit does.</li>
+<li>To build US credit from zero, use a secured card whose deposit sets the limit, or become an authorized user on a family member's good account.</li>
+<li>A late payment is reported only once it hits 30 days, but a single 30-day late can knock off 50–100 points and stays on file for years.</li>
+<li>Closing your oldest credit card cuts total available credit, pushes utilization up, and lowers your average account age a few years later.</li>
+<li>Building credit only requires paying the full balance on time each month; carrying a balance adds nothing except 20–24% APR interest.</li>
+<li>Earning 2% cash back while carrying a balance at 22% APR leaves you roughly 20 points behind, so rewards cards suit only those who pay in full.</li>
+<li>An annual-fee card pays off only if you truly use its perks on spending you would make anyway; points should never drive spending.</li>
+<li>Since 2018 a credit freeze at Equifax, Experian, and TransUnion has been free, and locking credit in advance beats the after-the-fact alerts of paid monitoring.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 <details>
 <summary>Does a high credit score equal financial health?</summary>

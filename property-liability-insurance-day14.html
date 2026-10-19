@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -157,6 +161,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>雇主福利里没有个人责任险。</b> 团体保单管健康、伤残与团体寿险；伞险和房/车/租客险只能在个人市场买，换工作不会中断——这反而是好事。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>房屋险、车险、租客险都含财产、责任和额外生活费三块，财产赔付有上限，责任赔付没有。</li>
+<li>保费该加在责任限额上而不是低免赔额上，车险责任限额提到 100/300/100 或 250/500/100 通常只多花很少的钱。</li>
+<li>房屋险保额应锚定不含地价的重建成本，赔付基准选重建成本，而不是折旧后的实际现金价值（ACV）。</li>
+<li>租客险年费通常只有百余美元量级，却同时提供个人责任保障和异地财物保障，是最常被跳过的一张。</li>
+<li>伞险架在车险和房屋险的责任限额之上，底层赔穿才启动，100 万美元一档的年保费通常在数百美元量级。</li>
+<li>伞险保额别按收入倍数定，改用资产口径：净值减受法律保护的资产，再加一段可被扣押的未来收入。</li>
+<li>伞险只赔你对别人造成的责任，不赔自己的损失，也不含执业与生意责任。</li>
+<li>HDHP 是开 HSA 的前提，但选医保要比最坏情形总支出：年保费加自付上限，减雇主 HSA 供款。</li>
+<li>免赔额是自留的那层风险：提到应急基金能一次吸收的水平，用「提高的免赔额 ÷ 每年省下的保费」算回本年数。</li>
+<li>小额索赔常是负收益，赔付要扣掉免赔额、未来数年的保费上浮和失去的无索赔折扣。</li>
+</ol>
 <h2 class="section" data-tts="4a6f652ee6916fe5">深入思考</h2>
 <details>
 <summary>为什么责任险这么便宜，财产险这么贵？</summary>

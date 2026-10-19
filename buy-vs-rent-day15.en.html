@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -165,6 +169,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>A thirty-year fixed payment against volatile income.</b> Test affordability against <strong>base salary</strong>, not total comp including equity: equity and bonuses are variables, the payment is a constant. A lender will approve more against total comp—that's its risk appetite, not yours.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>The principal portion of a mortgage payment is not a cost; compare annual rent with interest, property tax, insurance, maintenance, HOA, and the down payment's opportunity cost.</li>
+<li>Ben Felix's "5% rule" puts the unrecoverable cost of owning at about 5% of the home price: 1% property tax, 1% maintenance, 3% cost of capital.</li>
+<li>If monthly rent on a comparable home is below home price × 5% ÷ 12, renting wins; if it is above, buying wins.</li>
+<li>A round trip of buying and then selling a home commonly costs 8%–10% of the price in friction, which only a longer holding period can spread thin.</li>
+<li>Assuming 9% round-trip friction, the annualized cost of owning flattens out between five and seven years, which is where "stay at least five years" comes from.</li>
+<li>Shiller's long-run U.S. home price index shows real home prices rising only about one percentage point a year after inflation, far less than stocks.</li>
+<li>Homeowners build equity mainly through leverage, forced saving via principal payments, and untaxed imputed rent, not because housing itself earns high returns.</li>
+<li>The 28/36 rule is a lender's ceiling, not a target; firmer yardsticks are home price ÷ annual spending and housing cost as a share of after-tax cash flow.</li>
+<li>Home purchases rarely fail because of buying at the top; they fail when job loss, relocation, or a repair bill forces a sale at the wrong time.</li>
+<li>Tech workers should test mortgage affordability on base salary alone, because equity and bonuses vary while a 30-year payment stays fixed.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>What's actually wrong with "renting is paying your landlord's mortgage"?</summary>

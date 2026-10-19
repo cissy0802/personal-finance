@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -175,6 +179,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>年度复盘务必查预扣。</b>美国对补充性工资（含 RSU 归属）常按法定固定比例代扣（当前规则下超过 100 万美元的部分适用更高比例），这个比例对处于较高边际税档的人<strong>可能不足</strong>，差额年底才现形。复盘时对一次，不足就调 W-4 或补预缴。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>一页纸财务体检只有四块：净值表、五个关键比率、年度复盘清单和发薪日自动化流水线。</li>
+<li>净值表一季度更新一次、只看趋势，并把变化拆成「本期净存入」和「本期市值变动」两栏。</li>
+<li>传统 401(k) 等税前账户里的钱不是税后的钱，做长期规划时要按自己的预期税率打折。</li>
+<li>还没 vest 的股权是条件性的未来收入，不算进净值表，想记只能记在表外备注栏。</li>
+<li>财务体检的五个比率是储蓄率、应急缓冲、负债率、住房负担和 FI 进度，比余额更能暴露问题。</li>
+<li>FI 进度等于净值除以 25 倍年支出，25 倍来自 4% 提取率的粗略反推，只是说明性模型。</li>
+<li>《邻家的百万富翁》的「年龄 × 税前年收入 ÷ 10」以税前收入为锚，会系统性高估高收入人群的目标。</li>
+<li>年度复盘一年一次、约 90 分钟，逐条检查防守、税、账户与费用、文件四块，只放自己能改的设定。</li>
+<li>退休账户和保单的受益人指定优先于遗嘱，是年度复盘清单里最容易过期的一栏。</li>
+<li>发薪日流水线让工资先流向退休、账单和应急账户，剩下的才随便花；自动扣款本身也要每年审一次。</li>
+</ol>
 <h2 class="section" data-tts="8b60c4fb62a08ac2">深入思考</h2>
 <details>
 <summary>一页纸会不会把复杂问题过度简化？</summary>

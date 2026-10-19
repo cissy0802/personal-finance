@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -172,6 +176,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>大额贷款前，别在窗口期乱动信用。</b> 申房贷前的几个月，别扎堆开新卡、做硬查询或大额刷卡抬高利用率——这会压低分、抬高你三十年房贷的利率，代价远超任何积分。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>FICO 信用分范围是 300–850，由五个因子加权而成，其中还款记录占 35%、信用利用率占 30%，两项合计 65%。</li>
+<li>信用利用率等于已用额度除以总额度，最好压到 30% 以下，低于 10% 更好，看的是账单日快照。</li>
+<li>自己查信用分属于软查询，不会掉分；申请新信贷时对方发起的硬查询才会掉分。</li>
+<li>从零建立美国信用，可以用押金即额度的担保信用卡，或请信用好的家人把你加为授权用户。</li>
+<li>逾期满 30 天才会上报征信，但一次 30 天逾期就能砸掉 50–100 分，并留档数年。</li>
+<li>关掉最老的信用卡会砍掉总额度、抬高利用率，几年后还会拉低平均账龄，所以老卡别关。</li>
+<li>养信用只需每月按时全额还清，背余额并不加分，只是白付 20–24% APR 的信用卡利息。</li>
+<li>拿 2% 返现却背着 22% APR 的余额，净亏约 20 个百分点，奖励卡只适合每月能全额还清的人。</li>
+<li>年费卡只有在真能用满权益、且权益是本就要花的钱时才划算，积分永远不该驱动消费。</li>
+<li>自 2018 年起，Equifax、Experian、TransUnion 三大征信局的信用冻结都免费，事前上锁比付费监控的事后告警更强。</li>
+</ol>
 <h2 class="section" data-tts="02daf7dc71f70d95">深入思考</h2>
 <details>
 <summary>信用分高，就等于财务健康吗？</summary>

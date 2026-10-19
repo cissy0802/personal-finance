@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -170,6 +174,19 @@ A mortgage is usually the largest contract a person ever signs, and most people 
 <li><b>Prepay-vs-invest carries an extra correlation problem for you.</b> Employer stock falling, layoffs, and options going underwater tend to be three faces of one event. Under that correlation, cash is worth more than a modest certain return: thicken the buffer first, then talk about extra principal.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>The monthly mortgage payment is fixed, but early on it is almost all interest, because each month's interest equals the remaining balance times the monthly rate.</li>
+<li>On a $500,000, 30-year fixed loan at 6.5%, principal first exceeds interest only around month 233, and total interest comes to about $638,000.</li>
+<li>Mortgage interest is priced on the outstanding balance, as with any loan; only how much you borrow and for how long change the total interest.</li>
+<li>An adjustable-rate mortgage starts at a lower rate as payment for bearing reset risk, and it carries per-adjustment and lifetime caps.</li>
+<li>Most conventional US mortgages allow prepayment and refinancing without penalty, which makes a 30-year fixed rate close to a free option.</li>
+<li>Break-even months for a refinance or for buying points equal the one-time cost divided by the monthly saving; if you won't hold the loan that long, skip it.</li>
+<li>A refinance resets the term to 30 years by default, so a lower payment isn't automatically a saving; compare at the same remaining term or by remaining total interest.</li>
+<li>PMI protects the lender, not the borrower; on a conventional loan you can request cancellation at 80% of the original value, and it ends automatically at 78%.</li>
+<li>Lenders size loans on pre-tax income, which overstates what you can actually spend; a tougher yardstick is total housing cost divided by take-home cash flow.</li>
+<li>Before prepaying a mortgage, clear high-interest debt, capture the 401(k) match, and hold a 3–6 month emergency fund, then weigh the after-tax mortgage rate against expected returns.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Is a 30-year fixed always better than a 15?</summary>

@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -154,6 +158,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>有私活/咨询收入就是 1099 世界。</b> 顾问费、开源赞助、Kaggle 奖金都要自付自雇税、按季预缴；把它和 W-2 工资分开记账，别到年底才发现欠了一大笔。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>边际税率是最后、最高那一块钱所在税档的税率，决定再多赚或再省一块钱到底值多少。</li>
+<li>有效税率等于总税除以总收入；美国联邦税是累进的，所以有效税率永远低于边际税率，常常低很多。</li>
+<li>判断加班、接私活、往退休账户存钱值不值用边际税率；算真实税负和税后储蓄率用有效税率。</li>
+<li>联邦税档是一层层的水桶而不是开关，只有溢出到更高一档的那部分收入才按那一档的税率计税。</li>
+<li>加薪跳进更高税档不会让到手变少；真正可能多赚反亏的，是按收入卡线骤降或消失的福利和补贴悬崖。</li>
+<li>税率乘的是应税收入：总收入减线上调整得到 AGI，AGI 再减标准扣除或逐项扣除（取大的）才是应税收入。</li>
+<li>传统 401(k)/IRA 和 HSA 的税前供款属于线上调整，能把收入里最高那几块钱直接从高税档里拿走。</li>
+<li>W-2 雇员由雇主每次发薪预扣所得税并代付一半 FICA；1099 承包商要自付全部 15.3% 自雇税，并按季预缴。</li>
+<li>1099 报价通常要比 W-2 高 20%–30% 才算打平，因为要自付多出的自雇税和医保，也没有带薪假。</li>
+<li>RSU 到账默认只预扣 22% 联邦税，边际档在 32%–37% 的人报税季要补差额，到账当季就该估算缺口并存起来。</li>
+</ol>
 <h2 class="section" data-tts="8d03f9b105498d73">深入思考</h2>
 <details>
 <summary>既然税档不会让你“多赚反亏”，那什么情况真的会？</summary>

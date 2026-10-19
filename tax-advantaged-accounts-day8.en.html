@@ -77,6 +77,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -176,6 +180,19 @@ Day 7 covered how tax is computed: the rates multiply your <b>taxable</b> income
 <li><b>Don't let a forgotten rollover IRA block the back door.</b> Rolling a former employer's 401(k) into an IRA on the way out is common, but it contaminates your pro-rata math for years. For a high earner, the default should be rolling into your <strong>current employer's 401(k)</strong>, not an IRA.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Tax-advantaged accounts come in just three tax treatments: pre-tax (skip tax now, pay later), Roth (pay now, skip later), and taxable.</li>
+<li>The HSA is the only triple-tax-free account: money goes in, grows, and comes out for qualified medical costs tax-free, if you're on an HDHP.</li>
+<li>Growth in a pre-tax account is just as untaxed as in a Roth; the only difference is which end of the pipe you pay tax at.</li>
+<li>Annual 401(k), IRA, and HSA contribution room expires: miss the deadline and that year's room is gone for good.</li>
+<li>If your tax rate now equals your rate in retirement, pre-tax and Roth are mathematically identical; only the rate gap decides.</li>
+<li>Going all pre-tax leaves one huge bucket taxed as ordinary income in retirement, and RMDs can push you into a higher bracket.</li>
+<li>A backdoor Roth means a nondeductible contribution to a traditional IRA, then a conversion to Roth, reported on Form 8606.</li>
+<li>A mega-backdoor Roth only works if your 401(k) plan allows both after-tax contributions and timely conversions.</li>
+<li>The pro-rata rule treats all your pre-tax IRAs as one pool, so roll them into your current 401(k) before a backdoor conversion.</li>
+<li>The default funding order starts with the full 401(k) match, then high-interest debt and an emergency fund; college savings come after your own retirement.</li>
+</ol>
 <h2 class="section">Deeper questions</h2>
 <details>
 <summary>Is there a right answer to pre-tax vs Roth?</summary>

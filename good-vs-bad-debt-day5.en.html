@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -157,6 +161,19 @@ The labels "good debt" and "bad debt" are overused: people call every mortgage g
   </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Whether a debt is good or bad depends on its rate, not its label: compare its APR with the after-tax return you can earn reliably over the long run.</li>
+<li>Paying off a 22% debt locks in a risk-free 22% return, a number no investment can deliver reliably.</li>
+<li>The true annual rate on Chinese card installments, consumer loans, and online loans is often hidden behind "daily interest" or "fee" wording; convert everything to APR before comparing.</li>
+<li>The avalanche method sends every spare dollar to the highest-APR debt, which mathematically means the least total interest and the fastest exit.</li>
+<li>The snowball method clears the smallest balance first, paying a bit more interest for a higher chance of sticking with it; persistence, not optimality, usually decides who pays off.</li>
+<li>Whichever payoff order you pick, stop taking on new debt first; you can also ask the issuer for a lower rate or move the balance to a 0% balance-transfer card.</li>
+<li>A credit card paid in full every month is an interest-free tool; once you carry a balance it becomes one of the most expensive common forms of borrowing in the US.</li>
+<li>Paying only the 2%-3% credit card minimum can take decades and cost more in interest than the original balance, and a cash advance accrues interest from day one, so never take one.</li>
+<li>Buy now, pay later (BNPL) looks interest-free but dulls the pain of spending; the test is whether you would still buy the item paying in full.</li>
+<li>Leverage magnifies losses as much as gains, and pretax DTI rules like 28/36 overstate repayment capacity, so stress-test against the worst year's after-tax cash flow.</li>
+</ol>
 <h2 class="section">Go Deeper</h2>
 
 <details>

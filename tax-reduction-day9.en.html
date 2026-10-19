@@ -77,6 +77,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -160,6 +164,19 @@ Day 8 covered the <b>containers</b>—the tax-advantaged accounts. This issue co
 <li><b>Don't assume you itemize just because you always did.</b> With the SALT cap, high earners in high-tax states often gain little from itemizing and do better on the standard deduction. The AMT (Alternative Minimum Tax) exposure from ISOs is a separate thread—Day 11.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>A deduction lowers taxable income and is worth your marginal rate; a credit cuts the final tax bill dollar for dollar, so it is usually worth several times more.</li>
+<li>Above-the-line deductions such as the HSA and a traditional IRA come off before AGI is computed, and a lower AGI can unlock other AGI-based eligibility.</li>
+<li>You take the larger of the standard deduction or itemized deductions; after the 2017 tax law, itemizers fell from about 30% of filers to roughly 10%.</li>
+<li>Mortgage interest only saves tax if you itemize, and only on the part of your itemized total above the standard deduction, so "buying beats renting for the tax break" often fails.</li>
+<li>If you keep falling just short of the standard deduction, bunch two or three years of donations and property tax into one year to itemize, and take the standard deduction otherwise.</li>
+<li>In a taxable account, selling after more than a year is taxed at long-term capital gains rates, while selling sooner is taxed as ordinary income, a gap of ten-plus percentage points.</li>
+<li>Capital losses offset capital gains first, then up to $3,000 a year of ordinary income, and any remainder carries forward indefinitely.</li>
+<li>Under the wash-sale rule, buying a substantially identical security within 30 days before or after the sale disallows the loss, and buying it back in an IRA kills the loss permanently.</li>
+<li>Donating appreciated stock held over a year gives a deduction at fair market value and permanently avoids capital gains tax on the gain.</li>
+<li>Plan taxes over a lifetime: do Roth conversions and realize gains in low-income years, and bunch deductions and gifts into high-income years.</li>
+</ol>
 <h2 class="section">Deeper questions</h2>
 <details>
 <summary>Why do most of the tax tricks you hear about not apply?</summary>

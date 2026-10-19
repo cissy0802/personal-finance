@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -143,6 +147,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>波动的收入，更需要用「够用」当锚。</b> 收入年际起伏大时，若按最高的一年设定生活方式，低谷年就会被迫割肉或举债。用一个<strong>保守、跨周期都撑得住的支出基线</strong>过日子，把丰年的超额收入导向储蓄与缓冲，而不是永久拉高生活水位。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>理财多半输在「知道该做」和「实际做了」之间的鸿沟，行为设计把成败交给环境和默认值，而不是意志力。</li>
+<li>意志力是会耗竭的有限资源，而默认选项惯性巨大，绝大多数人会顺着系统预设的路径走。</li>
+<li>给好行为减摩擦：发薪日自动把钱转进储蓄和投资，让攒钱在没感觉时就已经完成。</li>
+<li>给坏行为加摩擦：删掉购物 App 里存好的支付方式，冲动想买的大件先在购物车里放 24 小时。</li>
+<li>享乐适应让新的消费水平很快变成日常，开销悄悄跟着收入涨，储蓄率就原地不动。</li>
+<li>每次加薪或奖金到账，先把其中一部分（如一半）自动转入投资，剩下的才允许流进日常开销。</li>
+<li>「几岁该存够几倍年薪」这类按收入定标的法则会高估高收入者的进度，储蓄率和净值 ÷ 年支出锚在支出上，更稳。</li>
+<li>不定义「够用」，欲望就没有终点；把够用写成具体的月支出水平、生活样子或财务自由目标数。</li>
+<li>很多消费买的是地位信号，参照对象永远在升级，带来的满足也最容易被享乐适应抹平。</li>
+<li>大额消费前问自己：如果没人知道我买了它，我还买吗？借此分清买的是效用和体验，还是别人的目光。</li>
+</ol>
 <h2 class="section" data-tts="8474ba32b67812c9">深入思考</h2>
 <details>
 <summary>把一切都自动化了，会不会反而对钱失去感觉、乱花更多？</summary>

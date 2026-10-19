@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -155,6 +159,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>责任风险随净值上升，不随之消失。</b> 伞险（umbrella，在车险 / 房屋险责任限额之上再加一层）通常按百万美元为单位出售，并要求底层责任限额先达标；可被求偿的资产越多，越该配——这是少数「越有钱越要买」的险种。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>保费必然大于期望赔付，所以每份保险按期望值算都是亏的，这是保险能存在的前提。</li>
+<li>保险买的不是收益，而是用一笔可预算的固定支出，削掉会让财务计划报废的小概率损失。</li>
+<li>判断要不要投保只问一句：这件事真发生了，会不会让我的财务计划报废？会就转移，不会就自留。</li>
+<li>返还型、储蓄型、投资型保单把保障和投资捆着卖，费用不透明且更贵，分开买几乎总是更划算。</li>
+<li>按「发生频率 × 后果严重度」筛险种，只给低概率、后果毁灭性的风险投保，高频小额的自留。</li>
+<li>车险里真正防破产的是责任限额，不是车损保额，因为重伤事故的求偿没有天花板。</li>
+<li>免赔额是主动划下的自保额度，应定在能一次性拿出、又不动信贷不卖资产的现金范围内。</li>
+<li>高免赔额本身不危险，危险的是免赔额高、账上却没备着那笔现金，选 HDHP 前先确认这笔钱在。</li>
+<li>每份保单查四行：保额上限、免赔额、除外责任、续保与可携带条款，团体保险离职当天失效。</li>
+<li>「寿险保额 ≈ 10 倍年收入」对高收入和股权薪酬者失真，优先用按家庭支出算的需求缺口法。</li>
+</ol>
 <h2 class="section" data-tts="4dccd87dabce4662">深入思考</h2>
 <details>
 <summary>期望值为负，为什么理性的人还买？</summary>

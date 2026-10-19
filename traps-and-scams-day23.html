@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -146,6 +150,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>二级市场的 pre-IPO 份额常穿了好几层 SPV</b>（Special Purpose Vehicle，特殊目的载体）。你买到的可能是"份额的份额"：费用逐层叠加、信息不对称，转让还可能受公司优先购买权限制。要求看直接持股凭证与<strong>全部费用层级</strong>。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>投资型保险把保障和投资捆在一起卖，费用无法分离；保障和投资分开买，通常更便宜、更透明、更容易退出。</li>
+<li>投资型保险的佣金通常按首年保费的很高比例一次付清，退保费用常延续十年以上，把投保人锁住。</li>
+<li>看保单演示表（illustration）要盯保证栏与演示栏的差额，演示栏只是假设，不是承诺。</li>
+<li>「寿险保额＝年收入 10 倍」对高收入者系统性高估，按支出、负债和现有净值算的需求缺口法更可靠。</li>
+<li>真正的被动收入是不再消耗时间的现金流；自媒体、电商、卖课、加盟都是要持续维护的生意。</li>
+<li>评估任何副业或「被动收入」项目，都先换算成真实时薪：年净现金流除以每年投入的小时数。</li>
+<li>庞氏结构的唯一定义性特征：付给老参与者的钱来自新参与者的入金，而不是外部现金流。</li>
+<li>回报高且稳定、收益与拉人挂钩、提现前要先补钱，都是骗局的通用指纹，与外壳是加密还是外汇无关。</li>
+<li>投钱进陌生平台前先做小额全额提现测试，并查监管注册；美国可查 SEC 的 IAPD 和 FINRA 的 BrokerCheck。</li>
+<li>判断一条理财建议，先问给建议的人靠佣金、AUM、固定费还是卖课赚钱，再判断内容对不对。</li>
+</ol>
 <h2 class="section" data-tts="5c3362cf7b463f97">深入思考</h2>
 <details>
 <summary>投资型保险是不是永远不该碰？</summary>

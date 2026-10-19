@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -146,6 +150,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>安全性越强，继承越难。</b> 硬件密钥、authenticator、公司设备上的 SSO 都会把继承人挡在外面。紧急访问与备份码，要当成安全设置的一部分一起做完。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>401(k)、IRA、寿险和 TOD/POD 账户按受益人表格直接支付，不进 probate，也不受遗嘱条款约束。</li>
+<li>受益人表格写着前配偶或已故父母，遗嘱再周全也纠正不了；表格空白的资产会落回遗产进 probate。</li>
+<li>给每个账户核对主受益人、备选受益人和上次更新日期，婚姻、生育、离婚、丧亲之后各复查一次。</li>
+<li>别把未成年人直接写成受益人，改用信托或 UTMA 托管账户承接，否则钱往往转入法院指定监管。</li>
+<li>遗嘱避不开 probate，却是唯一能为未成年子女指定监护人的法律文件。</li>
+<li>可撤销生前信托只有在房产改登记、账户改所有人之后才起作用，只签文件不过户是最常见的失败。</li>
+<li>失能比身故更可能先发生：持久财务授权书、医疗代理人和预立医疗指示这三份文件要一起做。</li>
+<li>婚姻不等于授权：配偶对你单独名下的退休账户、券商账户和房产没有当然处分权。</li>
+<li>联邦遗产税只落在极少数人身上，更普遍的传承损失是继承人不知道资产在哪、也进不去账户。</li>
+<li>数字资产要单独安排：设好密码管理器的紧急访问和手机的遗产联系人，别把密码抄在纸上交给家人。</li>
+</ol>
 <h2 class="section" data-tts="a8106331abee2c4a">深入思考</h2>
 <details>
 <summary>资产不多，是不是可以先跳过这一整期？</summary>

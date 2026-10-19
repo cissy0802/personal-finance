@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -150,6 +154,19 @@ Scams are illegal; traps are legal. Most people defend only against the first, w
   </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Cash-value insurance bundles protection with investment so the fees can't be separated; buying the two separately is usually cheaper, clearer, and easier to exit.</li>
+<li>Commissions on cash-value insurance are typically paid up front as a large share of first-year premium, and surrender charges often run past ten years, locking the buyer in.</li>
+<li>In a policy illustration, focus on the gap between the guaranteed column and the projected column; the projected column is an assumption, not a promise.</li>
+<li>The rule "life coverage = 10× annual income" systematically overstates for high earners; the needs-gap method, built on spending, debt, and existing net worth, is sturdier.</li>
+<li>Truly passive income is cash flow that no longer consumes your time; content, e-commerce, courses, and franchises are businesses that need constant upkeep.</li>
+<li>Judge any side hustle or "passive income" pitch by its real hourly rate: annual net cash flow divided by annual hours put in.</li>
+<li>A Ponzi structure has one defining feature: payouts to earlier participants come from later participants' deposits, not from external cash flow.</li>
+<li>High and stable promised returns, payouts tied to recruiting, and fees demanded before withdrawal are scam fingerprints whether the wrapper is crypto or forex.</li>
+<li>Before funding an unfamiliar platform, run a small full-withdrawal test and check registration; in the US, use the SEC's IAPD and FINRA's BrokerCheck.</li>
+<li>To judge financial advice, first ask whether the adviser earns from commissions, AUM fees, flat fees, or course sales, then judge whether the content is right.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -142,6 +146,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>The stronger your security, the harder the inheritance.</b> Hardware keys, authenticator apps, SSO on a company device — all of it locks heirs out. Treat emergency access and backup codes as part of the security setup, configured at the same time.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>401(k)s, IRAs, life insurance, and TOD/POD accounts pay out by beneficiary form, outside probate and regardless of what the will says.</li>
+<li>A beneficiary form that names an ex-spouse or a deceased parent can't be fixed by the will, and a blank form sends the asset back into probate.</li>
+<li>For every account, check the primary beneficiary, the contingent beneficiary, and the last update date, and re-check after marriage, a birth, a divorce, or a death.</li>
+<li>Don't name a minor directly as a beneficiary; route the money through a trust or an UTMA custodial account, or it usually ends up under court supervision.</li>
+<li>A will doesn't avoid probate, but it is the only legal document that can name a guardian for minor children.</li>
+<li>A revocable living trust works only once deeds are re-recorded and accounts re-registered into it; signing without funding it is the most common failure.</li>
+<li>Incapacity is likelier than death to come first, so do the durable power of attorney, healthcare proxy, and advance directive together.</li>
+<li>Marriage is not authorization: a spouse has no inherent power over retirement accounts, brokerage accounts, or property titled in your name alone.</li>
+<li>Federal estate tax reaches very few people; the far more common loss in transfer is heirs not knowing what exists or being unable to get in.</li>
+<li>Plan digital assets separately: set up password-manager emergency access and your phone's legacy contact instead of writing passwords on paper for family.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>I don't have much. Can I skip this issue entirely?</summary>

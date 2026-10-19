@@ -77,6 +77,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -176,6 +180,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>别让一个被遗忘的 rollover IRA 挡住后门。</b> 离职时顺手把前雇主 401(k) roll 进 IRA 很常见，但它会长期污染你的 pro-rata 计算。高收入者的默认动作应该是 roll 进<strong>现雇主的 401(k)</strong>，不是 IRA。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>税优账户的税收待遇只有三类：税前是现在免、将来交，Roth 是现在交、将来免，应税账户没有优惠。</li>
+<li>HSA 是唯一三重免税的账户：存入、增长、用于合格医疗支出的取出都免税，前提是参加 HDHP。</li>
+<li>税前账户的增长同样不征税，税前和 Roth 的唯一差别是在存入还是取出那一头交税。</li>
+<li>401(k)、IRA、HSA 的年度额度过期作废，错过截止日就永久没了，不能补缴。</li>
+<li>现在和将来税率相同时，税前与 Roth 在数学上完全等价，决定优劣的只有两个税率之差。</li>
+<li>全押税前会在退休时留下一个按普通收入课税的大桶，加上 RMD，可能被顶进更高税档。</li>
+<li>Backdoor Roth 是先向传统 IRA 做不可抵扣供款、再转换成 Roth，并用 Form 8606 申报。</li>
+<li>Mega-backdoor Roth 要求 401(k) 计划同时支持税后供款和及时转换，计划不支持就没有这条路。</li>
+<li>pro-rata 规则把名下所有税前 IRA 视为一个池子计税，做 backdoor 前先把它们 roll 进现雇主 401(k)。</li>
+<li>默认的存钱顺序是先拿满 401(k) 雇主匹配，再还高息债、建应急金；教育金排在自己的退休之后。</li>
+</ol>
 <h2 class="section" data-tts="b290752501667620">深入思考</h2>
 <details>
 <summary>税前还是 Roth，有标准答案吗？</summary>

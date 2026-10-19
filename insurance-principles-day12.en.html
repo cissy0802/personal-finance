@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -160,6 +164,19 @@ Here's the unflattering fact: <b>every insurance policy you own is, in expectati
 </ul>
 </div>
 
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Premiums must exceed expected claims, so every insurance policy loses money in expectation; that is the precondition for insurance existing.</li>
+<li>Insurance doesn't buy a return; it swaps a small, budgetable expense for the low-probability loss that would wreck a financial plan.</li>
+<li>The one test for buying cover: if this actually happened, would it wreck my plan? If yes, transfer the risk; if no, keep it.</li>
+<li>Return-of-premium, cash-value, and investment-linked policies bundle protection with investing at opaque, higher cost; buying them separately is almost always cheaper.</li>
+<li>Screen risks by frequency × severity and insure only the low-probability, catastrophic ones; self-insure the frequent small losses.</li>
+<li>In auto insurance, the liability limit is what prevents bankruptcy, not collision coverage, because a serious-injury claim has no ceiling.</li>
+<li>A deductible is a deliberate self-insurance limit: set it at cash you can produce at once without borrowing or selling assets.</li>
+<li>A high deductible isn't the danger; a high deductible with no cash set aside is, so fund the deductible before choosing an HDHP.</li>
+<li>Check four lines on every policy: coverage limit, deductible, exclusions, and renewability or portability; group cover ends the day you leave.</li>
+<li>The "life cover ≈ 10× income" rule distorts for high earners and equity-heavy pay; prefer the needs-gap method based on household spending.</li>
+</ol>
 <h2 class="section">Deeper Questions</h2>
 
 <details>

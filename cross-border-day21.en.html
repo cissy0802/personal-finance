@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -140,6 +144,19 @@ The most expensive financial mistakes cross-border households make are almost ne
 <li><b>Status uncertainty is a planning input, not background noise.</b> Visa timelines and green card queues make "which tax system will I be living under in a few years" genuinely unknown, and that feeds directly into pre-tax versus Roth, when to buy a home, and whether to buy assets abroad that are hard to unwind. <strong>Preserve optionality first, optimize tax second.</strong></li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>The US taxes citizens and green card holders on worldwide income by status, and moving to another country does not change that.</li>
+<li>Under the substantial presence test, 31 days in the US this year plus "this year + prior year ÷3 + the year before ÷6" of at least 183 days makes you a US tax resident.</li>
+<li>183 days in China within one tax year makes you a Chinese tax resident, and individuals without a domicile there are also subject to a separate six-year rule.</li>
+<li>The date of a cross-border move is itself a tax decision: arriving in December versus January can decide whether a year of worldwide income is reportable.</li>
+<li>Owing tax and having to file are separate questions, and the foreign-account filing duty for US citizens and green card holders has no residence exemption.</li>
+<li>FBAR applies when all foreign accounts you own or can sign on exceed $10,000 combined at any point in the year, and it reports peak balances, not income.</li>
+<li>CRS is an obligation on banks to exchange non-resident account data, not on individuals; the US stays out of CRS and runs its own FATCA agreements.</li>
+<li>For a US taxpayer, nearly every non-US-registered fund or ETF is a PFIC, with gains taxed at each year's top ordinary rate plus an interest charge.</li>
+<li>A non-US tax resident holding US-situs assets such as US stocks gets only a $60,000 US estate tax exemption at death, and there is no US–China estate tax treaty.</li>
+<li>China's annual $50,000-equivalent currency facilitation quota covers current-account uses only; buying property or securities abroad falls outside it.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>I'm only here to study / on a short assignment. Does this apply to me?</summary>

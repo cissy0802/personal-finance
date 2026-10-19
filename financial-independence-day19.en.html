@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head><body>
 <div class="wrap">
@@ -173,6 +177,19 @@ The most common misreading of FIRE (Financial Independence, Retire Early) is put
 <li><b>Coast FI is especially valuable with volatile income.</b> It converts "I must hit this number every year" into "the plan survives income being cut in half" — for anyone whose annual comp is decided by a share price, that stability is itself a return.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Your FI number is annual spending × 25, matching a 4% safe withdrawal rate; spending, not income, sets the FIRE target.</li>
+<li>Years to financial independence depend only on your savings rate and net worth ÷ annual spending; absolute income cancels out.</li>
+<li>Savings rate means the share of take-home pay you don't spend and do invest; cash sitting in a bank account doesn't count.</li>
+<li>A raise absorbed by proportionally higher spending leaves the savings rate and FI timeline unchanged, and lifts the FI number too.</li>
+<li>Coast FI means existing assets compound to the target with no new contributions; at a 5% real return and 20 years out, that's about 38% of the FI number today.</li>
+<li>Hitting your Coast number doesn't mean you can stop saving: it assumes compounding delivers, spending stays flat, and no layoff, so treat it as a floor.</li>
+<li>Financial independence buys the ability to say no; work also supplies structure, identity, and social contact, and assets replace only the income.</li>
+<li>Break financial independence into rungs: a 3–6 month buffer, 1–2 years of FU money, Coast, Barista, then full FI, each unlocking a specific option.</li>
+<li>Cutting a recurring expense raises the savings rate and permanently lowers the target: at 25×, spending $10k less a year cuts the FI number by $250k.</li>
+<li>When computing an FI number, discount pre-tax and taxable accounts at expected future tax rates, and leave out home equity and unvested equity.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Is 25× too optimistic, especially for retirements over 40 years?</summary>

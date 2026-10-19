@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -153,6 +157,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>用税后、且用“低谷年”口径审视每一笔债。</b> 高边际税档让税前 DTI 系统性高估偿债力；股权兑现的高峰年更会把比率算得过于乐观。按最坏那年的税后现金流做压力测试，别按 offer 或峰值年的数字。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>债务好坏不看名头看利率：把一笔债的 APR 和自己税后能长期稳定拿到的回报相比。</li>
+<li>还掉一笔 22% 利率的债，等于锁定 22% 的无风险回报，没有任何投资能稳定给到这个数。</li>
+<li>信用卡分期、消费贷和网贷的真实年化常被“日息”“手续费”话术掩盖，一律先换算成 APR 再比较。</li>
+<li>雪崩法把余钱全砸向 APR 最高的那笔债，数学上付的总利息最少、上岸最快。</li>
+<li>雪球法先清余额最小的债，多付一点利息换来更高的坚持率；能否还清往往取决于坚持而非最优。</li>
+<li>不管选雪崩还是雪球，都得先停止制造新债；还可以找发卡行谈降息，或把余额转到 0% 期限的转账卡。</li>
+<li>信用卡每月全额还清是免息工具，一旦滚动欠款，就切换成美国最贵的常见借贷之一。</li>
+<li>信用卡只还 2%–3% 的最低还款会几十年还不完、利息可超本金；信用卡取现从第一天计息，绝不取现。</li>
+<li>先买后付（BNPL）看着零息，其实在钝化花钱的痛感；判断标准是“全款我还买吗”。</li>
+<li>杠杆同倍放大收益和亏损；28/36 这类按税前收入算的 DTI 会高估偿债力，要按最坏那年的税后现金流做压力测试。</li>
+</ol>
 <h2 class="section" data-tts="38be29af76b8fd4e">深入思考</h2>
 <details>
 <summary>“先还债还是先投资”有标准答案吗？</summary>

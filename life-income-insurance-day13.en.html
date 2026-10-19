@@ -75,6 +75,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -169,6 +173,19 @@ If you die, what happens to the people who live on your income? That's the one t
 <li><b>Lock in insurability while income is climbing.</b> Pricing is fixed at the age and health on the underwriting date. A <strong>guaranteed insurability or future-increase rider</strong> lets you add coverage later without new medical underwriting—for anyone on a steep income curve, that matters far more than shaving the premium.</li>
 </ul>
 </div>
+<h2 class="section">Ten takeaways</h2>
+<ol class="takeaways">
+<li>Term life pays only if you die within the term and then expires; permanent life bundles cash value and commissions, often costing several to over ten times as much for the same death benefit.</li>
+<li>The default for most people is to buy term life and invest the premium saved, with the term set to the year the last dependent becomes financially independent.</li>
+<li>During the accumulation years, long-term disability is likelier than death: the US Social Security Administration estimates about one in four 20-year-olds will be disabled long-term before 67.</li>
+<li>Most long-term disabilities come from musculoskeletal disorders, cancer, and heart disease, not accidents, so accident insurance is no substitute for disability insurance.</li>
+<li>A disability policy comes down to four lines: the definition of disability, replacement rate and monthly cap, elimination period, and how long benefits last.</li>
+<li>Employer group long-term disability (LTD) nominally replaces 60% of salary, but it caps the monthly benefit, counts base pay only, and ends the day you leave the job.</li>
+<li>Disability benefits are taxable when the employer paid the premium with pre-tax money and usually tax-free when you paid with after-tax money, so compare coverage after tax.</li>
+<li>The "10 times annual income" rule for life coverage misfires for high tax brackets, volatile pay, and large savings, because it ignores the assets you already have.</li>
+<li>Size life coverage as a gap: dependent annual spending times years to cover, plus debts and education costs, minus available assets and existing coverage.</li>
+<li>Life insurance is needed only when someone depends on your income; a single person with no dependents rarely needs it, but disability insurance is that person's top priority.</li>
+</ol>
 <h2 class="section">Going Deeper</h2>
 <details>
 <summary>Is "buy term and invest the difference" really better?</summary>

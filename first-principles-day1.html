@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -161,6 +165,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>一切用税后口径算。</b> 高边际税档下，税前数字严重高估你的实际积累能力；储蓄率、净值、FI 目标都按<strong>到手的钱</strong>算，别按 offer 上的数。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>净值等于全部资产减去全部负债，衡量财富看净值这个存量，而不是收入这个流量。</li>
+<li>《邻家的百万富翁》发现，不少开豪车、住大宅的高收入者净值很低，低调的普通收入者反而更富。</li>
+<li>「年龄×税前年收入÷10」这类按收入定标的净值公式，会系统性高估高收入和股权薪酬为主的人。</li>
+<li>储蓄率等于（收入−支出）÷收入，它同时加快资产积累，又缩小财务自由所需的目标金额。</li>
+<li>假设实际回报 5%、按 4% 提取、从零开始，储蓄率从 10% 提到 30%，财务自由约从 51 年缩到 28 年。</li>
+<li>加薪如果被同比例的消费吃掉，储蓄率不变，财务自由的时间表一天也不会提前。</li>
+<li>按 4% 法则，每年多出一笔经常性支出，财务自由目标就要多攒这笔支出的 25 倍。</li>
+<li>订阅、会员、固定月付最该审视，真正被忽视的是支出的「经常性」，而不是单笔金额。</li>
+<li>财务体检看储蓄率、应急缓冲（目标 3–6 个月必要支出）、负债率和流动性四个比率，并定期看趋势。</li>
+<li>科技高薪人群算可动用净值时，要把未归属股权和集中在雇主的股票单列，并一律按税后到手的钱算。</li>
+</ol>
 <h2 class="section" data-tts="76b16e7b917eaa2e">深入思考</h2>
 <details>
 <summary>储蓄率是不是对所有人都是主变量？</summary>

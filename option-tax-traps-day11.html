@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -161,6 +165,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>中美差异：</b>中国没有 AMT 这套并行税制。境内非上市公司符合条件的股权激励可申请递延纳税，至转让时按「财产转让所得」适用 20% 税率（财税〔2016〕101 号）；上市公司股权激励目前单独计税、不并入当年综合所得，该优惠已多次延期，以最新公告为准。跨境部分留到 Day 21。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>ISO 行权时常规所得税不计收入，但 AMT 会把行权价差计入税基，一股没卖也可能先欠税。</li>
+<li>AMT 只认 ISO 行权当天的价格，之后股价就算跌到零，那一年的 AMT 也不会消失。</li>
+<li>ISO 每年只行权到刚好不触发 AMT 的临界股数（AMT crossover），分年切片比一次性全行权安全。</li>
+<li>ISO 股票须在授予满 2 年且行权满 1 年后再卖，收益才按长期资本利得计税，否则价差转为普通收入。</li>
+<li>83(b) 选择必须在股票转让日起 30 天内提交，没有延期，过期也无法补救。</li>
+<li>RSU 是一纸承诺而不是股票，税法上不算 property，不能报 83(b)，只在 vest 交割时计税。</li>
+<li>行权要用税后现金同时付行权价和税，买入的是高度集中、不流动、可能归零的私企股票。</li>
+<li>（行权成本 + 预计税）÷ 年支出 = 股票归零时烧掉的生活年数，这个数超过 1 就该缩小行权仓位。</li>
+<li>IPO 集中兑现时补充性工资的默认联邦预扣只有 22%，边际税率更高的人次年报税要补一张账单。</li>
+<li>RSU 的税在 vest 当天按当天股价定死，锁定期结束只恢复卖出能力，不会回头改写那笔收入。</li>
+</ol>
 <h2 class="section" data-tts="d78219d1b66779c2">深入思考</h2>
 <details>
 <summary>AMT 抵免究竟多久能拿回来？</summary>

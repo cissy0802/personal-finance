@@ -76,6 +76,10 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 .disc{margin-top:40px;padding:16px 18px;background:#eef1f0;border-radius:10px;
   color:var(--muted);font-size:12.5px;line-height:1.65}
 .note{font-size:13px;color:var(--muted);font-style:normal}
+.takeaways{counter-reset:tk;list-style:none;margin:0 0 8px;padding:0;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px}
+.takeaways li{counter-increment:tk;position:relative;margin:0;padding:11px 18px 11px 52px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.75}
+.takeaways li:first-child{border-top:none}
+.takeaways li::before{content:counter(tk,decimal-leading-zero);position:absolute;left:18px;top:12px;font-size:12.5px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -169,6 +173,19 @@ details .body{padding:0 0 16px;color:#3a544d;font-size:14.5px;border-top:1px sol
 <li><b>三十年固定月供 vs 波动的收入。</b> 用<strong>基本工资</strong>而非含股权的总包测承受力：股权与奖金是变量，月供是常量。银行按总包批更大额度——那是它的风险偏好，不是你的。</li>
 </ul>
 </div>
+<h2 class="section">十条要点</h2>
+<ol class="takeaways">
+<li>月供里还本金的部分不是成本，该拿年房租去比利息、房产税、保险、维护、HOA 和首付机会成本之和。</li>
+<li>Ben Felix 的「5% 法则」：买房年不可回收成本约为房价 5%，含房产税、维护和资本成本。</li>
+<li>同类房子的月租低于「房价 × 5% ÷ 12」时租更划算，高于它时买更划算。</li>
+<li>买房一次买卖往返的交易摩擦常见约为房价的 8%–10%，只能靠拉长持有年限来摊薄。</li>
+<li>按往返 9% 摩擦算，买房年化总成本在持有五到七年间明显变平，这是「至少住五年」的算术来源。</li>
+<li>Shiller 长期美国房价指数显示，扣除通胀后房价年化只涨一个百分点上下，远低于股票。</li>
+<li>自住房积累净值主要靠杠杆、每月还本金的强制储蓄和免税的自住收益，而不是房产本身回报高。</li>
+<li>28/36 规则是银行的放贷上限而非买房目标，更硬的标尺是房价 ÷ 年支出。</li>
+<li>买房失败多半不是买在高点，而是失业、调动或缺修缮钱时被迫在错误时间卖出，所以门槛按抗冲击能力设。</li>
+<li>科技从业者测买房承受力应只用基本工资，因为股权和奖金是变量，三十年月供是常量。</li>
+</ol>
 <h2 class="section" data-tts="94cfc2d0971509b3">深入思考</h2>
 <details>
 <summary>「租房是给房东打工」错在哪里？</summary>
